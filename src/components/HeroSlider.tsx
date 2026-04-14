@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Calendar, Users } from 'lucide-react';
+import { CalendarDays, ClipboardList, Info } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { ROUTES } from '../router/routes';
 
@@ -61,21 +61,21 @@ export default function HeroSlider() {
           </p>
 
           <div className="mb-10 flex flex-col justify-center gap-2.5 sm:flex-row sm:flex-wrap animate-fadeInUp-d2">
-            <Link to={ROUTES.CONVOCATORIAS}>
+            <Link to={ROUTES.SOBRE}>
               <button className="inline-flex min-w-36 items-center justify-center gap-2 rounded bg-[#2377b9] px-5 py-3 text-xs font-bold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#2f8bd2]">
-                <Users size={14} />
+                <CalendarDays size={14} />
                 {t('hero.register')}
               </button>
             </Link>
-            <Link to={ROUTES.CONVOCATORIAS}>
+            <Link to={ROUTES.PRE_REGISTRO}>
               <button className="inline-flex min-w-36 items-center justify-center gap-2 rounded bg-[#2377b9] px-5 py-3 text-xs font-bold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#2f8bd2]">
-                <BookOpen size={14} />
+                <ClipboardList size={14} />
                 {t('hero.guide')}
               </button>
             </Link>
-            <Link to={ROUTES.AGENDA}>
+            <Link to={ROUTES.VIAJE_SEDE}>
               <button className="inline-flex min-w-36 items-center justify-center gap-2 rounded bg-[#2377b9] px-5 py-3 text-xs font-bold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#2f8bd2]">
-                <Calendar size={14} />
+                <Info size={14} />
                 {t('hero.agenda')}
               </button>
             </Link>
