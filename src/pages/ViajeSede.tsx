@@ -7,7 +7,7 @@ export default function ViajeSede() {
   return (
     <>
       <PageHero
-        title="Viaje y Sede"
+        title="Datos útiles y logística"
         subtitle="Todo lo que necesitas saber para planificar tu viaje a Ciudad de Guatemala"
         backgroundImage="/src/assets/slider/AL-49.png"
         icon={<img src="/src/assets/iconos/AL-39.png" alt="" className="h-20 w-20 object-contain" />}

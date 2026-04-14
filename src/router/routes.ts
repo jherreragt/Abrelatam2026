@@ -4,7 +4,7 @@ export const ROUTES = {
   AGENDA: '/agenda',
   CONVOCATORIAS: '/convocatorias',
   SIDE_EVENTS: '/side-events',
-  VIAJE_SEDE: '/viaje-sede',
+  VIAJE_SEDE: '/datos-utiles-y-logistica',
   BECAS: '/becas',
   COMUNIDAD: '/comunidad',
   CODIGO_CONDUCTA: '/codigo-conducta',
