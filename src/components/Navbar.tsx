@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, Sun, Moon, ChevronDown } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { useLanguage } from '../context/LanguageContext';
@@ -10,36 +10,120 @@ interface NavbarProps {
   scrolled: boolean;
 }
 
-const links: { to: string; labelKey: string }[] = [
-  { to: ROUTES.HOME, labelKey: 'nav.home' },
-  { to: ROUTES.SOBRE, labelKey: 'nav.about' },
-  { to: ROUTES.AGENDA, labelKey: 'nav.agenda' },
-  { to: ROUTES.CONVOCATORIAS, labelKey: 'nav.calls' },
-  { to: ROUTES.NOTICIAS, labelKey: 'nav.news' },
-  { to: ROUTES.SIDE_EVENTS, labelKey: 'nav.sideEvents' },
-  { to: ROUTES.VIAJE_SEDE, labelKey: 'nav.travel' },
+interface DropdownItem {
+  to: string;
+  labelKey: string;
+}
+
+interface NavItem {
+  labelKey: string;
+  to?: string;
+  external?: string;
+  dropdown?: DropdownItem[];
+}
+
+const navItems: NavItem[] = [
+  { labelKey: 'nav.home', external: 'https://abrelatam.redciudadana.org.gt/' },
+  {
+    labelKey: 'nav.event',
+    dropdown: [
+      { to: ROUTES.SOBRE, labelKey: 'nav.about' },
+      { to: ROUTES.GUIA_PARTICIPANTES, labelKey: 'nav.guideForParticipants' },
+      { to: ROUTES.CODIGO_CONDUCTA, labelKey: 'nav.codeOfConduct' },
+      { to: ROUTES.PRE_REGISTRO, labelKey: 'nav.preRegister' },
+    ],
+  },
+  {
+    labelKey: 'nav.agendaMenu',
+    dropdown: [
+      { to: ROUTES.AGENDA, labelKey: 'nav.agendaPage' },
+      { to: ROUTES.SIDE_EVENTS, labelKey: 'nav.sideEvents' },
+      { to: ROUTES.VIAJE_SEDE, labelKey: 'nav.travel' },
+    ],
+  },
+  { labelKey: 'nav.press', to: ROUTES.PRENSA },
+  { labelKey: 'nav.contact', to: ROUTES.CONTACTO },
 ];
 
-const secondaryLinks: { to: string; labelKey: string }[] = [
-  { to: ROUTES.CODIGO_CONDUCTA, labelKey: 'nav.codeOfConduct' },
+const mobileAllLinks: { to?: string; external?: string; labelKey: string; indent?: boolean }[] = [
+  { external: 'https://abrelatam.redciudadana.org.gt/', labelKey: 'nav.home' },
+  { to: ROUTES.SOBRE, labelKey: 'nav.about', indent: true },
+  { to: ROUTES.GUIA_PARTICIPANTES, labelKey: 'nav.guideForParticipants', indent: true },
+  { to: ROUTES.CODIGO_CONDUCTA, labelKey: 'nav.codeOfConduct', indent: true },
+  { to: ROUTES.PRE_REGISTRO, labelKey: 'nav.preRegister', indent: true },
+  { to: ROUTES.AGENDA, labelKey: 'nav.agendaPage', indent: true },
+  { to: ROUTES.SIDE_EVENTS, labelKey: 'nav.sideEvents', indent: true },
+  { to: ROUTES.VIAJE_SEDE, labelKey: 'nav.travel', indent: true },
   { to: ROUTES.PRENSA, labelKey: 'nav.press' },
   { to: ROUTES.CONTACTO, labelKey: 'nav.contact' },
 ];
 
-const allLinks = [...links, ...secondaryLinks];
+function DropdownMenu({
+  item,
+  scrolled,
+}: {
+  item: NavItem;
+  scrolled: boolean;
+}) {
+  const [open, setOpen] = useState(false);
+  const { t } = useLanguage();
+  const ref = useRef<HTMLDivElement>(null);
+
+  const linkBase = 'px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200';
+  const linkInactive = scrolled
+    ? 'text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/40'
+    : 'text-white/85 hover:text-white hover:bg-white/12';
+
+  return (
+    <div
+      ref={ref}
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button className={`flex items-center gap-1 ${linkBase} ${linkInactive}`}>
+        {t(item.labelKey)}
+        <ChevronDown
+          size={13}
+          className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+        />
+      </button>
+
+      <div
+        className={`absolute left-0 top-full pt-2 w-56 transition-all duration-200 z-50 ${
+          open ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-1'
+        }`}
+      >
+        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-100 dark:border-slate-700/60 overflow-hidden py-1">
+          {item.dropdown!.map(link => (
+            <NavLink
+              key={link.to}
+              to={link.to}
+              className={({ isActive }) =>
+                `block w-full text-left px-4 py-2.5 text-sm transition-colors ${
+                  isActive
+                    ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30 font-medium'
+                    : 'text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-blue-600 dark:hover:text-blue-400'
+                }`
+              }
+              onClick={() => setOpen(false)}
+            >
+              {t(link.labelKey)}
+            </NavLink>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Navbar({ scrolled }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [moreOpen, setMoreOpen] = useState(false);
   const { isDark, toggleTheme } = useTheme();
   const { t } = useLanguage();
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+    document.body.style.overflow = isOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [isOpen]);
 
@@ -66,53 +150,37 @@ export default function Navbar({ scrolled }: NavbarProps) {
           <div className="flex items-center justify-between h-14">
 
             <div className="hidden lg:flex items-center gap-0.5">
-              {links.map(link => (
-                <NavLink
-                  key={link.to}
-                  to={link.to}
-                  end={link.to === ROUTES.HOME}
-                  className={({ isActive }) =>
-                    `${linkBase} ${isActive ? linkActive : linkInactive}`
-                  }
-                >
-                  {t(link.labelKey)}
-                </NavLink>
-              ))}
-
-              <div className="relative">
-                <button
-                  onMouseEnter={() => setMoreOpen(true)}
-                  onMouseLeave={() => setMoreOpen(false)}
-                  className={`flex items-center gap-1 ${linkBase} ${linkInactive}`}
-                >
-                  {t('nav.more')}
-                  <ChevronDown size={13} className={`transition-transform duration-200 ${moreOpen ? 'rotate-180' : ''}`} />
-                </button>
-                <div
-                  onMouseEnter={() => setMoreOpen(true)}
-                  onMouseLeave={() => setMoreOpen(false)}
-                  className={`absolute left-0 top-full pt-2 w-52 transition-all duration-200 z-50 ${moreOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-1'}`}
-                >
-                  <div className="bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-100 dark:border-slate-700/60 overflow-hidden py-1">
-                    {secondaryLinks.map(link => (
-                      <NavLink
-                        key={link.to}
-                        to={link.to}
-                        className={({ isActive }) =>
-                          `block w-full text-left px-4 py-2.5 text-sm transition-colors ${
-                            isActive
-                              ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30 font-medium'
-                              : 'text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-blue-600 dark:hover:text-blue-400'
-                          }`
-                        }
-                        onClick={() => setMoreOpen(false)}
-                      >
-                        {t(link.labelKey)}
-                      </NavLink>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              {navItems.map(item => {
+                if (item.dropdown) {
+                  return (
+                    <DropdownMenu key={item.labelKey} item={item} scrolled={scrolled} />
+                  );
+                }
+                if (item.external) {
+                  return (
+                    <a
+                      key={item.labelKey}
+                      href={item.external}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${linkBase} ${linkInactive}`}
+                    >
+                      {t(item.labelKey)}
+                    </a>
+                  );
+                }
+                return (
+                  <NavLink
+                    key={item.labelKey}
+                    to={item.to!}
+                    className={({ isActive }) =>
+                      `${linkBase} ${isActive ? linkActive : linkInactive}`
+                    }
+                  >
+                    {t(item.labelKey)}
+                  </NavLink>
+                );
+              })}
             </div>
 
             <div className="hidden lg:flex items-center gap-1">
@@ -168,23 +236,38 @@ export default function Navbar({ scrolled }: NavbarProps) {
               </button>
             </div>
             <nav className="flex-1 overflow-y-auto py-4 px-3 space-y-0.5">
-              {allLinks.map(link => (
-                <NavLink
-                  key={link.to}
-                  to={link.to}
-                  end={link.to === ROUTES.HOME}
-                  className={({ isActive }) =>
-                    `flex items-center px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
-                      isActive
-                        ? 'bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400'
-                        : 'text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400'
-                    }`
-                  }
-                  onClick={() => setIsOpen(false)}
-                >
-                  {t(link.labelKey)}
-                </NavLink>
-              ))}
+              {mobileAllLinks.map((link, i) => {
+                if (link.external) {
+                  return (
+                    <a
+                      key={i}
+                      href={link.external}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center px-4 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 ${link.indent ? 'pl-8' : ''}`}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {t(link.labelKey)}
+                    </a>
+                  );
+                }
+                return (
+                  <NavLink
+                    key={link.to}
+                    to={link.to!}
+                    className={({ isActive }) =>
+                      `flex items-center px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${link.indent ? 'pl-8' : ''} ${
+                        isActive
+                          ? 'bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400'
+                          : 'text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400'
+                      }`
+                    }
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {t(link.labelKey)}
+                  </NavLink>
+                );
+              })}
             </nav>
           </div>
         </div>

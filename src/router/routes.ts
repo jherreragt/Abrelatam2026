@@ -6,6 +6,7 @@ export const ROUTES = {
   SIDE_EVENTS: '/side-events',
   VIAJE_SEDE: '/datos-utiles-y-logistica',
   CODIGO_CONDUCTA: '/codigo-conducta',
+  GUIA_PARTICIPANTES: '/guia-participantes',
   PRENSA: '/prensa',
   CONTACTO: '/contacto',
   PRE_REGISTRO: '/pre-registro',

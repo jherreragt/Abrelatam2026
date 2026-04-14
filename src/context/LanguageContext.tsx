@@ -102,7 +102,12 @@ const translations = {
       partners: 'Aliados',
       contact: 'Contacto',
       news: 'Noticias',
-      more: 'Más'
+      more: 'Más',
+      event: 'Evento',
+      guideForParticipants: 'Guía para participantes',
+      preRegister: 'Pre-Registro',
+      agendaMenu: 'Agenda',
+      agendaPage: 'Agenda',
     },
     home: {
       title: 'Guatemala 2026: abrir datos, abrir caminos',
@@ -239,7 +244,12 @@ const translations = {
       partners: 'Partners',
       contact: 'Contact',
       news: 'News',
-      more: 'More'
+      more: 'More',
+      event: 'Event',
+      guideForParticipants: 'Guide for participants',
+      preRegister: 'Pre-Registration',
+      agendaMenu: 'Agenda',
+      agendaPage: 'Agenda',
     },
     home: {
       title: 'Guatemala 2026: opening data, opening paths',
@@ -376,7 +386,12 @@ const translations = {
       partners: 'Parceiros',
       contact: 'Contato',
       news: 'Notícias',
-      more: 'Mais'
+      more: 'Mais',
+      event: 'Evento',
+      guideForParticipants: 'Guia para participantes',
+      preRegister: 'Pré-Registro',
+      agendaMenu: 'Agenda',
+      agendaPage: 'Agenda',
     },
     home: {
       title: 'Guatemala 2026: abrir dados, abrir caminhos',
