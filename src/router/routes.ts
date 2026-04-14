@@ -8,6 +8,7 @@ export const ROUTES = {
   CODIGO_CONDUCTA: '/codigo-conducta',
   PRENSA: '/prensa',
   CONTACTO: '/contacto',
+  PRE_REGISTRO: '/pre-registro',
   NOTICIAS: '/noticias',
   BLOG_DETAIL: '/noticias/:slug',
 } as const;
