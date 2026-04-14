@@ -1,8 +1,22 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Send, Mail, Twitter, Facebook, Instagram, Youtube, MapPin, ArrowRight } from 'lucide-react';
+import { Facebook, Instagram, Send, Twitter, Youtube } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { ROUTES } from '../router/routes';
+import footerLogo from '../assets/logos/AL-10.png';
+import orgLogo1 from '../assets/logos/AL-51.png';
+import orgLogo2 from '../assets/logos/AL-52.png';
+import orgLogo3 from '../assets/logos/AL-53.png';
+import orgLogo4 from '../assets/logos/AL-54.png';
+import orgLogo5 from '../assets/logos/AL-55.png';
+
+const organizerLogos = [
+  { src: orgLogo1, alt: 'Organizador 1' },
+  { src: orgLogo2, alt: 'Organizador 2' },
+  { src: orgLogo3, alt: 'Red Ciudadana' },
+  { src: orgLogo4, alt: 'Hivos' },
+  { src: orgLogo5, alt: 'OEA' },
+];
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -21,139 +35,111 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-slate-950 text-slate-400 overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-600/40 to-transparent" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-900/8 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="relative container mx-auto px-4 md:px-6 max-w-7xl pt-16 pb-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-14">
-
-          <div className="lg:col-span-4">
-            <img
-              src="https://2023.abrelatam.org/wp-content/uploads/2023/03/Condatos-Negativotrue@2x.svg"
-              alt="CONDATOS"
-              className="h-10 w-auto mb-5 opacity-90"
-            />
-            <p className="text-sm text-slate-500 leading-relaxed mb-5 max-w-xs">
-              La conferencia regional más importante sobre datos abiertos y transparencia en América Latina.
-            </p>
-            <div className="flex items-center gap-2 text-sm text-slate-500 mb-6">
-              <MapPin size={14} className="text-blue-500 flex-shrink-0" />
-              <span>Centro Cultural Miguel Ángel Asturias, Guatemala</span>
-            </div>
-            <div className="flex gap-2.5">
-              {[
-                { icon: Twitter, label: 'Twitter' },
-                { icon: Facebook, label: 'Facebook' },
-                { icon: Instagram, label: 'Instagram' },
-                { icon: Youtube, label: 'YouTube' },
-              ].map(({ icon: Icon, label }) => (
-                <a
-                  key={label}
-                  href="#"
-                  aria-label={label}
-                  className="w-8 h-8 rounded-lg bg-slate-800/60 border border-slate-700/50 flex items-center justify-center text-slate-500 hover:text-white hover:bg-blue-600 hover:border-blue-500 transition-all duration-200"
-                >
-                  <Icon size={14} />
-                </a>
-              ))}
-            </div>
+    <footer className="bg-[#2377b9] text-white">
+      <div className="container mx-auto max-w-7xl px-4 py-14 md:px-6">
+        <section className="mb-14">
+          <h2 className="mb-9 text-base font-bold">Organizan</h2>
+          <div className="flex flex-wrap items-center gap-8 md:gap-12 lg:gap-14">
+            {organizerLogos.map(({ src, alt }) => (
+              <img
+                key={alt}
+                src={src}
+                alt={alt}
+                className="h-auto object-contain"
+                style={{width:'200px'}}
+              />
+            ))}
           </div>
+        </section>
 
-          <div className="lg:col-span-2">
-            <h4 className="text-white text-sm font-semibold mb-4 tracking-wide">Evento</h4>
-            <ul className="space-y-2.5">
-              {[
-                { to: ROUTES.SOBRE, label: t('footer.aboutEvent') },
-                { to: ROUTES.AGENDA, label: t('nav.agenda') },
-                { to: ROUTES.CONVOCATORIAS, label: t('nav.calls') },
-                { to: ROUTES.BECAS, label: t('nav.scholarships') },
-                { to: ROUTES.ALIADOS, label: t('nav.partners') },
-              ].map(({ to, label }) => (
-                <li key={to}>
-                  <Link
-                    to={to}
-                    className="text-sm text-slate-500 hover:text-blue-400 transition-colors flex items-center gap-1.5 group"
+        <div className="border-t border-white/35 pt-12">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-12">
+            <div className="lg:col-span-4">
+              <img
+                src={footerLogo}
+                alt="ABRELATAM CONDATOS"
+                className="mb-8 h-auto w-64 max-w-full object-contain"
+              />
+              <p className="mb-8 max-w-sm text-sm leading-relaxed text-white/85">
+                {t('footer.description')}
+              </p>
+              <div className="flex items-center gap-6">
+                {[
+                  { icon: Facebook, label: 'Facebook' },
+                  { icon: Twitter, label: 'Twitter' },
+                  { icon: Instagram, label: 'Instagram' },
+                  { icon: Youtube, label: 'YouTube' },
+                ].map(({ icon: Icon, label }) => (
+                  <a
+                    key={label}
+                    href="#"
+                    aria-label={label}
+                    className="text-white transition-colors hover:text-[#262460]"
                   >
-                    <ArrowRight size={11} className="opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-blue-400" />
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+                    <Icon size={18} />
+                  </a>
+                ))}
+              </div>
+            </div>
 
-          <div className="lg:col-span-2">
-            <h4 className="text-white text-sm font-semibold mb-4 tracking-wide">Participa</h4>
-            <ul className="space-y-2.5">
-              {[
-                { to: ROUTES.CONVOCATORIAS, label: 'Registrarme' },
-                { to: ROUTES.CONVOCATORIAS, label: t('home.proposeSession') },
-                { to: ROUTES.SIDE_EVENTS, label: t('nav.sideEvents') },
-                { to: ROUTES.CODIGO_CONDUCTA, label: t('nav.codeOfConduct') },
-                { to: ROUTES.CONTACTO, label: t('nav.contact') },
-              ].map(({ to, label }, i) => (
-                <li key={i}>
-                  <Link
-                    to={to}
-                    className="text-sm text-slate-500 hover:text-blue-400 transition-colors flex items-center gap-1.5 group"
-                  >
-                    <ArrowRight size={11} className="opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all text-blue-400" />
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <nav className="lg:col-span-2">
+              <h3 className="mb-4 text-sm font-bold">{t('footer.quickLinks')}</h3>
+              <ul className="space-y-3 text-sm text-white/85">
+                {[
+                  { to: ROUTES.SOBRE, label: t('footer.aboutEvent') },
+                  { to: ROUTES.AGENDA, label: t('nav.agenda') },
+                  { to: ROUTES.CONVOCATORIAS, label: t('nav.calls') },
+                  { to: ROUTES.BECAS, label: t('nav.scholarships') },
+                ].map(({ to, label }) => (
+                  <li key={to}>
+                    <Link to={to} className="transition-colors hover:text-[#262460]">
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
 
-          <div className="lg:col-span-4">
-            <h4 className="text-white text-sm font-semibold mb-2 tracking-wide">{t('footer.newsletter')}</h4>
-            <p className="text-sm text-slate-500 mb-4 leading-relaxed">{t('footer.newsletterDesc')}</p>
-            <form onSubmit={handleSubscribe} className="space-y-2.5">
-              <div className="relative">
-                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-600" size={15} />
+            <nav className="lg:col-span-2">
+              <h3 className="mb-4 text-sm font-bold">{t('footer.participate')}</h3>
+              <ul className="space-y-3 text-sm text-white/85">
+                {[
+                  { to: ROUTES.CONVOCATORIAS, label: t('home.register') },
+                  { to: ROUTES.CONVOCATORIAS, label: t('home.proposeSession') },
+                  { to: ROUTES.SIDE_EVENTS, label: t('nav.sideEvents') },
+                  { to: ROUTES.CODIGO_CONDUCTA, label: t('nav.codeOfConduct') },
+                ].map(({ to, label }) => (
+                  <li key={`${to}-${label}`}>
+                    <Link to={to} className="transition-colors hover:text-[#262460]">
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <div className="lg:col-span-4">
+              <h3 className="mb-4 text-sm font-bold">{t('footer.newsletter')}</h3>
+              <p className="mb-5 text-sm text-white/85">{t('footer.newsletterDesc')}</p>
+              <form onSubmit={handleSubscribe} className="space-y-3">
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="tu@email.com"
-                  className="w-full pl-9 pr-4 py-2.5 bg-slate-900 border border-slate-700/60 rounded-xl text-sm text-white placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all"
+                  aria-label="Email"
+                  className="h-12 w-full rounded bg-white px-4 text-sm text-slate-900 outline-none focus:ring-2 focus:ring-[#262460]"
                   required
                 />
-              </div>
-              <button
-                type="submit"
-                disabled={subscribed}
-                className={`w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-sm font-semibold transition-all duration-200 ${
-                  subscribed
-                    ? 'bg-emerald-600/20 text-emerald-400 border border-emerald-700/40 cursor-default'
-                    : 'bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/20'
-                }`}
-              >
-                {subscribed ? (
-                  <>{t('footer.subscribed')}</>
-                ) : (
-                  <>
-                    <Send size={14} />
-                    {t('footer.subscribe')}
-                  </>
-                )}
-              </button>
-            </form>
-          </div>
-        </div>
-
-        <div className="border-t border-slate-800/60 pt-7 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-slate-600">
-            © 2026 ABRELATAM / CONDATOS. Todos los derechos reservados.
-          </p>
-          <div className="flex items-center gap-5">
-            <Link to={ROUTES.CODIGO_CONDUCTA} className="text-xs text-slate-600 hover:text-slate-400 transition-colors">
-              Código de Conducta
-            </Link>
-            <Link to={ROUTES.CONTACTO} className="text-xs text-slate-600 hover:text-slate-400 transition-colors">
-              Privacidad
-            </Link>
+                <button
+                  type="submit"
+                  disabled={subscribed}
+                  className="flex h-12 w-full items-center justify-center gap-3 rounded bg-[#262460] px-4 text-sm font-bold text-white transition-colors hover:bg-[#343170] disabled:cursor-default disabled:bg-[#262460]/70"
+                >
+                  {!subscribed && <Send size={14} />}
+                  {subscribed ? t('footer.subscribed') : t('footer.subscribe')}
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

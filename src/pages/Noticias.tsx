@@ -14,7 +14,6 @@ export default function Noticias() {
     : blogPosts.filter(p => p.category === activeCategory);
 
   const sorted = [...filtered].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-  const [featured, ...rest] = sorted;
 
   return (
     <>
@@ -45,15 +44,9 @@ export default function Noticias() {
           ))}
         </div>
 
-        {featured && (
-          <div className="mb-8">
-            <BlogCard post={featured} featured />
-          </div>
-        )}
-
-        {rest.length > 0 && (
+        {sorted.length > 0 && (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {rest.map(post => (
+            {sorted.map(post => (
               <BlogCard key={post.id} post={post} />
             ))}
           </div>

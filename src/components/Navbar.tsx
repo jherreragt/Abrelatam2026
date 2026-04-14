@@ -119,7 +119,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
             </div>
 
             <div className="hidden lg:flex items-center gap-1">
-              <LanguageSwitcher />
+              <LanguageSwitcher scrolled={scrolled} />
               <button
                 onClick={toggleTheme}
                 className={`p-2 rounded-lg transition-all ${iconColor}`}
@@ -130,7 +130,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
             </div>
 
             <div className="flex items-center gap-1.5 lg:hidden">
-              <LanguageSwitcher />
+              <LanguageSwitcher scrolled={scrolled} />
               <button
                 onClick={toggleTheme}
                 className={`p-2 rounded-lg transition-all ${iconColor}`}

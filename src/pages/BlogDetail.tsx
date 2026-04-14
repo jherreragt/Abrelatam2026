@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, Clock, Tag, User } from 'lucide-react';
 import { getBlogPost, getRecentPosts, BlogPost } from '../data/blogPosts';
 import BlogCard from '../components/BlogCard';
 import { ROUTES } from '../router/routes';
+import newsPlaceholder from '../assets/IMAGEN.png';
 
 const categoryColors: Record<string, string> = {
   'Anuncio': 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300',
@@ -43,7 +44,7 @@ export default function BlogDetail() {
     <div className="bg-white dark:bg-slate-900 min-h-screen">
       <div className="relative h-72 md:h-96 overflow-hidden">
         <img
-          src={post.coverImage}
+          src={newsPlaceholder}
           alt={post.title}
           className="w-full h-full object-cover"
         />

@@ -1,7 +1,11 @@
 import { Globe } from 'lucide-react';
 import { useLanguage, Language } from '../context/LanguageContext';
 
-export default function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  scrolled?: boolean;
+}
+
+export default function LanguageSwitcher({ scrolled = false }: LanguageSwitcherProps) {
   const { language, setLanguage } = useLanguage();
 
   const languages: { code: Language; label: string }[] = [
@@ -10,9 +14,13 @@ export default function LanguageSwitcher() {
     { code: 'pt', label: 'PT' }
   ];
 
+  const buttonColor = scrolled
+    ? 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800'
+    : 'text-white hover:bg-white/12';
+
   return (
     <div className="relative group">
-      <button className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+      <button className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${buttonColor}`}>
         <Globe size={20} />
         <span className="text-sm font-medium uppercase">{language}</span>
       </button>

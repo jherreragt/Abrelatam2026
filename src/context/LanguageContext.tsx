@@ -77,6 +77,17 @@ const translations = {
       minutes: 'minutos',
       seconds: 'segundos'
     },
+    hero: {
+      location: 'Guatemala, Ciudad de Guatemala',
+      date: 'Noviembre de 2026',
+      register: 'Registro',
+      guide: 'Guia para principiantes',
+      agenda: 'Agenda',
+      days: 'Dias',
+      hours: 'Horas',
+      minutes: 'Minutos',
+      seconds: 'Segundos'
+    },
     nav: {
       home: 'Inicio',
       about: 'Sobre',
@@ -131,6 +142,11 @@ const translations = {
       venueFeature2: 'Múltiples salas y espacios para talleres y sesiones paralelas',
       venueFeature3: 'Ubicación central y fácil acceso en la Zona 1',
       venueFeature4: 'Infraestructura moderna y equipamiento técnico de primer nivel',
+      venueCtaEyebrow: 'ABRELATAM Y CONDATOS SON SOLO EL PRINCIPIO',
+      venueCtaTitle: '¡Registro general abierto!',
+      venueCtaSubtitle: 'El programa de América Abierta incluirá una serie de actividades nacionales e internacionales.',
+      venueCtaButton: 'Regístrate',
+      venueCtaNote: 'No olvides hacer pre-registro para recibir todas las novedades.',
       whatToFind: 'Lo que vas a encontrar',
       panels: 'Paneles y conferencias regionales',
       workshops: 'Talleres prácticos y sesiones técnicas',
@@ -147,7 +163,8 @@ const translations = {
       organizeSideDesc: 'Impulsa conversaciones paralelas y encuentros especializados.',
       proposeSession: 'Proponer sesión',
       proposeSideEvent: 'Proponer side event',
-      viewCalls: 'Ver convocatorias'
+      viewCalls: 'Ver convocatorias',
+      newsTitle: 'Novedades'
     },
     footer: {
       description: 'Guatemala te espera para la conferencia regional más importante sobre datos abiertos y transparencia.',
@@ -196,6 +213,17 @@ const translations = {
       hours: 'hours',
       minutes: 'minutes',
       seconds: 'seconds'
+    },
+    hero: {
+      location: 'Guatemala, Guatemala City',
+      date: 'November 2026',
+      register: 'Registration',
+      guide: 'Beginner guide',
+      agenda: 'Agenda',
+      days: 'Days',
+      hours: 'Hours',
+      minutes: 'Minutes',
+      seconds: 'Seconds'
     },
     nav: {
       home: 'Home',
@@ -251,6 +279,11 @@ const translations = {
       venueFeature2: 'Multiple rooms and spaces for workshops and parallel sessions',
       venueFeature3: 'Central location and easy access in Zone 1',
       venueFeature4: 'Modern infrastructure and first-class technical equipment',
+      venueCtaEyebrow: 'ABRELATAM AND CONDATOS ARE ONLY THE BEGINNING',
+      venueCtaTitle: 'General registration is open!',
+      venueCtaSubtitle: 'The America Abierta program will include a series of national and international activities.',
+      venueCtaButton: 'Register',
+      venueCtaNote: 'Do not forget to pre-register to receive all updates.',
       whatToFind: 'What you will find',
       panels: 'Regional panels and conferences',
       workshops: 'Practical workshops and technical sessions',
@@ -267,7 +300,8 @@ const translations = {
       organizeSideDesc: 'Drive parallel conversations and specialized meetings.',
       proposeSession: 'Propose session',
       proposeSideEvent: 'Propose side event',
-      viewCalls: 'View calls'
+      viewCalls: 'View calls',
+      newsTitle: 'News'
     },
     footer: {
       description: 'Guatemala awaits you for the most important regional conference on open data and transparency.',
@@ -316,6 +350,17 @@ const translations = {
       hours: 'horas',
       minutes: 'minutos',
       seconds: 'segundos'
+    },
+    hero: {
+      location: 'Guatemala, Cidade da Guatemala',
+      date: 'Novembro de 2026',
+      register: 'Inscricao',
+      guide: 'Guia para iniciantes',
+      agenda: 'Agenda',
+      days: 'Dias',
+      hours: 'Horas',
+      minutes: 'Minutos',
+      seconds: 'Segundos'
     },
     nav: {
       home: 'Início',
@@ -371,6 +416,11 @@ const translations = {
       venueFeature2: 'Múltiplas salas e espaços para oficinas e sessões paralelas',
       venueFeature3: 'Localização central e fácil acesso na Zona 1',
       venueFeature4: 'Infraestrutura moderna e equipamento técnico de primeiro nível',
+      venueCtaEyebrow: 'ABRELATAM E CONDATOS SAO APENAS O COMECO',
+      venueCtaTitle: 'Inscricao geral aberta!',
+      venueCtaSubtitle: 'O programa da America Aberta incluira uma serie de atividades nacionais e internacionais.',
+      venueCtaButton: 'Inscreva-se',
+      venueCtaNote: 'Nao esqueca de fazer o pre-registro para receber todas as novidades.',
       whatToFind: 'O que você vai encontrar',
       panels: 'Painéis e conferências regionais',
       workshops: 'Oficinas práticas e sessões técnicas',
@@ -387,7 +437,8 @@ const translations = {
       organizeSideDesc: 'Promova conversas paralelas e encontros especializados.',
       proposeSession: 'Propor sessão',
       proposeSideEvent: 'Propor side event',
-      viewCalls: 'Ver chamadas'
+      viewCalls: 'Ver chamadas',
+      newsTitle: 'Novidades'
     },
     footer: {
       description: 'Guatemala espera você para a conferência regional mais importante sobre dados abertos e transparência.',
