@@ -1,4 +1,5 @@
 import Section from '../components/Section';
+import PageHero from '../components/PageHero';
 
 const objectives = [
   {
@@ -26,21 +27,11 @@ const objectives = [
 export default function Sobre() {
   return (
     <>
-      <div className="relative flex aspect-[1921/869] w-full items-center justify-center overflow-hidden bg-[#262460] px-4 pt-24">
-        <img
-          src="/src/assets/slider/AL-45.png"
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover object-center"
-        />
-        <div className="relative z-10 mx-auto max-w-5xl text-center">
-          <h1 className="mb-8 text-3xl font-bold leading-tight tracking-[0.18em] text-white md:text-5xl">
-            Sobre ABRELATAM / CONDATOS 2026
-          </h1>
-          <p className="mx-auto max-w-4xl text-base font-medium leading-relaxed text-white md:text-xl">
-            Dos conferencias, un mismo objetivo: transformar America Latina a traves de datos abiertos
-          </p>
-        </div>
-      </div>
+      <PageHero
+        title="Sobre ABRELATAM / CONDATOS 2026"
+        subtitle="Dos conferencias, un mismo objetivo: transformar America Latina a traves de datos abiertos"
+        backgroundImage="/src/assets/slider/AL-45.png"
+      />
 
       <Section bgColor="white" className="py-24 md:py-32">
         <div className="mx-auto max-w-4xl text-center">

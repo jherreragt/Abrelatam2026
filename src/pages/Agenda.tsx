@@ -1,83 +1,80 @@
 import { Link } from 'react-router-dom';
-import { Calendar, Clock, Mic, Users, BookOpen, Coffee, Music, Zap, Bell } from 'lucide-react';
 import Section from '../components/Section';
+import PageHero from '../components/PageHero';
 import { ROUTES } from '../router/routes';
-
-const expectedContent = [
-  { icon: Mic, label: 'Conferencias magistrales' },
-  { icon: BookOpen, label: 'Talleres temáticos' },
-  { icon: Users, label: 'Paneles de discusión' },
-  { icon: Zap, label: 'Presentaciones relámpago' },
-  { icon: Coffee, label: 'Espacios de networking' },
-  { icon: Music, label: 'Eventos sociales' },
-];
 
 export default function Agenda() {
   return (
     <>
-      <div className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 pt-36 pb-20 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-blue-500/8 rounded-full blur-3xl" />
-        </div>
-        <div className="relative container mx-auto px-4 md:px-6 max-w-7xl text-center">
-          <span className="inline-block bg-white/10 text-white/80 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-5">
-            Programa
-          </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight">
-            Agenda 2026
-          </h1>
-          <p className="text-lg text-white/55 max-w-xl mx-auto leading-relaxed">
-            7 – 9 de octubre de 2026 · Centro Cultural Miguel Ángel Asturias, Guatemala
+      <PageHero
+        title="Agenda del Evento"
+        subtitle={
+          <>
+            5-8 de noviembre, 2026 &bull; guatemala
+          </>
+        }
+        backgroundImage="/src/assets/slider/AL-46.png"
+        icon={<img src="/src/assets/iconos/AL-36.png" alt="" className="h-20 w-20 object-contain" />}
+      />
+
+      <Section bgColor="gray" className="py-16 md:py-24">
+        <div className="mx-auto max-w-4xl rounded-lg bg-white px-6 py-12 text-center shadow-sm md:px-12 md:py-16 dark:bg-slate-900">
+          <img src="/src/assets/iconos/AL-36.png" alt="" className="mx-auto mb-5 h-14 w-14 object-contain" />
+          <h2 className="mb-7 text-3xl font-bold text-[#282456] md:text-4xl">Próximamente</h2>
+          <p className="mx-auto max-w-2xl text-base leading-relaxed text-slate-800 dark:text-slate-200">
+            Estamos trabajando en una agenda completa con sesiones increíbles, talleres prácticos,
+            paneles de discusión y oportunidades de networking.
           </p>
-        </div>
-      </div>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-800 dark:text-slate-200">
+            La agenda detallada será publicada en las próximas semanas.
+          </p>
 
-      <Section bgColor="white">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-3 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/40 rounded-2xl px-6 py-4 mb-10">
-            <Clock size={20} className="text-amber-600 dark:text-amber-400 flex-shrink-0" />
-            <p className="text-amber-800 dark:text-amber-300 text-sm font-medium">
-              La agenda completa se publicará próximamente. Suscríbete para recibir novedades.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-3 gap-4 mb-14">
-            {[
-              { day: 'Día 1', label: 'Miércoles 7 oct', type: 'ABRELATAM', desc: 'Desconferencia comunitaria, agenda colaborativa' },
-              { day: 'Día 2', label: 'Jueves 8 oct', type: 'CONDATOS', desc: 'Conferencia regional, paneles y sesiones' },
-              { day: 'Día 3', label: 'Viernes 9 oct', type: 'CONDATOS', desc: 'Talleres, workshops y networking' },
-            ].map(({ day, label, type, desc }) => (
-              <div key={day} className="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-5 border border-slate-100 dark:border-slate-700/40 text-left">
-                <div className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">{day}</div>
-                <div className="font-bold text-slate-900 dark:text-white text-sm mb-1">{label}</div>
-                <div className="inline-block bg-blue-100 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 text-xs font-semibold px-2 py-0.5 rounded-md mb-2">{type}</div>
-                <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">{desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-8">¿Qué puedes esperar?</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {expectedContent.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex flex-col items-center gap-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl p-5 border border-slate-100 dark:border-slate-700/40">
-                <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-950/50 flex items-center justify-center">
-                  <Icon size={20} className="text-blue-600 dark:text-blue-400" />
+          <div className="mx-auto mt-12 max-w-3xl rounded-lg bg-slate-50 px-6 py-8 text-left dark:bg-slate-800">
+            <h3 className="mb-5 text-center text-lg font-bold text-slate-900 dark:text-white">Lo que puedes esperar:</h3>
+            <div className="grid gap-x-12 gap-y-4 md:grid-cols-2">
+              {[
+                'Ponencias magistrales de expertos internacionales',
+                'Talleres prácticos y técnicos',
+                'Paneles de discusión sobre datos abiertos',
+                'Sesiones de networking',
+                'Hackaton y presentaciones de proyectos',
+                'Eventos sociales y culturales',
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-500" />
+                  <span>{item}</span>
                 </div>
-                <span className="text-sm font-medium text-slate-700 dark:text-slate-300 text-center">{label}</span>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-2 md:px-20">
+            <Link to={ROUTES.CONVOCATORIAS}>
+              <button className="w-full rounded-md bg-[#1f7dbd] px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-[#1769a3]">
+                Recibir actualizaciones
+              </button>
+            </Link>
+            <a
+              href="mailto:contacto@abrelatam2026.org"
+              className="rounded-md border border-[#1f7dbd] px-6 py-3.5 text-sm font-medium text-[#1f7dbd] transition-colors hover:bg-blue-50"
+            >
+              Contactar al equipo
+            </a>
           </div>
         </div>
       </Section>
 
-      <section className="py-14 bg-blue-600">
-        <div className="container mx-auto px-4 md:px-6 max-w-3xl text-center">
-          <Bell size={32} className="mx-auto text-white/70 mb-4" />
-          <h2 className="text-2xl font-bold text-white mb-3">Sé el primero en saber</h2>
-          <p className="text-white/70 text-sm mb-6">Regístrate para recibir la agenda tan pronto esté disponible.</p>
+      <section className="bg-white px-4 py-16 md:py-24 dark:bg-slate-950">
+        <div className="mx-auto max-w-6xl rounded-lg bg-slate-100 px-6 py-14 text-center md:px-12 dark:bg-slate-900">
+          <h2 className="mb-3 text-2xl font-bold text-[#10184a] md:text-3xl">¿Quieres proponer una sesión?</h2>
+          <p className="mx-auto mb-7 max-w-2xl text-base leading-snug text-[#10184a] dark:text-slate-200">
+            Las convocatorias para proponer ponencias, talleres y side events estarán abiertas
+            próximamente. Suscríbete a nuestro newsletter para recibir notificaciones cuando
+            se abra el proceso.
+          </p>
           <Link to={ROUTES.CONVOCATORIAS}>
-            <button className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-0.5">
-              Registrarme al evento
+            <button className="min-w-64 rounded-md bg-[#1f7dbd] px-8 py-4 text-sm font-medium text-white transition-colors hover:bg-[#1769a3]">
+              Ver convocatorias
             </button>
           </Link>
         </div>
