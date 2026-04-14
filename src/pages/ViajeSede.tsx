@@ -1,7 +1,5 @@
-import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
-import { ROUTES } from '../router/routes';
 
 export default function ViajeSede() {
   return (
@@ -160,19 +158,6 @@ export default function ViajeSede() {
       </section>
 
 
-      <section className="bg-white px-4 py-16 md:py-20 dark:bg-slate-950">
-        <div className="mx-auto max-w-5xl rounded-lg bg-slate-100 px-6 py-12 text-center dark:bg-slate-900">
-          <h2 className="mb-4 text-2xl font-bold text-[#10184a] md:text-3xl">¿Necesitas apoyo económico para el viaje?</h2>
-          <p className="mx-auto mb-8 max-w-lg text-sm leading-snug text-[#10184a] dark:text-slate-300">
-            Contamos con un programa de becas que incluye apoyo para transporte y alojamiento.
-          </p>
-          <Link to={ROUTES.BECAS}>
-            <button className="min-w-60 rounded-md bg-[#1f7dbd] px-8 py-3.5 text-sm font-medium text-white transition-colors hover:bg-[#1769a3]">
-              Ver programa de becas
-            </button>
-          </Link>
-        </div>
-      </section>
     </>
   );
 }

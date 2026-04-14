@@ -21,11 +21,8 @@ const links: { to: string; labelKey: string }[] = [
 ];
 
 const secondaryLinks: { to: string; labelKey: string }[] = [
-  { to: ROUTES.BECAS, labelKey: 'nav.scholarships' },
-  { to: ROUTES.COMUNIDAD, labelKey: 'nav.community' },
   { to: ROUTES.CODIGO_CONDUCTA, labelKey: 'nav.codeOfConduct' },
   { to: ROUTES.PRENSA, labelKey: 'nav.press' },
-  { to: ROUTES.ALIADOS, labelKey: 'nav.partners' },
   { to: ROUTES.CONTACTO, labelKey: 'nav.contact' },
 ];
 

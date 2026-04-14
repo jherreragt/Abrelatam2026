@@ -8,11 +8,8 @@ import Agenda from './pages/Agenda';
 import Convocatorias from './pages/Convocatorias';
 import SideEvents from './pages/SideEvents';
 import ViajeSede from './pages/ViajeSede';
-import Becas from './pages/Becas';
-import Comunidad from './pages/Comunidad';
 import CodigoConducta from './pages/CodigoConducta';
 import Prensa from './pages/Prensa';
-import Aliados from './pages/Aliados';
 import Contacto from './pages/Contacto';
 import Noticias from './pages/Noticias';
 import BlogDetail from './pages/BlogDetail';
@@ -30,11 +27,8 @@ export default function App() {
             <Route path={ROUTES.CONVOCATORIAS} element={<Convocatorias />} />
             <Route path={ROUTES.SIDE_EVENTS} element={<SideEvents />} />
             <Route path={ROUTES.VIAJE_SEDE} element={<ViajeSede />} />
-            <Route path={ROUTES.BECAS} element={<Becas />} />
-            <Route path={ROUTES.COMUNIDAD} element={<Comunidad />} />
             <Route path={ROUTES.CODIGO_CONDUCTA} element={<CodigoConducta />} />
             <Route path={ROUTES.PRENSA} element={<Prensa />} />
-            <Route path={ROUTES.ALIADOS} element={<Aliados />} />
             <Route path={ROUTES.CONTACTO} element={<Contacto />} />
             <Route path={ROUTES.NOTICIAS} element={<Noticias />} />
             <Route path={ROUTES.BLOG_DETAIL} element={<BlogDetail />} />

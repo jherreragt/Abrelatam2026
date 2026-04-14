@@ -89,7 +89,7 @@ export default function Footer() {
                   { to: ROUTES.SOBRE, label: t('footer.aboutEvent') },
                   { to: ROUTES.AGENDA, label: t('nav.agenda') },
                   { to: ROUTES.CONVOCATORIAS, label: t('nav.calls') },
-                  { to: ROUTES.BECAS, label: t('nav.scholarships') },
+                  { to: ROUTES.PRENSA, label: t('nav.press') },
                 ].map(({ to, label }) => (
                   <li key={to}>
                     <Link to={to} className="transition-colors hover:text-[#262460]">
