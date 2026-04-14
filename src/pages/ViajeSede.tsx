@@ -1,119 +1,176 @@
 import { Link } from 'react-router-dom';
-import { Plane, Car, MapPin, Hotel, Cloud, DollarSign, MessageCircle, Shield, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import PageHero from '../components/PageHero';
 import { ROUTES } from '../router/routes';
-
-const arrival = [
-  { icon: Plane, title: 'Vuelo internacional', desc: 'El Aeropuerto Internacional La Aurora (GUA) tiene conexiones directas con toda América Latina y varias ciudades de EE.UU. y Europa.', color: 'blue' },
-  { icon: Car, title: 'Renta de vehículo', desc: 'Todas las principales empresas de renta de autos están disponibles en el aeropuerto. El traslado al centro es de aprox. 20 minutos.', color: 'emerald' },
-  { icon: MapPin, title: 'Desde Centroamérica', desc: 'Accesible por bus desde México, El Salvador, Honduras, Belize y Costa Rica. Múltiples compañías ofrecen servicio directo a Guatemala City.', color: 'amber' },
-  { icon: MessageCircle, title: 'Visas y documentos', desc: 'Muchos países de América Latina no necesitan visa para Guatemala. Consulta con tu embajada con al menos 60 días de anticipación.', color: 'rose' },
-];
-
-const zones = [
-  { name: 'Zona 1 – Centro histórico', desc: 'Caminando al venue. Opciones más económicas.', price: 'USD 30–80/noche' },
-  { name: 'Zona 10 – Zona Viva', desc: 'Barrio moderno, restaurantes y vida nocturna.', price: 'USD 70–200/noche' },
-  { name: 'Zona 13 – Aeropuerto', desc: 'Práctico si llegas tarde o sales muy temprano.', price: 'USD 50–120/noche' },
-];
-
-const info = [
-  { icon: Cloud, title: 'Clima', desc: 'Octubre es temporada de lluvia. Trae ropa ligera y un impermeable. Temperatura promedio: 18–24°C.' },
-  { icon: DollarSign, title: 'Moneda', desc: 'Quetzal guatemalteco (GTQ). 1 USD ≈ 7.7 GTQ. Se aceptan dólares en hoteles y restaurantes turísticos.' },
-  { icon: MessageCircle, title: 'Idioma', desc: 'El español es el idioma oficial. El inglés se habla en hoteles y zonas turísticas.' },
-  { icon: Shield, title: 'Seguridad', desc: 'Usa transporte oficial o ridesharing (Uber). Evita zonas poco frecuentadas de noche.' },
-];
-
-const colorMap: Record<string, string> = {
-  blue: 'bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400',
-  emerald: 'bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400',
-  amber: 'bg-amber-50 dark:bg-amber-950/30 text-amber-600 dark:text-amber-400',
-  rose: 'bg-rose-50 dark:bg-rose-950/30 text-rose-600 dark:text-rose-400',
-};
 
 export default function ViajeSede() {
   return (
     <>
-      <div className="relative bg-gradient-to-br from-teal-600 via-cyan-700 to-slate-900 pt-36 pb-20 overflow-hidden">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none" />
-        <div className="relative container mx-auto px-4 md:px-6 max-w-7xl text-center">
-          <span className="inline-block bg-white/15 text-white/90 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-5">
-            Logística
-          </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight">
-            Viaje y sede
-          </h1>
-          <p className="text-lg text-white/60 max-w-2xl mx-auto leading-relaxed">
-            Todo lo que necesitas saber para llegar y disfrutar ABRELATAM / CONDATOS 2026 en Guatemala.
-          </p>
-        </div>
-      </div>
+      <PageHero
+        title="Viaje y Sede"
+        subtitle="Todo lo que necesitas saber para planificar tu viaje a Ciudad de Guatemala"
+        backgroundImage="/src/assets/slider/AL-49.png"
+        icon={<img src="/src/assets/iconos/AL-39.png" alt="" className="h-20 w-20 object-contain" />}
+      />
 
       <section className="py-20 md:py-28 bg-white dark:bg-slate-900">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-          <div className="text-center mb-14">
-            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-blue-500 mb-3">Cómo llegar</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Acceso a Guatemala</h2>
+          <div className="mx-auto mb-20 max-w-5xl">
+            <h2 className="mb-10 text-3xl font-bold text-[#10184a] md:text-4xl">Sede del evento</h2>
+            <div className="max-w-4xl space-y-6 text-base leading-relaxed text-slate-800 dark:text-slate-200">
+              <p>
+                ABRELATAM / CONDATOS 2026 se realizará en Ciudad de Guatemala, un punto de encuentro regional con
+                conexiones aéreas directas y una oferta cultural activa para recibir a la comunidad de datos abiertos.
+              </p>
+              <p>
+                La sede principal será el Centro Cultural Miguel Ángel Asturias, un espacio emblemático ubicado en el
+                corazón de la ciudad. Próximamente compartiremos información detallada sobre accesos, horarios,
+                recomendaciones de transporte y servicios disponibles durante el evento.
+              </p>
+            </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto mb-20">
-            {arrival.map(({ icon: Icon, title, desc, color }) => (
-              <div key={title} className="bg-white dark:bg-slate-800/70 rounded-2xl p-6 border border-slate-100 dark:border-slate-700/40 card-glow flex gap-4">
-                <div className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 ${colorMap[color]}`}>
-                  <Icon size={22} />
+        </div>
+      </section>
+
+      <section className="bg-slate-100 px-4 py-16 md:py-20 dark:bg-slate-950">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="mb-10 text-center text-2xl font-bold text-[#10184a] md:text-3xl">¿Cómo llegar?</h2>
+          <div className="grid gap-8 md:grid-cols-2">
+            {[
+              {
+                icon: '/src/assets/iconos/AL-32.png',
+                title: 'Por avión',
+                desc: 'El Aeropuerto Internacional La Aurora (GUA) está ubicado a solo 15 minutos del centro de convenciones. Tiene conexiones directas con las principales ciudades de América Latina, Estados Unidos y Europa.',
+                noteTitle: 'Principales aerolíneas:',
+                note: 'Copa Airlines, Avianca, Aeroméxico, United, Delta, American Airlines',
+              },
+              {
+                icon: '/src/assets/iconos/AL-33.png',
+                title: 'Transporte local',
+                desc: 'El Aeropuerto Internacional La Aurora (GUA) está ubicado a solo 15 minutos del centro de convenciones. Tiene conexiones directas con las principales ciudades de América Latina, Estados Unidos y Europa.',
+                noteTitle: 'Principales opciones:',
+                note: 'Taxis autorizados, transporte privado, shuttles y servicios por aplicación',
+              },
+              {
+                icon: '/src/assets/iconos/AL-35.png',
+                title: 'Desde Centroamérica',
+                desc: 'El Aeropuerto Internacional La Aurora (GUA) está ubicado a solo 15 minutos del centro de convenciones. Tiene conexiones directas con las principales ciudades de América Latina, Estados Unidos y Europa.',
+                noteTitle: 'Principales rutas:',
+                note: 'Conexiones terrestres desde México, El Salvador, Honduras y Belice',
+              },
+              {
+                icon: '/src/assets/iconos/AL-24.png',
+                title: 'Requisitos de entrada',
+                desc: 'El Aeropuerto Internacional La Aurora (GUA) está ubicado a solo 15 minutos del centro de convenciones. Tiene conexiones directas con las principales ciudades de América Latina, Estados Unidos y Europa.',
+                noteTitle: 'Recomendación:',
+                note: 'Consulta los requisitos migratorios con anticipación según tu país de origen',
+              },
+            ].map((item) => (
+              <article key={item.title} className="rounded-lg bg-white px-8 py-8 shadow-sm dark:bg-slate-900">
+                <img src={item.icon} alt="" className="mb-5 h-12 w-12 object-contain" />
+                <h3 className="mb-3 text-xl font-bold text-slate-950 dark:text-white">{item.title}</h3>
+                <p className="mb-6 text-sm leading-relaxed text-slate-700 dark:text-slate-300">{item.desc}</p>
+                <div className="rounded-md bg-slate-100 px-5 py-4 text-xs leading-relaxed text-slate-800 dark:bg-slate-800 dark:text-slate-300">
+                  <strong>{item.noteTitle}</strong>
+                  <br />
+                  {item.note}
                 </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 dark:text-white mb-2">{title}</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{desc}</p>
-                </div>
-              </div>
+              </article>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="text-center mb-12">
-            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-blue-500 mb-3">Alojamiento</span>
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-3">Dónde hospedarse</h2>
-            <p className="text-slate-500 dark:text-slate-400 text-sm max-w-xl mx-auto">
-              Recomendamos reservar con anticipación. Habrá un hotel oficial anunciado próximamente.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-20">
-            {zones.map(({ name, desc, price }) => (
-              <div key={name} className="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-5 border border-slate-100 dark:border-slate-700/40">
-                <div className="flex items-center gap-2 mb-2">
-                  <Hotel size={16} className="text-blue-500 flex-shrink-0" />
-                  <h3 className="font-semibold text-slate-900 dark:text-white text-sm">{name}</h3>
-                </div>
-                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-3">{desc}</p>
-                <div className="text-xs font-bold text-emerald-600 dark:text-emerald-400">{price}</div>
+      <section className="py-20 md:py-28 bg-white dark:bg-slate-900">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+
+          <div className="mx-auto mb-20 max-w-6xl">
+            <h2 className="mb-10 text-center text-3xl font-bold text-[#10184a] md:text-4xl">Alojamiento</h2>
+            <div className="mb-8 rounded-lg bg-slate-100 px-8 py-10 dark:bg-slate-800 md:flex md:items-start md:gap-8 md:px-12">
+              <img src="/src/assets/iconos/AL-35.png" alt="" className="mb-5 h-14 w-14 object-contain md:mb-0" />
+              <div>
+                <h3 className="mb-3 text-2xl font-bold text-slate-950 dark:text-white">Hoteles con tarifa especial</h3>
+                <p className="max-w-4xl text-base leading-relaxed text-slate-900 dark:text-slate-200">
+                  Hemos negociado tarifas preferenciales con varios hoteles cercanos a la sede. Los detalles y códigos
+                  de reserva se compartirán con las personas registradas.
+                </p>
               </div>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-3">
+              {[
+                {
+                  name: 'Zona 10',
+                  desc: 'La zona más cercana al evento, con múltiples opciones de restaurantes y servicios.',
+                  range: '$50-150 USD/noche',
+                },
+                {
+                  name: 'Zona 9',
+                  desc: 'Muy cerca de la sede, con opciones más económicas y excelente ubicación.',
+                  range: '$30-80 USD/noche',
+                },
+                {
+                  name: 'Zona 1 (Centro)',
+                  desc: 'Centro histórico con opciones económicas, a 20 minutos del evento.',
+                  range: '$20-50 USD/noche',
+                },
+              ].map((zone) => (
+                <article key={zone.name} className="rounded-lg bg-slate-100 px-8 py-8 dark:bg-slate-800">
+                  <img src="/src/assets/iconos/AL-35.png" alt="" className="mb-5 h-14 w-14 object-contain" />
+                  <h3 className="mb-2 text-xl font-bold text-slate-950 dark:text-white">{zone.name}</h3>
+                  <p className="mb-6 text-sm leading-relaxed text-slate-700 dark:text-slate-300">{zone.desc}</p>
+                  <p className="text-xs font-bold text-slate-900 dark:text-slate-100">Rango: {zone.range}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section className="bg-slate-100 px-4 py-16 md:py-20 dark:bg-slate-950">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="mb-10 text-center text-3xl font-bold text-[#10184a] md:text-4xl">Información útil</h2>
+          <div className="grid gap-8 md:grid-cols-2">
+            {[
+              {
+                title: 'Clima en junio',
+                desc: 'Junio es temporada de lluvias en Guatemala. Las temperaturas son agradables (15-25°C), pero te recomendamos traer paraguas o impermeable.',
+              },
+              {
+                title: 'Moneda',
+                desc: 'La moneda oficial es el Quetzal (GTQ). Hay cajeros automáticos disponibles y se aceptan dólares estadounidenses en muchos establecimientos.',
+              },
+              {
+                title: 'Idioma',
+                desc: 'El español es el idioma oficial, pero el evento contará con traducción simultánea español-inglés-portugués en las sesiones plenarias.',
+              },
+              {
+                title: 'Seguridad',
+                desc: 'Como en cualquier ciudad grande, recomendamos tomar precauciones básicas. Las zonas del evento y hoteles cercanos son seguras y bien vigiladas.',
+              },
+            ].map((item) => (
+              <article key={item.title} className="rounded-lg bg-white px-10 py-12 dark:bg-slate-900">
+                <h3 className="mb-3 text-xl font-bold text-slate-950 dark:text-white">{item.title}</h3>
+                <p className="text-base leading-snug text-slate-700 dark:text-slate-300">{item.desc}</p>
+              </article>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="text-center mb-12">
-            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-blue-500 mb-3">Tips</span>
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Información útil</h2>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-16">
-            {info.map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="flex items-start gap-4 bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-5 border border-slate-100 dark:border-slate-700/40">
-                <div className="w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-950/30 flex items-center justify-center flex-shrink-0">
-                  <Icon size={18} className="text-blue-600 dark:text-blue-400" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-slate-900 dark:text-white text-sm mb-1">{title}</h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">{desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
 
-          <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/30 rounded-2xl p-7 max-w-3xl mx-auto text-center">
-            <h3 className="font-bold text-slate-900 dark:text-white mb-2">¿Necesitas apoyo económico para el viaje?</h3>
-            <p className="text-sm text-slate-600 dark:text-slate-400 mb-5">
-              Contamos con un programa de becas que incluye apoyo para transporte y alojamiento.
-            </p>
-            <Link to={ROUTES.BECAS} className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all hover:-translate-y-0.5">
-              Ver programa de becas <ArrowRight size={15} />
-            </Link>
-          </div>
+      <section className="bg-white px-4 py-16 md:py-20 dark:bg-slate-950">
+        <div className="mx-auto max-w-5xl rounded-lg bg-slate-100 px-6 py-12 text-center dark:bg-slate-900">
+          <h2 className="mb-4 text-2xl font-bold text-[#10184a] md:text-3xl">¿Necesitas apoyo económico para el viaje?</h2>
+          <p className="mx-auto mb-8 max-w-lg text-sm leading-snug text-[#10184a] dark:text-slate-300">
+            Contamos con un programa de becas que incluye apoyo para transporte y alojamiento.
+          </p>
+          <Link to={ROUTES.BECAS}>
+            <button className="min-w-60 rounded-md bg-[#1f7dbd] px-8 py-3.5 text-sm font-medium text-white transition-colors hover:bg-[#1769a3]">
+              Ver programa de becas
+            </button>
+          </Link>
         </div>
       </section>
     </>
