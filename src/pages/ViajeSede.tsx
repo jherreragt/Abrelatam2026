@@ -1,5 +1,5 @@
+import { ArrowRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
-import { assetPath } from '../lib/assetPath';
 
 export default function ViajeSede() {
   return (
@@ -7,8 +7,8 @@ export default function ViajeSede() {
       <PageHero
         title="Datos útiles y logística"
         subtitle="Todo lo que necesitas saber para planificar tu viaje a Ciudad de Guatemala"
-        backgroundImage={assetPath('slider/AL-49.png')}
-        icon={<img src={assetPath('iconos/AL-39.png')} alt="" className="h-20 w-20 object-contain" />}
+        backgroundImage="/src/assets/slider/AL-49.png"
+        icon={<img src="/src/assets/iconos/AL-39.png" alt="" className="h-20 w-20 object-contain" />}
       />
 
       <section className="py-20 md:py-28 bg-white dark:bg-slate-900">
@@ -36,28 +36,28 @@ export default function ViajeSede() {
           <div className="grid gap-8 md:grid-cols-2">
             {[
               {
-                icon: assetPath('iconos/AL-32.png'),
+                icon: '/src/assets/iconos/AL-32.png',
                 title: 'Por avión',
                 desc: 'El Aeropuerto Internacional La Aurora (GUA) está ubicado a solo 15 minutos del centro de convenciones. Tiene conexiones directas con las principales ciudades de América Latina, Estados Unidos y Europa.',
                 noteTitle: 'Principales aerolíneas:',
                 note: 'Copa Airlines, Avianca, Aeroméxico, United, Delta, American Airlines',
               },
               {
-                icon: assetPath('iconos/AL-33.png'),
+                icon: '/src/assets/iconos/AL-33.png',
                 title: 'Transporte local',
                 desc: 'El Aeropuerto Internacional La Aurora (GUA) está ubicado a solo 15 minutos del centro de convenciones. Tiene conexiones directas con las principales ciudades de América Latina, Estados Unidos y Europa.',
                 noteTitle: 'Principales opciones:',
                 note: 'Taxis autorizados, transporte privado, shuttles y servicios por aplicación',
               },
               {
-                icon: assetPath('iconos/AL-35.png'),
+                icon: '/src/assets/iconos/AL-35.png',
                 title: 'Desde Centroamérica',
                 desc: 'El Aeropuerto Internacional La Aurora (GUA) está ubicado a solo 15 minutos del centro de convenciones. Tiene conexiones directas con las principales ciudades de América Latina, Estados Unidos y Europa.',
                 noteTitle: 'Principales rutas:',
                 note: 'Conexiones terrestres desde México, El Salvador, Honduras y Belice',
               },
               {
-                icon: assetPath('iconos/AL-24.png'),
+                icon: '/src/assets/iconos/AL-24.png',
                 title: 'Requisitos de entrada',
                 desc: 'El Aeropuerto Internacional La Aurora (GUA) está ubicado a solo 15 minutos del centro de convenciones. Tiene conexiones directas con las principales ciudades de América Latina, Estados Unidos y Europa.',
                 noteTitle: 'Recomendación:',
@@ -85,7 +85,7 @@ export default function ViajeSede() {
           <div className="mx-auto mb-20 max-w-6xl">
             <h2 className="mb-10 text-center text-3xl font-bold text-[#10184a] md:text-4xl">Alojamiento</h2>
             <div className="mb-8 rounded-lg bg-slate-100 px-8 py-10 dark:bg-slate-800 md:flex md:items-start md:gap-8 md:px-12">
-              <img src={assetPath('iconos/AL-35.png')} alt="" className="mb-5 h-14 w-14 object-contain md:mb-0" />
+              <img src="/src/assets/iconos/AL-35.png" alt="" className="mb-5 h-14 w-14 object-contain md:mb-0" />
               <div>
                 <h3 className="mb-3 text-2xl font-bold text-slate-950 dark:text-white">Hoteles con tarifa especial</h3>
                 <p className="max-w-4xl text-base leading-relaxed text-slate-900 dark:text-slate-200">
@@ -114,7 +114,7 @@ export default function ViajeSede() {
                 },
               ].map((zone) => (
                 <article key={zone.name} className="rounded-lg bg-slate-100 px-8 py-8 dark:bg-slate-800">
-                  <img src={assetPath('iconos/AL-35.png')} alt="" className="mb-5 h-14 w-14 object-contain" />
+                  <img src="/src/assets/iconos/AL-35.png" alt="" className="mb-5 h-14 w-14 object-contain" />
                   <h3 className="mb-2 text-xl font-bold text-slate-950 dark:text-white">{zone.name}</h3>
                   <p className="mb-6 text-sm leading-relaxed text-slate-700 dark:text-slate-300">{zone.desc}</p>
                   <p className="text-xs font-bold text-slate-900 dark:text-slate-100">Rango: {zone.range}</p>

@@ -5,14 +5,13 @@ import HeroSlider from '../components/HeroSlider';
 import BlogCard from '../components/BlogCard';
 import { getRecentPosts } from '../data/blogPosts';
 import { ROUTES } from '../router/routes';
-import { assetPath } from '../lib/assetPath';
 
 const thematicIcons = [
-  assetPath('iconos/AL-17.png'),
-  assetPath('iconos/AL-18.png'),
-  assetPath('iconos/AL-19.png'),
-  assetPath('iconos/AL-20.png'),
-  assetPath('iconos/AL-21.png'),
+  '/src/assets/iconos/AL-17.png',
+  '/src/assets/iconos/AL-18.png',
+  '/src/assets/iconos/AL-19.png',
+  '/src/assets/iconos/AL-20.png',
+  '/src/assets/iconos/AL-21.png',
 ];
 
 export default function Home() {
@@ -146,7 +145,7 @@ export default function Home() {
       <section className="bg-white dark:bg-slate-950">
         <div className="relative overflow-hidden bg-[#2377b9]">
           <img
-            src={assetPath('slider/AL-58.png')}
+            src="/src/assets/slider/AL-58.png"
             alt=""
             className="absolute inset-0 h-full w-full object-cover object-center opacity-90"
           />

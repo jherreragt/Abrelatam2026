@@ -1,25 +1,24 @@
 import Section from '../components/Section';
 import PageHero from '../components/PageHero';
-import { assetPath } from '../lib/assetPath';
 
 const objectives = [
   {
-    icon: assetPath('iconos/AL-29.png'),
+    icon: '/src/assets/iconos/AL-29.png',
     title: 'Fortalecer capacidades',
     desc: 'Ofrecer espacios de formacion y capacitacion en herramientas, metodologias y mejores practicas para trabajar con datos abiertos, tanto desde la sociedad civil como desde el gobierno.',
   },
   {
-    icon: assetPath('iconos/AL-24.png'),
+    icon: '/src/assets/iconos/AL-24.png',
     title: 'Construir comunidad',
     desc: 'Facilitar el encuentro entre personas y organizaciones que trabajan en datos abiertos para fortalecer redes de colaboracion regional y compartir experiencias exitosas.',
   },
   {
-    icon: assetPath('iconos/AL-25.png'),
+    icon: '/src/assets/iconos/AL-25.png',
     title: 'Impulsar politicas publicas',
     desc: 'Ofrecer espacios de formacion y capacitacion en herramientas, metodologias y mejores practicas para trabajar con datos abiertos, tanto desde la sociedad civil como desde el gobierno.',
   },
   {
-    icon: assetPath('iconos/AL-23.png'),
+    icon: '/src/assets/iconos/AL-23.png',
     title: 'Inspirar innovacion',
     desc: 'Facilitar el encuentro entre personas y organizaciones que trabajan en datos abiertos para fortalecer redes de colaboracion regional y compartir experiencias exitosas.',
   },
@@ -31,7 +30,7 @@ export default function Sobre() {
       <PageHero
         title="Sobre ABRELATAM / CONDATOS 2026"
         subtitle="Dos conferencias, un mismo objetivo: transformar America Latina a traves de datos abiertos"
-        backgroundImage={assetPath('slider/AL-45.png')}
+        backgroundImage="/src/assets/slider/AL-45.png"
       />
 
       <Section bgColor="white" className="py-24 md:py-32">
