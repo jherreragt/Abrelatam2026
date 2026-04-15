@@ -1,8 +1,11 @@
-const assets = import.meta.glob<string>('../assets/**/*', {
+const assets = import.meta.glob<string>(
+  ['../assets/iconos/*', '../assets/logos/*', '../assets/slider/*', '../assets/IMAGEN.png'],
+  {
   eager: true,
   import: 'default',
   query: '?url',
-});
+  },
+);
 
 export function assetPath(path: string) {
   const asset = assets[`../assets/${path}`];
