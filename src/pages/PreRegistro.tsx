@@ -61,7 +61,7 @@ export default function PreRegistro() {
                 Completa el formulario
               </h2>
               <p className="text-slate-500 dark:text-slate-400 text-sm">
-                Ciudad de Guatemala &mdash; 25 al 28 de junio, 2026
+                Ciudad de Guatemala &mdash; 7 al 9 de Octubre, 2026
               </p>
             </div>
 
