@@ -138,14 +138,19 @@ export default function Sobre() {
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { year: '2013', city: 'Montevideo' },
-              { year: '2014', city: 'Mexico DF' },
-              { year: '2015', city: 'Santiago' },
-              { year: '2016', city: 'San Jose' },
-              { year: '2013', city: 'Montevideo' },
-              { year: '2014', city: 'Mexico DF' },
-              { year: '2015', city: 'Santiago' },
-              { year: '2016', city: 'San Jose' },
+              { year: '2013', city: 'Uruguay' },
+              { year: '2014', city: 'México' },
+              { year: '2015', city: 'Chile' },
+              { year: '2016', city: 'Colombia' },
+              { year: '2017', city: 'Costa Rica' },
+              { year: '2018', city: 'Argentina' },
+              { year: '2019', city: 'Ecuador' },
+              { year: '2020', city: 'Desde casa' },
+              { year: '2021', city: 'Futuros' },
+              { year: '2022', city: 'Dominicana' },
+              { year: '2023', city: 'Uruguay' },
+              { year: '2024', city: 'Brasil' },
+              { year: '2025', city: 'Bolivia' },
             ].map(({ year, city }, index) => (
               <article key={`${year}-${city}-${index}`} className="rounded-lg bg-white px-8 py-10">
                 <h3 className="text-xl font-bold leading-tight text-[#262460]">
