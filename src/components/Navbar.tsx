@@ -5,6 +5,7 @@ import { useTheme } from '../context/ThemeContext';
 import { useLanguage } from '../context/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
 import { ROUTES } from '../router/routes';
+import { assetPath } from '../lib/assetPath';
 
 interface NavbarProps {
   scrolled: boolean;
@@ -216,23 +217,24 @@ export default function Navbar({ scrolled }: NavbarProps) {
       </nav>
 
       {isOpen && (
-        <div className="fixed inset-0 z-40 lg:hidden" onClick={() => setIsOpen(false)}>
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+        <div className="fixed inset-0 z-[60] lg:hidden" onClick={() => setIsOpen(false)}>
+          <div className="absolute inset-0 z-0 bg-black/60 backdrop-blur-sm" />
           <div
-            className="absolute top-0 right-0 bottom-0 w-80 bg-white dark:bg-slate-900 shadow-2xl flex flex-col animate-slideInRight"
+            className="absolute top-0 right-0 bottom-0 z-10 w-[min(20rem,calc(100vw-4rem))] bg-white dark:bg-slate-900 shadow-2xl flex flex-col animate-slideInRight"
             onClick={e => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between px-5 pt-6 pb-4 border-b border-slate-100 dark:border-slate-800">
+            <div className="flex items-center justify-between gap-4 px-5 pt-8 pb-4 border-b border-slate-100 dark:border-slate-800">
               <img
-                src="https://2023.abrelatam.org/wp-content/uploads/2023/03/Condatos-Negativotrue@2x.svg"
-                alt="CONDATOS"
-                className="h-8 w-auto dark:invert"
+                src={assetPath('logos/AL-10.png')}
+                alt="ABRELATAM CONDATOS"
+                className="h-10 w-auto"
               />
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-2 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                className="relative z-20 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg text-slate-500 hover:text-slate-700 dark:text-slate-300 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                aria-label="Cerrar menú"
               >
-                <X size={20} />
+                <X size={24} />
               </button>
             </div>
             <nav className="flex-1 overflow-y-auto py-4 px-3 space-y-0.5">

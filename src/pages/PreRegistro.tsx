@@ -1,7 +1,7 @@
 import { ClipboardList, CheckCircle2, Users, Globe } from 'lucide-react';
 
 const GOOGLE_FORM_URL =
-  'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true';
+  'https://forms.gle/hdhZaoH6aM11TKX16';
 
 const benefits = [
   {
@@ -94,6 +94,16 @@ export default function PreRegistro() {
 
             <p className="text-center text-xs text-slate-400 dark:text-slate-600 mt-4">
               Al enviar este formulario aceptas recibir comunicaciones sobre el evento. Puedes darte de baja en cualquier momento.
+            </p>
+            <p className="mt-3 text-center text-sm">
+              <a
+                href={GOOGLE_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-[#2377b9] hover:text-[#262460]"
+              >
+                Abrir formulario en una pestaña nueva
+              </a>
             </p>
           </div>
         </div>

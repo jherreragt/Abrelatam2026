@@ -3,19 +3,14 @@ import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Send, Twitter, Youtube } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { ROUTES } from '../router/routes';
-import footerLogo from '../assets/logos/AL-10.png';
-import orgLogo1 from '../assets/logos/AL-51.png';
-import orgLogo2 from '../assets/logos/AL-52.png';
-import orgLogo3 from '../assets/logos/AL-53.png';
-import orgLogo4 from '../assets/logos/AL-54.png';
-import orgLogo5 from '../assets/logos/AL-55.png';
+import { assetPath } from '../lib/assetPath';
 
 const organizerLogos = [
-  { src: orgLogo1, alt: 'Organizador 1' },
-  { src: orgLogo2, alt: 'Organizador 2' },
-  { src: orgLogo3, alt: 'Red Ciudadana' },
-  { src: orgLogo4, alt: 'Hivos' },
-  { src: orgLogo5, alt: 'OEA' },
+  { src: assetPath('logos/AL-51.png'), alt: 'Organizador 1' },
+  { src: assetPath('logos/AL-52.png'), alt: 'Organizador 2' },
+  { src: assetPath('logos/AL-53.png'), alt: 'Red Ciudadana' },
+  { src: assetPath('logos/AL-54.png'), alt: 'Hivos' },
+  { src: assetPath('logos/AL-55.png'), alt: 'OEA' },
 ];
 
 export default function Footer() {
@@ -56,7 +51,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-4">
               <img
-                src={footerLogo}
+                src={assetPath('logos/AL-10.png')}
                 alt="ABRELATAM CONDATOS"
                 className="mb-8 h-auto w-64 max-w-full object-contain"
               />

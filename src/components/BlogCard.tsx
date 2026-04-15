@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { BlogPost } from '../data/blogPosts';
-import newsPlaceholder from '../assets/IMAGEN.png';
+import { assetPath } from '../lib/assetPath';
 
 interface BlogCardProps {
   post: BlogPost;
@@ -19,7 +19,7 @@ export default function BlogCard({ post }: BlogCardProps) {
     >
       <div className="h-44 overflow-hidden">
         <img
-          src={newsPlaceholder}
+          src={assetPath('IMAGEN.png')}
           alt={post.title}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
