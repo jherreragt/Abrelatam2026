@@ -1,26 +1,27 @@
 import PageHero from '../components/PageHero';
+import { assetPath } from '../lib/assetPath';
 
 const calls = [
   {
-    icon: '/src/assets/iconos/AL-27.png',
+    icon: assetPath('iconos/AL-27.png'),
     title: 'Ponencias y presentaciones',
     desc: 'Comparte tu experiencia, investigación o proyecto en una sesión de 20 minutos. Buscamos casos de éxito, lecciones aprendidas y propuestas innovadoras en datos abiertos.',
     deadline: 'Febrero 2026',
   },
   {
-    icon: '/src/assets/iconos/AL-28.png',
+    icon: assetPath('iconos/AL-28.png'),
     title: 'Talleres prácticos',
     desc: 'Propone espacios de aprendizaje aplicado para compartir herramientas, metodologías y habilidades útiles para la comunidad.',
     deadline: 'Febrero 2026',
   },
   {
-    icon: '/src/assets/iconos/AL-29.png',
+    icon: assetPath('iconos/AL-29.png'),
     title: 'Paneles de discusión',
     desc: 'Reúne voces diversas para conversar sobre desafíos, oportunidades y aprendizajes alrededor de los datos abiertos en la región.',
     deadline: 'Febrero 2026',
   },
   {
-    icon: '/src/assets/iconos/AL-31.png',
+    icon: assetPath('iconos/AL-31.png'),
     title: 'Side events',
     desc: 'Organiza encuentros, demos, laboratorios o actividades paralelas que conecten a personas y organizaciones de la comunidad.',
     deadline: 'Febrero 2026',
@@ -33,8 +34,8 @@ export default function Convocatorias() {
       <PageHero
         title="Convocatorias"
         subtitle="Múltiples formas de participar y contribuir al evento más importante de datos abiertos en la región"
-        backgroundImage="/src/assets/slider/AL-47.png"
-        icon={<img src="/src/assets/iconos/AL-37.png" alt="" className="h-20 w-20 object-contain" />}
+        backgroundImage={assetPath('slider/AL-47.png')}
+        icon={<img src={assetPath('iconos/AL-37.png')} alt="" className="h-20 w-20 object-contain" />}
       />
 
       <section className="bg-slate-100 px-4 py-16 md:py-20 dark:bg-slate-950">

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Section from '../components/Section';
 import PageHero from '../components/PageHero';
 import { ROUTES } from '../router/routes';
+import { assetPath } from '../lib/assetPath';
 
 export default function SideEvents() {
   return (
@@ -9,8 +10,8 @@ export default function SideEvents() {
       <PageHero
         title="Side Events"
         subtitle="Espacios autorganizados por la comunidad para encuentros, talleres y actividades paralelas"
-        backgroundImage="/src/assets/slider/AL-48.png"
-        icon={<img src="/src/assets/iconos/AL-38.png" alt="" className="h-20 w-20 object-contain" />}
+        backgroundImage={assetPath('slider/AL-48.png')}
+        icon={<img src={assetPath('iconos/AL-38.png')} alt="" className="h-20 w-20 object-contain" />}
       />
 
       <Section bgColor="white" className="py-16 md:py-20">
@@ -37,17 +38,17 @@ export default function SideEvents() {
           <div className="mb-20 grid gap-6 md:grid-cols-3">
             {[
               {
-                icon: '/src/assets/iconos/AL-28.png',
+                icon: assetPath('iconos/AL-28.png'),
                 title: 'Reuniones de comunidad',
                 desc: 'Espacios para que redes, coaliciones u organizaciones se reúnan presencialmente, compartan actualizaciones y planifiquen acciones futuras.',
               },
               {
-                icon: '/src/assets/iconos/AL-29.png',
+                icon: assetPath('iconos/AL-29.png'),
                 title: 'Talleres especializados',
                 desc: 'Sesiones prácticas sobre herramientas, metodologías o enfoques específicos que requieren más tiempo que un formato regular de la agenda oficial.',
               },
               {
-                icon: '/src/assets/iconos/AL-31.png',
+                icon: assetPath('iconos/AL-31.png'),
                 title: 'Lanzamientos y demos',
                 desc: 'Presentaciones de nuevas propuestas, plataformas, investigaciones o iniciativas que quieran tener un espacio dedicado con su audiencia.',
               },
