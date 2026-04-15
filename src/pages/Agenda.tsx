@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Section from '../components/Section';
 import PageHero from '../components/PageHero';
 import { ROUTES } from '../router/routes';
+import { assetPath } from '../lib/assetPath';
 
 export default function Agenda() {
   return (
@@ -13,13 +14,13 @@ export default function Agenda() {
             5-8 de noviembre, 2026 &bull; guatemala
           </>
         }
-        backgroundImage="/src/assets/slider/AL-46.png"
-        icon={<img src="/src/assets/iconos/AL-36.png" alt="" className="h-20 w-20 object-contain" />}
+        backgroundImage={assetPath('slider/AL-46.png')}
+        icon={<img src={assetPath('iconos/AL-36.png')} alt="" className="h-20 w-20 object-contain" />}
       />
 
       <Section bgColor="gray" className="py-16 md:py-24">
         <div className="mx-auto max-w-4xl rounded-lg bg-white px-6 py-12 text-center shadow-sm md:px-12 md:py-16 dark:bg-slate-900">
-          <img src="/src/assets/iconos/AL-36.png" alt="" className="mx-auto mb-5 h-14 w-14 object-contain" />
+          <img src={assetPath('iconos/AL-36.png')} alt="" className="mx-auto mb-5 h-14 w-14 object-contain" />
           <h2 className="mb-7 text-3xl font-bold text-[#282456] md:text-4xl">Próximamente</h2>
           <p className="mx-auto max-w-2xl text-base leading-relaxed text-slate-800 dark:text-slate-200">
             Estamos trabajando en una agenda completa con sesiones increíbles, talleres prácticos,
