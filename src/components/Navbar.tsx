@@ -225,7 +225,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
           >
             <div className="flex items-center justify-between gap-4 px-5 pt-8 pb-4 border-b border-slate-100 dark:border-slate-800">
               <img
-                src={assetPath('logos/Logo_Final_AbreLatam-17.png')}
+                src={assetPath('logos/Logo_Final_AbreLatam01.png')}
                 alt="ABRELATAM CONDATOS"
                 className="h-10 w-auto"
               />
