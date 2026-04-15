@@ -1,5 +1,7 @@
 import { Mail, MessageCircle, HelpCircle, ChevronDown, ChevronUp, Send, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
+import PageHero from '../components/PageHero';
+import { assetPath } from '../lib/assetPath';
 
 interface FAQ {
   question: string;
@@ -44,50 +46,41 @@ export default function Contacto() {
 
   return (
     <>
-      <div className="relative bg-gradient-to-br from-blue-600 via-cyan-700 to-slate-900 pt-36 pb-20 overflow-hidden">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none" />
-        <div className="relative container mx-auto px-4 md:px-6 max-w-7xl text-center">
-          <span className="inline-block bg-white/15 text-white/90 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-5">
-            Contacto
-          </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight">
-            Contacto y FAQ
-          </h1>
-          <p className="text-lg text-white/60 max-w-2xl mx-auto leading-relaxed">
-            ¿Tienes preguntas? Aquí encontrarás respuestas o podrás contactarnos directamente.
-          </p>
-        </div>
-      </div>
+      <PageHero
+        title="Contacto y FAQ"
+        subtitle="Tienes preguntas? Aquí encontrarás respuestas o podrás contactarnos directamente."
+        backgroundImage={assetPath('slider/AL-48.png')}
+      />
 
-      <section className="py-20 md:py-28 bg-white dark:bg-slate-900">
+      <section className="py-20 md:py-28 bg-white dark:bg-primary">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
 
           <div className="text-center mb-12">
-            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-blue-500 mb-3">FAQ</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white flex items-center justify-center gap-3">
-              <HelpCircle size={28} className="text-blue-500" />
+            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-secondary mb-3">FAQ</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white flex items-center justify-center gap-3">
+              <HelpCircle size={28} className="text-secondary" />
               Preguntas frecuentes
             </h2>
           </div>
           <div className="max-w-3xl mx-auto space-y-2 mb-24">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white dark:bg-slate-800/70 rounded-2xl border border-slate-100 dark:border-slate-700/40 overflow-hidden transition-all duration-200">
+              <div key={index} className="bg-white dark:bg-primary/80 rounded-2xl border border-primary/10 dark:border-secondary/30 overflow-hidden transition-all duration-200">
                 <button
                   onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
                   className="w-full flex items-start justify-between gap-4 text-left px-6 py-5"
                 >
-                  <h3 className="font-semibold text-slate-900 dark:text-white text-sm leading-relaxed flex-1">
+                  <h3 className="font-semibold text-primary dark:text-white text-sm leading-relaxed flex-1">
                     {faq.question}
                   </h3>
                   {openFAQ === index ? (
-                    <ChevronUp className="text-blue-500 flex-shrink-0 mt-0.5" size={18} />
+                    <ChevronUp className="text-secondary flex-shrink-0 mt-0.5" size={18} />
                   ) : (
-                    <ChevronDown className="text-slate-400 flex-shrink-0 mt-0.5" size={18} />
+                    <ChevronDown className="text-secondary/80 flex-shrink-0 mt-0.5" size={18} />
                   )}
                 </button>
                 {openFAQ === index && (
-                  <div className="px-6 pb-5 border-t border-slate-100 dark:border-slate-700/40 pt-4">
-                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <div className="px-6 pb-5 border-t border-primary/10 dark:border-secondary/30 pt-4">
+                    <p className="text-sm text-primary/70 dark:text-secondary/80 leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
@@ -99,48 +92,48 @@ export default function Contacto() {
           <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto mb-20">
             <div>
               <div className="mb-8">
-                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-blue-500 mb-3">Formulario</span>
-                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">¿No encontraste tu respuesta?</h2>
-                <p className="text-slate-500 dark:text-slate-400 text-sm mt-2">Envíanos un mensaje y te responderemos pronto.</p>
+                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-secondary mb-3">Formulario</span>
+                <h2 className="text-2xl font-bold text-primary dark:text-white">¿No encontraste tu respuesta?</h2>
+                <p className="text-secondary dark:text-secondary/80 text-sm mt-2">Envíanos un mensaje y te responderemos pronto.</p>
               </div>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                      Nombre <span className="text-red-400">*</span>
+                    <label className="block text-xs font-semibold text-primary/80 dark:text-white/80 mb-1.5">
+                      Nombre <span className="text-secondary">*</span>
                     </label>
                     <input
                       type="text"
                       value={contactData.name}
                       onChange={(e) => setContactData({ ...contactData, name: e.target.value })}
                       required
-                      className="w-full px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm outline-none transition-all"
+                      className="w-full px-4 py-2.5 border border-primary/20 dark:border-secondary/30 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
                       placeholder="Tu nombre"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                      Correo <span className="text-red-400">*</span>
+                    <label className="block text-xs font-semibold text-primary/80 dark:text-white/80 mb-1.5">
+                      Correo <span className="text-secondary">*</span>
                     </label>
                     <input
                       type="email"
                       value={contactData.email}
                       onChange={(e) => setContactData({ ...contactData, email: e.target.value })}
                       required
-                      className="w-full px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm outline-none transition-all"
+                      className="w-full px-4 py-2.5 border border-primary/20 dark:border-secondary/30 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
                       placeholder="tu@email.com"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                    Asunto <span className="text-red-400">*</span>
+                  <label className="block text-xs font-semibold text-primary/80 dark:text-white/80 mb-1.5">
+                    Asunto <span className="text-secondary">*</span>
                   </label>
                   <select
                     value={contactData.subject}
                     onChange={(e) => setContactData({ ...contactData, subject: e.target.value })}
                     required
-                    className="w-full px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm outline-none transition-all"
+                    className="w-full px-4 py-2.5 border border-primary/20 dark:border-secondary/30 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
                   >
                     <option value="">Selecciona un tema</option>
                     <option value="registro">Registro e inscripción</option>
@@ -154,15 +147,15 @@ export default function Contacto() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                    Mensaje <span className="text-red-400">*</span>
+                  <label className="block text-xs font-semibold text-primary/80 dark:text-white/80 mb-1.5">
+                    Mensaje <span className="text-secondary">*</span>
                   </label>
                   <textarea
                     value={contactData.message}
                     onChange={(e) => setContactData({ ...contactData, message: e.target.value })}
                     rows={5}
                     required
-                    className="w-full px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm outline-none transition-all resize-none"
+                    className="w-full px-4 py-2.5 border border-primary/20 dark:border-secondary/30 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all resize-none"
                     placeholder="Escribe tu mensaje aquí..."
                   />
                 </div>
@@ -170,13 +163,13 @@ export default function Contacto() {
                   <button
                     type="submit"
                     disabled={submitted}
-                    className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 disabled:bg-emerald-500 text-white px-7 py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-0.5 disabled:translate-y-0"
+                    className="inline-flex items-center gap-2 bg-primary hover:bg-secondary disabled:bg-secondary text-white px-7 py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-0.5 disabled:translate-y-0"
                   >
                     {submitted ? <CheckCircle size={16} /> : <Send size={15} />}
                     {submitted ? 'Mensaje enviado' : 'Enviar mensaje'}
                   </button>
                   {submitted && (
-                    <p className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">
+                    <p className="text-xs text-secondary dark:text-secondary font-medium">
                       Te responderemos pronto.
                     </p>
                   )}
@@ -186,25 +179,25 @@ export default function Contacto() {
 
             <div>
               <div className="mb-8">
-                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-blue-500 mb-3">Equipos</span>
-                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Contactos directos</h2>
-                <p className="text-slate-500 dark:text-slate-400 text-sm mt-2">Escríbenos directamente al equipo que corresponde.</p>
+                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-secondary mb-3">Equipos</span>
+                <h2 className="text-2xl font-bold text-primary dark:text-white">Contactos directos</h2>
+                <p className="text-secondary dark:text-secondary/80 text-sm mt-2">Escríbenos directamente al equipo que corresponde.</p>
               </div>
               <div className="space-y-3">
                 {contacts.map(({ title, desc, email }) => (
                   <a
                     key={email}
                     href={`mailto:${email}`}
-                    className="group block bg-white dark:bg-slate-800/70 rounded-2xl p-5 border border-slate-100 dark:border-slate-700/40 card-glow"
+                    className="group block bg-white dark:bg-primary/80 rounded-2xl p-5 border border-primary/10 dark:border-secondary/30 card-glow"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <h3 className="font-semibold text-slate-900 dark:text-white text-sm mb-0.5">{title}</h3>
-                        <p className="text-xs text-slate-500 dark:text-slate-400 mb-2">{desc}</p>
-                        <span className="text-xs font-medium text-blue-600 dark:text-blue-400">{email}</span>
+                        <h3 className="font-semibold text-primary dark:text-white text-sm mb-0.5">{title}</h3>
+                        <p className="text-xs text-secondary dark:text-secondary/80 mb-2">{desc}</p>
+                        <span className="text-xs font-medium text-secondary dark:text-secondary">{email}</span>
                       </div>
-                      <div className="w-8 h-8 rounded-full bg-blue-50 dark:bg-blue-950/30 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30 transition-colors">
-                        <Mail size={14} className="text-blue-500" />
+                      <div className="w-8 h-8 rounded-full bg-secondary/10 dark:bg-primary/80 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/15 dark:group-hover:bg-secondary/20 transition-colors">
+                        <Mail size={14} className="text-secondary" />
                       </div>
                     </div>
                   </a>
@@ -213,7 +206,7 @@ export default function Contacto() {
             </div>
           </div>
 
-          <div className="bg-blue-600 rounded-2xl p-8 max-w-3xl mx-auto text-center">
+          <div className="bg-primary rounded-2xl p-8 max-w-3xl mx-auto text-center">
             <MessageCircle size={28} className="mx-auto text-white/70 mb-3" />
             <h3 className="font-bold text-white text-lg mb-2">¿Prefieres hablar por WhatsApp?</h3>
             <p className="text-white/70 text-sm mb-5">Nuestro equipo está disponible de lunes a viernes, 9am–6pm (hora Guatemala).</p>
@@ -221,7 +214,7 @@ export default function Contacto() {
               href="https://wa.me/50212345678"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white text-blue-700 hover:bg-blue-50 px-7 py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-white text-primary hover:bg-secondary/10 px-7 py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-0.5"
             >
               +502 1234-5678
             </a>
@@ -231,3 +224,5 @@ export default function Contacto() {
     </>
   );
 }
+
+

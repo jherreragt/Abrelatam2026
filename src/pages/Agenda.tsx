@@ -14,8 +14,7 @@ export default function Agenda() {
             5-8 de noviembre, 2026 &bull; guatemala
           </>
         }
-        backgroundImage={assetPath('slider/AL-46.png')}
-        icon={<img src={assetPath('iconos/AL-36.png')} alt="" className="h-20 w-20 object-contain" />}
+        backgroundImage={assetPath('slider/AL-48.png')}
       />
 
       <Section bgColor="gray" className="py-16 md:py-24">

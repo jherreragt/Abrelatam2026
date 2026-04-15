@@ -1,5 +1,7 @@
 import { MapPin, Calendar, Wifi, Coffee, Users, BookOpen, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import PageHero from '../components/PageHero';
+import { assetPath } from '../lib/assetPath';
 
 const sections = [
   {
@@ -53,23 +55,11 @@ export default function GuiaParticipantes() {
 
   return (
     <>
-      <div className="relative bg-[#262460] pt-36 pb-20 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#2377b9]/30 blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-[#2377b9]/20 blur-3xl" />
-        </div>
-        <div className="relative container mx-auto px-4 md:px-6 max-w-7xl text-center">
-          <span className="inline-block bg-white/15 text-white/90 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-5">
-            Participantes
-          </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight">
-            Guia para participantes
-          </h1>
-          <p className="text-lg text-white/65 max-w-2xl mx-auto leading-relaxed">
-            Todo lo que necesitas saber para aprovechar al maximo tu experiencia en ABRELATAM / CONDATOS 2026.
-          </p>
-        </div>
-      </div>
+      <PageHero
+        title="Guía para participantes"
+        subtitle="Todo lo que necesitas saber para aprovechar al máximo tu experiencia en ABRELATAM / CONDATOS 2026."
+        backgroundImage={assetPath('slider/AL-48.png')}
+      />
 
       <section className="bg-white dark:bg-slate-900 py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">

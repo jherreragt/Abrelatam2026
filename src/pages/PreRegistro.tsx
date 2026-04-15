@@ -1,4 +1,6 @@
 import { ClipboardList, CheckCircle2, Users, Globe } from 'lucide-react';
+import PageHero from '../components/PageHero';
+import { assetPath } from '../lib/assetPath';
 
 const GOOGLE_FORM_URL =
   'https://forms.gle/hdhZaoH6aM11TKX16';
@@ -29,25 +31,11 @@ const benefits = [
 export default function PreRegistro() {
   return (
     <>
-      <div className="relative bg-[#262460] pt-36 pb-20 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#2377b9]/30 blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-[#2377b9]/20 blur-3xl" />
-        </div>
-        <div className="relative container mx-auto px-4 md:px-6 max-w-7xl text-center">
-          <span className="inline-block bg-white/15 text-white/90 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-5">
-            Pre-registro
-          </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight">
-            Registra tu interes en{' '}
-            <span className="text-[#2377b9]">ABRELATAM / CONDATOS 2026</span>
-          </h1>
-          <p className="text-lg text-white/65 max-w-2xl mx-auto leading-relaxed">
-            Completa el formulario a continuacion y te contactaremos cuando se abra el registro oficial del evento.
-          </p>
-        </div>
-      </div>
-
+      <PageHero
+        title="Pre-registro"
+        subtitle="Completa el formulario a continuación y te contactaremos cuando se abra el registro oficial del evento."
+        backgroundImage={assetPath('slider/AL-48.png')}
+      />
       <section className="bg-slate-50 dark:bg-slate-950 py-16 md:py-20">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
@@ -111,3 +99,5 @@ export default function PreRegistro() {
     </>
   );
 }
+
+
