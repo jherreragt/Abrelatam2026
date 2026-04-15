@@ -23,7 +23,7 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { labelKey: 'nav.home', external: 'https://abrelatam.redciudadana.org.gt/' },
+  { labelKey: 'nav.home', to: ROUTES.HOME },
   {
     labelKey: 'nav.event',
     dropdown: [
