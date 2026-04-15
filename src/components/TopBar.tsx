@@ -14,11 +14,11 @@ export default function TopBar({ scrolled }: TopBarProps) {
       <div className="container mx-auto px-4 md:px-6 max-w-7xl h-full">
         <div className="flex items-center justify-between h-full">
           <a
-            href="mailto:contacto@abrelatam2026.org"
+            href="mailto:abrelatam@idatosabiertos.org"
             className="flex items-center gap-2 text-white/55 hover:text-white/90 transition-colors group"
           >
             <Mail size={13} className="group-hover:text-blue-400 transition-colors" />
-            <span className="hidden sm:inline text-xs">contacto@abrelatam2026.org</span>
+            <span className="hidden sm:inline text-xs">abrelatam@idatosabiertos.org</span>
           </a>
 
           <div className="flex items-center gap-3">
