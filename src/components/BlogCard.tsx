@@ -19,7 +19,7 @@ export default function BlogCard({ post }: BlogCardProps) {
     >
       <div className="h-44 overflow-hidden">
         <img
-          src={assetPath('IMAGEN.png')}
+          src={assetPath('v2/imagen/IMAGEN_01.png')}
           alt={post.title}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
@@ -34,7 +34,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         <p className="mb-8 flex-1 text-sm font-medium leading-relaxed text-black dark:text-slate-200">
           {post.excerpt}
         </p>
-        <span className="inline-flex w-fit rounded bg-[#2377b9] px-6 py-3 text-[10px] font-bold uppercase tracking-wide text-white transition-colors group-hover:bg-[#2f8bd2]">
+        <span className="inline-flex w-fit rounded bg-[#4367e1] px-6 py-3 text-[10px] font-bold uppercase tracking-wide text-white transition-colors group-hover:bg-[#3657c8]">
           Leer mas
         </span>
       </div>

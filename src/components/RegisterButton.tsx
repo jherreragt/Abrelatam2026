@@ -36,7 +36,7 @@ export default function RegisterButton() {
 
               <div className="flex items-start gap-4 mb-5">
                 <div className="relative">
-                  <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-xl shadow-lg shadow-blue-500/30">
+                  <div className="bg-[#4367e1] p-3 rounded-xl shadow-lg shadow-[#4367e1]/30">
                     <Sparkles className="text-white" size={22} />
                   </div>
                   <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
@@ -75,7 +75,7 @@ export default function RegisterButton() {
               <div className="flex gap-2">
                 <Button
                   size="lg"
-                  className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white border-0 font-semibold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all hover:scale-105 group"
+                  className="flex-1 bg-[#4367e1] hover:bg-[#3657c8] text-white border-0 font-semibold shadow-lg shadow-[#4367e1]/30 hover:shadow-xl hover:shadow-[#4367e1]/40 transition-all hover:scale-105 group"
                 >
                   <UserPlus size={18} />
                   {t('home.register')}
@@ -91,14 +91,14 @@ export default function RegisterButton() {
               </div>
             </div>
 
-            <div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg shadow-blue-500/50 animate-pulse border border-blue-400/30">
+            <div className="absolute -top-2 -right-2 bg-[#4367e1] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg shadow-[#4367e1]/50 animate-pulse border border-[#4367e1]/30">
               {t('registerPopup.badge')}
             </div>
           </div>
         ) : (
           <button
             onClick={() => setIsExpanded(true)}
-            className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-slate-900 text-white p-4 rounded-2xl shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all hover:scale-110 group border border-blue-500/30"
+            className="relative bg-[#4367e1] text-white p-4 rounded-2xl shadow-2xl shadow-[#4367e1]/30 hover:bg-[#3657c8] hover:shadow-[#4367e1]/50 transition-all hover:scale-110 group border border-[#4367e1]/30"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-transparent rounded-2xl"></div>
             <div className="relative flex items-center gap-2">

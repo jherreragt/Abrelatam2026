@@ -106,7 +106,7 @@ export default function Aliados() {
 
           <div className="text-center mt-10">
             <Link to={ROUTES.CONTACTO}>
-              <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-8 py-3.5 rounded-full font-bold text-sm transition-all hover:-translate-y-0.5">
+              <button className="inline-flex items-center gap-2 bg-[#4367e1] hover:bg-[#3657c8] text-white px-8 py-3.5 rounded-full font-bold text-sm transition-all hover:-translate-y-0.5">
                 <ExternalLink size={16} />
                 Contáctanos para patrocinar
               </button>

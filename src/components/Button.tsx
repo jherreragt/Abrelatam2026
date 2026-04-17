@@ -16,9 +16,9 @@ export default function Button({
   const base = 'font-semibold rounded-full transition-all duration-200 inline-flex items-center justify-center gap-2 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed';
 
   const variants = {
-    primary: 'bg-blue-600 hover:bg-blue-500 text-white shadow-md shadow-blue-600/25 hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5',
+    primary: 'bg-[#4367e1] hover:bg-[#3657c8] text-white shadow-md shadow-[#4367e1]/25 hover:shadow-lg hover:shadow-[#4367e1]/30 hover:-translate-y-0.5',
     secondary: 'bg-slate-800 hover:bg-slate-700 text-white shadow-md hover:-translate-y-0.5',
-    outline: 'border-2 border-blue-500 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:-translate-y-0.5',
+    outline: 'border-2 border-[#4367e1] text-[#4367e1] dark:text-[#8ea2ff] hover:bg-[#4367e1]/10 dark:hover:bg-[#4367e1]/20 hover:-translate-y-0.5',
     ghost: 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/60'
   };
 

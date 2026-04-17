@@ -44,7 +44,7 @@ export default function BlogDetail() {
     <div className="bg-white dark:bg-slate-900 min-h-screen">
       <div className="relative h-72 md:h-96 overflow-hidden">
         <img
-          src={assetPath('IMAGEN.png')}
+          src={assetPath('v2/imagen/IMAGEN_01.png')}
           alt={post.title}
           className="w-full h-full object-cover"
         />

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CalendarDays, ClipboardList, Info } from 'lucide-react';
+import { CalendarDays, ClipboardList, Users } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { ROUTES } from '../router/routes';
 import { assetPath } from '../lib/assetPath';
@@ -39,44 +39,50 @@ export default function HeroSlider() {
   }, []);
 
   const pad = (n: number) => String(n).padStart(2, '0');
+  const heroButtonClass = 'inline-flex min-w-36 items-center justify-center gap-2 rounded-md bg-[#fdcc30] px-5 py-3 text-xs font-bold uppercase tracking-wide text-[#262460] shadow-sm transition-colors duration-200 hover:bg-[#f0bd1f]';
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#262460]">
+    <section className="relative min-h-screen overflow-hidden bg-[#0a2f84]">
       <img
-        src={assetPath('slider/AL-08.png')}
+        src={assetPath('v2/slider/AL-07.png')}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover object-center opacity-95"
+        className="absolute inset-0 h-full w-full object-cover object-center"
+      />
+      <img
+        src={assetPath('v2/slider/AL-59.png')}
+        alt=""
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center"
       />
 
-      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 pb-24 pt-28 sm:pt-32 lg:pt-24">
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 pb-20 pt-28 sm:pt-32 lg:pt-24">
         <div className="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
           <img
-            src={assetPath('logos/Logo_Final_AbreLatam01.png')}
+            src={assetPath('v2/logos/AL-08.png')}
             alt="ABRELATAM CONDATOS"
-            className="mb-4 h-auto w-[min(82vw,460px)] drop-shadow-2xl animate-fadeInUp"
+            className="mb-3 h-auto w-[min(82vw,470px)] drop-shadow-2xl animate-fadeInUp"
           />
 
-          <p className="mb-8 max-w-xl text-base font-bold leading-snug tracking-wide text-white sm:text-lg md:text-xl animate-fadeInUp-d1">
+          <p className="mb-9 max-w-xl text-base font-bold leading-snug tracking-wide text-white sm:text-lg md:text-xl animate-fadeInUp-d1">
             {t('hero.location')}<br />
             {t('hero.date')}
           </p>
 
-          <div className="mb-10 flex flex-col justify-center gap-2.5 sm:flex-row sm:flex-wrap animate-fadeInUp-d2">
-            <Link to={ROUTES.SOBRE}>
-              <button className="inline-flex min-w-36 items-center justify-center gap-2 rounded bg-[#2377b9] px-5 py-3 text-xs font-bold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#2f8bd2]">
-                <CalendarDays size={14} />
+          <div className="mb-9 flex flex-col justify-center gap-2.5 sm:flex-row sm:flex-wrap animate-fadeInUp-d2">
+            <Link to={ROUTES.PRE_REGISTRO}>
+              <button className={heroButtonClass}>
+                <Users size={14} />
                 {t('hero.register')}
               </button>
             </Link>
-            <Link to={ROUTES.PRE_REGISTRO}>
-              <button className="inline-flex min-w-36 items-center justify-center gap-2 rounded bg-[#2377b9] px-5 py-3 text-xs font-bold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#2f8bd2]">
+            <Link to={ROUTES.GUIA_PARTICIPANTES}>
+              <button className={heroButtonClass}>
                 <ClipboardList size={14} />
                 {t('hero.guide')}
               </button>
             </Link>
-            <Link to={ROUTES.VIAJE_SEDE}>
-              <button className="inline-flex min-w-36 items-center justify-center gap-2 rounded bg-[#2377b9] px-5 py-3 text-xs font-bold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-[#2f8bd2]">
-                <Info size={14} />
+            <Link to={ROUTES.AGENDA}>
+              <button className={heroButtonClass}>
+                <CalendarDays size={14} />
                 {t('hero.agenda')}
               </button>
             </Link>

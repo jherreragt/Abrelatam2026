@@ -63,7 +63,7 @@ export default function Convocatorias() {
                 <h3 className="mb-3 text-xl font-bold text-slate-950 dark:text-white">{call.title}</h3>
                 <p className="mb-4 max-w-lg text-sm leading-relaxed text-slate-700 dark:text-slate-300">{call.desc}</p>
                 <p className="mb-8 text-sm text-slate-700 dark:text-slate-300">Fecha límite: {call.deadline}</p>
-                <button className="w-full rounded-md border border-[#1f7dbd] px-6 py-3 text-sm font-medium text-[#1f7dbd] transition-colors hover:bg-blue-50">
+                <button className="w-full rounded-md border border-[#4367e1] px-6 py-3 text-sm font-medium text-[#4367e1] transition-colors hover:bg-[#4367e1]/10">
                   Próximamente
                 </button>
               </article>

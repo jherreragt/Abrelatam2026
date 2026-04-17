@@ -171,6 +171,194 @@ const translations = {
       viewCalls: 'Ver convocatorias',
       newsTitle: 'Novedades'
     },
+    about: {
+      heroTitle: 'Sobre ABRELATAM / CONDATOS 2026',
+      heroSubtitle: 'Dos conferencias, un mismo objetivo: transformar America Latina a traves de datos abiertos',
+      historyTitle: 'Nuestra historia',
+      history1: 'Desde 2013, ABRELATAM y CONDATOS han sido los puntos de encuentro mas importantes para la comunidad latinoamericana de datos abiertos. Nacidas con el espiritu de democratizar el acceso a la informacion publica, estas conferencias han viajado por toda la region, dejando en cada pais una huella de colaboracion y transformacion.',
+      history2: 'ABRELATAM es el espacio donde activistas, desarrolladoras, periodistas, academicas y emprendedores sociales se reunen para compartir experiencias, aprender nuevas herramientas y construir redes de colaboracion que trascienden fronteras.',
+      history3: 'CONDATOS, por su parte, convoca especificamente a funcionarios publicos y tomadores de decisiones gubernamentales para dialogar sobre politicas publicas, implementacion de plataformas de datos abiertos y mejores practicas en transparencia.',
+      history4: 'En 2026, estas conferencias regresan a Centroamerica, y Guatemala tiene el honor de recibirlas. Sera una oportunidad unica para fortalecer el ecosistema regional de datos abiertos y construir puentes entre gobiernos, sociedad civil y sector tecnologico.',
+      objectivesTitle: 'Nuestros objetivos',
+      objectives: {
+        capacity: {
+          title: 'Fortalecer capacidades',
+          desc: 'Ofrecer espacios de formacion y capacitacion en herramientas, metodologias y mejores practicas para trabajar con datos abiertos, tanto desde la sociedad civil como desde el gobierno.'
+        },
+        community: {
+          title: 'Construir comunidad',
+          desc: 'Facilitar el encuentro entre personas y organizaciones que trabajan en datos abiertos para fortalecer redes de colaboracion regional y compartir experiencias exitosas.'
+        },
+        policy: {
+          title: 'Impulsar politicas publicas',
+          desc: 'Promover conversaciones entre gobiernos, sociedad civil y especialistas para avanzar en politicas publicas de apertura, transparencia y uso responsable de datos.'
+        },
+        innovation: {
+          title: 'Inspirar innovacion',
+          desc: 'Visibilizar iniciativas, herramientas y aprendizajes que usan datos abiertos para responder a desafios publicos y crear impacto social.'
+        }
+      },
+      audienceTitle: 'A quien va dirigido?',
+      audience: {
+        civilSociety: {
+          title: 'Activistas y organizaciones de sociedad civil',
+          desc: 'Que trabajan en transparencia, rendicion de cuentas, anticorrupcion y derechos digitales.'
+        },
+        publicOfficials: {
+          title: 'Funcionarios publicos',
+          desc: 'Responsables de politicas de datos abiertos, transparencia y gobierno digital.'
+        },
+        developers: {
+          title: 'Desarrolladores y tecnologos',
+          desc: 'Que construyen herramientas y aplicaciones con datos abiertos.'
+        },
+        dataJournalists: {
+          title: 'Periodistas de datos',
+          desc: 'Que utilizan datos para contar historias de impacto publico.'
+        },
+        academics: {
+          title: 'Academicos e investigadores',
+          desc: 'Que estudian el impacto de datos abiertos en la democracia y el desarrollo.'
+        },
+        socialEntrepreneurs: {
+          title: 'Emprendedores sociales',
+          desc: 'Que crean valor social y economico a partir de datos abiertos.'
+        }
+      },
+      previousEditionsTitle: 'Ediciones anteriores',
+      editions: {
+        uruguay: 'Uruguay',
+        mexico: 'Mexico',
+        chile: 'Chile',
+        colombia: 'Colombia',
+        costaRica: 'Costa Rica',
+        argentina: 'Argentina',
+        ecuador: 'Ecuador',
+        fromHome: 'Desde casa',
+        futuros: 'Futuros',
+        dominicana: 'Dominicana',
+        brazil: 'Brasil',
+        bolivia: 'Bolivia'
+      }
+    },
+    agendaPage: {
+      heroTitle: 'Agenda del evento',
+      heroSubtitle: '5-8 de noviembre, 2026 - Guatemala',
+      comingSoonTitle: 'Proximamente',
+      comingSoonText1: 'Estamos trabajando en una agenda completa con sesiones increibles, talleres practicos, paneles de discusion y oportunidades de networking.',
+      comingSoonText2: 'La agenda detallada sera publicada en las proximas semanas.',
+      expectTitle: 'Lo que puedes esperar:',
+      expectations: {
+        keynotes: 'Ponencias magistrales de expertos internacionales',
+        workshops: 'Talleres practicos y tecnicos',
+        panels: 'Paneles de discusion sobre datos abiertos',
+        networking: 'Sesiones de networking',
+        hackathon: 'Hackaton y presentaciones de proyectos',
+        socialEvents: 'Eventos sociales y culturales'
+      },
+      updatesButton: 'Recibir actualizaciones',
+      contactButton: 'Contactar al equipo',
+      proposeTitle: 'Quieres proponer una sesion?',
+      proposeText: 'Las convocatorias para proponer ponencias, talleres y side events estaran abiertas proximamente. Suscribete a nuestro newsletter para recibir notificaciones cuando se abra el proceso.',
+      callsButton: 'Ver convocatorias'
+    },
+    sideEventsPage: {
+      heroTitle: 'Side Events',
+      heroSubtitle: 'Espacios autorganizados por la comunidad para encuentros, talleres y actividades paralelas',
+      whatTitle: 'Que son los Side Events?',
+      whatText1: 'Los Side Events son actividades paralelas organizadas por participantes, organizaciones y comunidades durante ABRELATAM / CONDATOS. Estos espacios autorganizados permiten profundizar en temas especificos, reunir a comunidades de practica o explorar iniciativas particulares.',
+      whatText2: 'Pueden ser reuniones informales, talleres especializados, presentaciones de proyectos o cualquier actividad que enriquezca la experiencia del evento. Los Side Events son una tradicion de ABRELATAM que fortalece las redes y permite conversaciones mas enfocadas y profundas.',
+      typesTitle: 'Tipos de Side Events',
+      types: {
+        communityMeetups: {
+          title: 'Reuniones de comunidad',
+          desc: 'Espacios para que redes, coaliciones u organizaciones se reunan presencialmente, compartan actualizaciones y planifiquen acciones futuras.'
+        },
+        specializedWorkshops: {
+          title: 'Talleres especializados',
+          desc: 'Sesiones practicas sobre herramientas, metodologias o enfoques especificos que requieren mas tiempo que un formato regular de la agenda oficial.'
+        },
+        launchesDemos: {
+          title: 'Lanzamientos y demos',
+          desc: 'Presentaciones de nuevas propuestas, plataformas, investigaciones o iniciativas que quieran tener un espacio dedicado con su audiencia.'
+        }
+      },
+      guidelinesTitle: 'Lineamientos generales',
+      guidelines: {
+        proposal: {
+          title: 'Envia tu propuesta',
+          desc: 'Completa el formulario de propuesta de Side Event con los detalles de tu actividad: titulo, descripcion, duracion estimada, numero de participantes esperados y requerimientos tecnicos o de espacio.'
+        },
+        coordination: {
+          title: 'Coordinacion con organizacion',
+          desc: 'El equipo organizador revisara tu propuesta y te ayudara a encontrar el mejor horario y espacio disponible. Te daremos apoyo con logistica basica y difusion.'
+        },
+        promotion: {
+          title: 'Difusion',
+          desc: 'Tu Side Event aparecera en la agenda oficial y en los materiales del evento. Tambien puedes compartirlo en redes sociales y con tus comunidades.'
+        },
+        enjoy: {
+          title: 'Disfruta tu evento!',
+          desc: 'Facilita tu Side Event durante el congreso. Recuerda seguir el codigo de conducta y crear un espacio inclusivo y respetuoso para todas las personas participantes.'
+        }
+      },
+      ctaTitle: 'Tienes una idea para un Side Event?',
+      ctaText: 'Las convocatorias para organizar Side Events abriran proximamente. Suscribete para recibir una notificacion cuando esten disponibles.',
+      ctaButton: 'Proponer Side Event'
+    },
+    participantGuide: {
+      heroTitle: 'Guia para participantes',
+      heroSubtitle: 'Todo lo que necesitas saber para aprovechar al maximo tu experiencia en ABRELATAM / CONDATOS 2026.',
+      sections: {
+        whatIs: {
+          title: 'Que es ABRELATAM / CONDATOS?',
+          content: 'ABRELATAM es una desconferencia comunitaria donde la agenda se construye colectivamente. CONDATOS es la conferencia regional con paneles y talleres seleccionados por un comite. Juntos conforman el encuentro mas importante de la region sobre datos abiertos y tecnologia civica.'
+        },
+        datesPlace: {
+          title: 'Fechas y lugar',
+          content: 'El evento se realizara del 25 al 28 de junio de 2026 en Ciudad de Guatemala, Guatemala. La sede es el Centro Cultural Miguel Angel Asturias, en el corazon de la Zona 1.'
+        },
+        audience: {
+          title: 'A quien va dirigido?',
+          content: 'El evento es para personas de la sociedad civil, gobierno, academia, sector privado y comunidad tecnologica comprometidas con la apertura de datos, la transparencia y la innovacion publica en America Latina.'
+        },
+        howToArrive: {
+          title: 'Como llegar',
+          content: 'El Centro Cultural Miguel Angel Asturias se encuentra en la 24 Calle 3-81, Zona 1, Ciudad de Guatemala. Puedes llegar en Transmetro, taxi o servicio de ridesharing. Proximamente publicaremos una guia detallada de movilidad.'
+        },
+        duringEvent: {
+          title: 'Durante el evento',
+          content: 'Habra WiFi disponible en todas las salas. Te recomendamos llevar tu computadora o tablet para participar activamente. El evento cuenta con coffee breaks, almuerzo y espacios de networking.'
+        },
+        networking: {
+          title: 'Networking y comunidad',
+          content: 'ABRELATAM / CONDATOS es ante todo un espacio de comunidad. Aprovecha los recesos, las actividades sociales y los side events para conectar con otras personas de la region.'
+        }
+      },
+      faqTitle: 'Preguntas frecuentes',
+      faqs: {
+        registration: {
+          q: 'Necesito registro previo para asistir?',
+          a: 'Si, debes completar tu registro oficial cuando se habilite. Por ahora puedes hacer el pre-registro para recibir novedades.'
+        },
+        free: {
+          q: 'El evento es gratuito?',
+          a: 'El evento tiene costo de inscripcion. Se anunciaran los precios por categoria cuando se abra el registro oficial.'
+        },
+        translation: {
+          q: 'Habra traduccion simultanea?',
+          a: 'Si, las sesiones plenarias principales contaran con interpretacion espanol-ingles-portugues.'
+        },
+        propose: {
+          q: 'Puedo proponer una sesion?',
+          a: 'Las convocatorias para sesiones y talleres se abriran en febrero de 2026. Mantente atento a las novedades en este sitio.'
+        },
+        includes: {
+          q: 'Que incluye la inscripcion?',
+          a: 'Acceso a todas las sesiones, materiales del evento, coffee breaks y certificado de participacion. No incluye alojamiento ni transporte.'
+        }
+      }
+    },
     footer: {
       description: 'Guatemala te espera para la conferencia regional más importante sobre datos abiertos y transparencia.',
       quickLinks: 'Enlaces rápidos',
@@ -313,6 +501,194 @@ const translations = {
       viewCalls: 'View calls',
       newsTitle: 'News'
     },
+    about: {
+      heroTitle: 'About ABRELATAM / CONDATOS 2026',
+      heroSubtitle: 'Two conferences, one shared goal: transforming Latin America through open data',
+      historyTitle: 'Our history',
+      history1: 'Since 2013, ABRELATAM and CONDATOS have been the most important meeting points for the Latin American open data community. Born from the spirit of democratizing access to public information, these conferences have traveled across the region, leaving a mark of collaboration and transformation in each country.',
+      history2: 'ABRELATAM is the space where activists, developers, journalists, academics, and social entrepreneurs gather to share experiences, learn new tools, and build collaboration networks that cross borders.',
+      history3: 'CONDATOS, in turn, specifically brings together public officials and government decision-makers to discuss public policy, implementation of open data platforms, and best practices in transparency.',
+      history4: 'In 2026, these conferences return to Central America, and Guatemala has the honor of hosting them. It will be a unique opportunity to strengthen the regional open data ecosystem and build bridges among governments, civil society, and the technology sector.',
+      objectivesTitle: 'Our objectives',
+      objectives: {
+        capacity: {
+          title: 'Strengthen capacities',
+          desc: 'Offer training and learning spaces on tools, methodologies, and best practices for working with open data, both from civil society and government.'
+        },
+        community: {
+          title: 'Build community',
+          desc: 'Facilitate encounters among people and organizations working with open data to strengthen regional collaboration networks and share successful experiences.'
+        },
+        policy: {
+          title: 'Advance public policy',
+          desc: 'Promote conversations among governments, civil society, and specialists to advance public policies on openness, transparency, and responsible data use.'
+        },
+        innovation: {
+          title: 'Inspire innovation',
+          desc: 'Highlight initiatives, tools, and lessons that use open data to respond to public challenges and create social impact.'
+        }
+      },
+      audienceTitle: 'Who is it for?',
+      audience: {
+        civilSociety: {
+          title: 'Activists and civil society organizations',
+          desc: 'Working on transparency, accountability, anti-corruption, and digital rights.'
+        },
+        publicOfficials: {
+          title: 'Public officials',
+          desc: 'Responsible for open data policies, transparency, and digital government.'
+        },
+        developers: {
+          title: 'Developers and technologists',
+          desc: 'Building tools and applications with open data.'
+        },
+        dataJournalists: {
+          title: 'Data journalists',
+          desc: 'Using data to tell stories with public impact.'
+        },
+        academics: {
+          title: 'Academics and researchers',
+          desc: 'Studying the impact of open data on democracy and development.'
+        },
+        socialEntrepreneurs: {
+          title: 'Social entrepreneurs',
+          desc: 'Creating social and economic value from open data.'
+        }
+      },
+      previousEditionsTitle: 'Previous editions',
+      editions: {
+        uruguay: 'Uruguay',
+        mexico: 'Mexico',
+        chile: 'Chile',
+        colombia: 'Colombia',
+        costaRica: 'Costa Rica',
+        argentina: 'Argentina',
+        ecuador: 'Ecuador',
+        fromHome: 'From home',
+        futuros: 'Futuros',
+        dominicana: 'Dominican Republic',
+        brazil: 'Brazil',
+        bolivia: 'Bolivia'
+      }
+    },
+    agendaPage: {
+      heroTitle: 'Event agenda',
+      heroSubtitle: 'November 5-8, 2026 - Guatemala',
+      comingSoonTitle: 'Coming soon',
+      comingSoonText1: 'We are working on a complete agenda with outstanding sessions, hands-on workshops, discussion panels, and networking opportunities.',
+      comingSoonText2: 'The detailed agenda will be published in the coming weeks.',
+      expectTitle: 'What you can expect:',
+      expectations: {
+        keynotes: 'Keynotes by international experts',
+        workshops: 'Hands-on and technical workshops',
+        panels: 'Discussion panels on open data',
+        networking: 'Networking sessions',
+        hackathon: 'Hackathon and project presentations',
+        socialEvents: 'Social and cultural events'
+      },
+      updatesButton: 'Get updates',
+      contactButton: 'Contact the team',
+      proposeTitle: 'Want to propose a session?',
+      proposeText: 'Calls for talks, workshops, and side events will open soon. Subscribe to our newsletter to receive notifications when the process opens.',
+      callsButton: 'View calls'
+    },
+    sideEventsPage: {
+      heroTitle: 'Side Events',
+      heroSubtitle: 'Community-organized spaces for meetups, workshops, and parallel activities',
+      whatTitle: 'What are Side Events?',
+      whatText1: 'Side Events are parallel activities organized by participants, organizations, and communities during ABRELATAM / CONDATOS. These self-organized spaces allow people to go deeper into specific topics, bring communities of practice together, or explore particular initiatives.',
+      whatText2: 'They can be informal meetings, specialized workshops, project presentations, or any activity that enriches the event experience. Side Events are an ABRELATAM tradition that strengthens networks and enables more focused and in-depth conversations.',
+      typesTitle: 'Types of Side Events',
+      types: {
+        communityMeetups: {
+          title: 'Community meetups',
+          desc: 'Spaces for networks, coalitions, or organizations to meet in person, share updates, and plan future actions.'
+        },
+        specializedWorkshops: {
+          title: 'Specialized workshops',
+          desc: 'Hands-on sessions on specific tools, methodologies, or approaches that require more time than a regular official agenda format.'
+        },
+        launchesDemos: {
+          title: 'Launches and demos',
+          desc: 'Presentations of new proposals, platforms, research, or initiatives that need a dedicated space with their audience.'
+        }
+      },
+      guidelinesTitle: 'General guidelines',
+      guidelines: {
+        proposal: {
+          title: 'Submit your proposal',
+          desc: 'Complete the Side Event proposal form with the details of your activity: title, description, estimated duration, expected number of participants, and technical or space requirements.'
+        },
+        coordination: {
+          title: 'Coordination with organizers',
+          desc: 'The organizing team will review your proposal and help you find the best available time and space. We will provide basic logistical and outreach support.'
+        },
+        promotion: {
+          title: 'Promotion',
+          desc: 'Your Side Event will appear in the official agenda and event materials. You can also share it on social media and with your communities.'
+        },
+        enjoy: {
+          title: 'Enjoy your event!',
+          desc: 'Facilitate your Side Event during the conference. Remember to follow the code of conduct and create an inclusive, respectful space for all participants.'
+        }
+      },
+      ctaTitle: 'Have an idea for a Side Event?',
+      ctaText: 'Calls to organize Side Events will open soon. Subscribe to receive a notification when they are available.',
+      ctaButton: 'Propose Side Event'
+    },
+    participantGuide: {
+      heroTitle: 'Guide for participants',
+      heroSubtitle: 'Everything you need to know to make the most of your ABRELATAM / CONDATOS 2026 experience.',
+      sections: {
+        whatIs: {
+          title: 'What is ABRELATAM / CONDATOS?',
+          content: 'ABRELATAM is a community unconference where the agenda is built collectively. CONDATOS is the regional conference with panels and workshops selected by a committee. Together they form the region\'s most important gathering on open data and civic technology.'
+        },
+        datesPlace: {
+          title: 'Dates and venue',
+          content: 'The event will take place from June 25 to 28, 2026 in Guatemala City, Guatemala. The venue is the Miguel Angel Asturias Cultural Center, in the heart of Zone 1.'
+        },
+        audience: {
+          title: 'Who is it for?',
+          content: 'The event is for people from civil society, government, academia, the private sector, and the technology community who are committed to open data, transparency, and public innovation in Latin America.'
+        },
+        howToArrive: {
+          title: 'How to get there',
+          content: 'The Miguel Angel Asturias Cultural Center is located at 24 Calle 3-81, Zone 1, Guatemala City. You can arrive by Transmetro, taxi, or ridesharing service. We will soon publish a detailed mobility guide.'
+        },
+        duringEvent: {
+          title: 'During the event',
+          content: 'WiFi will be available in all rooms. We recommend bringing your laptop or tablet to participate actively. The event includes coffee breaks, lunch, and networking spaces.'
+        },
+        networking: {
+          title: 'Networking and community',
+          content: 'ABRELATAM / CONDATOS is, above all, a community space. Use breaks, social activities, and side events to connect with other people from the region.'
+        }
+      },
+      faqTitle: 'Frequently asked questions',
+      faqs: {
+        registration: {
+          q: 'Do I need to register in advance?',
+          a: 'Yes, you must complete your official registration when it opens. For now, you can pre-register to receive updates.'
+        },
+        free: {
+          q: 'Is the event free?',
+          a: 'The event has a registration fee. Prices by category will be announced when official registration opens.'
+        },
+        translation: {
+          q: 'Will simultaneous interpretation be available?',
+          a: 'Yes, the main plenary sessions will include Spanish-English-Portuguese interpretation.'
+        },
+        propose: {
+          q: 'Can I propose a session?',
+          a: 'Calls for sessions and workshops will open in February 2026. Stay tuned for updates on this site.'
+        },
+        includes: {
+          q: 'What does registration include?',
+          a: 'Access to all sessions, event materials, coffee breaks, and a certificate of participation. Lodging and transportation are not included.'
+        }
+      }
+    },
     footer: {
       description: 'Guatemala awaits you for the most important regional conference on open data and transparency.',
       quickLinks: 'Quick links',
@@ -454,6 +830,194 @@ const translations = {
       proposeSideEvent: 'Propor side event',
       viewCalls: 'Ver chamadas',
       newsTitle: 'Novidades'
+    },
+    about: {
+      heroTitle: 'Sobre ABRELATAM / CONDATOS 2026',
+      heroSubtitle: 'Duas conferencias, um mesmo objetivo: transformar a America Latina por meio de dados abertos',
+      historyTitle: 'Nossa historia',
+      history1: 'Desde 2013, ABRELATAM e CONDATOS sao os pontos de encontro mais importantes para a comunidade latino-americana de dados abertos. Nascidas com o espirito de democratizar o acesso a informacao publica, essas conferencias viajaram por toda a regiao, deixando em cada pais uma marca de colaboracao e transformacao.',
+      history2: 'ABRELATAM e o espaco onde ativistas, desenvolvedoras, jornalistas, academicas e empreendedores sociais se reunem para compartilhar experiencias, aprender novas ferramentas e construir redes de colaboracao que atravessam fronteiras.',
+      history3: 'CONDATOS, por sua vez, convoca especificamente funcionarios publicos e tomadores de decisao governamentais para dialogar sobre politicas publicas, implementacao de plataformas de dados abertos e melhores praticas em transparencia.',
+      history4: 'Em 2026, essas conferencias retornam a America Central, e a Guatemala tem a honra de recebe-las. Sera uma oportunidade unica para fortalecer o ecossistema regional de dados abertos e construir pontes entre governos, sociedade civil e setor tecnologico.',
+      objectivesTitle: 'Nossos objetivos',
+      objectives: {
+        capacity: {
+          title: 'Fortalecer capacidades',
+          desc: 'Oferecer espacos de formacao e capacitacao em ferramentas, metodologias e melhores praticas para trabalhar com dados abertos, tanto a partir da sociedade civil quanto do governo.'
+        },
+        community: {
+          title: 'Construir comunidade',
+          desc: 'Facilitar o encontro entre pessoas e organizacoes que trabalham com dados abertos para fortalecer redes de colaboracao regional e compartilhar experiencias bem-sucedidas.'
+        },
+        policy: {
+          title: 'Impulsionar politicas publicas',
+          desc: 'Promover conversas entre governos, sociedade civil e especialistas para avancar em politicas publicas de abertura, transparencia e uso responsavel de dados.'
+        },
+        innovation: {
+          title: 'Inspirar inovacao',
+          desc: 'Dar visibilidade a iniciativas, ferramentas e aprendizados que usam dados abertos para responder a desafios publicos e criar impacto social.'
+        }
+      },
+      audienceTitle: 'Para quem e?',
+      audience: {
+        civilSociety: {
+          title: 'Ativistas e organizacoes da sociedade civil',
+          desc: 'Que trabalham com transparencia, prestacao de contas, anticorrupcao e direitos digitais.'
+        },
+        publicOfficials: {
+          title: 'Funcionarios publicos',
+          desc: 'Responsaveis por politicas de dados abertos, transparencia e governo digital.'
+        },
+        developers: {
+          title: 'Desenvolvedores e tecnologos',
+          desc: 'Que constroem ferramentas e aplicacoes com dados abertos.'
+        },
+        dataJournalists: {
+          title: 'Jornalistas de dados',
+          desc: 'Que usam dados para contar historias de impacto publico.'
+        },
+        academics: {
+          title: 'Academicos e pesquisadores',
+          desc: 'Que estudam o impacto dos dados abertos na democracia e no desenvolvimento.'
+        },
+        socialEntrepreneurs: {
+          title: 'Empreendedores sociais',
+          desc: 'Que criam valor social e economico a partir de dados abertos.'
+        }
+      },
+      previousEditionsTitle: 'Edicoes anteriores',
+      editions: {
+        uruguay: 'Uruguai',
+        mexico: 'Mexico',
+        chile: 'Chile',
+        colombia: 'Colombia',
+        costaRica: 'Costa Rica',
+        argentina: 'Argentina',
+        ecuador: 'Equador',
+        fromHome: 'De casa',
+        futuros: 'Futuros',
+        dominicana: 'Dominicana',
+        brazil: 'Brasil',
+        bolivia: 'Bolivia'
+      }
+    },
+    agendaPage: {
+      heroTitle: 'Agenda do evento',
+      heroSubtitle: '5 a 8 de novembro de 2026 - Guatemala',
+      comingSoonTitle: 'Em breve',
+      comingSoonText1: 'Estamos trabalhando em uma agenda completa com sessoes incriveis, oficinas praticas, paineis de discussao e oportunidades de networking.',
+      comingSoonText2: 'A agenda detalhada sera publicada nas proximas semanas.',
+      expectTitle: 'O que voce pode esperar:',
+      expectations: {
+        keynotes: 'Palestras principais com especialistas internacionais',
+        workshops: 'Oficinas praticas e tecnicas',
+        panels: 'Paineis de discussao sobre dados abertos',
+        networking: 'Sessoes de networking',
+        hackathon: 'Hackathon e apresentacoes de projetos',
+        socialEvents: 'Eventos sociais e culturais'
+      },
+      updatesButton: 'Receber atualizacoes',
+      contactButton: 'Contatar a equipe',
+      proposeTitle: 'Quer propor uma sessao?',
+      proposeText: 'As chamadas para propor palestras, oficinas e side events serao abertas em breve. Assine nossa newsletter para receber notificacoes quando o processo for aberto.',
+      callsButton: 'Ver chamadas'
+    },
+    sideEventsPage: {
+      heroTitle: 'Side Events',
+      heroSubtitle: 'Espacos auto-organizados pela comunidade para encontros, oficinas e atividades paralelas',
+      whatTitle: 'O que sao Side Events?',
+      whatText1: 'Os Side Events sao atividades paralelas organizadas por participantes, organizacoes e comunidades durante ABRELATAM / CONDATOS. Esses espacos auto-organizados permitem aprofundar temas especificos, reunir comunidades de pratica ou explorar iniciativas particulares.',
+      whatText2: 'Podem ser reunioes informais, oficinas especializadas, apresentacoes de projetos ou qualquer atividade que enriqueça a experiencia do evento. Os Side Events sao uma tradicao do ABRELATAM que fortalece redes e permite conversas mais focadas e profundas.',
+      typesTitle: 'Tipos de Side Events',
+      types: {
+        communityMeetups: {
+          title: 'Reunioes de comunidade',
+          desc: 'Espacos para que redes, coalizoes ou organizacoes se encontrem presencialmente, compartilhem atualizacoes e planejem acoes futuras.'
+        },
+        specializedWorkshops: {
+          title: 'Oficinas especializadas',
+          desc: 'Sessoes praticas sobre ferramentas, metodologias ou abordagens especificas que exigem mais tempo do que um formato regular da agenda oficial.'
+        },
+        launchesDemos: {
+          title: 'Lancamentos e demos',
+          desc: 'Apresentacoes de novas propostas, plataformas, pesquisas ou iniciativas que queiram ter um espaco dedicado com seu publico.'
+        }
+      },
+      guidelinesTitle: 'Diretrizes gerais',
+      guidelines: {
+        proposal: {
+          title: 'Envie sua proposta',
+          desc: 'Preencha o formulario de proposta de Side Event com os detalhes da sua atividade: titulo, descricao, duracao estimada, numero esperado de participantes e requisitos tecnicos ou de espaco.'
+        },
+        coordination: {
+          title: 'Coordenacao com a organizacao',
+          desc: 'A equipe organizadora revisara sua proposta e ajudara a encontrar o melhor horario e espaco disponivel. Daremos apoio basico de logistica e divulgacao.'
+        },
+        promotion: {
+          title: 'Divulgacao',
+          desc: 'Seu Side Event aparecera na agenda oficial e nos materiais do evento. Voce tambem pode compartilha-lo nas redes sociais e com suas comunidades.'
+        },
+        enjoy: {
+          title: 'Aproveite seu evento!',
+          desc: 'Facilite seu Side Event durante o congresso. Lembre-se de seguir o codigo de conduta e criar um espaco inclusivo e respeitoso para todas as pessoas participantes.'
+        }
+      },
+      ctaTitle: 'Tem uma ideia para um Side Event?',
+      ctaText: 'As chamadas para organizar Side Events serao abertas em breve. Assine para receber uma notificacao quando estiverem disponiveis.',
+      ctaButton: 'Propor Side Event'
+    },
+    participantGuide: {
+      heroTitle: 'Guia para participantes',
+      heroSubtitle: 'Tudo o que voce precisa saber para aproveitar ao maximo sua experiencia no ABRELATAM / CONDATOS 2026.',
+      sections: {
+        whatIs: {
+          title: 'O que e ABRELATAM / CONDATOS?',
+          content: 'ABRELATAM e uma desconferencia comunitaria onde a agenda e construida coletivamente. CONDATOS e a conferencia regional com paineis e oficinas selecionados por um comite. Juntos formam o encontro mais importante da regiao sobre dados abertos e tecnologia civica.'
+        },
+        datesPlace: {
+          title: 'Datas e local',
+          content: 'O evento acontecera de 25 a 28 de junho de 2026 na Cidade da Guatemala, Guatemala. A sede e o Centro Cultural Miguel Angel Asturias, no coracao da Zona 1.'
+        },
+        audience: {
+          title: 'Para quem e?',
+          content: 'O evento e para pessoas da sociedade civil, governo, academia, setor privado e comunidade tecnologica comprometidas com dados abertos, transparencia e inovacao publica na America Latina.'
+        },
+        howToArrive: {
+          title: 'Como chegar',
+          content: 'O Centro Cultural Miguel Angel Asturias fica na 24 Calle 3-81, Zona 1, Cidade da Guatemala. Voce pode chegar de Transmetro, taxi ou aplicativo de transporte. Em breve publicaremos um guia detalhado de mobilidade.'
+        },
+        duringEvent: {
+          title: 'Durante o evento',
+          content: 'Havera WiFi disponivel em todas as salas. Recomendamos levar computador ou tablet para participar ativamente. O evento conta com coffee breaks, almoco e espacos de networking.'
+        },
+        networking: {
+          title: 'Networking e comunidade',
+          content: 'ABRELATAM / CONDATOS e, antes de tudo, um espaco de comunidade. Aproveite os intervalos, atividades sociais e side events para se conectar com outras pessoas da regiao.'
+        }
+      },
+      faqTitle: 'Perguntas frequentes',
+      faqs: {
+        registration: {
+          q: 'Preciso de registro previo para participar?',
+          a: 'Sim, voce deve completar seu registro oficial quando ele for aberto. Por enquanto, pode fazer o pre-registro para receber novidades.'
+        },
+        free: {
+          q: 'O evento e gratuito?',
+          a: 'O evento tera taxa de inscricao. Os valores por categoria serao anunciados quando o registro oficial for aberto.'
+        },
+        translation: {
+          q: 'Havera interpretacao simultanea?',
+          a: 'Sim, as principais sessoes plenarias contarao com interpretacao espanhol-ingles-portugues.'
+        },
+        propose: {
+          q: 'Posso propor uma sessao?',
+          a: 'As chamadas para sessoes e oficinas serao abertas em fevereiro de 2026. Acompanhe as novidades neste site.'
+        },
+        includes: {
+          q: 'O que a inscricao inclui?',
+          a: 'Acesso a todas as sessoes, materiais do evento, coffee breaks e certificado de participacao. Hospedagem e transporte nao estao incluidos.'
+        }
+      }
     },
     footer: {
       description: 'Guatemala espera você para a conferência regional mais importante sobre dados abertos e transparência.',

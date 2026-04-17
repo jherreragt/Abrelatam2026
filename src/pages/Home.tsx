@@ -8,11 +8,11 @@ import { ROUTES } from '../router/routes';
 import { assetPath } from '../lib/assetPath';
 
 const thematicIcons = [
-  assetPath('iconos/AL-17.png'),
-  assetPath('iconos/AL-18.png'),
-  assetPath('iconos/AL-19.png'),
-  assetPath('iconos/AL-20.png'),
-  assetPath('iconos/AL-21.png'),
+  assetPath('v2/iconos/AL-15.png'),
+  assetPath('v2/iconos/AL-16.png'),
+  assetPath('v2/iconos/AL-17.png'),
+  assetPath('v2/iconos/AL-18.png'),
+  assetPath('v2/iconos/AL-19.png'),
 ];
 
 export default function Home() {
@@ -146,7 +146,7 @@ export default function Home() {
       <section className="bg-white dark:bg-slate-950">
         <div className="relative overflow-hidden bg-[#2377b9]">
           <img
-            src={assetPath('slider/AL-58.png')}
+            src={assetPath('v2/banner/AL-56.png')}
             alt=""
             className="absolute inset-0 h-full w-full object-cover object-center opacity-90"
           />
@@ -161,7 +161,7 @@ export default function Home() {
               {t('home.venueCtaSubtitle')}
             </p>
             <Link to={ROUTES.CONVOCATORIAS}>
-              <button className="rounded bg-[#262460] px-12 py-4 text-sm font-bold uppercase tracking-widest text-white transition-colors duration-200 hover:bg-[#343170]">
+              <button className="rounded bg-[#fdcc30] px-12 py-4 text-sm font-bold uppercase tracking-widest text-black transition-colors duration-200 hover:bg-[#3657c8]">
                 {t('home.venueCtaButton')}
               </button>
             </Link>
@@ -306,7 +306,7 @@ export default function Home() {
                 key={index}
                 onClick={() => setNewsPage(index)}
                 aria-label={`Ver grupo de noticias ${index + 1}`}
-                className={`h-2 w-2 rounded-full transition-colors ${index === newsPage ? 'bg-[#262460]' : 'bg-slate-300 hover:bg-[#2377b9]'}`}
+                className={`h-2 w-2 rounded-full transition-colors ${index === newsPage ? 'bg-[#4367e1]' : 'bg-slate-300 hover:bg-[#4367e1]'}`}
               >
                 <span className="sr-only">Ver grupo de noticias {index + 1}</span>
               </button>

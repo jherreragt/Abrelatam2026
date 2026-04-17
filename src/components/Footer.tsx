@@ -30,7 +30,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#2377b9] text-white">
+    <footer className="bg-primary text-white">
       <div className="container mx-auto max-w-7xl px-4 py-14 md:px-6">
         <section className="mb-14">
           <h2 className="mb-9 text-base font-bold">Organizan</h2>
@@ -128,7 +128,7 @@ export default function Footer() {
                 <button
                   type="submit"
                   disabled={subscribed}
-                  className="flex h-12 w-full items-center justify-center gap-3 rounded bg-[#262460] px-4 text-sm font-bold text-white transition-colors hover:bg-[#343170] disabled:cursor-default disabled:bg-[#262460]/70"
+                  className="flex h-12 w-full items-center justify-center gap-3 rounded bg-[#4367e1] px-4 text-sm font-bold text-white transition-colors hover:bg-[#3657c8] disabled:cursor-default disabled:bg-[#4367e1]/70"
                 >
                   {!subscribed && <Send size={14} />}
                   {subscribed ? t('footer.subscribed') : t('footer.subscribe')}
