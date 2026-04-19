@@ -68,19 +68,19 @@ export default function HeroSlider() {
           </p>
 
           <div className="mb-9 flex flex-col justify-center gap-2.5 sm:flex-row sm:flex-wrap animate-fadeInUp-d2">
-            <Link to={ROUTES.PRE_REGISTRO}>
+            <Link to={ROUTES.SOBRE}>
               <button className={heroButtonClass}>
                 <Users size={14} />
                 {t('hero.register')}
               </button>
             </Link>
-            <Link to={ROUTES.GUIA_PARTICIPANTES}>
+            <Link to={ROUTES.PRE_REGISTRO}>
               <button className={heroButtonClass}>
                 <ClipboardList size={14} />
                 {t('hero.guide')}
               </button>
             </Link>
-            <Link to={ROUTES.AGENDA}>
+            <Link to={ROUTES.VIAJE_SEDE}>
               <button className={heroButtonClass}>
                 <CalendarDays size={14} />
                 {t('hero.agenda')}
