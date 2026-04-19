@@ -35,7 +35,7 @@ export default function Footer() {
         </section>
 
         <div className="border-t border-white/35 pt-12">
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-12">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-3 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-4">
               <img
                 src={assetPath('logos/Logo_Final_AbreLatam01.png')}
@@ -56,7 +56,7 @@ export default function Footer() {
                     key={label}
                     href="#"
                     aria-label={label}
-                    className="text-white transition-colors hover:text-[#262460]"
+                    className="text-white transition-colors hover:text-[#fdcc30]"
                   >
                     <Icon size={18} />
                   </a>
@@ -64,51 +64,61 @@ export default function Footer() {
               </div>
             </div>
 
-            <nav className="lg:col-span-2">
-              <h3 className="mb-4 text-sm font-bold">{t('footer.quickLinks')}</h3>
-              <ul className="space-y-3 text-sm text-white/85">
-                {[
-                  { to: ROUTES.SOBRE, label: t('footer.aboutEvent') },
-                  { to: ROUTES.AGENDA, label: t('nav.agenda') },
-                  { to: ROUTES.CONVOCATORIAS, label: t('nav.calls') },
-                  { to: ROUTES.PRENSA, label: t('nav.press') },
-                ].map(({ to, label }) => (
-                  <li key={to}>
-                    <Link to={to} className="transition-colors hover:text-[#262460]">
-                      {label}
-                    </Link>
-                  </li>
-                ))}
+            <nav className="lg:col-span-3">
+              <h3 className="mb-5 text-sm font-bold uppercase tracking-wider">{t('footer.quickLinks')}</h3>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <Link to={ROUTES.SOBRE} className="text-white/85 transition-colors hover:text-white">
+                    {t('footer.event')}
+                  </Link>
+                </li>
+                <li>
+                  <Link to={ROUTES.PRE_REGISTRO} className="text-white/85 transition-colors hover:text-white">
+                    {t('footer.preRegister')}
+                  </Link>
+                </li>
+                <li>
+                  <Link to={ROUTES.VIAJE_SEDE} className="text-white/85 transition-colors hover:text-white">
+                    {t('footer.usefulInfo')}
+                  </Link>
+                </li>
+                <li>
+                  <span className="flex items-center gap-2 text-white/45 cursor-default select-none">
+                    {t('footer.proposeSession')}
+                    <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white/50">
+                      {t('footer.comingSoon')}
+                    </span>
+                  </span>
+                </li>
+                <li>
+                  <span className="flex items-center gap-2 text-white/45 cursor-default select-none">
+                    Side Events
+                    <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white/50">
+                      {t('footer.comingSoon')}
+                    </span>
+                  </span>
+                </li>
+                <li>
+                  <span className="flex items-center gap-2 text-white/45 cursor-default select-none">
+                    {t('footer.volunteers')}
+                    <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white/50">
+                      {t('footer.comingSoon')}
+                    </span>
+                  </span>
+                </li>
               </ul>
             </nav>
 
-            <nav className="lg:col-span-2">
-              <h3 className="mb-4 text-sm font-bold">{t('footer.participate')}</h3>
-              <ul className="space-y-3 text-sm text-white/85">
-                {[
-                  { to: ROUTES.PRE_REGISTRO, label: 'Pre-registro' },
-                  { to: ROUTES.CONVOCATORIAS, label: t('home.proposeSession') },
-                  { to: ROUTES.SIDE_EVENTS, label: t('nav.sideEvents') },
-                  { to: ROUTES.CODIGO_CONDUCTA, label: t('nav.codeOfConduct') },
-                ].map(({ to, label }) => (
-                  <li key={`${to}-${label}`}>
-                    <Link to={to} className="transition-colors hover:text-[#262460]">
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-
-            <div className="lg:col-span-4">
-              <h3 className="mb-4 text-sm font-bold">Pre-registro</h3>
-              <p className="mb-5 text-sm text-white/85">
-                Asegura tu lugar en ABRELATAM / CONDATOS 2026. Comp&iacute;eta el formulario de pre-registro y recibe informaci&oacute;n cuando abran las inscripciones oficiales.
+            <div className="lg:col-span-5">
+              <h3 className="mb-5 text-sm font-bold uppercase tracking-wider">{t('footer.preRegister')}</h3>
+              <p className="mb-6 text-sm leading-relaxed text-white/85">
+                {t('footer.preRegisterDesc')}
               </p>
-              <Link to={ROUTES.PRE_REGISTRO}>
-                <button className="flex h-12 w-full items-center justify-center gap-3 rounded bg-[#4367e1] px-4 text-sm font-bold text-white transition-colors hover:bg-[#3657c8]">
-                  Formulario de pre-registro
-                </button>
+              <Link
+                to={ROUTES.PRE_REGISTRO}
+                className="inline-flex h-12 w-full items-center justify-center rounded bg-[#4367e1] px-6 text-sm font-bold text-white transition-colors hover:bg-[#3657c8]"
+              >
+                {t('footer.preRegisterButton')}
               </Link>
             </div>
           </div>
