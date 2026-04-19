@@ -58,7 +58,7 @@ const translations = {
     slider: {
       slide1: {
         title: 'Guatemala 2026: abrir datos, abrir caminos',
-        subtitle: 'ABRELATAM / CONDATOS llega a Ciudad de Guatemala la primera semana de noviembre de 2026. Tres días para encontrarnos, compartir aprendizajes y fortalecer la comunidad regional de datos abiertos y tecnología cívica.'
+        subtitle: 'ABRELATAM / CONDATOS llega a Ciudad de Guatemala del 7 al 9 de octubre de 2026. Tres días para encontrarnos, compartir aprendizajes y fortalecer la comunidad regional de datos abiertos y tecnología cívica.'
       },
       slide2: {
         title: 'Datos Abiertos: Transformando Latinoamérica',
@@ -111,9 +111,9 @@ const translations = {
     },
     home: {
       title: 'Guatemala 2026: abrir datos, abrir caminos',
-      subtitle: 'ABRELATAM / CONDATOS llega a Ciudad de Guatemala la primera semana de noviembre de 2026. Tres días para encontrarnos, compartir aprendizajes y fortalecer la comunidad regional de datos abiertos y tecnología cívica.',
+      subtitle: 'ABRELATAM / CONDATOS llega a Ciudad de Guatemala del 7 al 9 de octubre de 2026. Tres días para encontrarnos, compartir aprendizajes y fortalecer la comunidad regional de datos abiertos y tecnología cívica.',
       venue: 'Centro Cultural Miguel Ángel Asturias',
-      date: 'Primera semana de noviembre, 2026',
+      date: '7, 8 y 9 de octubre, 2026',
       register: 'Registrarme',
       getUpdates: 'Recibir novedades',
       learnMore: 'Conocer más',
@@ -243,7 +243,7 @@ const translations = {
     },
     agendaPage: {
       heroTitle: 'Agenda del evento',
-      heroSubtitle: '5-8 de noviembre, 2026 - Guatemala',
+      heroSubtitle: '7, 8 y 9 de octubre, 2026 - Guatemala',
       comingSoonTitle: 'Proximamente',
       comingSoonText1: 'Estamos trabajando en una agenda completa con sesiones increibles, talleres practicos, paneles de discusion y oportunidades de networking.',
       comingSoonText2: 'La agenda detallada sera publicada en las proximas semanas.',
@@ -316,7 +316,7 @@ const translations = {
         },
         datesPlace: {
           title: 'Fechas y lugar',
-          content: 'El evento se realizara del 25 al 28 de junio de 2026 en Ciudad de Guatemala, Guatemala. La sede es el Centro Cultural Miguel Angel Asturias, en el corazon de la Zona 1.'
+          content: 'El evento se realizara del 7 al 9 de octubre de 2026 en Ciudad de Guatemala, Guatemala. La sede es el Centro Cultural Miguel Ángel Asturias, en el corazon de la Zona 1.'
         },
         audience: {
           title: 'A quien va dirigido?',
@@ -387,7 +387,7 @@ const translations = {
     registerPopup: {
       title: 'ABRELATAM 2026',
       subtitle: 'Únete a la comunidad de datos abiertos más importante de Latinoamérica',
-      date: 'Noviembre 2026',
+      date: 'Octubre 2026',
       location: 'Ciudad de Guatemala',
       badge: '¡No te lo pierdas!'
     }
@@ -396,7 +396,7 @@ const translations = {
     slider: {
       slide1: {
         title: 'Guatemala 2026: opening data, opening paths',
-        subtitle: 'ABRELATAM / CONDATOS comes to Guatemala City the first week of November 2026. Three days to meet, share learnings and strengthen the regional open data and civic tech community.'
+        subtitle: 'ABRELATAM / CONDATOS comes to Guatemala City from October 7–9, 2026. Three days to meet, share learnings and strengthen the regional open data and civic tech community.'
       },
       slide2: {
         title: 'Open Data: Transforming Latin America',
@@ -449,9 +449,9 @@ const translations = {
     },
     home: {
       title: 'Guatemala 2026: opening data, opening paths',
-      subtitle: 'ABRELATAM / CONDATOS comes to Guatemala City in the first week of November 2026. Three days to meet, share learnings, and strengthen the regional community of open data and civic technology.',
+      subtitle: 'ABRELATAM / CONDATOS comes to Guatemala City from October 7–9, 2026. Three days to meet, share learnings, and strengthen the regional community of open data and civic technology.',
       venue: 'Miguel Ángel Asturias Cultural Center',
-      date: 'First week of November, 2026',
+      date: 'October 7, 8 & 9, 2026',
       register: 'Register',
       getUpdates: 'Get updates',
       learnMore: 'Learn More',
@@ -581,7 +581,7 @@ const translations = {
     },
     agendaPage: {
       heroTitle: 'Event agenda',
-      heroSubtitle: 'November 5-8, 2026 - Guatemala',
+      heroSubtitle: 'October 7–9, 2026 - Guatemala',
       comingSoonTitle: 'Coming soon',
       comingSoonText1: 'We are working on a complete agenda with outstanding sessions, hands-on workshops, discussion panels, and networking opportunities.',
       comingSoonText2: 'The detailed agenda will be published in the coming weeks.',
@@ -654,7 +654,7 @@ const translations = {
         },
         datesPlace: {
           title: 'Dates and venue',
-          content: 'The event will take place from June 25 to 28, 2026 in Guatemala City, Guatemala. The venue is the Miguel Angel Asturias Cultural Center, in the heart of Zone 1.'
+          content: 'The event will take place from October 7 to 9, 2026 in Guatemala City, Guatemala. The venue is the Miguel Ángel Asturias Cultural Center, in the heart of Zone 1.'
         },
         audience: {
           title: 'Who is it for?',
@@ -725,7 +725,7 @@ const translations = {
     registerPopup: {
       title: 'ABRELATAM 2026',
       subtitle: 'Join the most important open data community in Latin America',
-      date: 'November 2026',
+      date: 'October 2026',
       location: 'Guatemala City',
       badge: "Don't miss it!"
     }
@@ -734,7 +734,7 @@ const translations = {
     slider: {
       slide1: {
         title: 'Guatemala 2026: abrir dados, abrir caminhos',
-        subtitle: 'ABRELATAM / CONDATOS chega à Cidade da Guatemala na primeira semana de novembro de 2026. Três dias para nos encontrar, compartilhar aprendizados e fortalecer a comunidade regional de dados abertos e tecnologia cívica.'
+        subtitle: 'ABRELATAM / CONDATOS chega à Cidade da Guatemala de 7 a 9 de outubro de 2026. Três dias para nos encontrar, compartilhar aprendizados e fortalecer a comunidade regional de dados abertos e tecnologia cívica.'
       },
       slide2: {
         title: 'Dados Abertos: Transformando a América Latina',
@@ -787,9 +787,9 @@ const translations = {
     },
     home: {
       title: 'Guatemala 2026: abrir dados, abrir caminhos',
-      subtitle: 'ABRELATAM / CONDATOS chega à Cidade da Guatemala na primeira semana de novembro de 2026. Três dias para nos encontrarmos, compartilhar aprendizados e fortalecer a comunidade regional de dados abertos e tecnologia cívica.',
+      subtitle: 'ABRELATAM / CONDATOS chega à Cidade da Guatemala de 7 a 9 de outubro de 2026. Três dias para nos encontrarmos, compartilhar aprendizados e fortalecer a comunidade regional de dados abertos e tecnologia cívica.',
       venue: 'Centro Cultural Miguel Ángel Asturias',
-      date: 'Primeira semana de novembro, 2026',
+      date: '7, 8 e 9 de outubro, 2026',
       register: 'Inscrever-se',
       getUpdates: 'Receber novidades',
       learnMore: 'Saber mais',
@@ -919,7 +919,7 @@ const translations = {
     },
     agendaPage: {
       heroTitle: 'Agenda do evento',
-      heroSubtitle: '5 a 8 de novembro de 2026 - Guatemala',
+      heroSubtitle: '7, 8 e 9 de outubro de 2026 - Guatemala',
       comingSoonTitle: 'Em breve',
       comingSoonText1: 'Estamos trabalhando em uma agenda completa com sessoes incriveis, oficinas praticas, paineis de discussao e oportunidades de networking.',
       comingSoonText2: 'A agenda detalhada sera publicada nas proximas semanas.',
@@ -992,7 +992,7 @@ const translations = {
         },
         datesPlace: {
           title: 'Datas e local',
-          content: 'O evento acontecera de 25 a 28 de junho de 2026 na Cidade da Guatemala, Guatemala. A sede e o Centro Cultural Miguel Angel Asturias, no coracao da Zona 1.'
+          content: 'O evento acontecera de 7 a 9 de outubro de 2026 na Cidade da Guatemala, Guatemala. A sede e o Centro Cultural Miguel Ángel Asturias, no coracao da Zona 1.'
         },
         audience: {
           title: 'Para quem e?',
@@ -1063,7 +1063,7 @@ const translations = {
     registerPopup: {
       title: 'ABRELATAM 2026',
       subtitle: 'Junte-se à comunidade de dados abertos mais importante da América Latina',
-      date: 'Novembro 2026',
+      date: 'Outubro 2026',
       location: 'Cidade da Guatemala',
       badge: 'Não perca!'
     }
