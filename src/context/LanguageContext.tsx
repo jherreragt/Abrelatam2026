@@ -79,7 +79,7 @@ const translations = {
     },
     hero: {
       location: 'Ciudad de Guatemala, Guatemala',
-      date: '7 a 9 de Octubre de 2026',
+      date: '7, 8 y 9 de Octubre de 2026',
       register: 'Evento',
       guide: 'Pre-registro',
       agenda: 'Información Útil',
@@ -739,7 +739,7 @@ const translations = {
     },
     hero: {
       location: 'Cidade da Guatemala, Guatemala',
-      date: '7 a 9 de outubro de 2026',
+      date: '7, 8 e 9 de outubro de 2026',
       register: 'Evento',
       guide: 'Pré-registro',
       agenda: 'Informações Úteis',
