@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { NavLink, Link } from 'react-router-dom';
-import { Menu, X, Sun, Moon, ChevronDown } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
+import { NavLink } from 'react-router-dom';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
 import { ROUTES } from '../router/routes';
@@ -120,7 +119,6 @@ function DropdownMenu({
 
 export default function Navbar({ scrolled }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const { isDark, toggleTheme } = useTheme();
   const { t } = useLanguage();
 
   useEffect(() => {
@@ -145,6 +143,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
     : 'text-white/80 hover:text-white hover:bg-white/12';
 
   return (
+
     <>
       <nav className={`fixed top-10 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}>
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
@@ -186,24 +185,10 @@ export default function Navbar({ scrolled }: NavbarProps) {
 
             <div className="hidden lg:flex items-center gap-1">
               <LanguageSwitcher scrolled={scrolled} />
-              <button
-                onClick={toggleTheme}
-                className={`p-2 rounded-lg transition-all ${iconColor}`}
-                aria-label="Toggle theme"
-              >
-                {isDark ? <Sun size={18} /> : <Moon size={18} />}
-              </button>
             </div>
 
             <div className="flex items-center gap-1.5 lg:hidden">
               <LanguageSwitcher scrolled={scrolled} />
-              <button
-                onClick={toggleTheme}
-                className={`p-2 rounded-lg transition-all ${iconColor}`}
-                aria-label="Toggle theme"
-              >
-                {isDark ? <Sun size={18} /> : <Moon size={18} />}
-              </button>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className={`p-2 rounded-lg transition-all ${iconColor}`}
