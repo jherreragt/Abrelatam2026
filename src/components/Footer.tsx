@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Send, Twitter, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { ROUTES } from '../router/routes';
 import { assetPath } from '../lib/assetPath';
@@ -16,19 +15,6 @@ const organizerLogos = [
 
 export default function Footer() {
   const { t } = useLanguage();
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setTimeout(() => {
-        setEmail('');
-        setSubscribed(false);
-      }, 3000);
-    }
-  };
 
   return (
     <footer className="bg-primary text-white">
@@ -42,7 +28,7 @@ export default function Footer() {
                 src={src}
                 alt={alt}
                 className="h-auto object-contain"
-                style={{width:'200px'}}
+                style={{ width: '200px' }}
               />
             ))}
           </div>
@@ -100,7 +86,7 @@ export default function Footer() {
               <h3 className="mb-4 text-sm font-bold">{t('footer.participate')}</h3>
               <ul className="space-y-3 text-sm text-white/85">
                 {[
-                  { to: ROUTES.CONVOCATORIAS, label: t('home.register') },
+                  { to: ROUTES.PRE_REGISTRO, label: 'Pre-registro' },
                   { to: ROUTES.CONVOCATORIAS, label: t('home.proposeSession') },
                   { to: ROUTES.SIDE_EVENTS, label: t('nav.sideEvents') },
                   { to: ROUTES.CODIGO_CONDUCTA, label: t('nav.codeOfConduct') },
@@ -115,26 +101,15 @@ export default function Footer() {
             </nav>
 
             <div className="lg:col-span-4">
-              <h3 className="mb-4 text-sm font-bold">{t('footer.newsletter')}</h3>
-              <p className="mb-5 text-sm text-white/85">{t('footer.newsletterDesc')}</p>
-              <form onSubmit={handleSubscribe} className="space-y-3">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  aria-label="Email"
-                  className="h-12 w-full rounded bg-white px-4 text-sm text-slate-900 outline-none focus:ring-2 focus:ring-[#262460]"
-                  required
-                />
-                <button
-                  type="submit"
-                  disabled={subscribed}
-                  className="flex h-12 w-full items-center justify-center gap-3 rounded bg-[#4367e1] px-4 text-sm font-bold text-white transition-colors hover:bg-[#3657c8] disabled:cursor-default disabled:bg-[#4367e1]/70"
-                >
-                  {!subscribed && <Send size={14} />}
-                  {subscribed ? t('footer.subscribed') : t('footer.subscribe')}
+              <h3 className="mb-4 text-sm font-bold">Pre-registro</h3>
+              <p className="mb-5 text-sm text-white/85">
+                Asegura tu lugar en ABRELATAM / CONDATOS 2026. Comp&iacute;eta el formulario de pre-registro y recibe informaci&oacute;n cuando abran las inscripciones oficiales.
+              </p>
+              <Link to={ROUTES.PRE_REGISTRO}>
+                <button className="flex h-12 w-full items-center justify-center gap-3 rounded bg-[#4367e1] px-4 text-sm font-bold text-white transition-colors hover:bg-[#3657c8]">
+                  Formulario de pre-registro
                 </button>
-              </form>
+              </Link>
             </div>
           </div>
         </div>
