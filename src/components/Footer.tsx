@@ -11,6 +11,7 @@ const organizerLogos = [
   { src: assetPath('logos/AL-53.png'), alt: 'Red Ciudadana' },
   { src: assetPath('logos/AL-54.png'), alt: 'Hivos' },
   { src: assetPath('logos/AL-55.png'), alt: 'OEA' },
+  { src: '/assets/logos/logo_ilda_logo_blanco.png', alt: 'ILDA' },
 ];
 
 export default function Footer() {
