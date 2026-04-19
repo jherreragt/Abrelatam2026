@@ -15,6 +15,9 @@ import Noticias from './pages/Noticias';
 import BlogDetail from './pages/BlogDetail';
 import PreRegistro from './pages/PreRegistro';
 import GuiaParticipantes from './pages/GuiaParticipantes';
+import Aliados from './pages/Aliados';
+import Becas from './pages/Becas';
+import Comunidad from './pages/Comunidad';
 import { ROUTES } from './router/routes';
 
 export default function App() {
@@ -36,6 +39,9 @@ export default function App() {
             <Route path={ROUTES.BLOG_DETAIL} element={<BlogDetail />} />
             <Route path={ROUTES.PRE_REGISTRO} element={<PreRegistro />} />
             <Route path={ROUTES.GUIA_PARTICIPANTES} element={<GuiaParticipantes />} />
+            <Route path={ROUTES.ALIADOS} element={<Aliados />} />
+            <Route path={ROUTES.BECAS} element={<Becas />} />
+            <Route path={ROUTES.COMUNIDAD} element={<Comunidad />} />
           </Route>
         </Routes>
       </ThemeProvider>

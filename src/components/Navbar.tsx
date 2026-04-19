@@ -31,13 +31,17 @@ const navItems: NavItem[] = [
       { to: ROUTES.GUIA_PARTICIPANTES, labelKey: 'nav.guideForParticipants' },
       { to: ROUTES.CODIGO_CONDUCTA, labelKey: 'nav.codeOfConduct' },
       { to: ROUTES.PRE_REGISTRO, labelKey: 'nav.preRegister' },
+      { to: ROUTES.ALIADOS, labelKey: 'nav.partners' },
+      { to: ROUTES.COMUNIDAD, labelKey: 'nav.community' },
     ],
   },
   {
     labelKey: 'nav.agendaMenu',
     dropdown: [
       { to: ROUTES.AGENDA, labelKey: 'nav.agendaPage' },
+      { to: ROUTES.CONVOCATORIAS, labelKey: 'nav.calls' },
       { to: ROUTES.SIDE_EVENTS, labelKey: 'nav.sideEvents' },
+      { to: ROUTES.BECAS, labelKey: 'nav.scholarships' },
       { to: ROUTES.VIAJE_SEDE, labelKey: 'nav.travel' },
     ],
   },
@@ -46,13 +50,17 @@ const navItems: NavItem[] = [
 ];
 
 const mobileAllLinks: { to?: string; external?: string; labelKey: string; indent?: boolean }[] = [
-  { external: 'https://abrelatam.redciudadana.org.gt/', labelKey: 'nav.home' },
+  { to: ROUTES.HOME, labelKey: 'nav.home' },
   { to: ROUTES.SOBRE, labelKey: 'nav.about', indent: true },
   { to: ROUTES.GUIA_PARTICIPANTES, labelKey: 'nav.guideForParticipants', indent: true },
   { to: ROUTES.CODIGO_CONDUCTA, labelKey: 'nav.codeOfConduct', indent: true },
   { to: ROUTES.PRE_REGISTRO, labelKey: 'nav.preRegister', indent: true },
+  { to: ROUTES.ALIADOS, labelKey: 'nav.partners', indent: true },
+  { to: ROUTES.COMUNIDAD, labelKey: 'nav.community', indent: true },
   { to: ROUTES.AGENDA, labelKey: 'nav.agendaPage', indent: true },
+  { to: ROUTES.CONVOCATORIAS, labelKey: 'nav.calls', indent: true },
   { to: ROUTES.SIDE_EVENTS, labelKey: 'nav.sideEvents', indent: true },
+  { to: ROUTES.BECAS, labelKey: 'nav.scholarships', indent: true },
   { to: ROUTES.VIAJE_SEDE, labelKey: 'nav.travel', indent: true },
   { to: ROUTES.PRENSA, labelKey: 'nav.press' },
   { to: ROUTES.CONTACTO, labelKey: 'nav.contact' },

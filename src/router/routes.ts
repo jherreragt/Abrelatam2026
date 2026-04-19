@@ -12,4 +12,7 @@ export const ROUTES = {
   PRE_REGISTRO: '/pre-registro',
   NOTICIAS: '/noticias',
   BLOG_DETAIL: '/noticias/:slug',
+  ALIADOS: '/aliados',
+  BECAS: '/becas',
+  COMUNIDAD: '/comunidad',
 } as const;

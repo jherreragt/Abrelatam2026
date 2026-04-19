@@ -22,7 +22,7 @@ export default function SideEvents() {
         title={t('sideEventsPage.heroTitle')}
         subtitle={t('sideEventsPage.heroSubtitle')}
         backgroundImage={assetPath('v2/slider/AL-46.png')}
-        icon={<img src={assetPath('iconos/AL-38.png')} alt="" className="h-20 w-20 object-contain" />}
+        icon={<img src={assetPath('v2/iconos/AL-38.png')} alt="" className="h-20 w-20 object-contain" />}
       />
 
       <Section bgColor="white" className="py-16 md:py-20">

@@ -1,12 +1,22 @@
 import { useState } from 'react';
-import { Newspaper } from 'lucide-react';
 import Section from '../components/Section';
+import PageHero from '../components/PageHero';
 import BlogCard from '../components/BlogCard';
 import { blogPosts } from '../data/blogPosts';
+import { useLanguage, type Language } from '../context/LanguageContext';
+import { assetPath } from '../lib/assetPath';
 
 const categories = ['Todos', ...Array.from(new Set(blogPosts.map(p => p.category)))];
 
+const copy: Record<Language, { title: string; subtitle: string }> = {
+  es: { title: 'Noticias', subtitle: 'Novedades, convocatorias, análisis y reflexiones sobre datos abiertos en América Latina' },
+  en: { title: 'News', subtitle: 'Updates, calls, analysis and insights about open data in Latin America' },
+  pt: { title: 'Notícias', subtitle: 'Novidades, chamadas, análises e reflexões sobre dados abertos na América Latina' },
+};
+
 export default function Noticias() {
+  const { language } = useLanguage();
+  const text = copy[language];
   const [activeCategory, setActiveCategory] = useState('Todos');
 
   const filtered = activeCategory === 'Todos'
@@ -17,17 +27,13 @@ export default function Noticias() {
 
   return (
     <>
-      <Section bgColor="gray" className="pt-24">
-        <div className="text-center mb-12">
-          <Newspaper className="mx-auto mb-4 text-blue-500" size={48} />
-          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent mb-4">
-            Últimas Noticias
-          </h1>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Novedades, convocatorias, análisis y reflexiones sobre ABRELATAM/CONDATOS 2026 y el ecosistema de datos abiertos en América Latina.
-          </p>
-        </div>
+      <PageHero
+        title={text.title}
+        subtitle={text.subtitle}
+        backgroundImage={assetPath('v2/slider/AL-45.png')}
+      />
 
+      <Section bgColor="gray" className="py-16 md:py-20">
         <div className="flex flex-wrap justify-center gap-2 mb-10">
           {categories.map(cat => (
             <button

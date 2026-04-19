@@ -115,7 +115,7 @@ export default function ViajeSede() {
         title={text.heroTitle}
         subtitle={text.heroSubtitle}
         backgroundImage={assetPath('v2/slider/AL-47.png')}
-        icon={<img src={assetPath('iconos/AL-39.png')} alt="" className="h-20 w-20 object-contain" />}
+        icon={<img src={assetPath('v2/iconos/AL-39.png')} alt="" className="h-20 w-20 object-contain" />}
       />
 
       <section className="py-20 md:py-28 bg-white dark:bg-slate-900">
