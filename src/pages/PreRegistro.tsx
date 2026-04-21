@@ -72,7 +72,7 @@ export default function PreRegistro() {
       <PageHero
         title={text.heroTitle}
         subtitle={text.heroSubtitle}
-        backgroundImage={assetPath('v2/slider/AL-46.png')}
+        backgroundImage={assetPath('v2/slider/AL-51.png')}
       />
       <section className="bg-slate-50 dark:bg-slate-950 py-16 md:py-20">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">

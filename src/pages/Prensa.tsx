@@ -143,7 +143,7 @@ const copy: Record<Language, any> = {
 };
 
 const colorMap: Record<string, string> = {
-  brand: 'bg-secondary/10 dark:bg-primary/80 text-secondary dark:text-secondary',
+  brand: 'bg-[#456bdd] text-white',
 };
 
 export default function Prensa() {
@@ -155,7 +155,7 @@ export default function Prensa() {
       <PageHero
         title={text.heroTitle}
         subtitle={text.heroSubtitle}
-        backgroundImage={assetPath('v2/slider/AL-43.png')}
+        backgroundImage={assetPath('v2/slider/AL-52.png')}
       />
 
       <section className="py-20 md:py-28 bg-white dark:bg-primary">
@@ -206,7 +206,7 @@ export default function Prensa() {
           </div>
           <div className="max-w-3xl mx-auto mb-20">
             <div className="bg-white dark:bg-primary/80 rounded-2xl border border-primary/10 dark:border-secondary/30 overflow-hidden card-glow">
-              <div className="h-1.5 bg-gradient-to-r from-primary to-secondary" />
+              <div className="h-1.5 bg-gradient-to-r from-primary to-[#456bdd]" />
               <div className="p-8">
                 <p className="text-primary/80 dark:text-white/80 text-sm leading-relaxed mb-6">{text.accreditationIncludes}</p>
                 <ul className="space-y-3 mb-7">
@@ -222,7 +222,7 @@ export default function Prensa() {
                     <span className="font-semibold text-primary dark:text-white/85">{text.requirementsLabel}</span> {text.requirements}
                   </p>
                 </div>
-                <button className="inline-flex items-center gap-2 bg-[#4367e1] hover:bg-[#3657c8] text-white px-7 py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-0.5">
+                <button className="inline-flex items-center gap-2 bg-[#456bdd] hover:bg-[#092d7e] text-white px-7 py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-0.5">
                   <ExternalLink size={15} />
                   {text.requestButton}
                 </button>
@@ -256,7 +256,7 @@ export default function Prensa() {
             })}
           </div>
 
-          <div className="bg-primary dark:bg-primary rounded-2xl p-8 max-w-3xl mx-auto text-center">
+          <div className="bg-[#092d7e] dark:bg-[#092d7e] rounded-2xl p-8 max-w-3xl mx-auto text-center">
             <div className="w-12 h-12 rounded-2xl bg-secondary/100/20 flex items-center justify-center mx-auto mb-5">
               <Mail size={22} className="text-white" />
             </div>

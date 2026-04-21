@@ -191,15 +191,15 @@ export default function CodigoConducta() {
       <PageHero
         title={text.heroTitle}
         subtitle={text.heroSubtitle}
-        backgroundImage={assetPath('v2/slider/AL-45.png')}
+        backgroundImage={assetPath('v2/slider/AL-50.png')}
       />
 
       <section className="py-20 md:py-28 bg-white dark:bg-primary">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="max-w-3xl mx-auto mb-20">
-            <div className="bg-secondary/10 dark:bg-primary/80 border border-secondary/20 dark:border-secondary/30 rounded-2xl p-7 flex gap-4">
-              <div className="w-11 h-11 rounded-xl bg-secondary/15 dark:bg-secondary/20 flex items-center justify-center flex-shrink-0">
-                <Heart size={20} className="text-secondary dark:text-secondary" />
+            <div className="bg-[#456bdd]/10 dark:bg-primary/80 border border-[#456bdd]/20 dark:border-[#456bdd]/30 rounded-2xl p-7 flex gap-4">
+              <div className="w-11 h-11 rounded-xl bg-[#456bdd]/15 dark:bg-[#456bdd]/20 flex items-center justify-center flex-shrink-0">
+                <Heart size={20} className="text-[#456bdd]" />
               </div>
               <div>
                 <h3 className="font-bold text-primary dark:text-white mb-2">{text.commitmentTitle}</h3>
@@ -211,17 +211,17 @@ export default function CodigoConducta() {
           <div className="grid lg:grid-cols-2 gap-10 max-w-5xl mx-auto mb-20">
             <div>
               <div className="text-center mb-8">
-                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-secondary dark:text-secondary mb-3">{text.expectedLabel}</span>
+                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#456bdd] mb-3">{text.expectedLabel}</span>
                 <h2 className="text-2xl font-bold text-primary dark:text-white flex items-center justify-center gap-2">
-                  <CheckCircle size={22} className="text-secondary" />
+                  <CheckCircle size={22} className="text-[#456bdd]" />
                   {text.expectedTitle}
                 </h2>
               </div>
               <div className="space-y-3">
                 {expectedKeys.map((key) => (
-                  <div key={key} className="bg-white dark:bg-primary/80 rounded-2xl p-5 border border-primary/10 dark:border-secondary/30 card-glow">
+                  <div key={key} className="bg-white dark:bg-primary/80 rounded-2xl p-5 border border-primary/10 dark:border-[#456bdd]/30 card-glow">
                     <h4 className="font-semibold text-primary dark:text-white text-sm mb-1">{text.expected[key].title}</h4>
-                    <p className="text-xs text-primary/70 dark:text-secondary/80 leading-relaxed">{text.expected[key].desc}</p>
+                    <p className="text-xs text-primary/70 dark:text-[#456bdd]/80 leading-relaxed">{text.expected[key].desc}</p>
                   </div>
                 ))}
               </div>
@@ -229,21 +229,21 @@ export default function CodigoConducta() {
 
             <div>
               <div className="text-center mb-8">
-                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-secondary mb-3">{text.unacceptableLabel}</span>
+                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#456bdd] mb-3">{text.unacceptableLabel}</span>
                 <h2 className="text-2xl font-bold text-primary dark:text-white flex items-center justify-center gap-2">
-                  <XCircle size={22} className="text-secondary" />
+                  <XCircle size={22} className="text-[#456bdd]" />
                   {text.unacceptableTitle}
                 </h2>
               </div>
-              <div className="bg-white dark:bg-primary/80 rounded-2xl border border-primary/10 dark:border-secondary/30 overflow-hidden">
-                <div className="h-1 bg-gradient-to-r from-primary to-secondary" />
+              <div className="bg-white dark:bg-primary/80 rounded-2xl border border-primary/10 dark:border-[#456bdd]/30 overflow-hidden">
+                <div className="h-1 bg-gradient-to-r from-primary to-[#456bdd]" />
                 <div className="p-6">
-                  <p className="text-sm text-primary/70 dark:text-secondary/80 mb-5 leading-relaxed">{text.unacceptableIntro}</p>
+                  <p className="text-sm text-primary/70 dark:text-[#456bdd]/80 mb-5 leading-relaxed">{text.unacceptableIntro}</p>
                   <ul className="space-y-3">
                     {unacceptableKeys.map((key) => (
                       <li key={key} className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0 mt-2" />
-                        <p className="text-sm text-primary/70 dark:text-secondary/80 leading-relaxed">{text.unacceptable[key]}</p>
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#456bdd] flex-shrink-0 mt-2" />
+                        <p className="text-sm text-primary/70 dark:text-[#456bdd]/80 leading-relaxed">{text.unacceptable[key]}</p>
                       </li>
                     ))}
                   </ul>
@@ -254,30 +254,30 @@ export default function CodigoConducta() {
 
           <div className="max-w-3xl mx-auto mb-20">
             <div className="text-center mb-8">
-              <span className="inline-block text-xs font-semibold tracking-widest uppercase text-secondary mb-3">{text.consequencesLabel}</span>
+              <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#456bdd] mb-3">{text.consequencesLabel}</span>
               <h2 className="text-2xl font-bold text-primary dark:text-white">{text.consequencesTitle}</h2>
             </div>
-            <div className="bg-primary/5 dark:bg-primary/80 rounded-2xl p-7 border border-primary/10 dark:border-secondary/30">
+            <div className="bg-primary/5 dark:bg-primary/80 rounded-2xl p-7 border border-primary/10 dark:border-[#456bdd]/30">
               <p className="text-sm text-primary/80 dark:text-white/80 leading-relaxed mb-4">{text.consequences1}</p>
               <p className="text-sm text-primary/80 dark:text-white/80 leading-relaxed">{text.consequences2}</p>
             </div>
           </div>
 
           <div className="text-center mb-10">
-            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-secondary mb-3">{text.reportLabel}</span>
+            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#456bdd] mb-3">{text.reportLabel}</span>
             <h2 className="text-3xl font-bold text-primary dark:text-white flex items-center justify-center gap-3 mb-3">
-              <AlertTriangle size={26} className="text-secondary" />
+              <AlertTriangle size={26} className="text-[#456bdd]" />
               {text.reportTitle}
             </h2>
-            <p className="text-secondary dark:text-secondary/80 text-sm max-w-xl mx-auto">{text.reportText}</p>
+            <p className="text-[#456bdd] dark:text-[#456bdd]/80 text-sm max-w-xl mx-auto">{text.reportText}</p>
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <div className="bg-white dark:bg-primary/80 rounded-2xl border border-primary/10 dark:border-secondary/30 overflow-hidden card-glow">
-              <div className="h-1 bg-gradient-to-r from-primary to-secondary" />
+            <div className="bg-white dark:bg-primary/80 rounded-2xl border border-primary/10 dark:border-[#456bdd]/30 overflow-hidden card-glow">
+              <div className="h-1 bg-gradient-to-r from-primary to-[#456bdd]" />
               <div className="p-8">
-                <div className="bg-secondary/10 dark:bg-primary/80 border border-secondary/20 dark:border-secondary/30 rounded-xl p-4 mb-6 flex gap-3">
-                  <MessageCircle size={16} className="text-secondary flex-shrink-0 mt-0.5" />
+                <div className="bg-[#456bdd]/10 dark:bg-primary/80 border border-[#456bdd]/20 dark:border-[#456bdd]/30 rounded-xl p-4 mb-6 flex gap-3">
+                  <MessageCircle size={16} className="text-[#456bdd] flex-shrink-0 mt-0.5" />
                   <p className="text-xs text-primary/80 dark:text-white/80 leading-relaxed">{text.formNotice}</p>
                 </div>
 
@@ -287,7 +287,7 @@ export default function CodigoConducta() {
                       type="checkbox"
                       checked={reportData.anonymous}
                       onChange={(e) => setReportData({ ...reportData, anonymous: e.target.checked })}
-                      className="w-4 h-4 text-secondary rounded focus:ring-secondary border-primary/30 dark:border-secondary/40"
+                      className="w-4 h-4 text-[#456bdd] rounded focus:ring-[#456bdd] border-primary/30 dark:border-[#456bdd]/40"
                     />
                     <span className="text-sm text-primary/80 dark:text-white/80 font-medium">{text.anonymous}</span>
                   </label>
@@ -300,7 +300,7 @@ export default function CodigoConducta() {
                           type="text"
                           value={reportData.name}
                           onChange={(e) => setReportData({ ...reportData, name: e.target.value })}
-                          className="w-full px-4 py-2.5 border border-primary/20 dark:border-secondary/30 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
+                          className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
                         />
                       </div>
                       <div>
@@ -309,7 +309,7 @@ export default function CodigoConducta() {
                           type="email"
                           value={reportData.email}
                           onChange={(e) => setReportData({ ...reportData, email: e.target.value })}
-                          className="w-full px-4 py-2.5 border border-primary/20 dark:border-secondary/30 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
+                          className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
                           placeholder="tu@email.com"
                         />
                       </div>
@@ -318,14 +318,14 @@ export default function CodigoConducta() {
 
                   <div>
                     <label className="block text-xs font-semibold text-primary/80 dark:text-white/80 mb-1.5">
-                      {text.incident} <span className="text-secondary">*</span>
+                      {text.incident} <span className="text-[#456bdd]">*</span>
                     </label>
                     <textarea
                       value={reportData.incident}
                       onChange={(e) => setReportData({ ...reportData, incident: e.target.value })}
                       rows={5}
                       required
-                      className="w-full px-4 py-2.5 border border-primary/20 dark:border-secondary/30 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all resize-none"
+                      className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all resize-none"
                       placeholder={text.incidentPlaceholder}
                     />
                   </div>
@@ -337,7 +337,7 @@ export default function CodigoConducta() {
                         type="date"
                         value={reportData.date}
                         onChange={(e) => setReportData({ ...reportData, date: e.target.value })}
-                        className="w-full px-4 py-2.5 border border-primary/20 dark:border-secondary/30 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
+                        className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
                       />
                     </div>
                     <div>
@@ -346,7 +346,7 @@ export default function CodigoConducta() {
                         type="text"
                         value={reportData.location}
                         onChange={(e) => setReportData({ ...reportData, location: e.target.value })}
-                        className="w-full px-4 py-2.5 border border-primary/20 dark:border-secondary/30 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
+                        className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
                         placeholder={text.locationPlaceholder}
                       />
                     </div>
@@ -358,7 +358,7 @@ export default function CodigoConducta() {
                       type="text"
                       value={reportData.witnesses}
                       onChange={(e) => setReportData({ ...reportData, witnesses: e.target.value })}
-                      className="w-full px-4 py-2.5 border border-primary/20 dark:border-secondary/30 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
+                      className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
                       placeholder={text.witnessesPlaceholder}
                     />
                   </div>
@@ -367,24 +367,24 @@ export default function CodigoConducta() {
                     <button
                       type="submit"
                       disabled={submitted}
-                      className="inline-flex items-center gap-2 bg-[#4367e1] hover:bg-[#3657c8] disabled:bg-[#4367e1]/70 text-white px-7 py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-0.5 disabled:translate-y-0"
+                      className="inline-flex items-center gap-2 bg-[#456bdd] hover:bg-[#092d7e] disabled:bg-[#456bdd]/70 text-white px-7 py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-0.5 disabled:translate-y-0"
                     >
                       {submitted ? <CheckCircle size={16} /> : <Send size={15} />}
                       {submitted ? text.submitted : text.submit}
                     </button>
                     {submitted && (
-                      <p className="text-xs text-secondary dark:text-secondary font-medium">{text.submittedNote}</p>
+                      <p className="text-xs text-[#456bdd] font-medium">{text.submittedNote}</p>
                     )}
                   </div>
                 </form>
               </div>
             </div>
 
-            <div className="mt-5 bg-primary/5 dark:bg-primary/80 rounded-2xl p-5 border border-primary/10 dark:border-secondary/30">
+            <div className="mt-5 bg-primary/5 dark:bg-primary/80 rounded-2xl p-5 border border-primary/10 dark:border-[#456bdd]/30">
               <h4 className="font-semibold text-primary dark:text-white text-sm mb-2">{text.directTitle}</h4>
-              <p className="text-xs text-primary/70 dark:text-secondary/80 leading-relaxed mb-2">{text.directText}</p>
-              <div className="text-xs text-primary/70 dark:text-secondary/80 space-y-1">
-                <p>Email: <a href="mailto:conducta@abrelatam.org" className="text-secondary dark:text-secondary hover:underline font-medium">conducta@abrelatam.org</a></p>
+              <p className="text-xs text-primary/70 dark:text-[#456bdd]/80 leading-relaxed mb-2">{text.directText}</p>
+              <div className="text-xs text-primary/70 dark:text-[#456bdd]/80 space-y-1">
+                <p>Email: <a href="mailto:conducta@abrelatam.org" className="text-[#456bdd] hover:underline font-medium">conducta@abrelatam.org</a></p>
                 <p>{text.directAvailability}</p>
               </div>
             </div>

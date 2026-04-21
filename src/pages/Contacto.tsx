@@ -200,21 +200,21 @@ export default function Contacto() {
       <PageHero
         title={text.heroTitle}
         subtitle={text.heroSubtitle}
-        backgroundImage={assetPath('v2/slider/AL-46.png')}
+        backgroundImage={assetPath('v2/slider/AL-53.png')}
       />
 
       <section className="py-20 md:py-28 bg-white dark:bg-primary">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="text-center mb-12">
-            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-secondary mb-3">FAQ</span>
+            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#456bdd] mb-3">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white flex items-center justify-center gap-3">
-              <HelpCircle size={28} className="text-secondary" />
+              <HelpCircle size={28} className="text-[#456bdd]" />
               {text.faqTitle}
             </h2>
           </div>
           <div className="max-w-3xl mx-auto space-y-2 mb-24">
             {faqKeys.map((key, index) => (
-              <div key={key} className="bg-white dark:bg-primary/80 rounded-2xl border border-primary/10 dark:border-secondary/30 overflow-hidden transition-all duration-200">
+              <div key={key} className="bg-white dark:bg-primary/80 rounded-2xl border border-primary/10 dark:border-[#456bdd]/30 overflow-hidden transition-all duration-200">
                 <button
                   onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
                   className="w-full flex items-start justify-between gap-4 text-left px-6 py-5"
@@ -223,14 +223,14 @@ export default function Contacto() {
                     {text.faqs[key].q}
                   </h3>
                   {openFAQ === index ? (
-                    <ChevronUp className="text-secondary flex-shrink-0 mt-0.5" size={18} />
+                    <ChevronUp className="text-[#456bdd] flex-shrink-0 mt-0.5" size={18} />
                   ) : (
-                    <ChevronDown className="text-secondary/80 flex-shrink-0 mt-0.5" size={18} />
+                    <ChevronDown className="text-[#456bdd]/80 flex-shrink-0 mt-0.5" size={18} />
                   )}
                 </button>
                 {openFAQ === index && (
-                  <div className="px-6 pb-5 border-t border-primary/10 dark:border-secondary/30 pt-4">
-                    <p className="text-sm text-primary/70 dark:text-secondary/80 leading-relaxed">
+                  <div className="px-6 pb-5 border-t border-primary/10 dark:border-[#456bdd]/30 pt-4">
+                    <p className="text-sm text-primary/70 dark:text-[#456bdd]/80 leading-relaxed">
                       {text.faqs[key].a}
                     </p>
                   </div>
@@ -242,48 +242,48 @@ export default function Contacto() {
           <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto mb-20">
             <div>
               <div className="mb-8">
-                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-secondary mb-3">{text.formLabel}</span>
+                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#456bdd] mb-3">{text.formLabel}</span>
                 <h2 className="text-2xl font-bold text-primary dark:text-white">{text.formTitle}</h2>
-                <p className="text-secondary dark:text-secondary/80 text-sm mt-2">{text.formText}</p>
+                <p className="text-[#456bdd] dark:text-[#456bdd]/80 text-sm mt-2">{text.formText}</p>
               </div>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-semibold text-primary/80 dark:text-white/80 mb-1.5">
-                      {text.fields.name} <span className="text-secondary">*</span>
+                      {text.fields.name} <span className="text-[#456bdd]">*</span>
                     </label>
                     <input
                       type="text"
                       value={contactData.name}
                       onChange={(e) => setContactData({ ...contactData, name: e.target.value })}
                       required
-                      className="w-full px-4 py-2.5 border border-primary/20 dark:border-secondary/30 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
+                      className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
                       placeholder={text.fields.namePlaceholder}
                     />
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-primary/80 dark:text-white/80 mb-1.5">
-                      {text.fields.email} <span className="text-secondary">*</span>
+                      {text.fields.email} <span className="text-[#456bdd]">*</span>
                     </label>
                     <input
                       type="email"
                       value={contactData.email}
                       onChange={(e) => setContactData({ ...contactData, email: e.target.value })}
                       required
-                      className="w-full px-4 py-2.5 border border-primary/20 dark:border-secondary/30 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
+                      className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
                       placeholder={text.fields.emailPlaceholder}
                     />
                   </div>
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-primary/80 dark:text-white/80 mb-1.5">
-                    {text.fields.subject} <span className="text-secondary">*</span>
+                    {text.fields.subject} <span className="text-[#456bdd]">*</span>
                   </label>
                   <select
                     value={contactData.subject}
                     onChange={(e) => setContactData({ ...contactData, subject: e.target.value })}
                     required
-                    className="w-full px-4 py-2.5 border border-primary/20 dark:border-secondary/30 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
+                    className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
                   >
                     <option value="">{text.fields.subjectPlaceholder}</option>
                     {subjectKeys.map((key) => (
@@ -293,14 +293,14 @@ export default function Contacto() {
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-primary/80 dark:text-white/80 mb-1.5">
-                    {text.fields.message} <span className="text-secondary">*</span>
+                    {text.fields.message} <span className="text-[#456bdd]">*</span>
                   </label>
                   <textarea
                     value={contactData.message}
                     onChange={(e) => setContactData({ ...contactData, message: e.target.value })}
                     rows={5}
                     required
-                    className="w-full px-4 py-2.5 border border-primary/20 dark:border-secondary/30 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all resize-none"
+                    className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all resize-none"
                     placeholder={text.fields.messagePlaceholder}
                   />
                 </div>
@@ -308,13 +308,13 @@ export default function Contacto() {
                   <button
                     type="submit"
                     disabled={submitted}
-                    className="inline-flex items-center gap-2 bg-[#4367e1] hover:bg-[#3657c8] disabled:bg-[#4367e1]/70 text-white px-7 py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-0.5 disabled:translate-y-0"
+                    className="inline-flex items-center gap-2 bg-[#456bdd] hover:bg-[#092d7e] disabled:bg-[#456bdd]/70 text-white px-7 py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-0.5 disabled:translate-y-0"
                   >
                     {submitted ? <CheckCircle size={16} /> : <Send size={15} />}
                     {submitted ? text.fields.submitted : text.fields.submit}
                   </button>
                   {submitted && (
-                    <p className="text-xs text-secondary dark:text-secondary font-medium">
+                    <p className="text-xs text-[#456bdd] font-medium">
                       {text.fields.submittedNote}
                     </p>
                   )}
@@ -324,9 +324,9 @@ export default function Contacto() {
 
             <div>
               <div className="mb-8">
-                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-secondary mb-3">{text.teamsLabel}</span>
+                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#456bdd] mb-3">{text.teamsLabel}</span>
                 <h2 className="text-2xl font-bold text-primary dark:text-white">{text.teamsTitle}</h2>
-                <p className="text-secondary dark:text-secondary/80 text-sm mt-2">{text.teamsText}</p>
+                <p className="text-[#456bdd] dark:text-[#456bdd]/80 text-sm mt-2">{text.teamsText}</p>
               </div>
               <div className="space-y-3">
                 {contactKeys.map((key) => {
@@ -335,16 +335,16 @@ export default function Contacto() {
                     <a
                       key={key}
                       href={`mailto:${contact.email}`}
-                      className="group block bg-white dark:bg-primary/80 rounded-2xl p-5 border border-primary/10 dark:border-secondary/30 card-glow"
+                      className="group block bg-white dark:bg-primary/80 rounded-2xl p-5 border border-primary/10 dark:border-[#456bdd]/30 card-glow"
                     >
                       <div className="flex items-start justify-between gap-3">
                         <div>
                           <h3 className="font-semibold text-primary dark:text-white text-sm mb-0.5">{contact.title}</h3>
-                          <p className="text-xs text-secondary dark:text-secondary/80 mb-2">{contact.desc}</p>
-                          <span className="text-xs font-medium text-secondary dark:text-secondary">{contact.email}</span>
+                          <p className="text-xs text-[#456bdd] dark:text-[#456bdd]/80 mb-2">{contact.desc}</p>
+                          <span className="text-xs font-medium text-[#456bdd]">{contact.email}</span>
                         </div>
-                        <div className="w-8 h-8 rounded-full bg-secondary/10 dark:bg-primary/80 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/15 dark:group-hover:bg-secondary/20 transition-colors">
-                          <Mail size={14} className="text-secondary" />
+                        <div className="w-8 h-8 rounded-full bg-[#456bdd]/10 dark:bg-primary/80 flex items-center justify-center flex-shrink-0 group-hover:bg-[#456bdd]/15 dark:group-hover:bg-[#456bdd]/20 transition-colors">
+                          <Mail size={14} className="text-[#456bdd]" />
                         </div>
                       </div>
                     </a>
@@ -355,18 +355,18 @@ export default function Contacto() {
           </div>
 
           <section className="bg-white px-4 py-16 md:py-20 dark:bg-slate-950">
-            <div className="mx-auto max-w-5xl rounded-lg bg-slate-100 px-6 py-12 text-center dark:bg-slate-900">
-              <h2 className="mb-4 text-2xl font-bold text-[#10184a] md:text-3xl">
+            <div className="mx-auto max-w-5xl rounded-lg bg-[#092d7e] px-6 py-12 text-center dark:bg-[#092d7e]">
+              <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">
                 {text.whatsappTitle}
               </h2>
-              <p className="mx-auto mb-8 max-w-lg text-sm leading-snug text-[#10184a] dark:text-slate-300">
+              <p className="mx-auto mb-8 max-w-lg text-sm leading-snug text-white/80">
                 {text.whatsappText}
               </p>
               <a
                 href="https://wa.me/50212345678"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="min-w-60 rounded-md bg-[#4367e1] px-8 py-3.5 text-sm font-medium text-white transition-colors hover:bg-[#3657c8]"
+                className="min-w-60 rounded-md bg-white px-8 py-3.5 text-sm font-medium text-[#092d7e] transition-colors hover:bg-[#456bdd] hover:text-white"
               >
                 +502 1234-5678
               </a>

@@ -24,7 +24,7 @@ export default function GuiaParticipantes() {
       <PageHero
         title={t('participantGuide.heroTitle')}
         subtitle={t('participantGuide.heroSubtitle')}
-        backgroundImage={assetPath('v2/slider/AL-47.png')}
+        backgroundImage={assetPath('v2/slider/AL-49.png')}
       />
 
       <section className="bg-white dark:bg-slate-900 py-16 md:py-24">
@@ -36,8 +36,8 @@ export default function GuiaParticipantes() {
                 key={key}
                 className="bg-slate-50 dark:bg-slate-800/60 rounded-2xl p-7 border border-slate-100 dark:border-slate-700/40 flex flex-col gap-4"
               >
-                <div className="w-11 h-11 rounded-xl bg-[#262460]/10 dark:bg-[#2377b9]/15 flex items-center justify-center flex-shrink-0">
-                  <Icon size={22} className="text-[#262460] dark:text-[#2377b9]" />
+                <div className="w-11 h-11 rounded-xl bg-[#456bdd] flex items-center justify-center flex-shrink-0">
+                  <Icon size={22} className="text-white" />
                 </div>
                 <h3 className="font-bold text-slate-900 dark:text-white text-base leading-snug">
                   {t(`participantGuide.sections.${key}.title`)}
@@ -51,11 +51,11 @@ export default function GuiaParticipantes() {
 
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#2377b9] mb-3">
+              <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#456bdd] mb-3">
                 FAQ
               </span>
               <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white flex items-center justify-center gap-3">
-                <HelpCircle size={26} className="text-[#2377b9]" />
+                <HelpCircle size={26} className="text-[#456bdd]" />
                 {t('participantGuide.faqTitle')}
               </h2>
             </div>
