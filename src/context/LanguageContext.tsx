@@ -308,55 +308,55 @@ const translations = {
       ctaButton: 'Proponer Side Event'
     },
     participantGuide: {
-      heroTitle: 'Guia para participantes',
-      heroSubtitle: 'Todo lo que necesitas saber para aprovechar al maximo tu experiencia en ABRELATAM / CONDATOS 2026.',
+      heroTitle: 'Guía para participantes',
+      heroSubtitle: 'Todo lo que necesitas saber para aprovechar al máximo tu experiencia en ABRELATAM / CONDATOS 2026.',
       sections: {
         whatIs: {
-          title: 'Que es ABRELATAM / CONDATOS?',
-          content: 'ABRELATAM es una desconferencia comunitaria donde la agenda se construye colectivamente. CONDATOS es la conferencia regional con paneles y talleres seleccionados por un comite. Juntos conforman el encuentro mas importante de la region sobre datos abiertos y tecnologia civica.'
+          title: '¿Qué es ABRELATAM / CONDATOS?',
+          content: 'ABRELATAM es una desconferencia comunitaria donde la agenda se construye colectivamente. CONDATOS es la conferencia regional con paneles y talleres seleccionados por un comité a partir de un llamado público a propuestas. Juntos conforman el encuentro más importante de la región sobre datos abiertos y tecnología cívica.'
         },
         datesPlace: {
           title: 'Fechas y lugar',
-          content: 'El evento se realizara del 7 al 9 de octubre de 2026 en Ciudad de Guatemala, Guatemala. La sede es el Centro Cultural Miguel Ángel Asturias, en el corazon de la Zona 1.'
+          content: 'El evento se realizará del 7 al 9 de octubre de 2026 en Ciudad de Guatemala, Guatemala. La sede es el Centro Cultural Miguel Ángel Asturias, en el corazón de la Zona 1.'
         },
         audience: {
-          title: 'A quien va dirigido?',
-          content: 'El evento es para personas de la sociedad civil, gobierno, academia, sector privado y comunidad tecnologica comprometidas con la apertura de datos, la transparencia y la innovacion publica en America Latina.'
+          title: '¿A quién va dirigido?',
+          content: 'El evento es para personas de la sociedad civil, gobierno, academia, sector privado y comunidad tecnológica comprometidas con la apertura de datos, la transparencia y la innovación pública en América.'
         },
         howToArrive: {
-          title: 'Como llegar',
-          content: 'El Centro Cultural Miguel Angel Asturias se encuentra en la 24 Calle 3-81, Zona 1, Ciudad de Guatemala. Puedes llegar en Transmetro, taxi o servicio de ridesharing. Proximamente publicaremos una guia detallada de movilidad.'
+          title: 'Cómo llegar',
+          content: 'El Centro Cultural Miguel Angel Asturias se encuentra en la 24 Calle 3-81, Zona 1, Ciudad de Guatemala. Puedes llegar en Transmetro, taxi o servicio de ridesharing. Próximamente publicaremos una guía detallada de movilidad.'
         },
         duringEvent: {
           title: 'Durante el evento',
-          content: 'Habra WiFi disponible en todas las salas. Te recomendamos llevar tu computadora o tablet para participar activamente. El evento cuenta con coffee breaks, almuerzo y espacios de networking.'
+          content: 'Habrá WiFi disponible en todas las salas. Te recomendamos llevar tu computadora o tablet para participar activamente. El evento cuenta con coffee breaks, almuerzo y espacios de networking.'
         },
         networking: {
           title: 'Networking y comunidad',
-          content: 'ABRELATAM / CONDATOS es ante todo un espacio de comunidad. Aprovecha los recesos, las actividades sociales y los side events para conectar con otras personas de la region.'
+          content: 'ABRELATAM / CONDATOS es ante todo un espacio de comunidad. Aprovecha los recesos, las actividades sociales y los side events para conectar con otras personas de la región.'
         }
       },
       faqTitle: 'Preguntas frecuentes',
       faqs: {
         registration: {
-          q: 'Necesito registro previo para asistir?',
-          a: 'Si, debes completar tu registro para asistir al evento. El registro ya esta disponible en este sitio.'
+          q: '¿Necesito registro previo para asistir?',
+          a: 'Sí, Abrelatam-ConDatos tiene un formulario de registro que debes completar para asegurar tu participación.'
         },
         free: {
-          q: 'El evento es gratuito?',
-          a: 'El evento tiene costo de inscripcion. Se anunciaran los precios por categoria cuando se abra el registro oficial.'
+          q: '¿El evento es gratuito?',
+          a: 'Sí, el evento es gratuito. Todas las personas interesadas en temas de gobierno abierto y datos abiertos en las Américas están invitadas a participar. Esto incluye a personas que trabajan en gobierno, sociedad civil, academia, sector privado, organizaciones multilaterales, donantes y más.'
         },
         translation: {
-          q: 'Habra traduccion simultanea?',
-          a: 'Si, las sesiones plenarias principales contaran con interpretacion espanol-ingles-portugues.'
+          q: '¿Habrá traducción simultánea?',
+          a: 'Sí, las sesiones plenarias principales contarán con interpretación español-inglés-portugués.'
         },
         propose: {
-          q: 'Puedo proponer una sesion?',
-          a: 'Las convocatorias para sesiones y talleres se abriran en febrero de 2026. Mantente atento a las novedades en este sitio.'
+          q: '¿Puedo proponer una sesión?',
+          a: 'La agenda de Abrelatam-ConDatos se construye de forma colaborativa con la comunidad. Próximamente se abrirá el llamado a propuestas para la agenda.'
         },
         includes: {
-          q: 'Que incluye la inscripcion?',
-          a: 'Acceso a todas las sesiones, materiales del evento, coffee breaks y certificado de participacion. No incluye alojamiento ni transporte.'
+          q: '¿Qué incluye la inscripción?',
+          a: 'Acceso a todas las sesiones, materiales del evento, coffee breaks y certificado de participación.'
         }
       }
     },
