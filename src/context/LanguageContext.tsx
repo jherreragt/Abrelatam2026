@@ -175,54 +175,55 @@ const translations = {
       heroTitle: 'Sobre ABRELATAM / CONDATOS 2026',
       heroSubtitle: 'Dos conferencias, un mismo objetivo: transformar America Latina a traves de datos abiertos',
       historyTitle: 'Nuestra historia',
-      history1: 'Desde 2013, ABRELATAM y CONDATOS han sido los puntos de encuentro mas importantes para la comunidad latinoamericana de datos abiertos. Nacidas con el espiritu de democratizar el acceso a la informacion publica, estas conferencias han viajado por toda la region, dejando en cada pais una huella de colaboracion y transformacion.',
-      history2: 'ABRELATAM es el espacio donde activistas, desarrolladoras, periodistas, academicas y emprendedores sociales se reunen para compartir experiencias, aprender nuevas herramientas y construir redes de colaboracion que trascienden fronteras.',
-      history3: 'CONDATOS, por su parte, convoca especificamente a funcionarios publicos y tomadores de decisiones gubernamentales para dialogar sobre politicas publicas, implementacion de plataformas de datos abiertos y mejores practicas en transparencia.',
-      history4: 'En 2026, estas conferencias regresan a Centroamerica, y Guatemala tiene el honor de recibirlas. Sera una oportunidad unica para fortalecer el ecosistema regional de datos abiertos y construir puentes entre gobiernos, sociedad civil y sector tecnologico.',
+      history1: 'Desde 2013, ABRELATAM y CONDATOS han sido el punto de encuentro más importante para la comunidad latinoamericana de datos abiertos. Nacidas con el espíritu de democratizar el acceso a la información pública, estas conferencias han viajado por toda la región, dejando en cada país una huella de colaboración y transformación.',
+      history2: 'ABRELATAM es el espacio de desconferencia donde personas activistas, desarrolladoras, periodistas, académicas y emprendedores sociales se reúnen para compartir experiencias, aprender nuevas herramientas y construir redes de colaboración que trascienden fronteras.',
+      history3: 'CONDATOS, por su parte, es el espacio de conferencia que convoca específicamente a funcionarios públicos y tomadores de decisiones gubernamentales para dialogar sobre políticas públicas, implementación de plataformas de datos abiertos y mejores prácticas en transparencia.',
+      history4: 'Juntos, estos dos espacios reúnen en un mismo lugar a público de diferentes sectores para trabajar sobre una misma agenda.',
+      history5: 'En 2026, estas conferencias regresan a Centroamérica, y Guatemala tiene el honor de recibirlas. Será una oportunidad única para fortalecer el ecosistema regional de datos abiertos y construir puentes entre gobiernos, sociedad civil y sector tecnológico.',
       objectivesTitle: 'Nuestros objetivos',
       objectives: {
         capacity: {
           title: 'Fortalecer capacidades',
-          desc: 'Ofrecer espacios de formacion y capacitacion en herramientas, metodologias y mejores practicas para trabajar con datos abiertos, tanto desde la sociedad civil como desde el gobierno.'
+          desc: 'Ofrecer espacios de formación y capacitación en herramientas, metodologías y mejores prácticas para trabajar con datos abiertos y tecnología, tanto desde la sociedad civil como desde el gobierno.'
         },
         community: {
           title: 'Construir comunidad',
-          desc: 'Facilitar el encuentro entre personas y organizaciones que trabajan en datos abiertos para fortalecer redes de colaboracion regional y compartir experiencias exitosas.'
+          desc: 'Facilitar el encuentro entre personas y organizaciones que trabajan en datos abiertos y tecnología para fortalecer redes de colaboración regional y compartir experiencias exitosas.'
         },
         policy: {
-          title: 'Impulsar politicas publicas',
-          desc: 'Promover conversaciones entre gobiernos, sociedad civil y especialistas para avanzar en politicas publicas de apertura, transparencia y uso responsable de datos.'
+          title: 'Impulsar políticas públicas',
+          desc: 'Promover conversaciones entre gobiernos, sociedad civil y especialistas para avanzar en políticas públicas de apertura, transparencia y uso responsable de datos.'
         },
         innovation: {
-          title: 'Inspirar innovacion',
-          desc: 'Visibilizar iniciativas, herramientas y aprendizajes que usan datos abiertos para responder a desafios publicos y crear impacto social.'
+          title: 'Inspirar innovación',
+          desc: 'Visibilizar iniciativas, herramientas y aprendizajes que usan datos abiertos para responder a desafíos públicos y crear impacto social.'
         }
       },
-      audienceTitle: 'A quien va dirigido?',
+      audienceTitle: '¿A quién va dirigido?',
       audience: {
         civilSociety: {
           title: 'Activistas y organizaciones de sociedad civil',
-          desc: 'Que trabajan en transparencia, rendicion de cuentas, anticorrupcion y derechos digitales.'
+          desc: 'Que trabajan en transparencia, rendición de cuentas, anticorrupción y derechos digitales.'
         },
         publicOfficials: {
-          title: 'Funcionarios publicos',
-          desc: 'Responsables de politicas de datos abiertos, transparencia y gobierno digital.'
+          title: 'Funcionarios públicos',
+          desc: 'Responsables de políticas de datos abiertos, transparencia y gobierno digital.'
         },
         developers: {
-          title: 'Desarrolladores y tecnologos',
+          title: 'Desarrolladores y tecnólogos',
           desc: 'Que construyen herramientas y aplicaciones con datos abiertos.'
         },
         dataJournalists: {
           title: 'Periodistas de datos',
-          desc: 'Que utilizan datos para contar historias de impacto publico.'
+          desc: 'Que utilizan datos para contar historias de impacto público.'
         },
         academics: {
-          title: 'Academicos e investigadores',
+          title: 'Académicos e investigadores',
           desc: 'Que estudian el impacto de datos abiertos en la democracia y el desarrollo.'
         },
         socialEntrepreneurs: {
           title: 'Emprendedores sociales',
-          desc: 'Que crean valor social y economico a partir de datos abiertos.'
+          desc: 'Que crean valor social y económico a partir de datos abiertos.'
         }
       },
       previousEditionsTitle: 'Ediciones anteriores',
@@ -515,8 +516,9 @@ const translations = {
       historyTitle: 'Our history',
       history1: 'Since 2013, ABRELATAM and CONDATOS have been the most important meeting points for the Latin American open data community. Born from the spirit of democratizing access to public information, these conferences have traveled across the region, leaving a mark of collaboration and transformation in each country.',
       history2: 'ABRELATAM is the space where activists, developers, journalists, academics, and social entrepreneurs gather to share experiences, learn new tools, and build collaboration networks that cross borders.',
-      history3: 'CONDATOS, in turn, specifically brings together public officials and government decision-makers to discuss public policy, implementation of open data platforms, and best practices in transparency.',
-      history4: 'In 2026, these conferences return to Central America, and Guatemala has the honor of hosting them. It will be a unique opportunity to strengthen the regional open data ecosystem and build bridges among governments, civil society, and the technology sector.',
+      history3: 'CONDATOS, in turn, is the conference space that specifically brings together public officials and government decision-makers to discuss public policy, implementation of open data platforms, and best practices in transparency.',
+      history4: 'Together, these two spaces bring together audiences from different sectors in one place to work on a shared agenda.',
+      history5: 'In 2026, these conferences return to Central America, and Guatemala has the honor of hosting them. It will be a unique opportunity to strengthen the regional open data ecosystem and build bridges among governments, civil society, and the technology sector.',
       objectivesTitle: 'Our objectives',
       objectives: {
         capacity: {
@@ -853,8 +855,9 @@ const translations = {
       historyTitle: 'Nossa historia',
       history1: 'Desde 2013, ABRELATAM e CONDATOS sao os pontos de encontro mais importantes para a comunidade latino-americana de dados abertos. Nascidas com o espirito de democratizar o acesso a informacao publica, essas conferencias viajaram por toda a regiao, deixando em cada pais uma marca de colaboracao e transformacao.',
       history2: 'ABRELATAM e o espaco onde ativistas, desenvolvedoras, jornalistas, academicas e empreendedores sociais se reunem para compartilhar experiencias, aprender novas ferramentas e construir redes de colaboracao que atravessam fronteiras.',
-      history3: 'CONDATOS, por sua vez, convoca especificamente funcionarios publicos e tomadores de decisao governamentais para dialogar sobre politicas publicas, implementacao de plataformas de dados abertos e melhores praticas em transparencia.',
-      history4: 'Em 2026, essas conferencias retornam a America Central, e a Guatemala tem a honra de recebe-las. Sera uma oportunidade unica para fortalecer o ecossistema regional de dados abertos e construir pontes entre governos, sociedade civil e setor tecnologico.',
+      history3: 'CONDATOS, por sua vez, é o espaço de conferência que convoca especificamente funcionários públicos e tomadores de decisão governamentais para dialogar sobre políticas públicas, implementação de plataformas de dados abertos e melhores práticas em transparência.',
+      history4: 'Juntos, esses dois espaços reúnem em um mesmo lugar público de diferentes setores para trabalhar sobre uma mesma agenda.',
+      history5: 'Em 2026, essas conferências retornam à América Central, e a Guatemala tem a honra de recebê-las. Será uma oportunidade única para fortalecer o ecossistema regional de dados abertos e construir pontes entre governos, sociedade civil e setor tecnológico.',
       objectivesTitle: 'Nossos objetivos',
       objectives: {
         capacity: {

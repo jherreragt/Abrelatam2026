@@ -10,7 +10,7 @@ const objectives = [
   { icon: assetPath('v2/iconos/AL-23.png'), key: 'innovation' },
 ] as const;
 
-const historyParagraphs = ['history1', 'history2', 'history3', 'history4'] as const;
+const historyParagraphs = ['history1', 'history2', 'history3', 'history4', 'history5'] as const;
 const audienceKeys = ['civilSociety', 'publicOfficials', 'developers', 'dataJournalists', 'academics', 'socialEntrepreneurs'] as const;
 const editions = [
   { year: '2013', cityKey: 'uruguay' },
