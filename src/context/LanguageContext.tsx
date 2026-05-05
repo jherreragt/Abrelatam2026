@@ -105,7 +105,7 @@ const translations = {
       more: 'Más',
       event: 'Evento',
       guideForParticipants: 'Guía para participantes',
-      preRegister: 'Pre-Registro',
+      preRegister: 'Registro',
       agendaMenu: 'Agenda',
       agendaPage: 'Agenda',
     },
@@ -151,7 +151,7 @@ const translations = {
       venueCtaTitle: '¡Registro general abierto!',
       venueCtaSubtitle: 'El programa de América Abierta incluirá una serie de actividades nacionales e internacionales.',
       venueCtaButton: 'Regístrate',
-      venueCtaNote: 'No olvides hacer pre-registro para recibir todas las novedades.',
+      venueCtaNote: 'Regístrate ahora y sé parte de la comunidad regional de datos abiertos.',
       whatToFind: 'Lo que vas a encontrar',
       panels: 'Paneles y conferencias regionales',
       workshops: 'Talleres prácticos y sesiones técnicas',
@@ -339,7 +339,7 @@ const translations = {
       faqs: {
         registration: {
           q: 'Necesito registro previo para asistir?',
-          a: 'Si, debes completar tu registro oficial cuando se habilite. Por ahora puedes hacer el pre-registro para recibir novedades.'
+          a: 'Si, debes completar tu registro para asistir al evento. El registro ya esta disponible en este sitio.'
         },
         free: {
           q: 'El evento es gratuito?',
@@ -365,13 +365,13 @@ const translations = {
       aboutEvent: 'Sobre el evento',
       participate: 'Participa',
       event: 'Evento',
-      preRegister: 'Pre-Registro',
+      preRegister: 'Registro',
       usefulInfo: 'Información Útil',
       proposeSession: 'Proponer sesión',
       volunteers: 'Voluntarios',
       comingSoon: 'Próximamente',
-      preRegisterDesc: 'Asegura tu lugar en ABRELATAM / CONDATOS 2026. Completa el formulario de pre-registro y recibe información cuando abran las inscripciones oficiales.',
-      preRegisterButton: 'Formulario de pre-registro',
+      preRegisterDesc: 'Asegura tu lugar en ABRELATAM / CONDATOS 2026. Completa el formulario de registro y únete a la comunidad regional de datos abiertos.',
+      preRegisterButton: 'Formulario de registro',
       newsletter: 'Newsletter',
       newsletterDesc: 'Recibe las últimas novedades del evento',
       subscribe: 'Suscribirse',
@@ -443,7 +443,7 @@ const translations = {
       more: 'More',
       event: 'Event',
       guideForParticipants: 'Guide for participants',
-      preRegister: 'Pre-Registration',
+      preRegister: 'Registration',
       agendaMenu: 'Agenda',
       agendaPage: 'Agenda',
     },
@@ -489,7 +489,7 @@ const translations = {
       venueCtaTitle: 'General registration is open!',
       venueCtaSubtitle: 'The America Abierta program will include a series of national and international activities.',
       venueCtaButton: 'Register',
-      venueCtaNote: 'Do not forget to pre-register to receive all updates.',
+      venueCtaNote: 'Register now and be part of the regional open data community.',
       whatToFind: 'What you will find',
       panels: 'Regional panels and conferences',
       workshops: 'Practical workshops and technical sessions',
@@ -676,8 +676,8 @@ const translations = {
       faqTitle: 'Frequently asked questions',
       faqs: {
         registration: {
-          q: 'Do I need to register in advance?',
-          a: 'Yes, you must complete your official registration when it opens. For now, you can pre-register to receive updates.'
+          q: 'Do I need to register to attend?',
+          a: 'Yes, you must complete your registration to attend the event. Registration is now available on this site.'
         },
         free: {
           q: 'Is the event free?',
@@ -703,13 +703,13 @@ const translations = {
       aboutEvent: 'About the event',
       participate: 'Participate',
       event: 'Event',
-      preRegister: 'Pre-Registration',
+      preRegister: 'Registration',
       usefulInfo: 'Useful Information',
       proposeSession: 'Propose a session',
       volunteers: 'Volunteers',
       comingSoon: 'Coming soon',
-      preRegisterDesc: 'Secure your place at ABRELATAM / CONDATOS 2026. Complete the pre-registration form and receive information when official registrations open.',
-      preRegisterButton: 'Pre-registration form',
+      preRegisterDesc: 'Secure your place at ABRELATAM / CONDATOS 2026. Complete the registration form and join the regional open data community.',
+      preRegisterButton: 'Registration form',
       newsletter: 'Newsletter',
       newsletterDesc: 'Get the latest news about the event',
       subscribe: 'Subscribe',
@@ -781,7 +781,7 @@ const translations = {
       more: 'Mais',
       event: 'Evento',
       guideForParticipants: 'Guia para participantes',
-      preRegister: 'Pré-Registro',
+      preRegister: 'Registro',
       agendaMenu: 'Agenda',
       agendaPage: 'Agenda',
     },
@@ -827,7 +827,7 @@ const translations = {
       venueCtaTitle: 'Inscricao geral aberta!',
       venueCtaSubtitle: 'O programa da America Aberta incluira uma serie de atividades nacionais e internacionais.',
       venueCtaButton: 'Inscreva-se',
-      venueCtaNote: 'Nao esqueca de fazer o pre-registro para receber todas as novidades.',
+      venueCtaNote: 'Registre-se agora e faça parte da comunidade regional de dados abertos.',
       whatToFind: 'O que você vai encontrar',
       panels: 'Painéis e conferências regionais',
       workshops: 'Oficinas práticas e sessões técnicas',
@@ -1014,8 +1014,8 @@ const translations = {
       faqTitle: 'Perguntas frequentes',
       faqs: {
         registration: {
-          q: 'Preciso de registro previo para participar?',
-          a: 'Sim, voce deve completar seu registro oficial quando ele for aberto. Por enquanto, pode fazer o pre-registro para receber novidades.'
+          q: 'Preciso me registrar para participar?',
+          a: 'Sim, voce deve completar seu registro para participar do evento. O registro ja esta disponivel neste site.'
         },
         free: {
           q: 'O evento e gratuito?',
@@ -1041,13 +1041,13 @@ const translations = {
       aboutEvent: 'Sobre o evento',
       participate: 'Participe',
       event: 'Evento',
-      preRegister: 'Pré-Registro',
+      preRegister: 'Registro',
       usefulInfo: 'Informações Úteis',
       proposeSession: 'Propor sessão',
       volunteers: 'Voluntários',
       comingSoon: 'Em breve',
-      preRegisterDesc: 'Garanta seu lugar no ABRELATAM / CONDATOS 2026. Preencha o formulário de pré-registro e receba informações quando as inscrições oficiais abrirem.',
-      preRegisterButton: 'Formulário de pré-registro',
+      preRegisterDesc: 'Garanta seu lugar no ABRELATAM / CONDATOS 2026. Preencha o formulário de registro e faça parte da comunidade regional de dados abertos.',
+      preRegisterButton: 'Formulário de registro',
       newsletter: 'Newsletter',
       newsletterDesc: 'Receba as últimas notícias do evento',
       subscribe: 'Inscrever-se',

@@ -152,18 +152,18 @@ export default function Home() {
               Guatemala 2026
             </p>
             <h2 className="mb-5 text-3xl font-bold leading-tight md:text-5xl">
-              Pre-reg&iacute;strate ahora
+              Reg&iacute;strate ahora
             </h2>
             <p className="mb-8 max-w-3xl text-sm font-medium leading-relaxed md:text-base">
-              S&eacute; de los primeros en asegurar tu lugar en ABRELATAM / CONDATOS 2026. Completa el formulario de pre-registro y recibe toda la informaci&oacute;n cuando abran las inscripciones oficiales.
+              Asegura tu lugar en ABRELATAM / CONDATOS 2026. Completa el formulario de registro y &uacute;nete a la comunidad regional m&aacute;s importante de datos abiertos.
             </p>
             <Link to={ROUTES.PRE_REGISTRO}>
               <button className="rounded bg-[#fdcc30] px-12 py-4 text-sm font-bold uppercase tracking-widest text-black transition-colors duration-200 hover:bg-[#3657c8] hover:text-white">
-                Formulario de pre-registro
+                Formulario de registro
               </button>
             </Link>
             <p className="mt-8 text-xs font-medium text-white/90">
-              El pre-registro no garantiza inscripci&oacute;n, pero te coloca en la lista de prioridad.
+              El registro es gratuito. Completa el formulario para confirmar tu participaci&oacute;n.
             </p>
           </div>
         </div>

@@ -9,7 +9,7 @@ export const ROUTES = {
   GUIA_PARTICIPANTES: '/guia-participantes',
   PRENSA: '/prensa',
   CONTACTO: '/contacto',
-  PRE_REGISTRO: '/pre-registro',
+  PRE_REGISTRO: '/registro',
   NOTICIAS: '/noticias',
   BLOG_DETAIL: '/noticias/:slug',
 } as const;
