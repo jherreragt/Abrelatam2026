@@ -57,7 +57,7 @@ export default function HeroSlider() {
       <div className="relative z-10 flex min-h-screen items-center justify-center px-4 pb-20 pt-28 sm:pt-32 lg:pt-24">
         <div className="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
           <img
-            src={assetPath('v2/logos/AL-08.png')}
+            src={assetPath('slider/AL-09.png')}
             alt="ABRELATAM CONDATOS"
             className="mb-3 h-auto w-[min(82vw,470px)] drop-shadow-2xl animate-fadeInUp"
           />
