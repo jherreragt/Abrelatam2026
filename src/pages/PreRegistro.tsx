@@ -3,7 +3,7 @@ import PageHero from '../components/PageHero';
 import { useLanguage, type Language } from '../context/LanguageContext';
 import { assetPath } from '../lib/assetPath';
 
-const GOOGLE_FORM_URL = 'https://forms.gle/hdhZaoH6aM11TKX16';
+const JOTFORM_URL = 'https://form.jotform.com/261245071169051';
 
 const benefitItems = [
   { icon: CalendarCheck, key: 'confirmSpot' },
@@ -115,13 +115,12 @@ export default function PreRegistro() {
 
             <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-sm">
               <iframe
-                src={GOOGLE_FORM_URL}
+                src={JOTFORM_URL}
                 title={text.iframeTitle}
                 width="100%"
-                height="860"
+                height="1200"
                 frameBorder="0"
-                marginHeight={0}
-                marginWidth={0}
+                allowFullScreen
                 className="block"
               >
                 {text.loading}
@@ -133,7 +132,7 @@ export default function PreRegistro() {
             </p>
             <p className="mt-3 text-center text-sm">
               <a
-                href={GOOGLE_FORM_URL}
+                href={JOTFORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-[#2377b9] hover:text-[#262460]"
