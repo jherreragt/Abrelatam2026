@@ -7,6 +7,7 @@ import { assetPath } from '../lib/assetPath';
 const organizerLogos = [
   { src: assetPath('logos/AL-51.png'), alt: 'MINFIN', href: 'https://www.minfin.gob.gt/' },
   { src: assetPath('logos/AL-52.png'), alt: 'SEGEPLAN', href: 'https://portal.segeplan.gob.gt/segeplan/' },
+  { src: '/assets/logos/MCD-2024-2028_BLANCO_02.png', alt: 'Ministerio de Cultura y Deportes de Guatemala', href: 'https://mcd.gob.gt/' },
   { src: assetPath('logos/AL-53.png'), alt: 'Red Ciudadana', href: 'https://redciudadana.org/' },
   { src: assetPath('logos/AL-54.png'), alt: 'Hivos', href: 'https://hivos.org/' },
   { src: assetPath('logos/AL-55.png'), alt: 'OEA', href: 'https://www.oas.org/' },
