@@ -155,16 +155,13 @@ export default function Home() {
               Reg&iacute;strate ahora
             </h2>
             <p className="mb-8 max-w-3xl text-sm font-medium leading-relaxed md:text-base">
-              Asegura tu lugar en ABRELATAM / CONDATOS 2026. Completa el formulario de registro y &uacute;nete a la comunidad regional m&aacute;s importante de datos abiertos.
+              S&eacute; de los primeros en asegurar tu lugar en ABRELATAM / CONDATOS 2026. Completa el formulario de registro y recibe todas las novedades del evento.
             </p>
             <Link to={ROUTES.PRE_REGISTRO}>
               <button className="rounded bg-[#fdcc30] px-12 py-4 text-sm font-bold uppercase tracking-widest text-black transition-colors duration-200 hover:bg-[#3657c8] hover:text-white">
                 Formulario de registro
               </button>
             </Link>
-            <p className="mt-8 text-xs font-medium text-white/90">
-              El registro es gratuito. Completa el formulario para confirmar tu participaci&oacute;n.
-            </p>
           </div>
         </div>
 

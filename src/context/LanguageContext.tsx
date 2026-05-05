@@ -370,7 +370,7 @@ const translations = {
       proposeSession: 'Proponer sesión',
       volunteers: 'Voluntarios',
       comingSoon: 'Próximamente',
-      preRegisterDesc: 'Asegura tu lugar en ABRELATAM / CONDATOS 2026. Completa el formulario de registro y únete a la comunidad regional de datos abiertos.',
+      preRegisterDesc: 'Asegura tu lugar en ABRELATAM / CONDATOS 2026. Completa el formulario de registro y recibe información sobre novedades del evento.',
       preRegisterButton: 'Formulario de registro',
       newsletter: 'Newsletter',
       newsletterDesc: 'Recibe las últimas novedades del evento',
