@@ -46,7 +46,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 gap-10 md:grid-cols-3 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-4">
               <img
-                src={assetPath('logos/Logo_Final_AbreLatam01.png')}
+                src={assetPath('logos/AL-09.png')}
                 alt="ABRELATAM CONDATOS"
                 className="mb-8 h-auto w-64 max-w-full object-contain"
               />
