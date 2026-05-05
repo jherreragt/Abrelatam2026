@@ -263,8 +263,8 @@ export default function Home() {
         </div>
       </section> */}
 
-      {/* Latest News */}
-      <section className="bg-white py-20 md:py-28 dark:bg-slate-950">
+      {/* Latest News - temporarily hidden */}
+      {false && <section className="bg-white py-20 md:py-28 dark:bg-slate-950">
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           <h2 className="mb-12 text-center text-3xl font-bold text-[#262460] dark:text-white">
             {t('home.newsTitle')}
@@ -322,7 +322,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </section>}
     </>
   );
 }
