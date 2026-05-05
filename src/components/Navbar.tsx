@@ -37,8 +37,6 @@ const navItems: NavItem[] = [
     labelKey: 'nav.agendaMenu',
     dropdown: [
       { to: ROUTES.AGENDA, labelKey: 'nav.agendaPage' },
-      { to: ROUTES.CONVOCATORIAS, labelKey: 'nav.calls' },
-      { to: ROUTES.SIDE_EVENTS, labelKey: 'nav.sideEvents' },
       { to: ROUTES.VIAJE_SEDE, labelKey: 'nav.travel' },
     ],
   },
@@ -53,8 +51,6 @@ const mobileAllLinks: { to?: string; external?: string; labelKey: string; indent
   { to: ROUTES.CODIGO_CONDUCTA, labelKey: 'nav.codeOfConduct', indent: true },
   { to: ROUTES.PRE_REGISTRO, labelKey: 'nav.preRegister', indent: true },
   { to: ROUTES.AGENDA, labelKey: 'nav.agendaPage', indent: true },
-  { to: ROUTES.CONVOCATORIAS, labelKey: 'nav.calls', indent: true },
-  { to: ROUTES.SIDE_EVENTS, labelKey: 'nav.sideEvents', indent: true },
   { to: ROUTES.VIAJE_SEDE, labelKey: 'nav.travel', indent: true },
   { to: ROUTES.PRENSA, labelKey: 'nav.press' },
   { to: ROUTES.CONTACTO, labelKey: 'nav.contact' },
