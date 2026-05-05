@@ -1,8 +1,10 @@
 import { CheckCircle2, Users, Globe, CalendarCheck } from 'lucide-react';
+import { useEffect } from 'react';
 import PageHero from '../components/PageHero';
 import { useLanguage, type Language } from '../context/LanguageContext';
 import { assetPath } from '../lib/assetPath';
 
+const JOTFORM_ID = 'JotFormIFrame-261245071169051';
 const JOTFORM_URL = 'https://form.jotform.com/261245071169051';
 
 const benefitItems = [
@@ -77,6 +79,17 @@ export default function PreRegistro() {
   const { language } = useLanguage();
   const text = copy[language];
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js';
+    script.async = true;
+    script.onload = () => {
+      (window as any).jotformEmbedHandler(`iframe[id='${JOTFORM_ID}']`, 'https://form.jotform.com/');
+    };
+    document.body.appendChild(script);
+    return () => { document.body.removeChild(script); };
+  }, []);
+
   return (
     <>
       <PageHero
@@ -115,16 +128,16 @@ export default function PreRegistro() {
 
             <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-sm">
               <iframe
+                id={JOTFORM_ID}
+                title="Registro Abrelatam - ConDatos 2026"
+                onLoad={() => window.parent.scrollTo(0, 0)}
+                allowTransparency={true}
+                allow="geolocation; microphone; camera; fullscreen; payment"
                 src={JOTFORM_URL}
-                title={text.iframeTitle}
-                width="100%"
-                height="1200"
-                frameBorder="0"
-                allowFullScreen
-                className="block"
-              >
-                {text.loading}
-              </iframe>
+                frameBorder={0}
+                style={{ minWidth: '100%', maxWidth: '100%', height: '539px', border: 'none' }}
+                scrolling="no"
+              />
             </div>
 
             <p className="text-center text-xs text-slate-400 dark:text-slate-600 mt-4">
