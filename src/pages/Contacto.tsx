@@ -4,26 +4,38 @@ import PageHero from '../components/PageHero';
 import { useLanguage, type Language } from '../context/LanguageContext';
 import { assetPath } from '../lib/assetPath';
 
-const faqKeys = ['whenWhere', 'cost', 'scholarships', 'propose', 'languages', 'visa', 'included', 'sideEvent', 'firstTime', 'sponsor', 'accessibility', 'virtual'] as const;
+const faqKeys = ['what', 'dates', 'audience', 'registration', 'free', 'propose'] as const;
 
-const copy: Record<Language, any> = {
+const copy: Record<Language, { heroTitle: string; heroSubtitle: string; faqTitle: string; faqs: Record<string, { q: string; a: string }> }> = {
   es: {
     heroTitle: 'Contacto y FAQ',
     heroSubtitle: 'Tienes preguntas? Aqui encontraras respuestas o podras contactarnos directamente.',
     faqTitle: 'Preguntas frecuentes',
     faqs: {
-      whenWhere: { q: 'Cuando y donde sera el evento?', a: 'ABRELATAM / CONDATOS 2026 se realizara del 7 al 9 de octubre de 2026 en Ciudad de Guatemala, Guatemala.' },
-      cost: { q: 'Cuanto cuesta la inscripcion?', a: 'Los precios de inscripcion se anunciaran cuando se abra el registro oficial. Habra categorias diferenciadas y opciones de apoyo.' },
-      scholarships: { q: 'Habra becas disponibles?', a: 'Si, tendremos informacion sobre apoyos y becas cuando se abran las convocatorias correspondientes.' },
-      propose: { q: 'Puedo proponer una ponencia o taller?', a: 'Si, las convocatorias para propuestas se anunciaran en el sitio y canales oficiales.' },
-      languages: { q: 'En que idiomas sera el evento?', a: 'El evento se realiza principalmente en espanol, con sesiones y recursos en ingles y portugues cuando corresponda.' },
-      visa: { q: 'Necesito visa para viajar a Guatemala?', a: 'Depende de tu pais de origen. Revisa los requisitos migratorios oficiales antes de viajar.' },
-      included: { q: 'Que incluye el registro al evento?', a: 'El registro incluye acceso a las actividades del programa y materiales del evento. Los detalles finales se publicaran con el registro oficial.' },
-      sideEvent: { q: 'Como puedo organizar un Side Event?', a: 'Podras proponer un Side Event cuando se abran las convocatorias. El equipo organizador compartira lineamientos y fechas.' },
-      firstTime: { q: 'Habra actividades para quienes asisten por primera vez?', a: 'Si, estamos preparando espacios de orientacion y networking para nuevas personas participantes.' },
-      sponsor: { q: 'Como puedo ser patrocinador o aliado?', a: 'Contactanos a alianzas@abrelatam.org para recibir informacion sobre oportunidades de patrocinio.' },
-      accessibility: { q: 'El evento es accesible?', a: 'Trabajamos para que el evento sea accesible e inclusivo. Si tienes requerimientos especificos, escribenos.' },
-      virtual: { q: 'Puedo asistir virtualmente?', a: 'Estamos evaluando opciones de transmision para algunas sesiones. La experiencia principal sera presencial.' },
+      what: {
+        q: '¿Qué es ABRELATAM / CONDATOS?',
+        a: 'ABRELATAM es una desconferencia comunitaria donde la agenda se construye colectivamente. CONDATOS es la conferencia regional con paneles y talleres seleccionados por un comité a partir de un llamado público a propuestas. Juntos conforman el encuentro más importante de la región sobre datos abiertos y tecnología cívica.',
+      },
+      dates: {
+        q: 'Fechas y lugar',
+        a: 'El evento se realizará del 7 al 9 de octubre de 2026 en Ciudad de Guatemala, Guatemala. La sede es el Centro Cultural Miguel Ángel Asturias, en el corazón de la Zona 1.',
+      },
+      audience: {
+        q: '¿A quién va dirigido?',
+        a: 'El evento es para personas de la sociedad civil, gobierno, academia, sector privado y comunidad tecnológica comprometidas con la apertura de datos, la transparencia y la innovación pública en América.',
+      },
+      registration: {
+        q: '¿Necesito registro previo para asistir?',
+        a: 'Si, Abrelatam-ConDatos tiene un formulario de registro que debes completar para asegurar tu participación.',
+      },
+      free: {
+        q: '¿El evento es gratuito?',
+        a: 'Si, el evento es gratuito. Todas las personas interesadas en temas de gobierno abierto y datos abiertos en las Américas están invitadas a participar en el evento. Esto incluye a personas que trabajan en gobierno, sociedad civil, academia, sector privado, organizaciones multilaterales, donantes y más.',
+      },
+      propose: {
+        q: '¿Puedo proponer una sesión?',
+        a: 'La agenda de Abrelatam-ConDatos se construye de forma colaborativa con la comunidad. Próximamente se abrirá el llamado a propuestas para la agenda.',
+      },
     },
   },
   en: {
@@ -31,18 +43,30 @@ const copy: Record<Language, any> = {
     heroSubtitle: 'Have questions? Here you will find answers or ways to contact us directly.',
     faqTitle: 'Frequently asked questions',
     faqs: {
-      whenWhere: { q: 'When and where is the event?', a: 'ABRELATAM / CONDATOS 2026 will take place October 7-9, 2026 in Guatemala City, Guatemala.' },
-      cost: { q: 'How much does registration cost?', a: 'Registration prices will be announced when official registration opens. There will be different categories and support options.' },
-      scholarships: { q: 'Will scholarships be available?', a: 'Yes, information about support and scholarships will be shared when the relevant calls open.' },
-      propose: { q: 'Can I propose a talk or workshop?', a: 'Yes, calls for proposals will be announced on the website and official channels.' },
-      languages: { q: 'What languages will the event use?', a: 'The event is mainly in Spanish, with sessions and resources in English and Portuguese when applicable.' },
-      visa: { q: 'Do I need a visa to travel to Guatemala?', a: 'It depends on your country of origin. Check official migration requirements before traveling.' },
-      included: { q: 'What does event registration include?', a: 'Registration includes access to program activities and event materials. Final details will be published with official registration.' },
-      sideEvent: { q: 'How can I organize a Side Event?', a: 'You will be able to propose a Side Event when calls open. The organizing team will share guidelines and dates.' },
-      firstTime: { q: 'Will there be activities for first-time attendees?', a: 'Yes, we are preparing orientation and networking spaces for new participants.' },
-      sponsor: { q: 'How can I become a sponsor or partner?', a: 'Contact alianzas@abrelatam.org to receive information about sponsorship opportunities.' },
-      accessibility: { q: 'Is the event accessible?', a: 'We are working to make the event accessible and inclusive. If you have specific requirements, write to us.' },
-      virtual: { q: 'Can I attend virtually?', a: 'We are evaluating streaming options for some sessions. The main experience will be in person.' },
+      what: {
+        q: 'What is ABRELATAM / CONDATOS?',
+        a: 'ABRELATAM is a community unconference where the agenda is built collectively. CONDATOS is the regional conference with panels and workshops selected by a committee through a public call for proposals. Together they form the most important gathering in the region on open data and civic technology.',
+      },
+      dates: {
+        q: 'Dates and location',
+        a: 'The event will take place October 7–9, 2026 in Guatemala City, Guatemala. The venue is the Centro Cultural Miguel Ángel Asturias, in the heart of Zona 1.',
+      },
+      audience: {
+        q: 'Who is it for?',
+        a: 'The event is for people from civil society, government, academia, the private sector, and the tech community committed to open data, transparency, and public innovation in the Americas.',
+      },
+      registration: {
+        q: 'Do I need to register in advance?',
+        a: 'Yes, Abrelatam-ConDatos has a registration form that you must complete to secure your participation.',
+      },
+      free: {
+        q: 'Is the event free?',
+        a: 'Yes, the event is free. All people interested in open government and open data in the Americas are invited to participate. This includes people working in government, civil society, academia, the private sector, multilateral organizations, donors, and more.',
+      },
+      propose: {
+        q: 'Can I propose a session?',
+        a: 'The Abrelatam-ConDatos agenda is built collaboratively with the community. A call for proposals will open soon.',
+      },
     },
   },
   pt: {
@@ -50,18 +74,30 @@ const copy: Record<Language, any> = {
     heroSubtitle: 'Tem perguntas? Aqui voce encontrara respostas ou podera entrar em contato diretamente.',
     faqTitle: 'Perguntas frequentes',
     faqs: {
-      whenWhere: { q: 'Quando e onde sera o evento?', a: 'ABRELATAM / CONDATOS 2026 acontecera de 7 a 9 de outubro de 2026 na Cidade da Guatemala, Guatemala.' },
-      cost: { q: 'Quanto custa a inscricao?', a: 'Os valores de inscricao serao anunciados quando o registro oficial abrir. Havera categorias diferenciadas e opcoes de apoio.' },
-      scholarships: { q: 'Havera bolsas disponiveis?', a: 'Sim, informacoes sobre apoios e bolsas serao compartilhadas quando as chamadas correspondentes abrirem.' },
-      propose: { q: 'Posso propor uma palestra ou oficina?', a: 'Sim, as chamadas para propostas serao anunciadas no site e canais oficiais.' },
-      languages: { q: 'Em quais idiomas sera o evento?', a: 'O evento sera principalmente em espanhol, com sessoes e recursos em ingles e portugues quando aplicavel.' },
-      visa: { q: 'Preciso de visto para viajar a Guatemala?', a: 'Depende do seu pais de origem. Verifique os requisitos migratorios oficiais antes de viajar.' },
-      included: { q: 'O que o registro inclui?', a: 'O registro inclui acesso as atividades do programa e materiais do evento. Os detalhes finais serao publicados com o registro oficial.' },
-      sideEvent: { q: 'Como posso organizar um Side Event?', a: 'Voce podera propor um Side Event quando as chamadas abrirem. A equipe organizadora compartilhara diretrizes e datas.' },
-      firstTime: { q: 'Havera atividades para quem participa pela primeira vez?', a: 'Sim, estamos preparando espacos de orientacao e networking para novas pessoas participantes.' },
-      sponsor: { q: 'Como posso ser patrocinador ou parceiro?', a: 'Contate alianzas@abrelatam.org para receber informacoes sobre oportunidades de patrocinio.' },
-      accessibility: { q: 'O evento e acessivel?', a: 'Trabalhamos para que o evento seja acessivel e inclusivo. Se voce tiver requisitos especificos, escreva para nos.' },
-      virtual: { q: 'Posso participar virtualmente?', a: 'Estamos avaliando opcoes de transmissao para algumas sessoes. A experiencia principal sera presencial.' },
+      what: {
+        q: 'O que é ABRELATAM / CONDATOS?',
+        a: 'ABRELATAM é uma desconferência comunitária onde a agenda é construída coletivamente. CONDATOS é a conferência regional com painéis e oficinas selecionados por um comitê a partir de uma chamada pública de propostas. Juntos formam o encontro mais importante da região sobre dados abertos e tecnologia cívica.',
+      },
+      dates: {
+        q: 'Datas e local',
+        a: 'O evento acontecerá de 7 a 9 de outubro de 2026 na Cidade da Guatemala, Guatemala. A sede é o Centro Cultural Miguel Ángel Asturias, no coração da Zona 1.',
+      },
+      audience: {
+        q: 'Para quem é o evento?',
+        a: 'O evento é para pessoas da sociedade civil, governo, academia, setor privado e comunidade tecnológica comprometidas com a abertura de dados, transparência e inovação pública nas Américas.',
+      },
+      registration: {
+        q: 'Preciso me registrar com antecedência?',
+        a: 'Sim, o Abrelatam-ConDatos tem um formulário de inscrição que você deve preencher para garantir sua participação.',
+      },
+      free: {
+        q: 'O evento é gratuito?',
+        a: 'Sim, o evento é gratuito. Todas as pessoas interessadas em governo aberto e dados abertos nas Américas estão convidadas a participar. Isso inclui pessoas que trabalham em governo, sociedade civil, academia, setor privado, organizações multilaterais, doadores e mais.',
+      },
+      propose: {
+        q: 'Posso propor uma sessão?',
+        a: 'A agenda do Abrelatam-ConDatos é construída de forma colaborativa com a comunidade. Em breve será aberta a chamada de propostas para a agenda.',
+      },
     },
   },
 };
