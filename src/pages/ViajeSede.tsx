@@ -30,16 +30,16 @@ const copy: Record<Language, any> = {
     hotelTitle: 'Hoteles con tarifa especial',
     hotelText: 'Hemos negociado tarifas preferenciales con varios hoteles cercanos a la sede. Los detalles y códigos de reserva se compartirán con las personas registradas.',
     zones: {
-      zone10: { name: 'Zona 10', desc: 'La zona más cercana al evento, con múltiples opciones de restaurantes y servicios.', range: '$50-150 USD/noche' },
-      zone9: { name: 'Zona 9', desc: 'Muy cerca de la sede, con opciones más económicas y excelente ubicación.', range: '$30-80 USD/noche' },
-      zone1: { name: 'Zona 1 (Centro)', desc: 'Centro histórico con opciones económicas, a 20 minutos del evento.', range: '$20-50 USD/noche' },
+      zone10: { name: 'Zona 10', desc: 'La zona más cercana al evento, con múltiples opciones de restaurantes y servicios.' },
+      zone9: { name: 'Zona 9', desc: 'Muy cerca de la sede, con opciones más económicas y excelente ubicación.' },
+      zone1: { name: 'Zona 1 (Centro)', desc: 'Centro histórico con opciones económicas, a 20 minutos del evento.' },
     },
     rangeLabel: 'Rango',
     usefulTitle: 'Información útil',
     useful: {
       weather: { title: 'Clima en Octubre', desc: 'Octubre es temporada de lluvias en Guatemala. Las temperaturas son agradables (15-25 C), pero te recomendamos traer paraguas o impermeable.' },
       currency: { title: 'Moneda', desc: 'La moneda oficial es el Quetzal (GTQ). Hay cajeros automáticos disponibles y se aceptan dólares estadounidenses en muchos establecimientos.' },
-      language: { title: 'Idioma', desc: 'El español es el idioma oficial, pero el evento contará con traducción simultánea español-inglés-portugués en las sesiones plenarias.' },
+      language: { title: 'Idioma', desc: 'El español es el idioma oficial.' },
       safety: { title: 'Seguridad', desc: 'Como en cualquier ciudad grande, recomendamos tomar precauciones básicas. Las zonas del evento y hoteles cercanos son seguras y bien vigiladas.' },
     },
   },
@@ -60,16 +60,16 @@ const copy: Record<Language, any> = {
     hotelTitle: 'Hotels with special rates',
     hotelText: 'We have negotiated preferential rates with several hotels near the venue. Details and booking codes will be shared with registered participants.',
     zones: {
-      zone10: { name: 'Zone 10', desc: 'The area closest to the event, with many restaurant and service options.', range: '$50-150 USD/night' },
-      zone9: { name: 'Zone 9', desc: 'Very close to the venue, with more affordable options and an excellent location.', range: '$30-80 USD/night' },
-      zone1: { name: 'Zone 1 (Downtown)', desc: 'Historic center with affordable options, about 20 minutes from the event.', range: '$20-50 USD/night' },
+      zone10: { name: 'Zone 10', desc: 'The area closest to the event, with many restaurant and service options.' },
+      zone9: { name: 'Zone 9', desc: 'Very close to the venue, with more affordable options and an excellent location.' },
+      zone1: { name: 'Zone 1 (Downtown)', desc: 'Historic center with affordable options, about 20 minutes from the event.' },
     },
     rangeLabel: 'Range',
     usefulTitle: 'Useful information',
     useful: {
       weather: { title: 'June weather', desc: 'June is rainy season in Guatemala. Temperatures are pleasant (15-25 C), but we recommend bringing an umbrella or raincoat.' },
       currency: { title: 'Currency', desc: 'The official currency is the Quetzal (GTQ). ATMs are available and US dollars are accepted in many establishments.' },
-      language: { title: 'Language', desc: 'Spanish is the official language, but the event will include Spanish-English-Portuguese interpretation in plenary sessions.' },
+      language: { title: 'Language', desc: 'Spanish is the official language.' },
       safety: { title: 'Safety', desc: 'As in any large city, we recommend basic precautions. The event areas and nearby hotels are safe and well monitored.' },
     },
   },
@@ -90,16 +90,16 @@ const copy: Record<Language, any> = {
     hotelTitle: 'Hoteis com tarifa especial',
     hotelText: 'Negociamos tarifas preferenciais com varios hoteis proximos a sede. Os detalhes e codigos de reserva serao compartilhados com as pessoas registradas.',
     zones: {
-      zone10: { name: 'Zona 10', desc: 'A zona mais proxima do evento, com varias opcoes de restaurantes e servicos.', range: '$50-150 USD/noite' },
-      zone9: { name: 'Zona 9', desc: 'Muito perto da sede, com opcoes mais economicas e excelente localizacao.', range: '$30-80 USD/noite' },
-      zone1: { name: 'Zona 1 (Centro)', desc: 'Centro historico com opcoes economicas, a 20 minutos do evento.', range: '$20-50 USD/noite' },
+      zone10: { name: 'Zona 10', desc: 'A zona mais proxima do evento, com varias opcoes de restaurantes e servicos.' },
+      zone9: { name: 'Zona 9', desc: 'Muito perto da sede, com opcoes mais economicas e excelente localizacao.' },
+      zone1: { name: 'Zona 1 (Centro)', desc: 'Centro historico com opcoes economicas, a 20 minutos do evento.' },
     },
     rangeLabel: 'Faixa',
     usefulTitle: 'Informacoes uteis',
     useful: {
       weather: { title: 'Clima em junho', desc: 'Junho e temporada de chuvas na Guatemala. As temperaturas sao agradaveis (15-25 C), mas recomendamos trazer guarda-chuva ou capa de chuva.' },
       currency: { title: 'Moeda', desc: 'A moeda oficial e o Quetzal (GTQ). Ha caixas eletronicos disponiveis e dolares americanos sao aceitos em muitos estabelecimentos.' },
-      language: { title: 'Idioma', desc: 'O espanhol e o idioma oficial, mas o evento contara com interpretacao espanhol-ingles-portugues nas sessoes plenarias.' },
+      language: { title: 'Idioma', desc: 'O espanhol e o idioma oficial.' },
       safety: { title: 'Seguranca', desc: 'Como em qualquer cidade grande, recomendamos precaucoes basicas. As zonas do evento e hoteis proximos sao seguras e bem monitoradas.' },
     },
   },
@@ -172,8 +172,7 @@ export default function ViajeSede() {
                   <article key={key} className="rounded-lg bg-slate-100 px-8 py-8 dark:bg-slate-800">
                     <img src={assetPath('v2/iconos/AL-32.png')} alt="" className="mb-5 h-14 w-14 object-contain" />
                     <h3 className="mb-2 text-xl font-bold text-slate-950 dark:text-white">{zone.name}</h3>
-                    <p className="mb-6 text-sm leading-relaxed text-slate-700 dark:text-slate-300">{zone.desc}</p>
-                    <p className="text-xs font-bold text-slate-900 dark:text-slate-100">{text.rangeLabel}: {zone.range}</p>
+                    <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">{zone.desc}</p>
                   </article>
                 );
               })}
