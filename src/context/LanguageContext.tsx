@@ -173,7 +173,7 @@ const translations = {
     },
     about: {
       heroTitle: 'Sobre ABRELATAM / CONDATOS 2026',
-      heroSubtitle: 'Dos conferencias, un mismo objetivo: transformar America Latina a traves de datos abiertos',
+      heroSubtitle: 'Dos conferencias, un mismo objetivo: transformar América Latina a través de datos abiertos',
       historyTitle: 'Nuestra historia',
       history1: 'Desde 2013, ABRELATAM y CONDATOS han sido el punto de encuentro más importante para la comunidad latinoamericana de datos abiertos. Nacidas con el espíritu de democratizar el acceso a la información pública, estas conferencias han viajado por toda la región, dejando en cada país una huella de colaboración y transformación.',
       history2: 'ABRELATAM es el espacio de desconferencia donde personas activistas, desarrolladoras, periodistas, académicas y emprendedores sociales se reúnen para compartir experiencias, aprender nuevas herramientas y construir redes de colaboración que trascienden fronteras.',
@@ -851,7 +851,7 @@ const translations = {
     },
     about: {
       heroTitle: 'Sobre ABRELATAM / CONDATOS 2026',
-      heroSubtitle: 'Duas conferencias, um mesmo objetivo: transformar a America Latina por meio de dados abertos',
+      heroSubtitle: 'Duas conferências, um mesmo objetivo: transformar a América Latina por meio de dados abertos',
       historyTitle: 'Nossa historia',
       history1: 'Desde 2013, ABRELATAM e CONDATOS sao os pontos de encontro mais importantes para a comunidade latino-americana de dados abertos. Nascidas com o espirito de democratizar o acesso a informacao publica, essas conferencias viajaram por toda a regiao, deixando em cada pais uma marca de colaboracao e transformacao.',
       history2: 'ABRELATAM e o espaco onde ativistas, desenvolvedoras, jornalistas, academicas e empreendedores sociais se reunem para compartilhar experiencias, aprender novas ferramentas e construir redes de colaboracao que atravessam fronteiras.',
