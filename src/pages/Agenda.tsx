@@ -5,6 +5,14 @@ import { assetPath } from '../lib/assetPath';
 
 const expectationKeys = ['keynotes', 'workshops', 'panels', 'networking', 'hackathon', 'socialEvents'] as const;
 
+const thematicIcons = [
+  assetPath('v2/iconos/AL-15.png'),
+  assetPath('v2/iconos/AL-16.png'),
+  assetPath('v2/iconos/AL-17.png'),
+  assetPath('v2/iconos/AL-18.png'),
+  assetPath('v2/iconos/AL-19.png'),
+];
+
 export default function Agenda() {
   const { t } = useLanguage();
 
@@ -41,6 +49,31 @@ export default function Agenda() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section bgColor="white" className="py-16 md:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-16 max-w-4xl text-center">
+            <h2 className="text-2xl font-bold text-[#262460] md:text-3xl">
+              Líneas temáticas 2026
+            </h2>
+          </div>
+
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
+            {(['thematic1', 'thematic2', 'thematic3', 'thematic4', 'thematic5'] as const).map((key, i) => (
+              <div key={key} className="flex flex-col items-center text-center">
+                <img
+                  src={thematicIcons[i]}
+                  alt=""
+                  className="mb-6 h-20 w-20 object-contain"
+                />
+                <p className="max-w-40 text-sm font-semibold leading-snug text-black dark:text-slate-200">
+                  {t(`home.${key}`)}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
