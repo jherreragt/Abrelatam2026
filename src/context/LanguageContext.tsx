@@ -179,6 +179,7 @@ const translations = {
       history2: 'ABRELATAM es el espacio de desconferencia donde personas activistas, desarrolladoras, periodistas, académicas y emprendedores sociales se reúnen para compartir experiencias, aprender nuevas herramientas y construir redes de colaboración que trascienden fronteras.',
       history3: 'CONDATOS, por su parte, es el espacio de conferencia que convoca específicamente a funcionarios públicos y tomadores de decisiones gubernamentales para dialogar sobre políticas públicas, implementación de plataformas de datos abiertos y mejores prácticas en transparencia.',
       history4: 'Juntos, estos dos espacios reúnen en un mismo lugar a público de diferentes sectores para trabajar sobre una misma agenda.',
+      history4b: 'Estas conferencias cuentan con el apoyo fundamental del Departamento para la Gestión Pública Efectiva de la Organización de Estados Americanos (OEA), la Red de Gestión de Información, Transparencia y Acceso a Datos Públicos en América Latina y el Caribe (Red GEALC), e ILDA (Iniciativa Latinoamericana por los Datos Abiertos), aliados clave que trabajan para fortalecer la gobernanza abierta y la democratización del acceso a datos en la región.',
       history5: 'En 2026, estas conferencias regresan a Centroamérica, y Guatemala tiene el honor de recibirlas. Será una oportunidad única para fortalecer el ecosistema regional de datos abiertos y construir puentes entre gobiernos, sociedad civil y sector tecnológico.',
       objectivesTitle: 'Nuestros objetivos',
       objectives: {
@@ -518,6 +519,7 @@ const translations = {
       history2: 'ABRELATAM is the space where activists, developers, journalists, academics, and social entrepreneurs gather to share experiences, learn new tools, and build collaboration networks that cross borders.',
       history3: 'CONDATOS, in turn, is the conference space that specifically brings together public officials and government decision-makers to discuss public policy, implementation of open data platforms, and best practices in transparency.',
       history4: 'Together, these two spaces bring together audiences from different sectors in one place to work on a shared agenda.',
+      history4b: 'These conferences have fundamental support from the Department for Effective Public Management of the Organization of American States (OAS), the Network for Information Management, Transparency and Access to Public Data in Latin America and the Caribbean (Red GEALC), and ILDA (Latin American Initiative for Open Data), key allies working to strengthen open governance and democratize access to data in the region.',
       history5: 'In 2026, these conferences return to Central America, and Guatemala has the honor of hosting them. It will be a unique opportunity to strengthen the regional open data ecosystem and build bridges among governments, civil society, and the technology sector.',
       objectivesTitle: 'Our objectives',
       objectives: {
@@ -857,6 +859,7 @@ const translations = {
       history2: 'ABRELATAM e o espaco onde ativistas, desenvolvedoras, jornalistas, academicas e empreendedores sociais se reunem para compartilhar experiencias, aprender novas ferramentas e construir redes de colaboracao que atravessam fronteiras.',
       history3: 'CONDATOS, por sua vez, é o espaço de conferência que convoca especificamente funcionários públicos e tomadores de decisão governamentais para dialogar sobre políticas públicas, implementação de plataformas de dados abertos e melhores práticas em transparência.',
       history4: 'Juntos, esses dois espaços reúnem em um mesmo lugar público de diferentes setores para trabalhar sobre uma mesma agenda.',
+      history4b: 'Essas conferências contam com apoio fundamental do Departamento para a Gestão Pública Efetiva da Organização dos Estados Americanos (OEA), da Rede de Gestão da Informação, Transparência e Acesso a Dados Públicos na América Latina e Caribe (Red GEALC), e ILDA (Iniciativa Latino-Americana pelos Dados Abertos), aliados-chave que trabalham para fortalecer a governança aberta e democratizar o acesso a dados na região.',
       history5: 'Em 2026, essas conferências retornam à América Central, e a Guatemala tem a honra de recebê-las. Será uma oportunidade única para fortalecer o ecossistema regional de dados abertos e construir pontes entre governos, sociedade civil e setor tecnológico.',
       objectivesTitle: 'Nossos objetivos',
       objectives: {
