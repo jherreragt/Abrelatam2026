@@ -247,8 +247,8 @@ const translations = {
       heroTitle: 'Agenda del evento',
       heroSubtitle: '7, 8 y 9 de octubre, 2026 - Guatemala',
       comingSoonTitle: 'Proximamente',
-      comingSoonText1: 'Estamos trabajando en una agenda completa con sesiones increibles, talleres practicos, paneles de discusion y oportunidades de networking.',
-      comingSoonText2: 'La agenda detallada sera publicada en las proximas semanas.',
+      comingSoonText1: 'Estamos trabajando en una agenda completa con sesiones increíbles, talleres prácticos, paneles de discusión y oportunidades de networking.',
+      comingSoonText2: 'El llamado a contribuciones para la agenda será publicado en las próximas semanas.',
       expectTitle: 'Lo que puedes esperar:',
       expectations: {
         keynotes: 'Ponencias magistrales de expertos internacionales',
