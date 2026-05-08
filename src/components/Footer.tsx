@@ -7,11 +7,14 @@ import { assetPath } from '../lib/assetPath';
 const organizerLogos = [
   { src: assetPath('logos/AL-51.png'), alt: 'MINFIN', href: 'https://www.minfin.gob.gt/' },
   { src: assetPath('logos/AL-52.png'), alt: 'SEGEPLAN', href: 'https://portal.segeplan.gob.gt/segeplan/' },
-  { src: assetPath('logos/mcd.png'), alt: 'Ministerio de Cultura y Deportes de Guatemala', href: 'https://mcd.gob.gt/' },
   { src: assetPath('logos/AL-53.png'), alt: 'Red Ciudadana', href: 'https://redciudadana.org/' },
   { src: assetPath('logos/AL-54.png'), alt: 'Hivos', href: 'https://hivos.org/' },
   { src: assetPath('logos/AL-55.png'), alt: 'OEA', href: 'https://www.oas.org/' },
   { src: '/assets/logos/logo_ilda_logo_blanco.png', alt: 'ILDA', href: 'https://ilda.la/' },
+];
+
+const supporterLogos = [
+  { src: assetPath('logos/mcd.png'), alt: 'Ministerio de Cultura y Deportes de Guatemala', href: 'https://mcd.gob.gt/' },
 ];
 
 export default function Footer() {
@@ -24,6 +27,29 @@ export default function Footer() {
           <h2 className="mb-9 text-base font-bold">Organizan</h2>
           <div className="flex flex-wrap items-center gap-8 md:gap-12 lg:gap-14">
             {organizerLogos.map(({ src, alt, href }) => (
+              <a
+                key={alt}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={alt}
+                className="transition-opacity hover:opacity-75"
+              >
+                <img
+                  src={src}
+                  alt={alt}
+                  className="h-auto object-contain"
+                  style={{ width: '200px' }}
+                />
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-14">
+          <h2 className="mb-9 text-base font-bold">Con el apoyo de:</h2>
+          <div className="flex flex-wrap items-center gap-8 md:gap-12 lg:gap-14">
+            {supporterLogos.map(({ src, alt, href }) => (
               <a
                 key={alt}
                 href={href}
