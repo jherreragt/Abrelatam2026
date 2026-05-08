@@ -347,17 +347,13 @@ const translations = {
           q: '¿El evento es gratuito?',
           a: 'Sí, el evento es gratuito. Todas las personas interesadas en temas de gobierno abierto y datos abiertos en las Américas están invitadas a participar. Esto incluye a personas que trabajan en gobierno, sociedad civil, academia, sector privado, organizaciones multilaterales, donantes y más.'
         },
-        translation: {
-          q: '¿Habrá traducción simultánea?',
-          a: 'Sí, las sesiones plenarias principales contarán con interpretación español-inglés-portugués.'
-        },
         propose: {
           q: '¿Puedo proponer una sesión?',
           a: 'La agenda de Abrelatam-ConDatos se construye de forma colaborativa con la comunidad. Próximamente se abrirá el llamado a propuestas para la agenda.'
         },
         includes: {
           q: '¿Qué incluye la inscripción?',
-          a: 'Acceso a todas las sesiones, materiales del evento, coffee breaks y certificado de participación.'
+          a: 'Acceso a todas las sesiones, materiales del evento y coffee breaks.'
         }
       }
     },
@@ -687,17 +683,13 @@ const translations = {
           q: 'Is the event free?',
           a: 'The event has a registration fee. Prices by category will be announced when official registration opens.'
         },
-        translation: {
-          q: 'Will simultaneous interpretation be available?',
-          a: 'Yes, the main plenary sessions will include Spanish-English-Portuguese interpretation.'
-        },
         propose: {
           q: 'Can I propose a session?',
           a: 'Calls for sessions and workshops will open in February 2026. Stay tuned for updates on this site.'
         },
         includes: {
           q: 'What does registration include?',
-          a: 'Access to all sessions, event materials, coffee breaks, and a certificate of participation. Lodging and transportation are not included.'
+          a: 'Access to all sessions and event materials. Coffee breaks are included.'
         }
       }
     },
@@ -1027,17 +1019,13 @@ const translations = {
           q: 'O evento e gratuito?',
           a: 'O evento tera taxa de inscricao. Os valores por categoria serao anunciados quando o registro oficial for aberto.'
         },
-        translation: {
-          q: 'Havera interpretacao simultanea?',
-          a: 'Sim, as principais sessoes plenarias contarao com interpretacao espanhol-ingles-portugues.'
-        },
         propose: {
           q: 'Posso propor uma sessao?',
           a: 'As chamadas para sessoes e oficinas serao abertas em fevereiro de 2026. Acompanhe as novidades neste site.'
         },
         includes: {
           q: 'O que a inscricao inclui?',
-          a: 'Acesso a todas as sessoes, materiais do evento, coffee breaks e certificado de participacao. Hospedagem e transporte nao estao incluidos.'
+          a: 'Acesso a todas as sessoes e materiais do evento. Coffee breaks estao incluidos.'
         }
       }
     },

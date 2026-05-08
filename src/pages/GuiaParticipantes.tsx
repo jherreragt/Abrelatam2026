@@ -13,7 +13,7 @@ const sections = [
   { icon: Coffee, key: 'networking' },
 ] as const;
 
-const faqKeys = ['registration', 'free', 'translation', 'propose', 'includes'] as const;
+const faqKeys = ['registration', 'free', 'propose', 'includes'] as const;
 
 export default function GuiaParticipantes() {
   const { t } = useLanguage();
