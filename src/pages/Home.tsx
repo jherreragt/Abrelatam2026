@@ -84,7 +84,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="mx-auto mb-16 max-w-4xl text-center">
             <p className="text-base font-medium leading-relaxed text-[#262460] md:text-lg">
-              <strong className="font-bold">ABRELATAM</strong> y <strong className="font-bold">CONDATOS</strong> son el epicentro de la conversación sobre datos abiertos, conectando a gobiernos, academia, sector privado y sociedad civil de América Latina y el Caribe para abordar desafíos locales y globales. Este encuentro facilita la colaboración y el diálogo entre múltiples sectores para avanzar en la transparencia, el desarrollo inclusivo y el fortalecimiento de la democracia a través de los datos.
+              <strong className="font-bold">ABRELATAM</strong> y <strong className="font-bold">CONDATOS</strong> son el epicentro de la conversación sobre datos abiertos en América Latina y el Caribe, conectando a gobiernos, academia, sector privado y sociedad civil para abordar desafíos locales y globales. Este encuentro facilita la colaboración y el diálogo entre múltiples sectores para avanzar en la transparencia, el desarrollo inclusivo y el fortalecimiento de la democracia a través de los datos.
             </p>
 
             <h2 className="mt-14 text-2xl font-bold text-[#262460] md:text-3xl">
