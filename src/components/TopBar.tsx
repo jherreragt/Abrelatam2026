@@ -25,10 +25,10 @@ export default function TopBar({ scrolled }: TopBarProps) {
             <span className="hidden md:inline text-xs text-white/30 font-medium tracking-wide">Síguenos</span>
             <div className="flex items-center gap-2.5">
               {[
-                { href: '#', icon: Twitter, label: 'Twitter' },
-                { href: '#', icon: Facebook, label: 'Facebook' },
-                { href: '#', icon: Instagram, label: 'Instagram' },
-                { href: '#', icon: Youtube, label: 'YouTube' },
+                { href: 'https://x.com/hashtag/AbrelatamCondatos2026', icon: Twitter, label: 'Twitter' },
+                { href: 'https://www.facebook.com/hashtag/AbrelatamCondatos2026', icon: Facebook, label: 'Facebook' },
+                { href: 'https://www.instagram.com/explore/search/keyword/?q=%23AbrelatamCondatos2026', icon: Instagram, label: 'Instagram' },
+                { href: 'https://www.youtube.com/hashtag/abrelatamcondatos2026', icon: Youtube, label: 'YouTube' },
               ].map(({ href, icon: Icon, label }) => (
                 <a
                   key={label}
