@@ -82,14 +82,16 @@ export default function Footer() {
               </p>
               <div className="flex items-center gap-6">
                 {[
-                  { icon: Facebook, label: 'Facebook' },
-                  { icon: Twitter, label: 'Twitter' },
-                  { icon: Instagram, label: 'Instagram' },
-                  { icon: Youtube, label: 'YouTube' },
-                ].map(({ icon: Icon, label }) => (
+                  { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/hashtag/AbrelatamCondatos2026' },
+                  { icon: Twitter, label: 'Twitter', href: 'https://x.com/hashtag/AbrelatamCondatos2026' },
+                  { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/explore/search/keyword/?q=%23AbrelatamCondatos2026' },
+                  { icon: Youtube, label: 'YouTube', href: 'https://www.youtube.com/hashtag/abrelatamcondatos2026' },
+                ].map(({ icon: Icon, label, href }) => (
                   <a
                     key={label}
-                    href="#"
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={label}
                     className="text-white transition-colors hover:text-[#fdcc30]"
                   >
