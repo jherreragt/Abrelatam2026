@@ -13,6 +13,7 @@ const thematicIcons = [
   assetPath('v2/iconos/AL-17.png'),
   assetPath('v2/iconos/AL-18.png'),
   assetPath('v2/iconos/AL-19.png'),
+  assetPath('v2/iconos/AL-20.png'),
 ];
 
 export default function Home() {
@@ -92,8 +93,8 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
-            {(['thematic1', 'thematic2', 'thematic3', 'thematic4', 'thematic5'] as const).map((key, i) => (
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+            {(['thematic1', 'thematic2', 'thematic3', 'thematic4', 'thematic5', 'thematic6'] as const).map((key, i) => (
               <div key={key} className="flex flex-col items-center text-center">
                 <img
                   src={thematicIcons[i]}
