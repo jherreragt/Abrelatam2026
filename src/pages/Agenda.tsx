@@ -58,7 +58,7 @@ export default function Agenda() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-16 max-w-4xl text-center">
             <h2 className="text-2xl font-bold text-[#262460] md:text-3xl">
-              Líneas temáticas 2026
+              {t('home.thematicTitle')}
             </h2>
           </div>
 
