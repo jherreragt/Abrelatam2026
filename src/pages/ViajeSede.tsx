@@ -67,7 +67,7 @@ const copy: Record<Language, any> = {
     rangeLabel: 'Range',
     usefulTitle: 'Useful information',
     useful: {
-      weather: { title: 'June weather', desc: 'June is rainy season in Guatemala. Temperatures are pleasant (15-25 C), but we recommend bringing an umbrella or raincoat.' },
+      weather: { title: 'October weather', desc: 'October is rainy season in Guatemala. Temperatures are pleasant (15-25 C), but we recommend bringing an umbrella or raincoat.' },
       currency: { title: 'Currency', desc: 'The official currency is the Quetzal (GTQ). ATMs are available and US dollars are accepted in many establishments.' },
       language: { title: 'Language', desc: 'Spanish is the official language.' },
       safety: { title: 'Safety', desc: 'As in any large city, we recommend basic precautions. The event areas and nearby hotels are safe and well monitored.' },
@@ -97,7 +97,7 @@ const copy: Record<Language, any> = {
     rangeLabel: 'Faixa',
     usefulTitle: 'Informacoes uteis',
     useful: {
-      weather: { title: 'Clima em junho', desc: 'Junho e temporada de chuvas na Guatemala. As temperaturas sao agradaveis (15-25 C), mas recomendamos trazer guarda-chuva ou capa de chuva.' },
+      weather: { title: 'Clima em outubro', desc: 'Outubro é temporada de chuvas na Guatemala. As temperaturas são agradáveis (15-25°C), mas recomendamos trazer guarda-chuva ou capa de chuva.' },
       currency: { title: 'Moeda', desc: 'A moeda oficial e o Quetzal (GTQ). Ha caixas eletronicos disponiveis e dolares americanos sao aceitos em muitos estabelecimentos.' },
       language: { title: 'Idioma', desc: 'O espanhol e o idioma oficial.' },
       safety: { title: 'Seguranca', desc: 'Como em qualquer cidade grande, recomendamos precaucoes basicas. As zonas do evento e hoteis proximos sao seguras e bem monitoradas.' },

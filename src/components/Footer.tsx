@@ -24,7 +24,7 @@ export default function Footer() {
     <footer className="bg-primary text-white">
       <div className="container mx-auto max-w-7xl px-4 py-14 md:px-6">
         <section className="mb-14">
-          <h2 className="mb-9 text-base font-bold">Organizan</h2>
+          <h2 className="mb-9 text-base font-bold">{t('footerLogos.organizes')}</h2>
           <div className="flex flex-wrap items-center gap-8 md:gap-12 lg:gap-14">
             {organizerLogos.map(({ src, alt, href }) => (
               <a
@@ -47,7 +47,7 @@ export default function Footer() {
         </section>
 
         <section className="mb-14">
-          <h2 className="mb-9 text-base font-bold">Con el apoyo de:</h2>
+          <h2 className="mb-9 text-base font-bold">{t('footerLogos.supportedBy')}</h2>
           <div className="flex flex-wrap items-center gap-8 md:gap-12 lg:gap-14">
             {supporterLogos.map(({ src, alt, href }) => (
               <a
@@ -129,7 +129,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <span className="flex items-center gap-2 text-white/45 cursor-default select-none">
-                    Side Events
+                    {t('nav.sideEvents')}
                     <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white/50">
                       {t('footer.comingSoon')}
                     </span>

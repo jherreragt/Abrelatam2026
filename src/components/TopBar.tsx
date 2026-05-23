@@ -1,10 +1,12 @@
 import { Twitter, Facebook, Instagram, Youtube, Mail } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 interface TopBarProps {
   scrolled: boolean;
 }
 
 export default function TopBar({ scrolled }: TopBarProps) {
+  const { t } = useLanguage();
   return (
     <div className={`fixed top-0 left-0 right-0 z-50 h-10 transition-all duration-300 ${
       scrolled
@@ -22,7 +24,7 @@ export default function TopBar({ scrolled }: TopBarProps) {
           </a>
 
           <div className="flex items-center gap-3">
-            <span className="hidden md:inline text-xs text-white/30 font-medium tracking-wide">Síguenos</span>
+            <span className="hidden md:inline text-xs text-white/30 font-medium tracking-wide">{t('topbar.followUs')}</span>
             <div className="flex items-center gap-2.5">
               {[
                 { href: 'https://x.com/hashtag/AbrelatamCondatos2026', icon: Twitter, label: 'Twitter' },

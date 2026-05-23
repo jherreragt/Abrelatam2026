@@ -4,6 +4,7 @@ import { getBlogPost, getRecentPosts, BlogPost } from '../data/blogPosts';
 import BlogCard from '../components/BlogCard';
 import { ROUTES } from '../router/routes';
 import { assetPath } from '../lib/assetPath';
+import { useLanguage } from '../context/LanguageContext';
 
 const categoryColors: Record<string, string> = {
   'Anuncio': 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300',
@@ -22,15 +23,16 @@ function formatDate(dateStr: string): string {
 export default function BlogDetail() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
+  const { t } = useLanguage();
   const post = getBlogPost(slug ?? '');
 
   if (!post) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <p className="text-xl text-slate-500 mb-4">Artículo no encontrado.</p>
+          <p className="text-xl text-slate-500 mb-4">{t('blogDetail.notFound')}</p>
           <button onClick={() => navigate(ROUTES.NOTICIAS)} className="text-blue-600 hover:underline flex items-center gap-2 mx-auto">
-            <ArrowLeft size={16} /> Volver a noticias
+            <ArrowLeft size={16} /> {t('blogDetail.backToNews')}
           </button>
         </div>
       </div>
@@ -65,7 +67,7 @@ export default function BlogDetail() {
           className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 mb-8 transition-colors group"
         >
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-          Volver a noticias
+          {t('blogDetail.backToNews')}
         </button>
 
         <div className="flex flex-wrap items-center gap-4 mb-8 pb-8 border-b border-slate-100 dark:border-slate-700">
@@ -86,7 +88,7 @@ export default function BlogDetail() {
             </span>
             <span className="flex items-center gap-1.5">
               <Clock size={14} />
-              {post.readTime} min de lectura
+              {post.readTime} {t('blogDetail.readTime')}
             </span>
           </div>
         </div>
@@ -114,7 +116,7 @@ export default function BlogDetail() {
       {recent.length > 0 && (
         <div className="bg-slate-50 dark:bg-slate-800/50 py-14">
           <div className="max-w-4xl mx-auto px-4 md:px-6">
-            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6">Más artículos</h2>
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6">{t('blogDetail.moreArticles')}</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {recent.map((p: BlogPost) => (
                 <BlogCard key={p.id} post={p} />

@@ -3,20 +3,13 @@ import Section from '../components/Section';
 import PageHero from '../components/PageHero';
 import BlogCard from '../components/BlogCard';
 import { blogPosts } from '../data/blogPosts';
-import { useLanguage, type Language } from '../context/LanguageContext';
+import { useLanguage } from '../context/LanguageContext';
 import { assetPath } from '../lib/assetPath';
 
 const categories = ['Todos', ...Array.from(new Set(blogPosts.map(p => p.category)))];
 
-const copy: Record<Language, { title: string; subtitle: string }> = {
-  es: { title: 'Noticias', subtitle: 'Novedades, convocatorias, análisis y reflexiones sobre datos abiertos en América Latina' },
-  en: { title: 'News', subtitle: 'Updates, calls, analysis and insights about open data in Latin America' },
-  pt: { title: 'Notícias', subtitle: 'Novidades, chamadas, análises e reflexões sobre dados abertos na América Latina' },
-};
-
 export default function Noticias() {
-  const { language } = useLanguage();
-  const text = copy[language];
+  const { t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState('Todos');
 
   const filtered = activeCategory === 'Todos'
@@ -28,8 +21,8 @@ export default function Noticias() {
   return (
     <>
       <PageHero
-        title={text.title}
-        subtitle={text.subtitle}
+        title={t('noticias.title')}
+        subtitle={t('noticias.subtitle')}
         backgroundImage={assetPath('v2/slider/AL-45.png')}
       />
 
@@ -60,7 +53,7 @@ export default function Noticias() {
 
         {sorted.length === 0 && (
           <div className="text-center py-16 text-slate-400 dark:text-slate-500">
-            No hay artículos en esta categoría aún.
+            {t('noticias.emptyCategory')}
           </div>
         )}
       </Section>
