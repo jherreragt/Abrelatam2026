@@ -255,6 +255,7 @@ const translations = {
       ctaText1: 'Abrelatam/ConDatos es posible gracias a la colaboración entre organizaciones comprometidas con una región más abierta, transparente e innovadora.',
       ctaText2: 'Si tu entidad busca involucrarse en esta conversación y apoyar un espacio de impacto regional, nos encantaría explorar formas de colaboración.',
       ctaButton: 'Contáctanos',
+      contactLabel: 'Contacto',
     },
     convocatoriasPage: {
       heroTitle: 'Convocatorias',
@@ -699,6 +700,7 @@ const translations = {
       ctaText1: 'Abrelatam/ConDatos is made possible through the collaboration of organizations committed to a more open, transparent, and innovative region.',
       ctaText2: 'If your organization is looking to get involved in this conversation and support a regional-impact space, we would love to explore ways to collaborate.',
       ctaButton: 'Contact us',
+      contactLabel: 'Contact',
     },
     convocatoriasPage: {
       heroTitle: 'Calls',
@@ -1143,6 +1145,7 @@ const translations = {
       ctaText1: 'O Abrelatam/ConDatos é possível graças à colaboração entre organizações comprometidas com uma região mais aberta, transparente e inovadora.',
       ctaText2: 'Se sua entidade busca se envolver nessa conversa e apoiar um espaço de impacto regional, adoraríamos explorar formas de colaboração.',
       ctaButton: 'Entre em contato',
+      contactLabel: 'Contato',
     },
     convocatoriasPage: {
       heroTitle: 'Chamadas',

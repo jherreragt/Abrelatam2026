@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Mail } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import { useLanguage, type Language } from '../context/LanguageContext';
 import { ROUTES } from '../router/routes';
@@ -362,8 +362,24 @@ export default function Patrocinadores() {
           >
             {t('patrocinadores.ctaButton')}
           </Link>
+
+          <div className="mt-12 border-t border-white/20 pt-10">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-white/60">
+              {t('patrocinadores.contactLabel')}
+            </p>
+            <a
+              href="mailto:abrelatam@idatosabiertos.org"
+              className="inline-flex items-center gap-2 text-lg font-semibold text-white transition-colors hover:text-[#fdcc30]"
+            >
+              <Mail size={20} />
+              abrelatam@idatosabiertos.org
+            </a>
+          </div>
         </div>
       </section>
     </>
   );
 }
+
+
+export default Patrocinadores
