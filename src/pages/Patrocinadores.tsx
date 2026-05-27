@@ -1,8 +1,6 @@
-import { Link } from 'react-router-dom';
 import { CheckCircle, Mail } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import { useLanguage, type Language } from '../context/LanguageContext';
-import { ROUTES } from '../router/routes';
 import { assetPath } from '../lib/assetPath';
 
 const listCopy: Record<Language, { whyOrg: string[]; makePossible: string[]; benefits: string[] }> = {
@@ -356,14 +354,7 @@ export default function Patrocinadores() {
           <p className="mb-10 text-base leading-relaxed text-white/85">
             {t('patrocinadores.ctaText2')}
           </p>
-          <Link
-            to={ROUTES.CONTACTO}
-            className="inline-flex h-14 items-center rounded bg-[#fdcc30] px-10 text-sm font-bold uppercase tracking-widest text-black transition-colors duration-200 hover:bg-white hover:text-[#262460]"
-          >
-            {t('patrocinadores.ctaButton')}
-          </Link>
-
-          <div className="mt-12 border-t border-white/20 pt-10">
+          <div className="mt-2 border-t border-white/20 pt-10">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-white/60">
               {t('patrocinadores.contactLabel')}
             </p>
