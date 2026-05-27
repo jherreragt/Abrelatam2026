@@ -12,4 +12,5 @@ export const ROUTES = {
   PRE_REGISTRO: '/registro',
   NOTICIAS: '/noticias',
   BLOG_DETAIL: '/noticias/:slug',
+  PATROCINADORES: '/patrocinadores',
 } as const;

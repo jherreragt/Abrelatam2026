@@ -40,6 +40,7 @@ const navItems: NavItem[] = [
       { to: ROUTES.VIAJE_SEDE, labelKey: 'nav.travel' },
     ],
   },
+  { labelKey: 'nav.sponsors', to: ROUTES.PATROCINADORES },
   { labelKey: 'nav.press', to: ROUTES.PRENSA },
   { labelKey: 'nav.contact', to: ROUTES.CONTACTO },
 ];
@@ -52,6 +53,7 @@ const mobileAllLinks: { to?: string; external?: string; labelKey: string; indent
   { to: ROUTES.PRE_REGISTRO, labelKey: 'nav.preRegister', indent: true },
   { to: ROUTES.AGENDA, labelKey: 'nav.agendaPage', indent: true },
   { to: ROUTES.VIAJE_SEDE, labelKey: 'nav.travel', indent: true },
+  { to: ROUTES.PATROCINADORES, labelKey: 'nav.sponsors' },
   { to: ROUTES.PRENSA, labelKey: 'nav.press' },
   { to: ROUTES.CONTACTO, labelKey: 'nav.contact' },
 ];
