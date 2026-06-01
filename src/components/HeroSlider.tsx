@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CalendarDays, ClipboardList, Users } from 'lucide-react';
+import { CalendarDays, ClipboardList, Users, Lightbulb } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { ROUTES } from '../router/routes';
 import { assetPath } from '../lib/assetPath';
@@ -84,6 +84,12 @@ export default function HeroSlider() {
               <button className={heroButtonClass}>
                 <CalendarDays size={14} />
                 {t('hero.agenda')}
+              </button>
+            </Link>
+            <Link to={ROUTES.PROPONER_SESION}>
+              <button className={heroButtonClass}>
+                <Lightbulb size={14} />
+                {t('hero.proposeSession')}
               </button>
             </Link>
           </div>
