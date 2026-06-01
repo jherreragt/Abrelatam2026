@@ -6,7 +6,6 @@ import { assetPath } from '../lib/assetPath';
 const sessionTypes = [
   {
     icon: Users,
-    code: '5.1',
     title: 'Panel o conversación moderada',
     duration: '50 minutos',
     description:
@@ -14,7 +13,6 @@ const sessionTypes = [
   },
   {
     icon: Wrench,
-    code: '5.2',
     title: 'Taller práctico',
     duration: '50 minutos',
     description:
@@ -22,7 +20,6 @@ const sessionTypes = [
   },
   {
     icon: MessageSquare,
-    code: '5.3',
     title: 'Diálogos',
     duration: '50 minutos',
     description:
@@ -30,7 +27,6 @@ const sessionTypes = [
   },
   {
     icon: Zap,
-    code: '5.4',
     title: 'Charla relámpago',
     duration: '15 minutos',
     description:
@@ -54,13 +50,6 @@ export default function ProponerSesion() {
       <section className="bg-white py-16">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <p className="text-base leading-relaxed text-slate-600 md:text-lg">
-            La programación de Abrelatam ConDatos busca construir una agenda diversa, representativa y conectada con los
-            desafíos más relevantes de América Latina y el Caribe. Reconocemos que la innovación, el conocimiento y las
-            experiencias valiosas emergen desde distintos territorios, sectores y comunidades, por lo que promovemos
-            activamente la participación de voces provenientes de diferentes regiones geográficas, disciplinas,
-            identidades y trayectorias.
-          </p>
-          <p className="mt-5 text-base leading-relaxed text-slate-600 md:text-lg">
             Las propuestas serán evaluadas considerando tanto su calidad y relevancia temática como su contribución a
             una agenda plural que refleje la riqueza y complejidad del ecosistema de datos, tecnología, transparencia,
             participación ciudadana e innovación social de la región. Asimismo, se priorizarán aquellas iniciativas
@@ -77,18 +66,15 @@ export default function ProponerSesion() {
           <p className="mb-10 text-sm text-slate-500">Entre los tipos de sesión sugeridos se encuentran:</p>
 
           <div className="grid gap-6 sm:grid-cols-2">
-            {sessionTypes.map(({ icon: Icon, code, title, duration, description }) => (
+            {sessionTypes.map(({ icon: Icon, title, duration, description }) => (
               <div
-                key={code}
+                key={title}
                 className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
               >
                 <div className="mb-4 flex items-center gap-3">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#092d7e]/10">
                     <Icon size={20} className="text-[#092d7e]" />
                   </div>
-                  <span className="rounded-full bg-[#fdcc30] px-2.5 py-0.5 text-xs font-bold text-[#092d7e]">
-                    {code}
-                  </span>
                 </div>
                 <h3 className="mb-1 text-base font-bold text-slate-800">{title}</h3>
                 <span className="mb-3 text-xs font-semibold uppercase tracking-wide text-[#4367e1]">{duration}</span>
