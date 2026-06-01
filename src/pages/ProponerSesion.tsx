@@ -20,7 +20,7 @@ export default function ProponerSesion() {
             <iframe
               src="https://pretalx.abrelatam.org/abrelatam-2026/cfp"
               title={t('proponerSesion.iframeTitle')}
-              className="h-[85vh] min-h-[600px] w-full border-0"
+              className="h-[170vh] min-h-[1200px] w-full border-0"
               allow="fullscreen"
             />
           </div>
