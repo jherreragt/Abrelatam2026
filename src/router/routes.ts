@@ -13,4 +13,5 @@ export const ROUTES = {
   NOTICIAS: '/noticias',
   BLOG_DETAIL: '/noticias/:slug',
   PATROCINADORES: '/patrocinadores',
+  PROPONER_SESION: '/proponer-sesion',
 } as const;

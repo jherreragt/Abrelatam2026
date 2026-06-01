@@ -16,6 +16,7 @@ import Contacto from './pages/Contacto';
 import PreRegistro from './pages/PreRegistro';
 import GuiaParticipantes from './pages/GuiaParticipantes';
 import Patrocinadores from './pages/Patrocinadores';
+import ProponerSesion from './pages/ProponerSesion';
 import { ROUTES } from './router/routes';
 
 export default function App() {
@@ -38,6 +39,7 @@ export default function App() {
             <Route path={ROUTES.PRE_REGISTRO} element={<PreRegistro />} />
             <Route path={ROUTES.GUIA_PARTICIPANTES} element={<GuiaParticipantes />} />
             <Route path={ROUTES.PATROCINADORES} element={<Patrocinadores />} />
+            <Route path={ROUTES.PROPONER_SESION} element={<ProponerSesion />} />
           </Route>
         </Routes>
       </ThemeProvider>

@@ -257,6 +257,11 @@ const translations = {
       ctaButton: 'Contáctanos',
       contactLabel: 'Contacto',
     },
+    proponerSesion: {
+      heroTitle: 'Proponer una sesión',
+      heroSubtitle: 'Comparte tu conocimiento y experiencia con la comunidad de datos abiertos de América Latina',
+      iframeTitle: 'Formulario para proponer una sesión',
+    },
     convocatoriasPage: {
       heroTitle: 'Convocatorias',
       heroSubtitle: 'Múltiples formas de participar y contribuir al evento más importante de datos abiertos en la región',
@@ -702,6 +707,11 @@ const translations = {
       ctaButton: 'Contact us',
       contactLabel: 'Contact',
     },
+    proponerSesion: {
+      heroTitle: 'Propose a session',
+      heroSubtitle: 'Share your knowledge and experience with the open data community in Latin America',
+      iframeTitle: 'Form to propose a session',
+    },
     convocatoriasPage: {
       heroTitle: 'Calls',
       heroSubtitle: 'Multiple ways to participate and contribute to the most important open data event in the region',
@@ -1146,6 +1156,11 @@ const translations = {
       ctaText2: 'Se sua entidade busca se envolver nessa conversa e apoiar um espaço de impacto regional, adoraríamos explorar formas de colaboração.',
       ctaButton: 'Entre em contato',
       contactLabel: 'Contato',
+    },
+    proponerSesion: {
+      heroTitle: 'Propor uma sessão',
+      heroSubtitle: 'Compartilhe seu conhecimento e experiência com a comunidade de dados abertos da América Latina',
+      iframeTitle: 'Formulário para propor uma sessão',
     },
     convocatoriasPage: {
       heroTitle: 'Chamadas',
