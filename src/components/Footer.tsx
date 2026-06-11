@@ -93,7 +93,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="text-white transition-colors hover:text-[#fdcc30]"
+                    className="text-white transition-colors hover:text-white/70"
                   >
                     <Icon size={18} />
                   </a>
@@ -150,7 +150,7 @@ export default function Footer() {
               </p>
               <Link
                 to={ROUTES.PRE_REGISTRO}
-                className="inline-flex h-12 w-full items-center justify-center rounded bg-[#4367e1] px-6 text-sm font-bold text-white transition-colors hover:bg-[#3657c8]"
+                className="inline-flex h-12 w-full items-center justify-center rounded bg-secondary px-6 text-sm font-bold text-white transition-colors hover:bg-[#2789b8]"
               >
                 {t('footer.preRegisterButton')}
               </Link>

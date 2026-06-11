@@ -71,7 +71,7 @@ function DropdownMenu({
 
   const linkBase = 'px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200';
   const linkInactive = scrolled
-    ? 'text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/40'
+    ? 'text-slate-700 hover:text-[#329bd0] hover:bg-[#329bd0]/10'
     : 'text-white/85 hover:text-white hover:bg-white/12';
 
   return (
@@ -94,7 +94,7 @@ function DropdownMenu({
           open ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-1'
         }`}
       >
-        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-100 dark:border-slate-700/60 overflow-hidden py-1">
+        <div className="bg-white rounded-xl shadow-xl border border-slate-100 overflow-hidden py-1">
           {item.dropdown!.map(link => (
             <NavLink
               key={link.to}
@@ -102,8 +102,8 @@ function DropdownMenu({
               className={({ isActive }) =>
                 `block w-full text-left px-4 py-2.5 text-sm transition-colors ${
                   isActive
-                    ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30 font-medium'
-                    : 'text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-blue-600 dark:hover:text-blue-400'
+                    ? 'text-[#329bd0] bg-[#329bd0]/10 font-medium'
+                    : 'text-slate-700 hover:bg-slate-50 hover:text-[#329bd0]'
                 }`
               }
               onClick={() => setOpen(false)}
@@ -127,19 +127,19 @@ export default function Navbar({ scrolled }: NavbarProps) {
   }, [isOpen]);
 
   const navBg = scrolled
-    ? 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl shadow-sm border-b border-slate-200/60 dark:border-slate-700/40'
+    ? 'bg-white/90 backdrop-blur-xl shadow-sm border-b border-slate-200/60'
     : 'bg-transparent';
 
   const linkBase = 'px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200';
   const linkInactive = scrolled
-    ? 'text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/40'
+    ? 'text-slate-700 hover:text-[#329bd0] hover:bg-[#329bd0]/10'
     : 'text-white/85 hover:text-white hover:bg-white/12';
   const linkActive = scrolled
-    ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/40'
+    ? 'text-[#329bd0] bg-[#329bd0]/10'
     : 'text-white bg-white/15';
 
   const iconColor = scrolled
-    ? 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800'
+    ? 'text-slate-600 hover:text-[#329bd0] hover:bg-slate-100'
     : 'text-white/80 hover:text-white hover:bg-white/12';
 
   return (
@@ -205,10 +205,10 @@ export default function Navbar({ scrolled }: NavbarProps) {
         <div className="fixed inset-0 z-[60] lg:hidden" onClick={() => setIsOpen(false)}>
           <div className="absolute inset-0 z-0 bg-black/60 backdrop-blur-sm" />
           <div
-            className="absolute top-0 right-0 bottom-0 z-10 w-[min(20rem,calc(100vw-4rem))] bg-white dark:bg-slate-900 shadow-2xl flex flex-col animate-slideInRight"
+            className="absolute top-0 right-0 bottom-0 z-10 w-[min(20rem,calc(100vw-4rem))] bg-white shadow-2xl flex flex-col animate-slideInRight"
             onClick={e => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between gap-4 px-5 pt-8 pb-4 border-b border-slate-100 dark:border-slate-800">
+            <div className="flex items-center justify-between gap-4 px-5 pt-8 pb-4 border-b border-slate-100">
               <img
                 src={assetPath('logos/AL-09.png')}
                 alt="ABRELATAM CONDATOS"
@@ -216,7 +216,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
               />
               <button
                 onClick={() => setIsOpen(false)}
-                className="relative z-20 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg text-slate-500 hover:text-slate-700 dark:text-slate-300 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                className="relative z-20 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-colors"
                 aria-label="Cerrar menú"
               >
                 <X size={24} />
@@ -231,7 +231,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
                       href={link.external}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex items-center px-4 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 ${link.indent ? 'pl-8' : ''}`}
+                      className={`flex items-center px-4 py-2.5 rounded-lg text-sm font-medium transition-all text-slate-700 hover:bg-[#329bd0]/10 hover:text-[#329bd0] ${link.indent ? 'pl-8' : ''}`}
                       onClick={() => setIsOpen(false)}
                     >
                       {t(link.labelKey)}
@@ -245,8 +245,8 @@ export default function Navbar({ scrolled }: NavbarProps) {
                     className={({ isActive }) =>
                       `flex items-center px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${link.indent ? 'pl-8' : ''} ${
                         isActive
-                          ? 'bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400'
-                          : 'text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400'
+                          ? 'bg-[#329bd0]/10 text-[#329bd0]'
+                          : 'text-slate-700 hover:bg-slate-50 hover:text-[#329bd0]'
                       }`
                     }
                     onClick={() => setIsOpen(false)}

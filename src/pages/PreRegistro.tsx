@@ -98,21 +98,21 @@ export default function PreRegistro() {
         backgroundImage={assetPath('v2/slider/AL-51.png')}
       />
 
-      <section className="bg-slate-50 dark:bg-slate-950 py-16 md:py-20">
+      <section className="bg-slate-50 py-16 md:py-20">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
             {benefitItems.map(({ icon: Icon, key }) => (
               <div
                 key={key}
-                className="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 flex flex-col gap-4"
+                className="bg-white rounded-2xl p-6 border border-slate-100 flex flex-col gap-4"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#262460]/10 dark:bg-[#2377b9]/15 flex items-center justify-center flex-shrink-0">
-                  <Icon size={20} className="text-[#262460] dark:text-[#2377b9]" />
+                <div className="w-10 h-10 rounded-xl bg-[#329bd0]/10 flex items-center justify-center flex-shrink-0">
+                  <Icon size={20} className="text-[#329bd0]" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900 dark:text-white text-sm mb-1">{text.benefits[key].title}</h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">{text.benefits[key].desc}</p>
+                  <h3 className="font-bold text-slate-900 text-sm mb-1">{text.benefits[key].title}</h3>
+                  <p className="text-xs text-slate-500 leading-relaxed">{text.benefits[key].desc}</p>
                 </div>
               </div>
             ))}
@@ -120,13 +120,13 @@ export default function PreRegistro() {
 
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
                 {text.formTitle}
               </h2>
-              <p className="text-slate-500 dark:text-slate-400 text-sm">{text.dateLine}</p>
+              <p className="text-slate-500 text-sm">{text.dateLine}</p>
             </div>
 
-            <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-sm">
+            <div className="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
               <iframe
                 id={JOTFORM_ID}
                 title="Registro Abrelatam - ConDatos 2026"
@@ -140,7 +140,7 @@ export default function PreRegistro() {
               />
             </div>
 
-            <p className="text-center text-xs text-slate-400 dark:text-slate-600 mt-4">
+            <p className="text-center text-xs text-slate-400 mt-4">
               {text.consent}
             </p>
             <p className="mt-3 text-center text-sm">
@@ -148,7 +148,7 @@ export default function PreRegistro() {
                 href={JOTFORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-[#2377b9] hover:text-[#262460]"
+                className="font-semibold text-[#329bd0] hover:text-[#2789b8] transition-colors"
               >
                 {text.openForm}
               </a>

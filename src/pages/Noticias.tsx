@@ -34,8 +34,8 @@ export default function Noticias() {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                 activeCategory === cat
-                  ? 'bg-[#4367e1] text-white shadow-md'
-                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-[#4367e1] dark:hover:border-[#4367e1]'
+                  ? 'bg-[#329bd0] text-white shadow-md'
+                  : 'bg-white text-slate-600 border border-slate-200 hover:border-[#329bd0] hover:text-[#329bd0]'
               }`}
             >
               {cat}
@@ -52,7 +52,7 @@ export default function Noticias() {
         )}
 
         {sorted.length === 0 && (
-          <div className="text-center py-16 text-slate-400 dark:text-slate-500">
+          <div className="text-center py-16 text-slate-400">
             {t('noticias.emptyCategory')}
           </div>
         )}

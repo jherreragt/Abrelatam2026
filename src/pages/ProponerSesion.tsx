@@ -62,7 +62,7 @@ export default function ProponerSesion() {
       {/* Session types */}
       <section className="bg-slate-50 py-16">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
-          <h2 className="mb-3 text-2xl font-bold text-[#092d7e] md:text-3xl">Tipos de sesión</h2>
+          <h2 className="mb-3 text-2xl font-bold text-[#262262] md:text-3xl">Tipos de sesión</h2>
           <p className="mb-10 text-sm text-slate-500">Entre los tipos de sesión sugeridos se encuentran:</p>
 
           <div className="grid gap-6 sm:grid-cols-2">
@@ -72,12 +72,12 @@ export default function ProponerSesion() {
                 className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
               >
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#092d7e]/10">
-                    <Icon size={20} className="text-[#092d7e]" />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#329bd0]/10">
+                    <Icon size={20} className="text-[#329bd0]" />
                   </div>
                 </div>
-                <h3 className="mb-1 text-base font-bold text-slate-800">{title}</h3>
-                <span className="mb-3 text-xs font-semibold uppercase tracking-wide text-[#4367e1]">{duration}</span>
+                <h3 className="mb-1 text-base font-bold text-[#262262]">{title}</h3>
+                <span className="mb-3 text-xs font-semibold uppercase tracking-wide text-[#329bd0]">{duration}</span>
                 <p className="text-sm leading-relaxed text-slate-600">{description}</p>
               </div>
             ))}
@@ -86,7 +86,7 @@ export default function ProponerSesion() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#092d7e] py-16">
+      <section className="bg-[#262262] py-16">
         <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
           <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">¿Listo para proponer tu sesión?</h2>
           <p className="mb-8 text-base leading-relaxed text-white/80">
@@ -96,7 +96,7 @@ export default function ProponerSesion() {
             href="https://pretalx.abrelatam.org/abrelatam-2026/cfp"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 rounded-lg bg-[#fdcc30] px-8 py-4 text-sm font-bold uppercase tracking-wide text-[#092d7e] shadow-lg transition-colors hover:bg-[#f0bd1f]"
+            className="inline-flex items-center gap-2.5 rounded-lg bg-[#329bd0] px-8 py-4 text-sm font-bold uppercase tracking-wide text-white shadow-lg transition-colors hover:bg-[#2789b8]"
           >
             Proponer sesión
             <ExternalLink size={15} />

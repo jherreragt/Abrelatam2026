@@ -15,7 +15,7 @@ export default function BlogCard({ post }: BlogCardProps) {
   return (
     <Link
       to={`/noticias/${post.slug}`}
-      className="group flex min-h-[360px] flex-col overflow-hidden bg-slate-100 transition-transform duration-300 hover:-translate-y-1 dark:bg-slate-800"
+      className="group flex min-h-[360px] flex-col overflow-hidden bg-slate-100 transition-transform duration-300 hover:-translate-y-1"
     >
       <div className="h-44 overflow-hidden">
         <img
@@ -25,16 +25,16 @@ export default function BlogCard({ post }: BlogCardProps) {
         />
       </div>
       <div className="flex flex-1 flex-col p-8">
-        <p className="mb-2 text-xs font-medium text-[#2377b9]">
+        <p className="mb-2 text-xs font-medium text-[#329bd0]">
           {formatDate(post.date)}
         </p>
-        <h3 className="mb-3 text-xl font-bold leading-tight text-black transition-colors group-hover:text-[#2377b9] dark:text-white">
+        <h3 className="mb-3 text-xl font-bold leading-tight text-black transition-colors group-hover:text-[#329bd0]">
           {post.title}
         </h3>
-        <p className="mb-8 flex-1 text-sm font-medium leading-relaxed text-black dark:text-slate-200">
+        <p className="mb-8 flex-1 text-sm font-medium leading-relaxed text-black">
           {post.excerpt}
         </p>
-        <span className="inline-flex w-fit rounded bg-[#4367e1] px-6 py-3 text-[10px] font-bold uppercase tracking-wide text-white transition-colors group-hover:bg-[#3657c8]">
+        <span className="inline-flex w-fit rounded bg-[#329bd0] px-6 py-3 text-[10px] font-bold uppercase tracking-wide text-white transition-colors group-hover:bg-[#2789b8]">
           Leer mas
         </span>
       </div>

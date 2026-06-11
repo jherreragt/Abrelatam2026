@@ -77,30 +77,30 @@ const copy: Record<Language, any> = {
     heroTitle: 'Informacoes uteis e logistica',
     heroSubtitle: 'Tudo o que voce precisa saber para planejar sua viagem a Cidade da Guatemala',
     venueTitle: 'Sede do evento',
-    venueText1: 'ABRELATAM / CONDATOS 2026 sera realizado na Cidade da Guatemala, um ponto de encontro regional com conexoes aereas diretas e uma oferta cultural ativa para receber a comunidade de dados abertos.',
-    venueText2: 'A sede principal sera o Centro Cultural Miguel Angel Asturias, um espaco emblematico no coracao da cidade. Em breve compartilharemos informacoes detalhadas sobre acessos, horarios, recomendacoes de transporte e servicos disponiveis durante o evento.',
+    venueText1: 'ABRELATAM / CONDATOS 2026 sera realizado na Cidade da Guatemala.',
+    venueText2: 'A sede principal sera o Centro Cultural Miguel Angel Asturias. Em breve compartilharemos informacoes detalhadas.',
     arrivalTitle: 'Como chegar?',
     arrival: {
-      plane: { title: 'De aviao', desc: 'O Aeroporto Internacional La Aurora (GUA) fica a cerca de 15 minutos da area de convencoes. Tem conexoes diretas com as principais cidades da America Latina, Estados Unidos e Europa.', noteTitle: 'Principais companhias:', note: 'Copa Airlines, Avianca, Aeromexico, United, Delta, American Airlines' },
+      plane: { title: 'De aviao', desc: 'O Aeroporto Internacional La Aurora (GUA) fica a cerca de 15 minutos da area de convencoes.', noteTitle: 'Principais companhias:', note: 'Copa Airlines, Avianca, Aeromexico, United, Delta, American Airlines' },
       local: { title: 'Transporte local', desc: 'Do aeroporto e das areas hoteleiras, voce podera usar taxis autorizados, transporte privado, shuttles ou servicos por aplicativo.', noteTitle: 'Principais opcoes:', note: 'Taxis autorizados, transporte privado, shuttles e servicos por aplicativo' },
-      centralAmerica: { title: 'Da America Central', desc: 'A Guatemala conta com conexoes terrestres regionais e rotas desde paises vizinhos para quem viaja de onibus ou transporte privado.', noteTitle: 'Principais rotas:', note: 'Conexoes terrestres desde Mexico, El Salvador, Honduras e Belize' },
-      entry: { title: 'Requisitos de entrada', desc: 'Os requisitos migratorios dependem do seu pais de origem. Consulte as informacoes oficiais antes de comprar voos ou reservar hospedagem.', noteTitle: 'Recomendacao:', note: 'Consulte os requisitos migratorios com antecedencia conforme seu pais de origem' },
+      centralAmerica: { title: 'Da America Central', desc: 'A Guatemala conta com conexoes terrestres regionais.', noteTitle: 'Principais rotas:', note: 'Conexoes terrestres desde Mexico, El Salvador, Honduras e Belize' },
+      entry: { title: 'Requisitos de entrada', desc: 'Os requisitos migratorios dependem do seu pais de origem.', noteTitle: 'Recomendacao:', note: 'Consulte os requisitos migratorios com antecedencia' },
     },
     lodgingTitle: 'Hospedagem',
     hotelTitle: 'Hoteis com tarifa especial',
-    hotelText: 'Negociamos tarifas preferenciais com varios hoteis proximos a sede. Os detalhes e codigos de reserva serao compartilhados com as pessoas registradas.',
+    hotelText: 'Negociamos tarifas preferenciais com varios hoteis proximos a sede.',
     zones: {
-      zone10: { name: 'Zona 10', desc: 'A zona mais proxima do evento, com varias opcoes de restaurantes e servicos.' },
-      zone9: { name: 'Zona 9', desc: 'Muito perto da sede, com opcoes mais economicas e excelente localizacao.' },
-      zone1: { name: 'Zona 1 (Centro)', desc: 'Centro historico com opcoes economicas, a 20 minutos do evento.' },
+      zone10: { name: 'Zona 10', desc: 'A zona mais proxima do evento.' },
+      zone9: { name: 'Zona 9', desc: 'Muito perto da sede, com opcoes mais economicas.' },
+      zone1: { name: 'Zona 1 (Centro)', desc: 'Centro historico com opcoes economicas.' },
     },
     rangeLabel: 'Faixa',
     usefulTitle: 'Informacoes uteis',
     useful: {
-      weather: { title: 'Clima em outubro', desc: 'Outubro é temporada de chuvas na Guatemala. As temperaturas são agradáveis (15-25°C), mas recomendamos trazer guarda-chuva ou capa de chuva.' },
-      currency: { title: 'Moeda', desc: 'A moeda oficial e o Quetzal (GTQ). Ha caixas eletronicos disponiveis e dolares americanos sao aceitos em muitos estabelecimentos.' },
+      weather: { title: 'Clima em outubro', desc: 'Outubro e temporada de chuvas na Guatemala. As temperaturas sao agradaveis (15-25C).' },
+      currency: { title: 'Moeda', desc: 'A moeda oficial e o Quetzal (GTQ).' },
       language: { title: 'Idioma', desc: 'O espanhol e o idioma oficial.' },
-      safety: { title: 'Seguranca', desc: 'Como em qualquer cidade grande, recomendamos precaucoes basicas. As zonas do evento e hoteis proximos sao seguras e bem monitoradas.' },
+      safety: { title: 'Seguranca', desc: 'As zonas do evento e hoteis proximos sao seguras e bem monitoradas.' },
     },
   },
 };
@@ -118,11 +118,11 @@ export default function ViajeSede() {
         icon={<img src={assetPath('v2/iconos/AL-39.png')} alt="" className="h-20 w-20 object-contain" />}
       />
 
-      <section className="py-20 md:py-28 bg-white dark:bg-slate-900">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="mx-auto mb-20 max-w-5xl">
-            <h2 className="mb-10 text-3xl font-bold text-[#10184a] md:text-4xl">{text.venueTitle}</h2>
-            <div className="max-w-4xl space-y-6 text-base leading-relaxed text-slate-800 dark:text-slate-200">
+            <h2 className="mb-10 text-3xl font-bold text-[#262262] md:text-4xl">{text.venueTitle}</h2>
+            <div className="max-w-4xl space-y-6 text-base leading-relaxed text-slate-800">
               <p>{text.venueText1}</p>
               <p>{text.venueText2}</p>
             </div>
@@ -130,18 +130,18 @@ export default function ViajeSede() {
         </div>
       </section>
 
-      <section className="bg-slate-100 px-4 py-16 md:py-20 dark:bg-slate-950">
+      <section className="bg-slate-100 px-4 py-16 md:py-20">
         <div className="mx-auto max-w-5xl">
-          <h2 className="mb-10 text-center text-2xl font-bold text-[#10184a] md:text-3xl">{text.arrivalTitle}</h2>
+          <h2 className="mb-10 text-center text-2xl font-bold text-[#262262] md:text-3xl">{text.arrivalTitle}</h2>
           <div className="grid gap-8 md:grid-cols-2">
             {arrivalCards.map(({ icon, key }) => {
               const item = text.arrival[key];
               return (
-                <article key={key} className="rounded-lg bg-white px-8 py-8 shadow-sm dark:bg-slate-900">
+                <article key={key} className="rounded-lg bg-white px-8 py-8 shadow-sm">
                   <img src={icon} alt="" className="mb-5 h-12 w-12 object-contain" />
-                  <h3 className="mb-3 text-xl font-bold text-slate-950 dark:text-white">{item.title}</h3>
-                  <p className="mb-6 text-sm leading-relaxed text-slate-700 dark:text-slate-300">{item.desc}</p>
-                  <div className="rounded-md bg-slate-100 px-5 py-4 text-xs leading-relaxed text-slate-800 dark:bg-slate-800 dark:text-slate-300">
+                  <h3 className="mb-3 text-xl font-bold text-slate-950">{item.title}</h3>
+                  <p className="mb-6 text-sm leading-relaxed text-slate-700">{item.desc}</p>
+                  <div className="rounded-md bg-slate-100 px-5 py-4 text-xs leading-relaxed text-slate-800">
                     <strong>{item.noteTitle}</strong>
                     <br />
                     {item.note}
@@ -153,15 +153,15 @@ export default function ViajeSede() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white dark:bg-slate-900">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="mx-auto mb-20 max-w-6xl">
-            <h2 className="mb-10 text-center text-3xl font-bold text-[#10184a] md:text-4xl">{text.lodgingTitle}</h2>
-            <div className="mb-8 rounded-lg bg-slate-100 px-8 py-10 dark:bg-slate-800 md:flex md:items-start md:gap-8 md:px-12">
+            <h2 className="mb-10 text-center text-3xl font-bold text-[#262262] md:text-4xl">{text.lodgingTitle}</h2>
+            <div className="mb-8 rounded-lg bg-slate-100 px-8 py-10 md:flex md:items-start md:gap-8 md:px-12">
               <img src={assetPath('v2/iconos/AL-32.png')} alt="" className="mb-5 h-14 w-14 object-contain md:mb-0" />
               <div>
-                <h3 className="mb-3 text-2xl font-bold text-slate-950 dark:text-white">{text.hotelTitle}</h3>
-                <p className="max-w-4xl text-base leading-relaxed text-slate-900 dark:text-slate-200">{text.hotelText}</p>
+                <h3 className="mb-3 text-2xl font-bold text-slate-950">{text.hotelTitle}</h3>
+                <p className="max-w-4xl text-base leading-relaxed text-slate-900">{text.hotelText}</p>
               </div>
             </div>
 
@@ -169,10 +169,10 @@ export default function ViajeSede() {
               {lodgingZones.map((key) => {
                 const zone = text.zones[key];
                 return (
-                  <article key={key} className="rounded-lg bg-slate-100 px-8 py-8 dark:bg-slate-800">
+                  <article key={key} className="rounded-lg bg-slate-100 px-8 py-8">
                     <img src={assetPath('v2/iconos/AL-32.png')} alt="" className="mb-5 h-14 w-14 object-contain" />
-                    <h3 className="mb-2 text-xl font-bold text-slate-950 dark:text-white">{zone.name}</h3>
-                    <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">{zone.desc}</p>
+                    <h3 className="mb-2 text-xl font-bold text-slate-950">{zone.name}</h3>
+                    <p className="text-sm leading-relaxed text-slate-700">{zone.desc}</p>
                   </article>
                 );
               })}
@@ -181,16 +181,16 @@ export default function ViajeSede() {
         </div>
       </section>
 
-      <section className="bg-slate-100 px-4 py-16 md:py-20 dark:bg-slate-950">
+      <section className="bg-slate-100 px-4 py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-10 text-center text-3xl font-bold text-[#10184a] md:text-4xl">{text.usefulTitle}</h2>
+          <h2 className="mb-10 text-center text-3xl font-bold text-[#262262] md:text-4xl">{text.usefulTitle}</h2>
           <div className="grid gap-8 md:grid-cols-2">
             {usefulKeys.map((key) => {
               const item = text.useful[key];
               return (
-                <article key={key} className="rounded-lg bg-white px-10 py-12 dark:bg-slate-900">
-                  <h3 className="mb-3 text-xl font-bold text-slate-950 dark:text-white">{item.title}</h3>
-                  <p className="text-base leading-snug text-slate-700 dark:text-slate-300">{item.desc}</p>
+                <article key={key} className="rounded-lg bg-white px-10 py-12">
+                  <h3 className="mb-3 text-xl font-bold text-slate-950">{item.title}</h3>
+                  <p className="text-base leading-snug text-slate-700">{item.desc}</p>
                 </article>
               );
             })}

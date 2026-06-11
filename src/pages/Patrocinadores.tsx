@@ -99,7 +99,7 @@ const tierColors = {
   silver: { header: 'bg-slate-400', badge: 'bg-slate-100 text-slate-600', dot: 'text-slate-400' },
   bronze: { header: 'bg-amber-600', badge: 'bg-amber-50 text-amber-700', dot: 'text-amber-500' },
   gold: { header: 'bg-yellow-400', badge: 'bg-yellow-50 text-yellow-700', dot: 'text-yellow-500' },
-  platinum: { header: 'bg-[#4367e1]', badge: 'bg-blue-50 text-blue-700', dot: 'text-[#4367e1]' },
+  platinum: { header: 'bg-[#329bd0]', badge: 'bg-[#329bd0]/10 text-[#262262]', dot: 'text-[#329bd0]' },
 };
 
 export default function Patrocinadores() {
@@ -116,9 +116,9 @@ export default function Patrocinadores() {
       />
 
       {/* Intro */}
-      <section className="bg-white py-20 md:py-28 dark:bg-slate-900">
+      <section className="bg-white py-20 md:py-28">
         <div className="container mx-auto max-w-4xl px-4 md:px-6">
-          <div className="space-y-6 text-base leading-relaxed text-slate-700 dark:text-slate-300 md:text-lg">
+          <div className="space-y-6 text-base leading-relaxed text-slate-700 md:text-lg">
             <p>{t('patrocinadores.intro1')}</p>
             <p>{t('patrocinadores.intro2')}</p>
             <p>{t('patrocinadores.intro3')}</p>
@@ -127,27 +127,27 @@ export default function Patrocinadores() {
       </section>
 
       {/* Why sponsor */}
-      <section className="bg-slate-50 py-20 md:py-28 dark:bg-slate-950">
+      <section className="bg-slate-50 py-20 md:py-28">
         <div className="container mx-auto max-w-5xl px-4 md:px-6">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold text-[#262460] dark:text-white md:text-4xl">
+            <h2 className="text-3xl font-bold text-[#262262] md:text-4xl">
               {t('patrocinadores.whyTitle')}
             </h2>
           </div>
 
           <div className="grid gap-10 md:grid-cols-2 md:gap-14">
             <div>
-              <p className="mb-8 text-base leading-relaxed text-slate-700 dark:text-slate-300">
+              <p className="mb-8 text-base leading-relaxed text-slate-700">
                 {t('patrocinadores.whyText')}
               </p>
-              <h3 className="mb-5 text-lg font-bold text-[#262460] dark:text-white">
+              <h3 className="mb-5 text-lg font-bold text-[#262262]">
                 {t('patrocinadores.whyOrgTitle')}
               </h3>
               <ul className="space-y-3">
                 {lists.whyOrg.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle size={18} className="mt-0.5 flex-shrink-0 text-[#4367e1]" />
-                    <span className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">{item}</span>
+                    <CheckCircle size={18} className="mt-0.5 flex-shrink-0 text-[#329bd0]" />
+                    <span className="text-sm leading-relaxed text-slate-700">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -165,7 +165,7 @@ export default function Patrocinadores() {
       </section>
 
       {/* Track record + stats */}
-      <section className="bg-[#262460] py-20 md:py-28">
+      <section className="bg-[#262262] py-20 md:py-28">
         <div className="container mx-auto max-w-5xl px-4 md:px-6">
           <div className="mb-14 text-center">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
@@ -183,7 +183,7 @@ export default function Patrocinadores() {
               { val: t('patrocinadores.stat3Value'), label: t('patrocinadores.stat3Label') },
             ].map(({ val, label }) => (
               <div key={label} className="rounded-2xl border border-white/15 bg-white/10 px-8 py-10 text-center backdrop-blur-sm">
-                <p className="mb-2 text-5xl font-bold text-[#fdcc30]">{val}</p>
+                <p className="mb-2 text-5xl font-bold text-[#329bd0]">{val}</p>
                 <p className="text-base font-medium text-white/80">{label}</p>
               </div>
             ))}
@@ -199,7 +199,7 @@ export default function Patrocinadores() {
                   key={year}
                   className="flex items-center gap-3 rounded-xl border border-white/15 bg-white/8 px-4 py-3"
                 >
-                  <span className="text-sm font-bold text-[#fdcc30]">{year}</span>
+                  <span className="text-sm font-bold text-[#329bd0]">{year}</span>
                   <span className="text-xs text-white/75">{place}</span>
                 </div>
               ))}
@@ -209,13 +209,13 @@ export default function Patrocinadores() {
       </section>
 
       {/* What does sponsorship make possible */}
-      <section className="bg-white py-20 md:py-28 dark:bg-slate-900">
+      <section className="bg-white py-20 md:py-28">
         <div className="container mx-auto max-w-4xl px-4 md:px-6">
           <div className="mb-10 text-center">
-            <h2 className="mb-3 text-3xl font-bold text-[#262460] dark:text-white md:text-4xl">
+            <h2 className="mb-3 text-3xl font-bold text-[#262262] md:text-4xl">
               {t('patrocinadores.makePossibleTitle')}
             </h2>
-            <p className="text-base text-slate-600 dark:text-slate-400">
+            <p className="text-base text-slate-600">
               {t('patrocinadores.makePossibleText')}
             </p>
           </div>
@@ -223,12 +223,12 @@ export default function Patrocinadores() {
             {lists.makePossible.map((item, i) => (
               <div
                 key={i}
-                className="flex items-start gap-4 rounded-2xl border border-slate-100 bg-slate-50 px-6 py-5 dark:border-slate-700/40 dark:bg-slate-800/50"
+                className="flex items-start gap-4 rounded-2xl border border-slate-100 bg-slate-50 px-6 py-5"
               >
-                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#4367e1] text-sm font-bold text-white">
+                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#329bd0] text-sm font-bold text-white">
                   {i + 1}
                 </div>
-                <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">{item}</p>
+                <p className="text-sm leading-relaxed text-slate-700">{item}</p>
               </div>
             ))}
           </div>
@@ -236,25 +236,25 @@ export default function Patrocinadores() {
       </section>
 
       {/* Benefits */}
-      <section className="bg-slate-50 py-20 md:py-28 dark:bg-slate-950">
+      <section className="bg-slate-50 py-20 md:py-28">
         <div className="container mx-auto max-w-4xl px-4 md:px-6">
           <div className="mb-10 text-center">
-            <h2 className="mb-3 text-3xl font-bold text-[#262460] dark:text-white md:text-4xl">
+            <h2 className="mb-3 text-3xl font-bold text-[#262262] md:text-4xl">
               {t('patrocinadores.benefitsTitle')}
             </h2>
-            <p className="text-base text-slate-600 dark:text-slate-400">
+            <p className="text-base text-slate-600">
               {t('patrocinadores.benefitsText')}
             </p>
           </div>
-          <div className="rounded-2xl bg-white p-8 shadow-sm dark:bg-slate-900 md:p-10">
-            <p className="mb-6 font-semibold text-slate-900 dark:text-white">
+          <div className="rounded-2xl bg-white p-8 shadow-sm md:p-10">
+            <p className="mb-6 font-semibold text-slate-900">
               {t('patrocinadores.benefitsListTitle')}
             </p>
             <ul className="space-y-4">
               {lists.benefits.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle size={18} className="mt-0.5 flex-shrink-0 text-[#4367e1]" />
-                  <span className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">{item}</span>
+                  <CheckCircle size={18} className="mt-0.5 flex-shrink-0 text-[#329bd0]" />
+                  <span className="text-sm leading-relaxed text-slate-700">{item}</span>
                 </li>
               ))}
             </ul>
@@ -263,20 +263,20 @@ export default function Patrocinadores() {
       </section>
 
       {/* Sponsorship tiers */}
-      <section className="bg-white py-20 md:py-28 dark:bg-slate-900">
+      <section className="bg-white py-20 md:py-28">
         <div className="container mx-auto max-w-5xl px-4 md:px-6">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold text-[#262460] dark:text-white md:text-4xl">
+            <h2 className="text-3xl font-bold text-[#262262] md:text-4xl">
               {t('patrocinadores.tiersTitle')}
             </h2>
           </div>
 
           {/* Desktop table */}
-          <div className="hidden overflow-hidden rounded-2xl border border-slate-100 dark:border-slate-700/40 md:block">
+          <div className="hidden overflow-hidden rounded-2xl border border-slate-100 md:block">
             <table className="w-full text-sm">
               <thead>
                 <tr>
-                  <th className="bg-slate-50 px-6 py-4 text-left font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                  <th className="bg-slate-50 px-6 py-4 text-left font-semibold text-slate-700">
                     {t('patrocinadores.tierBenefit')}
                   </th>
                   {(['silver', 'bronze', 'gold', 'platinum'] as const).map((tier) => (
@@ -289,10 +289,10 @@ export default function Patrocinadores() {
                   ))}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 dark:divide-slate-700/40">
+              <tbody className="divide-y divide-slate-100">
                 {tierRows.map(({ key, silver, bronze, gold, platinum }) => (
-                  <tr key={key} className="bg-white hover:bg-slate-50/50 dark:bg-slate-900 dark:hover:bg-slate-800/40 transition-colors">
-                    <td className="px-6 py-4 text-slate-700 dark:text-slate-300">
+                  <tr key={key} className="bg-white hover:bg-slate-50/50 transition-colors">
+                    <td className="px-6 py-4 text-slate-700">
                       {t(`patrocinadores.${key}`)}
                     </td>
                     {([silver, bronze, gold, platinum] as const).map((has, i) => {
@@ -302,7 +302,7 @@ export default function Patrocinadores() {
                           {has ? (
                             <CheckCircle size={20} className={`mx-auto ${tierColors[tierKey].dot}`} />
                           ) : (
-                            <span className="mx-auto block h-0.5 w-4 rounded bg-slate-200 dark:bg-slate-700" />
+                            <span className="mx-auto block h-0.5 w-4 rounded bg-slate-200" />
                           )}
                         </td>
                       );
@@ -319,16 +319,16 @@ export default function Patrocinadores() {
               const tierLabel = t(`patrocinadores.tier${tier.charAt(0).toUpperCase() + tier.slice(1)}`);
               const included = tierRows.filter((r) => r[tier]);
               return (
-                <div key={tier} className="overflow-hidden rounded-2xl border border-slate-100 dark:border-slate-700/40">
+                <div key={tier} className="overflow-hidden rounded-2xl border border-slate-100">
                   <div className={`px-6 py-4 text-center font-bold text-white ${tierColors[tier].header}`}>
                     {tierLabel}
                   </div>
-                  <div className="bg-white px-6 py-5 dark:bg-slate-900">
+                  <div className="bg-white px-6 py-5">
                     <ul className="space-y-3">
                       {included.map(({ key }) => (
                         <li key={key} className="flex items-start gap-3">
                           <CheckCircle size={16} className={`mt-0.5 flex-shrink-0 ${tierColors[tier].dot}`} />
-                          <span className="text-sm text-slate-700 dark:text-slate-300">
+                          <span className="text-sm text-slate-700">
                             {t(`patrocinadores.${key}`)}
                           </span>
                         </li>
@@ -343,7 +343,7 @@ export default function Patrocinadores() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#2377b9] py-20 md:py-28">
+      <section className="bg-[#329bd0] py-20 md:py-28">
         <div className="container mx-auto max-w-3xl px-4 text-center md:px-6">
           <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
             {t('patrocinadores.ctaTitle')}
@@ -360,7 +360,7 @@ export default function Patrocinadores() {
             </p>
             <a
               href="mailto:abrelatam@idatosabiertos.org"
-              className="inline-flex items-center gap-2 text-lg font-semibold text-white transition-colors hover:text-[#fdcc30]"
+              className="inline-flex items-center gap-2 text-lg font-semibold text-white transition-colors hover:text-white/80"
             >
               <Mail size={20} />
               abrelatam@idatosabiertos.org

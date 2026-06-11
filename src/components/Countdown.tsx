@@ -39,56 +39,36 @@ export default function Countdown() {
   }, []);
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-slate-100 dark:from-blue-950/30 dark:to-slate-900/50 border-2 border-blue-200 dark:border-blue-800/50 rounded-2xl p-8 shadow-xl backdrop-blur-sm">
+    <div className="bg-gradient-to-br from-[#329bd0]/10 to-slate-100 border-2 border-[#329bd0]/30 rounded-2xl p-8 shadow-xl backdrop-blur-sm">
       <div className="text-center mb-6">
         <div className="flex items-center justify-center gap-2 mb-3">
-          <Calendar className="text-blue-600 dark:text-blue-400" size={28} />
-          <Clock className="text-blue-600 dark:text-blue-400" size={28} />
+          <Calendar className="text-[#329bd0]" size={28} />
+          <Clock className="text-[#329bd0]" size={28} />
         </div>
-        <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">
+        <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
           {t('countdown.title')}
         </h3>
-        <p className="text-slate-700 dark:text-slate-300">
+        <p className="text-slate-700">
           {t('countdown.subtitle')}
         </p>
       </div>
 
       <div className="grid grid-cols-4 gap-3 md:gap-6 max-w-2xl mx-auto">
-        <div className="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-lg border border-blue-100 dark:border-blue-900/30 hover:scale-105 transition-transform">
-          <div className="text-3xl md:text-5xl font-bold bg-gradient-to-br from-blue-600 to-blue-500 bg-clip-text text-transparent mb-1">
-            {timeLeft.days}
+        {[
+          { value: timeLeft.days, key: 'days' },
+          { value: timeLeft.hours, key: 'hours' },
+          { value: timeLeft.minutes, key: 'minutes' },
+          { value: timeLeft.seconds, key: 'seconds' },
+        ].map(({ value, key }) => (
+          <div key={key} className="bg-white rounded-xl p-4 shadow-lg border border-[#329bd0]/20 hover:scale-105 transition-transform">
+            <div className="text-3xl md:text-5xl font-bold text-[#329bd0] mb-1">
+              {value}
+            </div>
+            <div className="text-xs md:text-sm text-slate-600 uppercase font-medium">
+              {t(`countdown.${key}`)}
+            </div>
           </div>
-          <div className="text-xs md:text-sm text-slate-600 dark:text-slate-400 uppercase font-medium">
-            {t('countdown.days')}
-          </div>
-        </div>
-
-        <div className="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-lg border border-blue-100 dark:border-blue-900/30 hover:scale-105 transition-transform">
-          <div className="text-3xl md:text-5xl font-bold bg-gradient-to-br from-blue-600 to-blue-500 bg-clip-text text-transparent mb-1">
-            {timeLeft.hours}
-          </div>
-          <div className="text-xs md:text-sm text-slate-600 dark:text-slate-400 uppercase font-medium">
-            {t('countdown.hours')}
-          </div>
-        </div>
-
-        <div className="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-lg border border-blue-100 dark:border-blue-900/30 hover:scale-105 transition-transform">
-          <div className="text-3xl md:text-5xl font-bold bg-gradient-to-br from-blue-600 to-blue-500 bg-clip-text text-transparent mb-1">
-            {timeLeft.minutes}
-          </div>
-          <div className="text-xs md:text-sm text-slate-600 dark:text-slate-400 uppercase font-medium">
-            {t('countdown.minutes')}
-          </div>
-        </div>
-
-        <div className="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-lg border border-blue-100 dark:border-blue-900/30 hover:scale-105 transition-transform">
-          <div className="text-3xl md:text-5xl font-bold bg-gradient-to-br from-blue-600 to-blue-500 bg-clip-text text-transparent mb-1">
-            {timeLeft.seconds}
-          </div>
-          <div className="text-xs md:text-sm text-slate-600 dark:text-slate-400 uppercase font-medium">
-            {t('countdown.seconds')}
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

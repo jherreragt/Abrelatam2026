@@ -30,7 +30,7 @@ const copy: Record<Language, { heroTitle: string; heroSubtitle: string; faqTitle
       },
       free: {
         q: '¿El evento es gratuito?',
-        a: 'Si, el evento es gratuito. Todas las personas interesadas en temas de gobierno abierto y datos abiertos en las Américas están invitadas a participar en el evento. Esto incluye a personas que trabajan en gobierno, sociedad civil, academia, sector privado, organizaciones multilaterales, donantes y más.',
+        a: 'Si, el evento es gratuito. Todas las personas interesadas en temas de gobierno abierto y datos abiertos en las Américas están invitadas a participar en el evento.',
       },
       propose: {
         q: '¿Puedo proponer una sesión?',
@@ -61,7 +61,7 @@ const copy: Record<Language, { heroTitle: string; heroSubtitle: string; faqTitle
       },
       free: {
         q: 'Is the event free?',
-        a: 'Yes, the event is free. All people interested in open government and open data in the Americas are invited to participate. This includes people working in government, civil society, academia, the private sector, multilateral organizations, donors, and more.',
+        a: 'Yes, the event is free. All people interested in open government and open data in the Americas are invited to participate.',
       },
       propose: {
         q: 'Can I propose a session?',
@@ -76,7 +76,7 @@ const copy: Record<Language, { heroTitle: string; heroSubtitle: string; faqTitle
     faqs: {
       what: {
         q: 'O que é ABRELATAM / CONDATOS?',
-        a: 'ABRELATAM é uma desconferência comunitária onde a agenda é construída coletivamente. CONDATOS é a conferência regional com painéis e oficinas selecionados por um comitê a partir de uma chamada pública de propostas. Juntos formam o encontro mais importante da região sobre dados abertos e tecnologia cívica.',
+        a: 'ABRELATAM é uma desconferência comunitária onde a agenda é construída coletivamente. CONDATOS é a conferência regional com painéis e oficinas selecionados por um comitê a partir de uma chamada pública de propostas.',
       },
       dates: {
         q: 'Datas e local',
@@ -92,7 +92,7 @@ const copy: Record<Language, { heroTitle: string; heroSubtitle: string; faqTitle
       },
       free: {
         q: 'O evento é gratuito?',
-        a: 'Sim, o evento é gratuito. Todas as pessoas interessadas em governo aberto e dados abertos nas Américas estão convidadas a participar. Isso inclui pessoas que trabalham em governo, sociedade civil, academia, setor privado, organizações multilaterais, doadores e mais.',
+        a: 'Sim, o evento é gratuito. Todas as pessoas interessadas em governo aberto e dados abertos nas Américas estão convidadas a participar.',
       },
       propose: {
         q: 'Posso propor uma sessão?',
@@ -115,34 +115,34 @@ export default function Contacto() {
         backgroundImage={assetPath('v2/slider/AL-53.png')}
       />
 
-      <section className="py-20 md:py-28 bg-white dark:bg-primary">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="text-center mb-12">
-            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#456bdd] mb-3">FAQ</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white flex items-center justify-center gap-3">
-              <HelpCircle size={28} className="text-[#456bdd]" />
+            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#329bd0] mb-3">FAQ</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#262262] flex items-center justify-center gap-3">
+              <HelpCircle size={28} className="text-[#329bd0]" />
               {text.faqTitle}
             </h2>
           </div>
           <div className="max-w-3xl mx-auto space-y-2">
             {faqKeys.map((key, index) => (
-              <div key={key} className="bg-white dark:bg-primary/80 rounded-2xl border border-primary/10 dark:border-[#456bdd]/30 overflow-hidden transition-all duration-200">
+              <div key={key} className="bg-white rounded-2xl border border-slate-200 overflow-hidden transition-all duration-200">
                 <button
                   onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
                   className="w-full flex items-start justify-between gap-4 text-left px-6 py-5"
                 >
-                  <h3 className="font-semibold text-primary dark:text-white text-sm leading-relaxed flex-1">
+                  <h3 className="font-semibold text-[#262262] text-sm leading-relaxed flex-1">
                     {text.faqs[key].q}
                   </h3>
                   {openFAQ === index ? (
-                    <ChevronUp className="text-[#456bdd] flex-shrink-0 mt-0.5" size={18} />
+                    <ChevronUp className="text-[#329bd0] flex-shrink-0 mt-0.5" size={18} />
                   ) : (
-                    <ChevronDown className="text-[#456bdd]/80 flex-shrink-0 mt-0.5" size={18} />
+                    <ChevronDown className="text-slate-400 flex-shrink-0 mt-0.5" size={18} />
                   )}
                 </button>
                 {openFAQ === index && (
-                  <div className="px-6 pb-5 border-t border-primary/10 dark:border-[#456bdd]/30 pt-4">
-                    <p className="text-sm text-primary/70 dark:text-[#456bdd]/80 leading-relaxed">
+                  <div className="px-6 pb-5 border-t border-slate-100 pt-4">
+                    <p className="text-sm text-slate-600 leading-relaxed">
                       {text.faqs[key].a}
                     </p>
                   </div>

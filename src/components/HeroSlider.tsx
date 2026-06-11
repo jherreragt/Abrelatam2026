@@ -39,10 +39,10 @@ export default function HeroSlider() {
   }, []);
 
   const pad = (n: number) => String(n).padStart(2, '0');
-  const heroButtonClass = 'inline-flex min-w-36 items-center justify-center gap-2 rounded-md bg-[#fdcc30] px-5 py-3 text-xs font-bold uppercase tracking-wide text-[#262460] shadow-sm transition-colors duration-200 hover:bg-[#f0bd1f]';
+  const heroButtonClass = 'inline-flex min-w-36 items-center justify-center gap-2 rounded-md bg-[#329bd0] px-5 py-3 text-xs font-bold uppercase tracking-wide text-white shadow-sm transition-colors duration-200 hover:bg-[#2789b8]';
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#0a2f84]">
+    <section className="relative min-h-screen overflow-hidden bg-[#262262]">
       <img
         src={assetPath('v2/slider/AL-07.png')}
         alt=""

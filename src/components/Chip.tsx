@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { LucideIcon } from 'lucide-react';
+import { Video as LucideIcon } from 'lucide-react';
 
 interface ChipProps {
   children: ReactNode;
@@ -9,9 +9,9 @@ interface ChipProps {
 
 export default function Chip({ children, icon: Icon, variant = 'default' }: ChipProps) {
   const variants = {
-    default: 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700',
-    orange: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800',
-    amber: 'bg-slate-100 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700'
+    default: 'bg-slate-100 text-slate-700 border border-slate-200',
+    orange: 'bg-[#329bd0]/10 text-[#262262] border border-[#329bd0]/30',
+    amber: 'bg-slate-100 text-slate-700 border border-slate-200'
   };
 
   return (

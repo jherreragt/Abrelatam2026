@@ -21,9 +21,9 @@ export default function RegisterButton() {
     <div className="fixed bottom-6 right-6 z-40">
       <div className="relative">
         {isExpanded ? (
-          <div className="bg-gradient-to-br from-slate-900 via-blue-950 to-black rounded-3xl shadow-2xl overflow-hidden max-w-sm animate-slideInRight border border-blue-500/20">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-transparent"></div>
-            <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl"></div>
+          <div className="bg-gradient-to-br from-slate-900 via-[#262262] to-black rounded-3xl shadow-2xl overflow-hidden max-w-sm animate-slideInRight border border-[#329bd0]/20">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#329bd0]/10 via-transparent to-transparent"></div>
+            <div className="absolute top-0 right-0 w-40 h-40 bg-[#329bd0]/20 rounded-full blur-3xl"></div>
 
             <div className="relative p-6">
               <button
@@ -36,11 +36,11 @@ export default function RegisterButton() {
 
               <div className="flex items-start gap-4 mb-5">
                 <div className="relative">
-                  <div className="bg-[#4367e1] p-3 rounded-xl shadow-lg shadow-[#4367e1]/30">
+                  <div className="bg-[#329bd0] p-3 rounded-xl shadow-lg shadow-[#329bd0]/30">
                     <Sparkles className="text-white" size={22} />
                   </div>
-                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
-                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-[#329bd0] rounded-full animate-ping"></div>
+                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-[#329bd0] rounded-full"></div>
                 </div>
                 <div className="flex-1 pt-0.5">
                   <h3 className="text-white font-bold text-xl mb-1.5 tracking-tight">
@@ -54,8 +54,8 @@ export default function RegisterButton() {
 
               <div className="space-y-3 mb-6 bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
                 <div className="flex items-center gap-3 text-white">
-                  <div className="bg-blue-500/20 p-2 rounded-lg">
-                    <Calendar size={16} className="text-blue-400" />
+                  <div className="bg-[#329bd0]/20 p-2 rounded-lg">
+                    <Calendar size={16} className="text-[#329bd0]" />
                   </div>
                   <span className="text-sm font-medium">
                     {t('registerPopup.date')}
@@ -63,8 +63,8 @@ export default function RegisterButton() {
                 </div>
                 <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
                 <div className="flex items-center gap-3 text-white">
-                  <div className="bg-blue-500/20 p-2 rounded-lg">
-                    <MapPin size={16} className="text-blue-400" />
+                  <div className="bg-[#329bd0]/20 p-2 rounded-lg">
+                    <MapPin size={16} className="text-[#329bd0]" />
                   </div>
                   <span className="text-sm font-medium">
                     {t('registerPopup.location')}
@@ -75,7 +75,7 @@ export default function RegisterButton() {
               <div className="flex gap-2">
                 <Button
                   size="lg"
-                  className="flex-1 bg-[#4367e1] hover:bg-[#3657c8] text-white border-0 font-semibold shadow-lg shadow-[#4367e1]/30 hover:shadow-xl hover:shadow-[#4367e1]/40 transition-all hover:scale-105 group"
+                  className="flex-1 bg-[#329bd0] hover:bg-[#2789b8] text-white border-0 font-semibold shadow-lg shadow-[#329bd0]/30 hover:shadow-xl hover:shadow-[#329bd0]/40 transition-all hover:scale-105 group"
                 >
                   <UserPlus size={18} />
                   {t('home.register')}
@@ -91,22 +91,22 @@ export default function RegisterButton() {
               </div>
             </div>
 
-            <div className="absolute -top-2 -right-2 bg-[#4367e1] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg shadow-[#4367e1]/50 animate-pulse border border-[#4367e1]/30">
+            <div className="absolute -top-2 -right-2 bg-[#329bd0] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg shadow-[#329bd0]/50 animate-pulse border border-[#329bd0]/30">
               {t('registerPopup.badge')}
             </div>
           </div>
         ) : (
           <button
             onClick={() => setIsExpanded(true)}
-            className="relative bg-[#4367e1] text-white p-4 rounded-2xl shadow-2xl shadow-[#4367e1]/30 hover:bg-[#3657c8] hover:shadow-[#4367e1]/50 transition-all hover:scale-110 group border border-[#4367e1]/30"
+            className="relative bg-[#329bd0] text-white p-4 rounded-2xl shadow-2xl shadow-[#329bd0]/30 hover:bg-[#2789b8] hover:shadow-[#329bd0]/50 transition-all hover:scale-110 group border border-[#329bd0]/30"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-transparent rounded-2xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl"></div>
             <div className="relative flex items-center gap-2">
               <UserPlus size={24} className="group-hover:rotate-12 transition-transform" />
               <ChevronUp size={20} />
             </div>
-            <div className="absolute -top-1 -right-1 bg-blue-400 w-3 h-3 rounded-full animate-ping"></div>
-            <div className="absolute -top-1 -right-1 bg-blue-400 w-3 h-3 rounded-full shadow-lg shadow-blue-400/50"></div>
+            <div className="absolute -top-1 -right-1 bg-[#329bd0] w-3 h-3 rounded-full animate-ping"></div>
+            <div className="absolute -top-1 -right-1 bg-[#329bd0] w-3 h-3 rounded-full shadow-lg shadow-[#329bd0]/50"></div>
           </button>
         )}
       </div>

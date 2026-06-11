@@ -114,7 +114,7 @@ const copy: Record<Language, any> = {
     heroTitle: 'Codigo de conduta',
     heroSubtitle: 'Nosso compromisso com um espaco seguro, respeitoso e inclusivo para todas as pessoas que participam do ABRELATAM / CONDATOS.',
     commitmentTitle: 'Nosso compromisso',
-    commitmentText: 'ABRELATAM / CONDATOS se compromete a oferecer uma experiencia de conferencia livre de assedio para todas as pessoas, independentemente de genero, identidade e expressao de genero, idade, orientacao sexual, deficiencia, aparencia fisica, tamanho corporal, raca, etnia, religiao, nacionalidade ou experiencia tecnica.',
+    commitmentText: 'ABRELATAM / CONDATOS se compromete a oferecer uma experiencia de conferencia livre de assedio para todas as pessoas.',
     expectedLabel: 'Esperado',
     expectedTitle: 'Comportamento esperado',
     expected: {
@@ -126,24 +126,24 @@ const copy: Record<Language, any> = {
     },
     unacceptableLabel: 'Inaceitavel',
     unacceptableTitle: 'Comportamento inaceitavel',
-    unacceptableIntro: 'Nao sera tolerada nenhuma forma de assedio. O assedio inclui, mas nao se limita a:',
+    unacceptableIntro: 'Nao sera tolerada nenhuma forma de assedio.',
     unacceptable: {
       offensive: 'Comentarios ofensivos relacionados a genero, identidade e expressao de genero, orientacao sexual, deficiencia, aparencia fisica, idade, raca, etnia, nacionalidade ou religiao.',
       unwantedComments: 'Comentarios indesejados sobre escolhas e praticas de estilo de vida de uma pessoa.',
       physicalContact: 'Contato fisico inapropriado ou atencao sexual indesejada.',
       intimidation: 'Intimidacao deliberada, perseguicao ou acompanhamento.',
-      harassingPhoto: 'Fotografia ou gravacao assediadora, incluindo registro de atividade online com fins de assedio.',
+      harassingPhoto: 'Fotografia ou gravacao assediadora.',
       disruption: 'Interrupcao sustentada de conversas, palestras ou outros eventos.',
       advocacy: 'Defesa ou incentivo de qualquer um dos comportamentos anteriores.',
     },
     consequencesLabel: 'Consequencias',
     consequencesTitle: 'Consequencias do descumprimento',
-    consequences1: 'Espera-se que pessoas solicitadas a interromper um comportamento inaceitavel o facam imediatamente. Se uma pessoa praticar assedio, a organizacao podera tomar qualquer medida apropriada, incluindo advertencia ou expulsao do evento sem reembolso.',
+    consequences1: 'Espera-se que pessoas solicitadas a interromper um comportamento inaceitavel o facam imediatamente.',
     consequences2: 'A equipe organizadora reserva-se o direito de proibir a participacao em eventos futuros de pessoas que violem o codigo de conduta.',
     reportLabel: 'Reportar',
     reportTitle: 'Reportar um incidente',
-    reportText: 'Se voce experimentar ou presenciar comportamento inaceitavel, reporte o quanto antes. Todas as denuncias sao tratadas com confidencialidade.',
-    formNotice: 'Seu reporte sera revisado pela equipe de resposta do codigo de conduta. Voce pode faze-lo anonimamente, se preferir.',
+    reportText: 'Se voce experimentar ou presenciar comportamento inaceitavel, reporte o quanto antes.',
+    formNotice: 'Seu reporte sera revisado pela equipe de resposta do codigo de conduta.',
     anonymous: 'Enviar reporte de forma anonima',
     name: 'Seu nome (opcional)',
     email: 'Email (opcional)',
@@ -159,7 +159,7 @@ const copy: Record<Language, any> = {
     submittedNote: 'Sera revisado confidencialmente.',
     directTitle: 'Contato direto da equipe',
     directText: 'Voce tambem pode contatar diretamente a equipe do codigo de conduta:',
-    directAvailability: 'Durante o evento, havera pessoas identificadas da equipe de codigo de conduta disponiveis o tempo todo.',
+    directAvailability: 'Durante o evento, havera pessoas identificadas da equipe disponiveis o tempo todo.',
   },
 };
 
@@ -194,16 +194,16 @@ export default function CodigoConducta() {
         backgroundImage={assetPath('v2/slider/AL-50.png')}
       />
 
-      <section className="py-20 md:py-28 bg-white dark:bg-primary">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="max-w-3xl mx-auto mb-20">
-            <div className="bg-[#456bdd]/10 dark:bg-primary/80 border border-[#456bdd]/20 dark:border-[#456bdd]/30 rounded-2xl p-7 flex gap-4">
-              <div className="w-11 h-11 rounded-xl bg-[#456bdd]/15 dark:bg-[#456bdd]/20 flex items-center justify-center flex-shrink-0">
-                <Heart size={20} className="text-[#456bdd]" />
+            <div className="bg-[#329bd0]/10 border border-[#329bd0]/20 rounded-2xl p-7 flex gap-4">
+              <div className="w-11 h-11 rounded-xl bg-[#329bd0]/15 flex items-center justify-center flex-shrink-0">
+                <Heart size={20} className="text-[#329bd0]" />
               </div>
               <div>
-                <h3 className="font-bold text-primary dark:text-white mb-2">{text.commitmentTitle}</h3>
-                <p className="text-sm text-primary/80 dark:text-white/80 leading-relaxed">{text.commitmentText}</p>
+                <h3 className="font-bold text-[#262262] mb-2">{text.commitmentTitle}</h3>
+                <p className="text-sm text-slate-700 leading-relaxed">{text.commitmentText}</p>
               </div>
             </div>
           </div>
@@ -211,17 +211,17 @@ export default function CodigoConducta() {
           <div className="grid lg:grid-cols-2 gap-10 max-w-5xl mx-auto mb-20">
             <div>
               <div className="text-center mb-8">
-                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#456bdd] mb-3">{text.expectedLabel}</span>
-                <h2 className="text-2xl font-bold text-primary dark:text-white flex items-center justify-center gap-2">
-                  <CheckCircle size={22} className="text-[#456bdd]" />
+                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#329bd0] mb-3">{text.expectedLabel}</span>
+                <h2 className="text-2xl font-bold text-[#262262] flex items-center justify-center gap-2">
+                  <CheckCircle size={22} className="text-[#329bd0]" />
                   {text.expectedTitle}
                 </h2>
               </div>
               <div className="space-y-3">
                 {expectedKeys.map((key) => (
-                  <div key={key} className="bg-white dark:bg-primary/80 rounded-2xl p-5 border border-primary/10 dark:border-[#456bdd]/30 card-glow">
-                    <h4 className="font-semibold text-primary dark:text-white text-sm mb-1">{text.expected[key].title}</h4>
-                    <p className="text-xs text-primary/70 dark:text-[#456bdd]/80 leading-relaxed">{text.expected[key].desc}</p>
+                  <div key={key} className="bg-white rounded-2xl p-5 border border-slate-200 card-glow">
+                    <h4 className="font-semibold text-[#262262] text-sm mb-1">{text.expected[key].title}</h4>
+                    <p className="text-xs text-slate-600 leading-relaxed">{text.expected[key].desc}</p>
                   </div>
                 ))}
               </div>
@@ -229,21 +229,21 @@ export default function CodigoConducta() {
 
             <div>
               <div className="text-center mb-8">
-                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#456bdd] mb-3">{text.unacceptableLabel}</span>
-                <h2 className="text-2xl font-bold text-primary dark:text-white flex items-center justify-center gap-2">
-                  <XCircle size={22} className="text-[#456bdd]" />
+                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#329bd0] mb-3">{text.unacceptableLabel}</span>
+                <h2 className="text-2xl font-bold text-[#262262] flex items-center justify-center gap-2">
+                  <XCircle size={22} className="text-[#329bd0]" />
                   {text.unacceptableTitle}
                 </h2>
               </div>
-              <div className="bg-white dark:bg-primary/80 rounded-2xl border border-primary/10 dark:border-[#456bdd]/30 overflow-hidden">
-                <div className="h-1 bg-gradient-to-r from-primary to-[#456bdd]" />
+              <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                <div className="h-1 bg-gradient-to-r from-[#262262] to-[#329bd0]" />
                 <div className="p-6">
-                  <p className="text-sm text-primary/70 dark:text-[#456bdd]/80 mb-5 leading-relaxed">{text.unacceptableIntro}</p>
+                  <p className="text-sm text-slate-600 mb-5 leading-relaxed">{text.unacceptableIntro}</p>
                   <ul className="space-y-3">
                     {unacceptableKeys.map((key) => (
                       <li key={key} className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#456bdd] flex-shrink-0 mt-2" />
-                        <p className="text-sm text-primary/70 dark:text-[#456bdd]/80 leading-relaxed">{text.unacceptable[key]}</p>
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#329bd0] flex-shrink-0 mt-2" />
+                        <p className="text-sm text-slate-600 leading-relaxed">{text.unacceptable[key]}</p>
                       </li>
                     ))}
                   </ul>
@@ -254,31 +254,31 @@ export default function CodigoConducta() {
 
           <div className="max-w-3xl mx-auto mb-20">
             <div className="text-center mb-8">
-              <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#456bdd] mb-3">{text.consequencesLabel}</span>
-              <h2 className="text-2xl font-bold text-primary dark:text-white">{text.consequencesTitle}</h2>
+              <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#329bd0] mb-3">{text.consequencesLabel}</span>
+              <h2 className="text-2xl font-bold text-[#262262]">{text.consequencesTitle}</h2>
             </div>
-            <div className="bg-primary/5 dark:bg-primary/80 rounded-2xl p-7 border border-primary/10 dark:border-[#456bdd]/30">
-              <p className="text-sm text-primary/80 dark:text-white/80 leading-relaxed mb-4">{text.consequences1}</p>
-              <p className="text-sm text-primary/80 dark:text-white/80 leading-relaxed">{text.consequences2}</p>
+            <div className="bg-slate-50 rounded-2xl p-7 border border-slate-200">
+              <p className="text-sm text-slate-700 leading-relaxed mb-4">{text.consequences1}</p>
+              <p className="text-sm text-slate-700 leading-relaxed">{text.consequences2}</p>
             </div>
           </div>
 
           <div className="text-center mb-10">
-            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#456bdd] mb-3">{text.reportLabel}</span>
-            <h2 className="text-3xl font-bold text-primary dark:text-white flex items-center justify-center gap-3 mb-3">
-              <AlertTriangle size={26} className="text-[#456bdd]" />
+            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#329bd0] mb-3">{text.reportLabel}</span>
+            <h2 className="text-3xl font-bold text-[#262262] flex items-center justify-center gap-3 mb-3">
+              <AlertTriangle size={26} className="text-[#329bd0]" />
               {text.reportTitle}
             </h2>
-            <p className="text-[#456bdd] dark:text-[#456bdd]/80 text-sm max-w-xl mx-auto">{text.reportText}</p>
+            <p className="text-slate-600 text-sm max-w-xl mx-auto">{text.reportText}</p>
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <div className="bg-white dark:bg-primary/80 rounded-2xl border border-primary/10 dark:border-[#456bdd]/30 overflow-hidden card-glow">
-              <div className="h-1 bg-gradient-to-r from-primary to-[#456bdd]" />
+            <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden card-glow">
+              <div className="h-1 bg-gradient-to-r from-[#262262] to-[#329bd0]" />
               <div className="p-8">
-                <div className="bg-[#456bdd]/10 dark:bg-primary/80 border border-[#456bdd]/20 dark:border-[#456bdd]/30 rounded-xl p-4 mb-6 flex gap-3">
-                  <MessageCircle size={16} className="text-[#456bdd] flex-shrink-0 mt-0.5" />
-                  <p className="text-xs text-primary/80 dark:text-white/80 leading-relaxed">{text.formNotice}</p>
+                <div className="bg-[#329bd0]/10 border border-[#329bd0]/20 rounded-xl p-4 mb-6 flex gap-3">
+                  <MessageCircle size={16} className="text-[#329bd0] flex-shrink-0 mt-0.5" />
+                  <p className="text-xs text-slate-700 leading-relaxed">{text.formNotice}</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -287,29 +287,29 @@ export default function CodigoConducta() {
                       type="checkbox"
                       checked={reportData.anonymous}
                       onChange={(e) => setReportData({ ...reportData, anonymous: e.target.checked })}
-                      className="w-4 h-4 text-[#456bdd] rounded focus:ring-[#456bdd] border-primary/30 dark:border-[#456bdd]/40"
+                      className="w-4 h-4 text-[#329bd0] rounded focus:ring-[#329bd0] border-slate-300"
                     />
-                    <span className="text-sm text-primary/80 dark:text-white/80 font-medium">{text.anonymous}</span>
+                    <span className="text-sm text-slate-700 font-medium">{text.anonymous}</span>
                   </label>
 
                   {!reportData.anonymous && (
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-semibold text-primary/80 dark:text-white/80 mb-1.5">{text.name}</label>
+                        <label className="block text-xs font-semibold text-slate-700 mb-1.5">{text.name}</label>
                         <input
                           type="text"
                           value={reportData.name}
                           onChange={(e) => setReportData({ ...reportData, name: e.target.value })}
-                          className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
+                          className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#329bd0] focus:border-transparent bg-white text-[#262262] text-sm outline-none transition-all"
                         />
                       </div>
                       <div>
-                        <label className="block text-xs font-semibold text-primary/80 dark:text-white/80 mb-1.5">{text.email}</label>
+                        <label className="block text-xs font-semibold text-slate-700 mb-1.5">{text.email}</label>
                         <input
                           type="email"
                           value={reportData.email}
                           onChange={(e) => setReportData({ ...reportData, email: e.target.value })}
-                          className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
+                          className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#329bd0] focus:border-transparent bg-white text-[#262262] text-sm outline-none transition-all"
                           placeholder="tu@email.com"
                         />
                       </div>
@@ -317,48 +317,48 @@ export default function CodigoConducta() {
                   )}
 
                   <div>
-                    <label className="block text-xs font-semibold text-primary/80 dark:text-white/80 mb-1.5">
-                      {text.incident} <span className="text-[#456bdd]">*</span>
+                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                      {text.incident} <span className="text-[#329bd0]">*</span>
                     </label>
                     <textarea
                       value={reportData.incident}
                       onChange={(e) => setReportData({ ...reportData, incident: e.target.value })}
                       rows={5}
                       required
-                      className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all resize-none"
+                      className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#329bd0] focus:border-transparent bg-white text-[#262262] text-sm outline-none transition-all resize-none"
                       placeholder={text.incidentPlaceholder}
                     />
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-primary/80 dark:text-white/80 mb-1.5">{text.date}</label>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1.5">{text.date}</label>
                       <input
                         type="date"
                         value={reportData.date}
                         onChange={(e) => setReportData({ ...reportData, date: e.target.value })}
-                        className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
+                        className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#329bd0] focus:border-transparent bg-white text-[#262262] text-sm outline-none transition-all"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-primary/80 dark:text-white/80 mb-1.5">{text.location}</label>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1.5">{text.location}</label>
                       <input
                         type="text"
                         value={reportData.location}
                         onChange={(e) => setReportData({ ...reportData, location: e.target.value })}
-                        className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
+                        className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#329bd0] focus:border-transparent bg-white text-[#262262] text-sm outline-none transition-all"
                         placeholder={text.locationPlaceholder}
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-primary/80 dark:text-white/80 mb-1.5">{text.witnesses}</label>
+                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">{text.witnesses}</label>
                     <input
                       type="text"
                       value={reportData.witnesses}
                       onChange={(e) => setReportData({ ...reportData, witnesses: e.target.value })}
-                      className="w-full px-4 py-2.5 border border-primary/20 dark:border-[#456bdd]/30 rounded-xl focus:ring-2 focus:ring-[#456bdd] focus:border-transparent bg-white dark:bg-primary/80 text-primary dark:text-white text-sm outline-none transition-all"
+                      className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#329bd0] focus:border-transparent bg-white text-[#262262] text-sm outline-none transition-all"
                       placeholder={text.witnessesPlaceholder}
                     />
                   </div>
@@ -367,24 +367,24 @@ export default function CodigoConducta() {
                     <button
                       type="submit"
                       disabled={submitted}
-                      className="inline-flex items-center gap-2 bg-[#456bdd] hover:bg-[#092d7e] disabled:bg-[#456bdd]/70 text-white px-7 py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-0.5 disabled:translate-y-0"
+                      className="inline-flex items-center gap-2 bg-[#329bd0] hover:bg-[#2789b8] disabled:bg-[#329bd0]/70 text-white px-7 py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-0.5 disabled:translate-y-0"
                     >
                       {submitted ? <CheckCircle size={16} /> : <Send size={15} />}
                       {submitted ? text.submitted : text.submit}
                     </button>
                     {submitted && (
-                      <p className="text-xs text-[#456bdd] font-medium">{text.submittedNote}</p>
+                      <p className="text-xs text-[#329bd0] font-medium">{text.submittedNote}</p>
                     )}
                   </div>
                 </form>
               </div>
             </div>
 
-            <div className="mt-5 bg-primary/5 dark:bg-primary/80 rounded-2xl p-5 border border-primary/10 dark:border-[#456bdd]/30">
-              <h4 className="font-semibold text-primary dark:text-white text-sm mb-2">{text.directTitle}</h4>
-              <p className="text-xs text-primary/70 dark:text-[#456bdd]/80 leading-relaxed mb-2">{text.directText}</p>
-              <div className="text-xs text-primary/70 dark:text-[#456bdd]/80 space-y-1">
-                <p>Email: <a href="mailto:abrelatam@idatosabiertos.org" className="text-[#456bdd] hover:underline font-medium">abrelatam@idatosabiertos.org</a></p>
+            <div className="mt-5 bg-slate-50 rounded-2xl p-5 border border-slate-200">
+              <h4 className="font-semibold text-[#262262] text-sm mb-2">{text.directTitle}</h4>
+              <p className="text-xs text-slate-600 leading-relaxed mb-2">{text.directText}</p>
+              <div className="text-xs text-slate-600 space-y-1">
+                <p>Email: <a href="mailto:abrelatam@idatosabiertos.org" className="text-[#329bd0] hover:underline font-medium">abrelatam@idatosabiertos.org</a></p>
                 <p>{text.directAvailability}</p>
               </div>
             </div>

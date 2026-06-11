@@ -26,26 +26,26 @@ export default function Agenda() {
       />
 
       <Section bgColor="gray" className="py-16 md:py-24">
-        <div className="mx-auto max-w-4xl rounded-lg bg-white px-6 py-12 text-center shadow-sm md:px-12 md:py-16 dark:bg-slate-900">
+        <div className="mx-auto max-w-4xl rounded-lg bg-white px-6 py-12 text-center shadow-sm md:px-12 md:py-16">
           <img src={assetPath('v2/iconos/AL-24.png')} alt="" className="mx-auto mb-5 h-20 w-20 object-contain" />
-          <h2 className="mb-7 text-3xl font-bold text-[#282456] md:text-4xl">
+          <h2 className="mb-7 text-3xl font-bold text-[#262262] md:text-4xl">
             {t('agendaPage.comingSoonTitle')}
           </h2>
-          <p className="mx-auto max-w-2xl text-base leading-relaxed text-slate-800 dark:text-slate-200">
+          <p className="mx-auto max-w-2xl text-base leading-relaxed text-slate-800">
             {t('agendaPage.comingSoonText1')}
           </p>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-800 dark:text-slate-200">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-800">
             {t('agendaPage.comingSoonText2')}
           </p>
 
-          <div className="mx-auto mt-12 max-w-3xl rounded-lg bg-slate-50 px-6 py-8 text-left dark:bg-slate-800">
-            <h3 className="mb-5 text-center text-lg font-bold text-slate-900 dark:text-white">
+          <div className="mx-auto mt-12 max-w-3xl rounded-lg bg-slate-50 px-6 py-8 text-left">
+            <h3 className="mb-5 text-center text-lg font-bold text-slate-900">
               {t('agendaPage.expectTitle')}
             </h3>
             <div className="grid gap-x-12 gap-y-4 md:grid-cols-2">
               {expectationKeys.map((key) => (
-                <div key={key} className="flex items-start gap-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-500" />
+                <div key={key} className="flex items-start gap-3 text-sm leading-relaxed text-slate-600">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#329bd0]" />
                   <span>{t(`agendaPage.expectations.${key}`)}</span>
                 </div>
               ))}
@@ -57,7 +57,7 @@ export default function Agenda() {
       <Section bgColor="white" className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-16 max-w-4xl text-center">
-            <h2 className="text-2xl font-bold text-[#262460] md:text-3xl">
+            <h2 className="text-2xl font-bold text-[#262262] md:text-3xl">
               {t('home.thematicTitle')}
             </h2>
           </div>
@@ -70,7 +70,7 @@ export default function Agenda() {
                   alt=""
                   className="mb-6 h-20 w-20 object-contain"
                 />
-                <p className="max-w-40 text-sm font-semibold leading-snug text-black dark:text-slate-200">
+                <p className="max-w-40 text-sm font-semibold leading-snug text-[#262262]">
                   {t(`home.${key}`)}
                 </p>
               </div>

@@ -9,7 +9,7 @@ interface PageHeroProps {
 
 export default function PageHero({ title, subtitle, backgroundImage, icon }: PageHeroProps) {
   return (
-    <div className="relative flex aspect-[1921/869] w-full items-center justify-center overflow-hidden bg-[#262460] px-4 pt-24">
+    <div className="relative flex aspect-[1921/869] w-full items-center justify-center overflow-hidden bg-[#262262] px-4 pt-24">
       <img
         src={backgroundImage}
         alt=""
