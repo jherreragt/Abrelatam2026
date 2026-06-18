@@ -4,10 +4,12 @@ import TopBar from '../components/TopBar';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import GDPRBanner from '../components/GDPRBanner';
+import { useSEO } from '../hooks/useSEO';
 
 export default function MainLayout() {
   const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
+  useSEO();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://abrelatam2026.org/sitemap.xml
+
+# Block irrelevant paths
+Disallow: /dist/
+Disallow: /.bolt/
