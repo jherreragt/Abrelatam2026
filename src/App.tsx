@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import { LanguageProvider } from './context/LanguageContext';
+import { AuthProvider } from './context/AuthContext';
 import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
 import Sobre from './pages/Sobre';
@@ -17,31 +18,35 @@ import PreRegistro from './pages/PreRegistro';
 import GuiaParticipantes from './pages/GuiaParticipantes';
 import Patrocinadores from './pages/Patrocinadores';
 import ProponerSesion from './pages/ProponerSesion';
+import Admin from './pages/Admin';
 import { ROUTES } from './router/routes';
 
 export default function App() {
   return (
     <LanguageProvider>
       <ThemeProvider>
-        <Routes>
-          <Route element={<MainLayout />}>
-            <Route path={ROUTES.HOME} element={<Home />} />
-            <Route path={ROUTES.SOBRE} element={<Sobre />} />
-            <Route path={ROUTES.AGENDA} element={<Agenda />} />
-            <Route path={ROUTES.CONVOCATORIAS} element={<Convocatorias />} />
-            <Route path={ROUTES.SIDE_EVENTS} element={<SideEvents />} />
-            <Route path={ROUTES.VIAJE_SEDE} element={<ViajeSede />} />
-            <Route path={ROUTES.CODIGO_CONDUCTA} element={<CodigoConducta />} />
-            <Route path={ROUTES.PRENSA} element={<Prensa />} />
-            <Route path={ROUTES.CONTACTO} element={<Contacto />} />
-            {/* <Route path={ROUTES.NOTICIAS} element={<Noticias />} /> */}
-            {/* <Route path={ROUTES.BLOG_DETAIL} element={<BlogDetail />} /> */}
-            <Route path={ROUTES.PRE_REGISTRO} element={<PreRegistro />} />
-            <Route path={ROUTES.GUIA_PARTICIPANTES} element={<GuiaParticipantes />} />
-            <Route path={ROUTES.PATROCINADORES} element={<Patrocinadores />} />
-            <Route path={ROUTES.PROPONER_SESION} element={<ProponerSesion />} />
-          </Route>
-        </Routes>
+        <AuthProvider>
+          <Routes>
+            <Route element={<MainLayout />}>
+              <Route path={ROUTES.HOME} element={<Home />} />
+              <Route path={ROUTES.SOBRE} element={<Sobre />} />
+              <Route path={ROUTES.AGENDA} element={<Agenda />} />
+              <Route path={ROUTES.CONVOCATORIAS} element={<Convocatorias />} />
+              <Route path={ROUTES.SIDE_EVENTS} element={<SideEvents />} />
+              <Route path={ROUTES.VIAJE_SEDE} element={<ViajeSede />} />
+              <Route path={ROUTES.CODIGO_CONDUCTA} element={<CodigoConducta />} />
+              <Route path={ROUTES.PRENSA} element={<Prensa />} />
+              <Route path={ROUTES.CONTACTO} element={<Contacto />} />
+              {/* <Route path={ROUTES.NOTICIAS} element={<Noticias />} /> */}
+              {/* <Route path={ROUTES.BLOG_DETAIL} element={<BlogDetail />} /> */}
+              <Route path={ROUTES.PRE_REGISTRO} element={<PreRegistro />} />
+              <Route path={ROUTES.GUIA_PARTICIPANTES} element={<GuiaParticipantes />} />
+              <Route path={ROUTES.PATROCINADORES} element={<Patrocinadores />} />
+              <Route path={ROUTES.PROPONER_SESION} element={<ProponerSesion />} />
+            </Route>
+            <Route path={ROUTES.ADMIN} element={<Admin />} />
+          </Routes>
+        </AuthProvider>
       </ThemeProvider>
     </LanguageProvider>
   );
