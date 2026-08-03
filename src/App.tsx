@@ -18,6 +18,7 @@ import PreRegistro from './pages/PreRegistro';
 import GuiaParticipantes from './pages/GuiaParticipantes';
 import Patrocinadores from './pages/Patrocinadores';
 import ProponerSesion from './pages/ProponerSesion';
+import DatosArte from './pages/DatosArte';
 import Admin from './pages/Admin';
 import { ROUTES } from './router/routes';
 
@@ -43,6 +44,7 @@ export default function App() {
               <Route path={ROUTES.GUIA_PARTICIPANTES} element={<GuiaParticipantes />} />
               <Route path={ROUTES.PATROCINADORES} element={<Patrocinadores />} />
               <Route path={ROUTES.PROPONER_SESION} element={<ProponerSesion />} />
+              <Route path={ROUTES.DATOS_ARTE} element={<DatosArte />} />
             </Route>
             <Route path={ROUTES.ADMIN} element={<Admin />} />
           </Routes>

@@ -41,6 +41,7 @@ const navItems: NavItem[] = [
     ],
   },
   { labelKey: 'nav.sponsors', to: ROUTES.PATROCINADORES },
+  { labelKey: 'nav.datosArte', to: ROUTES.DATOS_ARTE },
   { labelKey: 'nav.press', to: ROUTES.PRENSA },
   { labelKey: 'nav.contact', to: ROUTES.CONTACTO },
 ];
@@ -54,6 +55,7 @@ const mobileAllLinks: { to?: string; external?: string; labelKey: string; indent
   { to: ROUTES.AGENDA, labelKey: 'nav.agendaPage', indent: true },
   { to: ROUTES.VIAJE_SEDE, labelKey: 'nav.travel', indent: true },
   { to: ROUTES.PATROCINADORES, labelKey: 'nav.sponsors' },
+  { to: ROUTES.DATOS_ARTE, labelKey: 'nav.datosArte' },
   { to: ROUTES.PRENSA, labelKey: 'nav.press' },
   { to: ROUTES.CONTACTO, labelKey: 'nav.contact' },
 ];

@@ -14,5 +14,6 @@ export const ROUTES = {
   BLOG_DETAIL: '/noticias/:slug',
   PATROCINADORES: '/patrocinadores',
   PROPONER_SESION: '/proponer-sesion',
+  DATOS_ARTE: '/datos-arte',
   ADMIN: '/admin',
 } as const;

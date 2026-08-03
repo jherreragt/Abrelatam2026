@@ -110,6 +110,7 @@ const translations = {
       agendaMenu: 'Agenda',
       agendaPage: 'Agenda',
       sponsors: 'Patrocinadores',
+      datosArte: 'Datos+Arte',
     },
     home: {
       title: 'Guatemala 2026: abrir datos, abrir caminos',
@@ -594,6 +595,7 @@ const translations = {
       agendaMenu: 'Agenda',
       agendaPage: 'Agenda',
       sponsors: 'Sponsors',
+      datosArte: 'Datos+Arte',
     },
     home: {
       title: 'Guatemala 2026: opening data, opening paths',
@@ -1078,6 +1080,7 @@ const translations = {
       agendaMenu: 'Agenda',
       agendaPage: 'Agenda',
       sponsors: 'Patrocinadores',
+      datosArte: 'Dados+Arte',
     },
     home: {
       title: 'Guatemala 2026: abrir dados, abrir caminhos',
