@@ -125,20 +125,14 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <span className="flex items-center gap-2 text-white/45 cursor-default select-none">
+                  <Link to={ROUTES.SIDE_EVENTS} className="text-white/85 transition-colors hover:text-white">
                     {t('nav.sideEvents')}
-                    <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white/50">
-                      {t('footer.comingSoon')}
-                    </span>
-                  </span>
+                  </Link>
                 </li>
                 <li>
-                  <span className="flex items-center gap-2 text-white/45 cursor-default select-none">
+                  <Link to={ROUTES.VOLUNTARIOS} className="text-white/85 transition-colors hover:text-white">
                     {t('footer.volunteers')}
-                    <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white/50">
-                      {t('footer.comingSoon')}
-                    </span>
-                  </span>
+                  </Link>
                 </li>
               </ul>
             </nav>
