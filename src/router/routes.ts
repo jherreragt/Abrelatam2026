@@ -15,5 +15,6 @@ export const ROUTES = {
   PATROCINADORES: '/patrocinadores',
   PROPONER_SESION: '/proponer-sesion',
   DATOS_ARTE: '/datos-arte',
+  VOLUNTARIOS: '/voluntarios',
   ADMIN: '/admin',
 } as const;

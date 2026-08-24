@@ -19,6 +19,7 @@ import GuiaParticipantes from './pages/GuiaParticipantes';
 import Patrocinadores from './pages/Patrocinadores';
 import ProponerSesion from './pages/ProponerSesion';
 import DatosArte from './pages/DatosArte';
+import Voluntarios from './pages/Voluntarios';
 import Admin from './pages/Admin';
 import { ROUTES } from './router/routes';
 
@@ -45,6 +46,7 @@ export default function App() {
               <Route path={ROUTES.PATROCINADORES} element={<Patrocinadores />} />
               <Route path={ROUTES.PROPONER_SESION} element={<ProponerSesion />} />
               <Route path={ROUTES.DATOS_ARTE} element={<DatosArte />} />
+              <Route path={ROUTES.VOLUNTARIOS} element={<Voluntarios />} />
             </Route>
             <Route path={ROUTES.ADMIN} element={<Admin />} />
           </Routes>

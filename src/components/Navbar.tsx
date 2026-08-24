@@ -40,6 +40,13 @@ const navItems: NavItem[] = [
       { to: ROUTES.VIAJE_SEDE, labelKey: 'nav.travel' },
     ],
   },
+  {
+    labelKey: 'nav.participate',
+    dropdown: [
+      { to: ROUTES.SIDE_EVENTS, labelKey: 'nav.sideEvents' },
+      { to: ROUTES.VOLUNTARIOS, labelKey: 'nav.volunteers' },
+    ],
+  },
   { labelKey: 'nav.sponsors', to: ROUTES.PATROCINADORES },
   { labelKey: 'nav.datosArte', to: ROUTES.DATOS_ARTE },
   { labelKey: 'nav.press', to: ROUTES.PRENSA },
@@ -54,6 +61,8 @@ const mobileAllLinks: { to?: string; external?: string; labelKey: string; indent
   { to: ROUTES.PRE_REGISTRO, labelKey: 'nav.preRegister', indent: true },
   { to: ROUTES.AGENDA, labelKey: 'nav.agendaPage', indent: true },
   { to: ROUTES.VIAJE_SEDE, labelKey: 'nav.travel', indent: true },
+  { to: ROUTES.SIDE_EVENTS, labelKey: 'nav.sideEvents' },
+  { to: ROUTES.VOLUNTARIOS, labelKey: 'nav.volunteers' },
   { to: ROUTES.PATROCINADORES, labelKey: 'nav.sponsors' },
   { to: ROUTES.DATOS_ARTE, labelKey: 'nav.datosArte' },
   { to: ROUTES.PRENSA, labelKey: 'nav.press' },
