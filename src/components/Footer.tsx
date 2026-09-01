@@ -53,6 +53,44 @@ export default function Footer() {
 
   return (
     <footer className="bg-primary text-white">
+      <section className="bg-white">
+        <div className="container mx-auto max-w-7xl px-4 py-14 md:px-6">
+          <div className="space-y-8">
+            {sponsorTiers.map(({ tierKey, sponsors }) => (
+              <div key={tierKey} className="flex flex-wrap items-center justify-center gap-x-8 gap-y-5">
+                {sponsors.map((sponsor) => (
+                  <div key={sponsor.name} className="flex items-center">
+                    {sponsor.href ? (
+                      <a
+                        href={sponsor.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={sponsor.name}
+                        className="transition-opacity hover:opacity-70"
+                      >
+                        <img
+                          src={sponsor.logo}
+                          alt={sponsor.name}
+                          className="h-auto object-contain"
+                          style={{ maxWidth: '170px', maxHeight: '56px' }}
+                        />
+                      </a>
+                    ) : (
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className="h-auto object-contain"
+                        style={{ maxWidth: '170px', maxHeight: '56px' }}
+                      />
+                    )}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <div className="container mx-auto max-w-7xl px-4 py-14 md:px-6">
         <section className="mb-14">
           <h2 className="mb-9 text-base font-bold">{t('footerLogos.organizes')}</h2>
@@ -96,52 +134,6 @@ export default function Footer() {
                   style={{ width: '200px' }}
                 />
               </a>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="mb-9 text-base font-bold">{t('footerLogos.sponsors')}</h2>
-          <div className="space-y-7">
-            {sponsorTiers.map(({ tierKey, sponsors }) => (
-              <div key={tierKey} className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
-                <span className="inline-flex w-28 flex-shrink-0 items-center justify-center rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white/90">
-                  {t(`footerLogos.${tierKey}`)}
-                </span>
-                <div className="flex flex-wrap items-center gap-x-6 gap-y-4">
-                  {sponsors.length > 0 ? (
-                    sponsors.map((sponsor) => (
-                      <div key={sponsor.name} className="flex items-center gap-2">
-                        {sponsor.href ? (
-                          <a
-                            href={sponsor.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={sponsor.name}
-                            className="transition-opacity hover:opacity-75"
-                          >
-                            <img
-                              src={sponsor.logo}
-                              alt={sponsor.name}
-                              className="h-auto object-contain brightness-0 invert"
-                              style={{ maxWidth: '160px', maxHeight: '48px' }}
-                            />
-                          </a>
-                        ) : (
-                          <img
-                            src={sponsor.logo}
-                            alt={sponsor.name}
-                            className="h-auto object-contain brightness-0 invert"
-                            style={{ maxWidth: '160px', maxHeight: '48px' }}
-                          />
-                        )}
-                      </div>
-                    ))
-                  ) : (
-                    <span className="text-sm italic text-white/40">—</span>
-                  )}
-                </div>
-              </div>
             ))}
           </div>
         </section>
