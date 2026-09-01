@@ -34,16 +34,16 @@ const sponsorTiers: { tierKey: 'platinum' | 'gold' | 'silver' | 'bronze'; sponso
   {
     tierKey: 'silver',
     sponsors: [
-      { name: 'BID', logo: '/assets/logos/sponsors/bid_logo.webp', href: 'https://www.iadb.org/' },
-      { name: 'Embajada de la República de China (Taiwán) en Guatemala', logo: '/assets/logos/sponsors/taiwan_embassy_logo.webp' },
-      { name: 'BANRURAL', logo: '/assets/logos/sponsors/banrural_logo.webp', href: 'https://www.banrural.gob.gt/' },
+      { name: 'BID', logo: '/assets/logos/sponsors/BID_Logo_ES_Color_JPG_(1).jpg', href: 'https://www.iadb.org/' },
+      { name: 'Embajada de la República de China (Taiwán) en Guatemala', logo: '/assets/logos/sponsors/embajada_china(taiwan).jpg' },
+      { name: 'BANRURAL', logo: '/assets/logos/sponsors/banrural.png', href: 'https://www.banrural.gob.gt/' },
     ],
   },
   {
     tierKey: 'bronze',
     sponsors: [
-      { name: 'PNUD', logo: '/assets/logos/sponsors/pnud_logo.webp', href: 'https://www.gt.undp.org/' },
-      { name: 'UNESCO', logo: '/assets/logos/sponsors/unesco_logo.webp', href: 'https://www.unesco.org/' },
+      { name: 'PNUD', logo: '/assets/logos/sponsors/pnud.png', href: 'https://www.gt.undp.org/' },
+      { name: 'UNESCO', logo: '/assets/logos/sponsors/unesco.webp', href: 'https://www.unesco.org/' },
     ],
   },
 ];
