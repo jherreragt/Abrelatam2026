@@ -34,16 +34,16 @@ const sponsorTiers: { tierKey: 'platinum' | 'gold' | 'silver' | 'bronze'; sponso
   {
     tierKey: 'silver',
     sponsors: [
-      { name: 'BID', logo: '/assets/logos/sponsors/BID_Logo_ES_Color_JPG_(1).jpg', href: 'https://www.iadb.org/' },
-      { name: 'Embajada de la República de China (Taiwán) en Guatemala', logo: '/assets/logos/sponsors/embajada_china(taiwan).jpg' },
-      { name: 'BANRURAL', logo: '/assets/logos/sponsors/banrural.png', href: 'https://www.banrural.gob.gt/' },
+      { name: 'BID', logo: '/assets/logos/sponsors/bid_logo.webp', href: 'https://www.iadb.org/' },
+      { name: 'Embajada de la República de China (Taiwán) en Guatemala', logo: '/assets/logos/sponsors/taiwan_embassy_logo.webp', href: 'https://www.embassy.taiwan.gt/' },
+      { name: 'BANRURAL', logo: '/assets/logos/sponsors/banrural_logo.webp', href: 'https://www.banrural.gob.gt/' },
     ],
   },
   {
     tierKey: 'bronze',
     sponsors: [
-      { name: 'PNUD', logo: '/assets/logos/sponsors/pnud.png', href: 'https://www.gt.undp.org/' },
-      { name: 'UNESCO', logo: '/assets/logos/sponsors/unesco.webp', href: 'https://www.unesco.org/' },
+      { name: 'PNUD', logo: '/assets/logos/sponsors/pnud_logo.webp', href: 'https://www.gt.undp.org/' },
+      { name: 'UNESCO', logo: '/assets/logos/sponsors/unesco_logo.webp', href: 'https://www.unesco.org/' },
     ],
   },
 ];
@@ -55,9 +55,12 @@ export default function Footer() {
     <footer className="bg-primary text-white">
       <section className="bg-white">
         <div className="container mx-auto max-w-7xl px-4 py-14 md:px-6">
-          <div className="space-y-8">
+          <h2 className="mb-8 text-center text-sm font-bold uppercase tracking-wider text-primary">
+            {t('footerLogos.sponsors')}
+          </h2>
+          <div className="space-y-10">
             {sponsorTiers.map(({ tierKey, sponsors }) => (
-              <div key={tierKey} className="flex flex-wrap items-center justify-center gap-x-8 gap-y-5">
+              <div key={tierKey} className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
                 {sponsors.map((sponsor) => (
                   <div key={sponsor.name} className="flex items-center">
                     {sponsor.href ? (
@@ -72,7 +75,7 @@ export default function Footer() {
                           src={sponsor.logo}
                           alt={sponsor.name}
                           className="h-auto object-contain"
-                          style={{ maxWidth: '170px', maxHeight: '56px' }}
+                          style={{ maxWidth: '200px', maxHeight: '72px' }}
                         />
                       </a>
                     ) : (
@@ -80,7 +83,7 @@ export default function Footer() {
                         src={sponsor.logo}
                         alt={sponsor.name}
                         className="h-auto object-contain"
-                        style={{ maxWidth: '170px', maxHeight: '56px' }}
+                        style={{ maxWidth: '200px', maxHeight: '72px' }}
                       />
                     )}
                   </div>
