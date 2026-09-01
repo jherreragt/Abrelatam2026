@@ -54,10 +54,7 @@ const CONTACT_EMAIL = 'abrelatam@idatosabiertos.org';
 
 export default function Voluntarios() {
   const { t } = useLanguage();
-  useSEO({
-    title: `${t('voluntariosPage.heroTitle')} — Abrelatam/Condatos`,
-    description: t('voluntariosPage.heroSubtitle'),
-  });
+  useSEO();
 
   useEffect(() => {
     window.scrollTo(0, 0);

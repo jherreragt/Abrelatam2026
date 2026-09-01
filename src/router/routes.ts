@@ -16,5 +16,6 @@ export const ROUTES = {
   PROPONER_SESION: '/proponer-sesion',
   DATOS_ARTE: '/datos-arte',
   VOLUNTARIOS: '/voluntarios',
+  ZONA_GASTRONOMICA: '/zona-gastronomica',
   ADMIN: '/admin',
 } as const;

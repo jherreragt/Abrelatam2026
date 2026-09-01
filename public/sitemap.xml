@@ -132,4 +132,24 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://abrelatam2026.org/contacto"/>
   </url>
 
+  <url>
+    <loc>https://abrelatam2026.org/voluntarios</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://abrelatam2026.org/voluntarios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abrelatam2026.org/voluntarios"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://abrelatam2026.org/voluntarios"/>
+  </url>
+
+  <url>
+    <loc>https://abrelatam2026.org/zona-gastronomica</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://abrelatam2026.org/zona-gastronomica"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abrelatam2026.org/zona-gastronomica"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://abrelatam2026.org/zona-gastronomica"/>
+  </url>
+
 </urlset>

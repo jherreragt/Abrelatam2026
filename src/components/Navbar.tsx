@@ -45,6 +45,7 @@ const navItems: NavItem[] = [
     dropdown: [
       { to: ROUTES.SIDE_EVENTS, labelKey: 'nav.sideEvents' },
       { to: ROUTES.VOLUNTARIOS, labelKey: 'nav.volunteers' },
+      { to: ROUTES.ZONA_GASTRONOMICA, labelKey: 'nav.zonaGastro' },
     ],
   },
   { labelKey: 'nav.sponsors', to: ROUTES.PATROCINADORES },
@@ -63,6 +64,7 @@ const mobileAllLinks: { to?: string; external?: string; labelKey: string; indent
   { to: ROUTES.VIAJE_SEDE, labelKey: 'nav.travel', indent: true },
   { to: ROUTES.SIDE_EVENTS, labelKey: 'nav.sideEvents' },
   { to: ROUTES.VOLUNTARIOS, labelKey: 'nav.volunteers' },
+  { to: ROUTES.ZONA_GASTRONOMICA, labelKey: 'nav.zonaGastro' },
   { to: ROUTES.PATROCINADORES, labelKey: 'nav.sponsors' },
   { to: ROUTES.DATOS_ARTE, labelKey: 'nav.datosArte' },
   { to: ROUTES.PRENSA, labelKey: 'nav.press' },

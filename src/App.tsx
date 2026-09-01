@@ -20,6 +20,7 @@ import Patrocinadores from './pages/Patrocinadores';
 import ProponerSesion from './pages/ProponerSesion';
 import DatosArte from './pages/DatosArte';
 import Voluntarios from './pages/Voluntarios';
+import ZonaGastronomica from './pages/ZonaGastronomica';
 import Admin from './pages/Admin';
 import { ROUTES } from './router/routes';
 
@@ -47,6 +48,7 @@ export default function App() {
               <Route path={ROUTES.PROPONER_SESION} element={<ProponerSesion />} />
               <Route path={ROUTES.DATOS_ARTE} element={<DatosArte />} />
               <Route path={ROUTES.VOLUNTARIOS} element={<Voluntarios />} />
+              <Route path={ROUTES.ZONA_GASTRONOMICA} element={<ZonaGastronomica />} />
             </Route>
             <Route path={ROUTES.ADMIN} element={<Admin />} />
           </Routes>

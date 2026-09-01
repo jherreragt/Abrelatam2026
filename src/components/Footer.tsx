@@ -134,6 +134,11 @@ export default function Footer() {
                     {t('footer.volunteers')}
                   </Link>
                 </li>
+                <li>
+                  <Link to={ROUTES.ZONA_GASTRONOMICA} className="text-white/85 transition-colors hover:text-white">
+                    {t('nav.zonaGastro')}
+                  </Link>
+                </li>
               </ul>
             </nav>
 

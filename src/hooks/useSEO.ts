@@ -78,6 +78,16 @@ const pageMeta: Record<string, PageMeta> = {
     description: 'Presenta tu propuesta de sesión para ABRELATAM / CONDATOS 2026: paneles, talleres prácticos, diálogos y charlas relámpago sobre datos abiertos.',
     path: ROUTES.PROPONER_SESION,
   },
+  [ROUTES.ZONA_GASTRONOMICA]: {
+    title: 'Zona Gastronómica | AbreLatam/ConDatos 2026',
+    description: 'Conoce la zona gastronómica de AbreLatam/ConDatos 2026 y solicita participar con tu food truck o emprendimiento gastronómico en Guatemala.',
+    path: ROUTES.ZONA_GASTRONOMICA,
+  },
+  [ROUTES.VOLUNTARIOS]: {
+    title: 'Voluntarios — ABRELATAM / CONDATOS 2026',
+    description: 'Sé parte del equipo de voluntarios y voluntarias de ABRELATAM / CONDATOS 2026 en Ciudad de Guatemala.',
+    path: ROUTES.VOLUNTARIOS,
+  },
 };
 
 function setMeta(name: string, content: string, property = false) {
