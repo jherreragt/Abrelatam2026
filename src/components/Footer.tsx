@@ -17,6 +17,13 @@ const supporterLogos = [
   { src: assetPath('logos/mcd.png'), alt: 'Ministerio de Cultura y Deportes de Guatemala', href: 'https://mcd.gob.gt/' },
 ];
 
+const sponsorTiers = [
+  { tierKey: 'platinum', sponsors: ['BANTRAB'] },
+  { tierKey: 'gold', sponsors: [] },
+  { tierKey: 'silver', sponsors: ['BID', 'Embajada de la República de China (Taiwán) en Guatemala', 'BANRURAL'] },
+  { tierKey: 'bronze', sponsors: ['PNUD', 'UNESCO'] },
+] as const;
+
 export default function Footer() {
   const { t } = useLanguage();
 
@@ -65,6 +72,30 @@ export default function Footer() {
                   style={{ width: '200px' }}
                 />
               </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-14">
+          <h2 className="mb-9 text-base font-bold">{t('footerLogos.sponsors')}</h2>
+          <div className="space-y-7">
+            {sponsorTiers.map(({ tierKey, sponsors }) => (
+              <div key={tierKey} className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+                <span className="inline-flex w-28 flex-shrink-0 items-center justify-center rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white/90">
+                  {t(`footerLogos.${tierKey}`)}
+                </span>
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                  {sponsors.length > 0 ? (
+                    sponsors.map((name) => (
+                      <span key={name} className="text-sm font-medium text-white/85">
+                        {name}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="text-sm italic text-white/40">—</span>
+                  )}
+                </div>
+              </div>
             ))}
           </div>
         </section>

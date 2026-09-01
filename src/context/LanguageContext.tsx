@@ -200,6 +200,11 @@ const translations = {
     footerLogos: {
       organizes: 'Organizan',
       supportedBy: 'Con el apoyo de:',
+      sponsors: 'Patrocinadores',
+      platinum: 'Platino',
+      gold: 'Oro',
+      silver: 'Plata',
+      bronze: 'Bronce',
     },
     patrocinadores: {
       heroTitle: 'Patrocinadores',
@@ -756,6 +761,11 @@ const translations = {
     footerLogos: {
       organizes: 'Organized by',
       supportedBy: 'Supported by:',
+      sponsors: 'Sponsors',
+      platinum: 'Platinum',
+      gold: 'Gold',
+      silver: 'Silver',
+      bronze: 'Bronze',
     },
     patrocinadores: {
       heroTitle: 'Sponsors',
@@ -1312,6 +1322,11 @@ const translations = {
     footerLogos: {
       organizes: 'Organizam',
       supportedBy: 'Com o apoio de:',
+      sponsors: 'Patrocinadores',
+      platinum: 'Platina',
+      gold: 'Ouro',
+      silver: 'Prata',
+      bronze: 'Bronze',
     },
     patrocinadores: {
       heroTitle: 'Patrocinadores',
