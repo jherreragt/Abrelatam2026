@@ -1572,7 +1572,7 @@ const translations = {
     },
     zonaGastro: {
       heroTitle: 'Zona Gastronômica',
-      heroSubtitle: 'Contaremos com diversas opções de alimentos, bebidas, café e lanches disponíveis para compra durante os dias do evento.'
+      heroSubtitle: 'Contaremos com diversas opções de alimentos, bebidas, café e lanches disponíveis para compra durante os dias do evento.',
       eyebrow: 'Gastronomia',
       optionsTitle: 'Opções gastronômicas para participantes',
       optionsText: 'A oferta gastronômica será fornecida por food trucks e empreendimentos locais, com diferentes opções e faixas de preço.',
