@@ -10,7 +10,7 @@ const organizerLogos = [
   { src: assetPath('logos/AL-53.png'), alt: 'Red Ciudadana', href: 'https://redciudadana.org/' },
   { src: assetPath('logos/AL-54.png'), alt: 'Hivos', href: 'https://hivos.org/' },
   { src: assetPath('logos/AL-55.png'), alt: 'OEA', href: 'https://www.oas.org/' },
-  { src: '/assets/logos/logo_ilda_logo_blanco.png', alt: 'ILDA', href: 'https://ilda.la/' },
+  { src: assetPath('logos/logo_ilda_logo_blanco.png'), alt: 'ILDA', href: 'https://ilda.la/' },
 ];
 
 const supporterLogos = [
@@ -27,23 +27,23 @@ const sponsorTiers: { tierKey: 'platinum' | 'gold' | 'silver' | 'bronze'; sponso
   {
     tierKey: 'platinum',
     sponsors: [
-      { name: 'BANTRAB', logo: '/assets/logos/sponsors/bantrab_logo.webp', href: 'https://www.bantrab.gob.gt/' },
+      { name: 'BANTRAB', logo: assetPath('logos/sponsors/bantrab_logo.webp'), href: 'https://www.bantrab.gob.gt/' },
     ],
   },
   { tierKey: 'gold', sponsors: [] },
   {
     tierKey: 'silver',
     sponsors: [
-      { name: 'BID', logo: '/assets/logos/sponsors/bid_logo.webp', href: 'https://www.iadb.org/' },
-      { name: 'Embajada de la República de China (Taiwán) en Guatemala', logo: '/assets/logos/sponsors/taiwan_embassy_logo.webp', href: 'https://www.embassy.taiwan.gt/' },
-      { name: 'BANRURAL', logo: '/assets/logos/sponsors/banrural_logo.webp', href: 'https://www.banrural.gob.gt/' },
+      { name: 'BID', logo: assetPath('logos/sponsors/bid_logo.webp'), href: 'https://www.iadb.org/' },
+      { name: 'Embajada de la República de China (Taiwán) en Guatemala', logo: assetPath('logos/sponsors/taiwan_embassy_logo.webp'), href: 'https://www.embassy.taiwan.gt/' },
+      { name: 'BANRURAL', logo: assetPath('logos/sponsors/banrural_logo.webp'), href: 'https://www.banrural.gob.gt/' },
     ],
   },
   {
     tierKey: 'bronze',
     sponsors: [
-      { name: 'PNUD', logo: '/assets/logos/sponsors/pnud_logo.webp', href: 'https://www.gt.undp.org/' },
-      { name: 'UNESCO', logo: '/assets/logos/sponsors/unesco_logo.webp', href: 'https://www.unesco.org/' },
+      { name: 'PNUD', logo: assetPath('logos/sponsors/pnud_logo.webp'), href: 'https://www.gt.undp.org/' },
+      { name: 'UNESCO', logo: assetPath('logos/sponsors/unesco_logo.webp'), href: 'https://www.unesco.org/' },
     ],
   },
 ];
