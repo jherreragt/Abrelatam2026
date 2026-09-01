@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
 import Section from '../components/Section';
 import PageHero from '../components/PageHero';
 import { useLanguage } from '../context/LanguageContext';
-import { ROUTES } from '../router/routes';
 import { assetPath } from '../lib/assetPath';
+
+const SIDE_EVENT_FORM_URL = 'https://forms.gle/5hJPqobErW7gZsSu6';
 
 const sideEventTypes = [
   { icon: assetPath('v2/iconos/AL-26.png'), key: 'communityMeetups' },
@@ -89,11 +89,15 @@ export default function SideEvents() {
           <p className="mx-auto mb-8 max-w-lg text-sm leading-snug text-slate-700">
             {t('sideEventsPage.ctaText')}
           </p>
-          <Link to={ROUTES.CONVOCATORIAS}>
+          <a
+            href={SIDE_EVENT_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button className="min-w-60 rounded-md bg-[#329bd0] px-8 py-3.5 text-sm font-medium text-white transition-colors hover:bg-[#2789b8]">
               {t('sideEventsPage.ctaButton')}
             </button>
-          </Link>
+          </a>
         </div>
       </section>
     </>
