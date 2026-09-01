@@ -186,7 +186,7 @@ export const blogPosts: BlogPost[] = [
 <p>Para CONDATOS 2026, utilizaremos:</p>
 <ul>
   <li><strong>Gran Sala:</strong> Plenarias y sesiones inaugurales (capacidad: 2,000 personas)</li>
-  <li><strong>Salones del Centro de Convenciones:</strong> Panels y talleres simultáneos (8 salas de 50-150 personas)</li>
+  <li><strong>Salones del Centro de Convenciones:</strong> Paneles y talleres simultáneos (8 salas de 50-150 personas)</li>
   <li><strong>Plaza exterior:</strong> Área de exposiciones, networking y food court</li>
   <li><strong>Teatro de Cámara:</strong> Presentaciones relámpago y eventos especiales</li>
 </ul>

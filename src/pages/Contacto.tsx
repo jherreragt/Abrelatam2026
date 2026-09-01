@@ -9,7 +9,7 @@ const faqKeys = ['what', 'dates', 'audience', 'registration', 'free', 'propose']
 const copy: Record<Language, { heroTitle: string; heroSubtitle: string; faqTitle: string; faqs: Record<string, { q: string; a: string }> }> = {
   es: {
     heroTitle: 'Contacto y FAQ',
-    heroSubtitle: 'Tienes preguntas? Aqui encontraras respuestas o podras contactarnos directamente.',
+    heroSubtitle: '¿Tienes preguntas? Aquí encontrarás respuestas o podrás contactarnos directamente.',
     faqTitle: 'Preguntas frecuentes',
     faqs: {
       what: {
@@ -26,11 +26,11 @@ const copy: Record<Language, { heroTitle: string; heroSubtitle: string; faqTitle
       },
       registration: {
         q: '¿Necesito registro previo para asistir?',
-        a: 'Si, Abrelatam-ConDatos tiene un formulario de registro que debes completar para asegurar tu participación.',
+        a: 'Sí, Abrelatam-ConDatos tiene un formulario de registro que debes completar para asegurar tu participación.',
       },
       free: {
         q: '¿El evento es gratuito?',
-        a: 'Si, el evento es gratuito. Todas las personas interesadas en temas de gobierno abierto y datos abiertos en las Américas están invitadas a participar en el evento.',
+        a: 'Sí, el evento es gratuito. Todas las personas interesadas en temas de gobierno abierto y datos abiertos en las Américas están invitadas a participar en el evento.',
       },
       propose: {
         q: '¿Puedo proponer una sesión?',
@@ -71,7 +71,7 @@ const copy: Record<Language, { heroTitle: string; heroSubtitle: string; faqTitle
   },
   pt: {
     heroTitle: 'Contato e FAQ',
-    heroSubtitle: 'Tem perguntas? Aqui voce encontrara respostas ou podera entrar em contato diretamente.',
+    heroSubtitle: 'Tem perguntas? Aqui você encontrará respostas ou poderá entrar em contato diretamente.',
     faqTitle: 'Perguntas frequentes',
     faqs: {
       what: {

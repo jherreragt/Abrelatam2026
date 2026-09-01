@@ -161,7 +161,7 @@ export default function Home() {
               to={ROUTES.NOTICIAS}
               className="text-sm font-bold uppercase tracking-wide text-[#329bd0] transition-colors hover:text-[#262262]"
             >
-              Ver mas noticias
+              Ver más noticias
             </Link>
           </div>
         </div>

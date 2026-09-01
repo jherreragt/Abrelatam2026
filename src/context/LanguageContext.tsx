@@ -79,7 +79,7 @@ const translations = {
     },
     hero: {
       location: 'Ciudad de Guatemala, Guatemala',
-      date: '7, 8 y 9 de Octubre de 2026',
+      date: '7, 8 y 9 de octubre de 2026',
       register: 'Evento',
       guide: 'Registro',
       agenda: 'Información Útil',
@@ -354,7 +354,7 @@ const translations = {
       previousEditionsTitle: 'Ediciones anteriores',
       editions: {
         uruguay: 'Uruguay',
-        mexico: 'Mexico',
+        mexico: 'México',
         chile: 'Chile',
         colombia: 'Colombia',
         costaRica: 'Costa Rica',
@@ -370,39 +370,39 @@ const translations = {
     agendaPage: {
       heroTitle: 'Agenda del evento',
       heroSubtitle: '7, 8 y 9 de octubre, 2026 - Guatemala',
-      comingSoonTitle: 'Proximamente',
+      comingSoonTitle: 'Próximamente',
       comingSoonText1: 'Estamos trabajando en una agenda completa con sesiones increíbles, talleres prácticos, paneles de discusión y oportunidades de networking.',
       comingSoonText2: 'El llamado a contribuciones para la agenda será publicado en las próximas semanas.',
       expectTitle: 'Lo que puedes esperar:',
       expectations: {
         keynotes: 'Ponencias magistrales de expertos internacionales',
-        workshops: 'Talleres practicos y tecnicos',
-        panels: 'Paneles de discusion sobre datos abiertos',
+        workshops: 'Talleres prácticos y técnicos',
+        panels: 'Paneles de discusión sobre datos abiertos',
         networking: 'Sesiones de networking',
-        hackathon: 'Hackaton y presentaciones de proyectos',
+        hackathon: 'Hackatón y presentaciones de proyectos',
         socialEvents: 'Eventos sociales y culturales'
       },
       updatesButton: 'Recibir actualizaciones',
       contactButton: 'Contactar al equipo',
-      proposeTitle: 'Quieres proponer una sesion?',
-      proposeText: 'Las convocatorias para proponer ponencias, talleres y side events estaran abiertas proximamente. Suscribete a nuestro newsletter para recibir notificaciones cuando se abra el proceso.',
+      proposeTitle: '¿Quieres proponer una sesión?',
+      proposeText: 'Las convocatorias para proponer ponencias, talleres y side events estarán abiertas próximamente. Suscríbete a nuestro newsletter para recibir notificaciones cuando se abra el proceso.',
       callsButton: 'Ver convocatorias'
     },
     sideEventsPage: {
       heroTitle: 'Side Events',
-      heroSubtitle: 'Espacios autorganizados por la comunidad para encuentros, talleres y actividades paralelas',
-      whatTitle: 'Que son los Side Events?',
-      whatText1: 'Los Side Events son actividades paralelas organizadas por participantes, organizaciones y comunidades durante ABRELATAM / CONDATOS. Estos espacios autorganizados permiten profundizar en temas especificos, reunir a comunidades de practica o explorar iniciativas particulares.',
-      whatText2: 'Pueden ser reuniones informales, talleres especializados, presentaciones de proyectos o cualquier actividad que enriquezca la experiencia del evento. Los Side Events son una tradicion de ABRELATAM que fortalece las redes y permite conversaciones mas enfocadas y profundas.',
+      heroSubtitle: 'Espacios autoorganizados por la comunidad para encuentros, talleres y actividades paralelas',
+      whatTitle: '¿Qué son los Side Events?',
+      whatText1: 'Los Side Events son actividades paralelas organizadas por participantes, organizaciones y comunidades durante ABRELATAM / CONDATOS. Estos espacios autoorganizados permiten profundizar en temas específicos, reunir a comunidades de práctica o explorar iniciativas particulares.',
+      whatText2: 'Pueden ser reuniones informales, talleres especializados, presentaciones de proyectos o cualquier actividad que enriquezca la experiencia del evento. Los Side Events son una tradición de ABRELATAM que fortalece las redes y permite conversaciones más enfocadas y profundas.',
       typesTitle: 'Tipos de Side Events',
       types: {
         communityMeetups: {
           title: 'Reuniones de comunidad',
-          desc: 'Espacios para que redes, coaliciones u organizaciones se reunan presencialmente, compartan actualizaciones y planifiquen acciones futuras.'
+          desc: 'Espacios para que redes, coaliciones u organizaciones se reúnan presencialmente, compartan actualizaciones y planifiquen acciones futuras.'
         },
         specializedWorkshops: {
           title: 'Talleres especializados',
-          desc: 'Sesiones practicas sobre herramientas, metodologias o enfoques especificos que requieren mas tiempo que un formato regular de la agenda oficial.'
+          desc: 'Sesiones prácticas sobre herramientas, metodologías o enfoques específicos que requieren más tiempo que un formato regular de la agenda oficial.'
         },
         launchesDemos: {
           title: 'Lanzamientos y demos',
@@ -412,24 +412,24 @@ const translations = {
       guidelinesTitle: 'Lineamientos generales',
       guidelines: {
         proposal: {
-          title: 'Envia tu propuesta',
-          desc: 'Completa el formulario de propuesta de Side Event con los detalles de tu actividad: titulo, descripcion, duracion estimada, numero de participantes esperados y requerimientos tecnicos o de espacio.'
+          title: 'Envía tu propuesta',
+          desc: 'Completa el formulario de propuesta de Side Event con los detalles de tu actividad: título, descripción, duración estimada, número de participantes esperados y requerimientos técnicos o de espacio.'
         },
         coordination: {
-          title: 'Coordinacion con organizacion',
-          desc: 'El equipo organizador revisara tu propuesta y te ayudara a encontrar el mejor horario y espacio disponible. Te daremos apoyo con logistica basica y difusion.'
+          title: 'Coordinación con organización',
+          desc: 'El equipo organizador revisará tu propuesta y te ayudará a encontrar el mejor horario y espacio disponible. Te daremos apoyo con logística básica y difusión.'
         },
         promotion: {
-          title: 'Difusion',
-          desc: 'Tu Side Event aparecera en la agenda oficial y en los materiales del evento. Tambien puedes compartirlo en redes sociales y con tus comunidades.'
+          title: 'Difusión',
+          desc: 'Tu Side Event aparecerá en la agenda oficial y en los materiales del evento. También puedes compartirlo en redes sociales y con tus comunidades.'
         },
         enjoy: {
-          title: 'Disfruta tu evento!',
-          desc: 'Facilita tu Side Event durante el congreso. Recuerda seguir el codigo de conducta y crear un espacio inclusivo y respetuoso para todas las personas participantes.'
+          title: '¡Disfruta tu evento!',
+          desc: 'Facilita tu Side Event durante el congreso. Recuerda seguir el código de conducta y crear un espacio inclusivo y respetuoso para todas las personas participantes.'
         }
       },
-      ctaTitle: 'Tienes una idea para un Side Event?',
-      ctaText: 'Las convocatorias para organizar Side Events abriran proximamente. Suscribete para recibir una notificacion cuando esten disponibles.',
+      ctaTitle: '¿Tienes una idea para un Side Event?',
+      ctaText: 'Las convocatorias para organizar Side Events abrirán próximamente. Suscríbete para recibir una notificación cuando estén disponibles.',
       ctaButton: 'Proponer Side Event'
     },
     voluntariosPage: {
@@ -457,7 +457,7 @@ const translations = {
       req1: 'Disponibilidad durante al menos dos de los tres días del evento (7 al 9 de octubre de 2026).',
       req2: 'Compromiso con el código de conducta del evento.',
       req3: 'Ganas de aprender y colaborar en un ambiente horizontal y diverso.',
-      ctaTitle: 'Quieres ser voluntario o voluntaria?',
+      ctaTitle: '¿Quieres ser voluntario o voluntaria?',
       ctaText: 'Completa el formulario de inscripción y nos pondremos en contacto contigo.',
       ctaButton: 'Inscribirme como voluntario',
       contactText: '¿Tienes dudas? Escríbenos:',
@@ -518,7 +518,7 @@ const translations = {
         },
         howToArrive: {
           title: 'Cómo llegar',
-          content: 'El Centro Cultural Miguel Angel Asturias se encuentra en la 24 Calle 3-81, Zona 1, Ciudad de Guatemala. Puedes llegar en Transmetro, taxi o servicio de ridesharing. Próximamente publicaremos una guía detallada de movilidad.'
+          content: 'El Centro Cultural Miguel Ángel Asturias se encuentra en la 24 Calle 3-81, Zona 1, Ciudad de Guatemala. Puedes llegar en Transmetro, taxi o servicio de ridesharing. Próximamente publicaremos una guía detallada de movilidad.'
         },
         duringEvent: {
           title: 'Durante el evento',
@@ -922,7 +922,7 @@ const translations = {
         argentina: 'Argentina',
         ecuador: 'Ecuador',
         fromHome: 'From home',
-        futuros: 'Futuros',
+        futuros: 'Upcoming',
         dominicana: 'Dominican Republic',
         brazil: 'Brazil',
         bolivia: 'Bolivia'
@@ -1079,7 +1079,7 @@ const translations = {
         },
         howToArrive: {
           title: 'How to get there',
-          content: 'The Miguel Angel Asturias Cultural Center is located at 24 Calle 3-81, Zone 1, Guatemala City. You can arrive by Transmetro, taxi, or ridesharing service. We will soon publish a detailed mobility guide.'
+          content: 'The Miguel Ángel Asturias Cultural Center is located at 24 Calle 3-81, Zone 1, Guatemala City. You can arrive by Transmetro, taxi, or ridesharing service. We will soon publish a detailed mobility guide.'
         },
         duringEvent: {
           title: 'During the event',
@@ -1277,9 +1277,9 @@ const translations = {
       venueFeature2: 'Múltiplas salas e espaços para oficinas e sessões paralelas',
       venueFeature3: 'Localização central e fácil acesso na Zona 1',
       venueFeature4: 'Infraestrutura moderna e equipamento técnico de primeiro nível',
-      venueCtaEyebrow: 'ABRELATAM E CONDATOS SAO APENAS O COMECO',
-      venueCtaTitle: 'Inscricao geral aberta!',
-      venueCtaSubtitle: 'O programa da America Aberta incluira uma serie de atividades nacionais e internacionais.',
+      venueCtaEyebrow: 'ABRELATAM E CONDATOS SÃO APENAS O COMEÇO',
+      venueCtaTitle: 'Inscrição geral aberta!',
+      venueCtaSubtitle: 'O programa da América Aberta incluirá uma série de atividades nacionais e internacionais.',
       venueCtaButton: 'Inscreva-se',
       venueCtaNote: 'Registre-se agora e faça parte da comunidade regional de dados abertos.',
       whatToFind: 'O que você vai encontrar',
@@ -1420,9 +1420,9 @@ const translations = {
     about: {
       heroTitle: 'Sobre ABRELATAM / CONDATOS 2026',
       heroSubtitle: 'Duas conferências, um mesmo objetivo: transformar a América Latina por meio de dados abertos',
-      historyTitle: 'Nossa historia',
-      history1: 'Desde 2013, ABRELATAM e CONDATOS sao os pontos de encontro mais importantes para a comunidade latino-americana de dados abertos. Nascidas com o espirito de democratizar o acesso a informacao publica, essas conferencias viajaram por toda a regiao, deixando em cada pais uma marca de colaboracao e transformacao.',
-      history2: 'ABRELATAM e o espaco onde ativistas, desenvolvedoras, jornalistas, academicas e empreendedores sociais se reunem para compartilhar experiencias, aprender novas ferramentas e construir redes de colaboracao que atravessam fronteiras.',
+      historyTitle: 'Nossa história',
+      history1: 'Desde 2013, ABRELATAM e CONDATOS são os pontos de encontro mais importantes para a comunidade latino-americana de dados abertos. Nascidas com o espírito de democratizar o acesso à informação pública, essas conferências viajaram por toda a região, deixando em cada país uma marca de colaboração e transformação.',
+      history2: 'ABRELATAM é o espaço onde ativistas, desenvolvedoras, jornalistas, acadêmicas e empreendedores sociais se reúnem para compartilhar experiências, aprender novas ferramentas e construir redes de colaboração que atravessam fronteiras.',
       history3: 'CONDATOS, por sua vez, é o espaço de conferência que convoca especificamente funcionários públicos e tomadores de decisão governamentais para dialogar sobre políticas públicas, implementação de plataformas de dados abertos e melhores práticas em transparência.',
       history4: 'Juntos, esses dois espaços reúnem em um mesmo lugar público de diferentes setores para trabalhar sobre uma mesma agenda.',
       history4b: 'Essas conferências contam com apoio fundamental do Departamento para a Gestão Pública Efetiva da Organização dos Estados Americanos (OEA), da Rede Interamericana de Governo Digital, e ILDA (Iniciativa Latino-Americana pelos Dados Abertos), aliados-chave que trabalham para fortalecer a governança aberta e democratizar o acesso a dados na região.',
@@ -1431,54 +1431,54 @@ const translations = {
       objectives: {
         capacity: {
           title: 'Fortalecer capacidades',
-          desc: 'Oferecer espacos de formacao e capacitacao em ferramentas, metodologias e melhores praticas para trabalhar com dados abertos, tanto a partir da sociedade civil quanto do governo.'
+          desc: 'Oferecer espaços de formação e capacitação em ferramentas, metodologias e melhores práticas para trabalhar com dados abertos, tanto a partir da sociedade civil quanto do governo.'
         },
         community: {
           title: 'Construir comunidade',
-          desc: 'Facilitar o encontro entre pessoas e organizacoes que trabalham com dados abertos para fortalecer redes de colaboracao regional e compartilhar experiencias bem-sucedidas.'
+          desc: 'Facilitar o encontro entre pessoas e organizações que trabalham com dados abertos para fortalecer redes de colaboração regional e compartilhar experiências bem-sucedidas.'
         },
         policy: {
-          title: 'Impulsionar politicas publicas',
-          desc: 'Promover conversas entre governos, sociedade civil e especialistas para avancar em politicas publicas de abertura, transparencia e uso responsavel de dados.'
+          title: 'Impulsionar políticas públicas',
+          desc: 'Promover conversas entre governos, sociedade civil e especialistas para avançar em políticas públicas de abertura, transparência e uso responsável de dados.'
         },
         innovation: {
-          title: 'Inspirar inovacao',
-          desc: 'Dar visibilidade a iniciativas, ferramentas e aprendizados que usam dados abertos para responder a desafios publicos e criar impacto social.'
+          title: 'Inspirar inovação',
+          desc: 'Dar visibilidade a iniciativas, ferramentas e aprendizados que usam dados abertos para responder a desafios públicos e criar impacto social.'
         }
       },
-      audienceTitle: 'Para quem e?',
+      audienceTitle: 'Para quem é?',
       audience: {
         civilSociety: {
-          title: 'Ativistas e organizacoes da sociedade civil',
-          desc: 'Que trabalham com transparencia, prestacao de contas, anticorrupcao e direitos digitais.'
+          title: 'Ativistas e organizações da sociedade civil',
+          desc: 'Que trabalham com transparência, prestação de contas, anticorrupção e direitos digitais.'
         },
         publicOfficials: {
-          title: 'Funcionarios publicos',
-          desc: 'Responsaveis por politicas de dados abertos, transparencia e governo digital.'
+          title: 'Funcionários públicos',
+          desc: 'Responsáveis por políticas de dados abertos, transparência e governo digital.'
         },
         developers: {
-          title: 'Desenvolvedores e tecnologos',
-          desc: 'Que constroem ferramentas e aplicacoes com dados abertos.'
+          title: 'Desenvolvedores e tecnólogos',
+          desc: 'Que constroem ferramentas e aplicações com dados abertos.'
         },
         dataJournalists: {
           title: 'Jornalistas de dados',
-          desc: 'Que usam dados para contar historias de impacto publico.'
+          desc: 'Que usam dados para contar histórias de impacto público.'
         },
         academics: {
-          title: 'Academicos e pesquisadores',
+          title: 'Acadêmicos e pesquisadores',
           desc: 'Que estudam o impacto dos dados abertos na democracia e no desenvolvimento.'
         },
         socialEntrepreneurs: {
           title: 'Empreendedores sociais',
-          desc: 'Que criam valor social e economico a partir de dados abertos.'
+          desc: 'Que criam valor social e econômico a partir de dados abertos.'
         }
       },
-      previousEditionsTitle: 'Edicoes anteriores',
+      previousEditionsTitle: 'Edições anteriores',
       editions: {
         uruguay: 'Uruguai',
-        mexico: 'Mexico',
+        mexico: 'México',
         chile: 'Chile',
-        colombia: 'Colombia',
+        colombia: 'Colômbia',
         costaRica: 'Costa Rica',
         argentina: 'Argentina',
         ecuador: 'Equador',
@@ -1486,72 +1486,72 @@ const translations = {
         futuros: 'Futuros',
         dominicana: 'Dominicana',
         brazil: 'Brasil',
-        bolivia: 'Bolivia'
+        bolivia: 'Bolívia'
       }
     },
     agendaPage: {
       heroTitle: 'Agenda do evento',
       heroSubtitle: '7, 8 e 9 de outubro de 2026 - Guatemala',
       comingSoonTitle: 'Em breve',
-      comingSoonText1: 'Estamos trabalhando em uma agenda completa com sessoes incriveis, oficinas praticas, paineis de discussao e oportunidades de networking.',
-      comingSoonText2: 'A agenda detalhada sera publicada nas proximas semanas.',
-      expectTitle: 'O que voce pode esperar:',
+      comingSoonText1: 'Estamos trabalhando em uma agenda completa com sessões incríveis, oficinas práticas, painéis de discussão e oportunidades de networking.',
+      comingSoonText2: 'A agenda detalhada será publicada nas próximas semanas.',
+      expectTitle: 'O que você pode esperar:',
       expectations: {
         keynotes: 'Palestras principais com especialistas internacionais',
-        workshops: 'Oficinas praticas e tecnicas',
-        panels: 'Paineis de discussao sobre dados abertos',
-        networking: 'Sessoes de networking',
-        hackathon: 'Hackathon e apresentacoes de projetos',
+        workshops: 'Oficinas práticas e técnicas',
+        panels: 'Painéis de discussão sobre dados abertos',
+        networking: 'Sessões de networking',
+        hackathon: 'Hackathon e apresentações de projetos',
         socialEvents: 'Eventos sociais e culturais'
       },
-      updatesButton: 'Receber atualizacoes',
+      updatesButton: 'Receber atualizações',
       contactButton: 'Contatar a equipe',
-      proposeTitle: 'Quer propor uma sessao?',
-      proposeText: 'As chamadas para propor palestras, oficinas e side events serao abertas em breve. Assine nossa newsletter para receber notificacoes quando o processo for aberto.',
+      proposeTitle: 'Quer propor uma sessão?',
+      proposeText: 'As chamadas para propor palestras, oficinas e side events serão abertas em breve. Assine nossa newsletter para receber notificações quando o processo for aberto.',
       callsButton: 'Ver chamadas'
     },
     sideEventsPage: {
       heroTitle: 'Side Events',
-      heroSubtitle: 'Espacos auto-organizados pela comunidade para encontros, oficinas e atividades paralelas',
-      whatTitle: 'O que sao Side Events?',
-      whatText1: 'Os Side Events sao atividades paralelas organizadas por participantes, organizacoes e comunidades durante ABRELATAM / CONDATOS. Esses espacos auto-organizados permitem aprofundar temas especificos, reunir comunidades de pratica ou explorar iniciativas particulares.',
-      whatText2: 'Podem ser reunioes informais, oficinas especializadas, apresentacoes de projetos ou qualquer atividade que enriqueça a experiencia do evento. Os Side Events sao uma tradicao do ABRELATAM que fortalece redes e permite conversas mais focadas e profundas.',
+      heroSubtitle: 'Espaços auto-organizados pela comunidade para encontros, oficinas e atividades paralelas',
+      whatTitle: 'O que são Side Events?',
+      whatText1: 'Os Side Events são atividades paralelas organizadas por participantes, organizações e comunidades durante ABRELATAM / CONDATOS. Esses espaços auto-organizados permitem aprofundar temas específicos, reunir comunidades de prática ou explorar iniciativas particulares.',
+      whatText2: 'Podem ser reuniões informais, oficinas especializadas, apresentações de projetos ou qualquer atividade que enriqueça a experiência do evento. Os Side Events são uma tradição do ABRELATAM que fortalece redes e permite conversas mais focadas e profundas.',
       typesTitle: 'Tipos de Side Events',
       types: {
         communityMeetups: {
-          title: 'Reunioes de comunidade',
-          desc: 'Espacos para que redes, coalizoes ou organizacoes se encontrem presencialmente, compartilhem atualizacoes e planejem acoes futuras.'
+          title: 'Reuniões de comunidade',
+          desc: 'Espaços para que redes, coalizões ou organizações se encontrem presencialmente, compartilhem atualizações e planejem ações futuras.'
         },
         specializedWorkshops: {
           title: 'Oficinas especializadas',
-          desc: 'Sessoes praticas sobre ferramentas, metodologias ou abordagens especificas que exigem mais tempo do que um formato regular da agenda oficial.'
+          desc: 'Sessões práticas sobre ferramentas, metodologias ou abordagens específicas que exigem mais tempo do que um formato regular da agenda oficial.'
         },
         launchesDemos: {
-          title: 'Lancamentos e demos',
-          desc: 'Apresentacoes de novas propostas, plataformas, pesquisas ou iniciativas que queiram ter um espaco dedicado com seu publico.'
+          title: 'Lançamentos e demos',
+          desc: 'Apresentações de novas propostas, plataformas, pesquisas ou iniciativas que queiram ter um espaço dedicado com seu público.'
         }
       },
       guidelinesTitle: 'Diretrizes gerais',
       guidelines: {
         proposal: {
           title: 'Envie sua proposta',
-          desc: 'Preencha o formulario de proposta de Side Event com os detalhes da sua atividade: titulo, descricao, duracao estimada, numero esperado de participantes e requisitos tecnicos ou de espaco.'
+          desc: 'Preencha o formulário de proposta de Side Event com os detalhes da sua atividade: título, descrição, duração estimada, número esperado de participantes e requisitos técnicos ou de espaço.'
         },
         coordination: {
-          title: 'Coordenacao com a organizacao',
-          desc: 'A equipe organizadora revisara sua proposta e ajudara a encontrar o melhor horario e espaco disponivel. Daremos apoio basico de logistica e divulgacao.'
+          title: 'Coordenação com a organização',
+          desc: 'A equipe organizadora revisará sua proposta e ajudará a encontrar o melhor horário e espaço disponível. Daremos apoio básico de logística e divulgação.'
         },
         promotion: {
-          title: 'Divulgacao',
-          desc: 'Seu Side Event aparecera na agenda oficial e nos materiais do evento. Voce tambem pode compartilha-lo nas redes sociais e com suas comunidades.'
+          title: 'Divulgação',
+          desc: 'Seu Side Event aparecerá na agenda oficial e nos materiais do evento. Você também pode compartilhá-lo nas redes sociais e com suas comunidades.'
         },
         enjoy: {
           title: 'Aproveite seu evento!',
-          desc: 'Facilite seu Side Event durante o congresso. Lembre-se de seguir o codigo de conduta e criar um espaco inclusivo e respeitoso para todas as pessoas participantes.'
+          desc: 'Facilite seu Side Event durante o congresso. Lembre-se de seguir o código de conduta e criar um espaço inclusivo e respeitoso para todas as pessoas participantes.'
         }
       },
       ctaTitle: 'Tem uma ideia para um Side Event?',
-      ctaText: 'As chamadas para organizar Side Events serao abertas em breve. Assine para receber uma notificacao quando estiverem disponiveis.',
+      ctaText: 'As chamadas para organizar Side Events serão abertas em breve. Assine para receber uma notificação quando estiverem disponíveis.',
       ctaButton: 'Propor Side Event'
     },
     voluntariosPage: {
@@ -1624,50 +1624,50 @@ const translations = {
     },
     participantGuide: {
       heroTitle: 'Guia para participantes',
-      heroSubtitle: 'Tudo o que voce precisa saber para aproveitar ao maximo sua experiencia no ABRELATAM / CONDATOS 2026.',
+      heroSubtitle: 'Tudo o que você precisa saber para aproveitar ao máximo sua experiência no ABRELATAM / CONDATOS 2026.',
       sections: {
         whatIs: {
-          title: 'O que e ABRELATAM / CONDATOS?',
-          content: 'ABRELATAM e uma desconferencia comunitaria onde a agenda e construida coletivamente. CONDATOS e a conferencia regional com paineis e oficinas selecionados por um comite. Juntos formam o encontro mais importante da regiao sobre dados abertos e tecnologia civica.'
+          title: 'O que é ABRELATAM / CONDATOS?',
+          content: 'ABRELATAM é uma desconferência comunitária onde a agenda é construída coletivamente. CONDATOS é a conferência regional com painéis e oficinas selecionados por um comitê. Juntos formam o encontro mais importante da região sobre dados abertos e tecnologia cívica.'
         },
         datesPlace: {
           title: 'Datas e local',
-          content: 'O evento acontecera de 7 a 9 de outubro de 2026 na Cidade da Guatemala, Guatemala. A sede e o Centro Cultural Miguel Ángel Asturias, no coracao da Zona 1.'
+          content: 'O evento acontecerá de 7 a 9 de outubro de 2026 na Cidade da Guatemala, Guatemala. A sede é o Centro Cultural Miguel Ángel Asturias, no coração da Zona 1.'
         },
         audience: {
-          title: 'Para quem e?',
-          content: 'O evento e para pessoas da sociedade civil, governo, academia, setor privado e comunidade tecnologica comprometidas com dados abertos, transparencia e inovacao publica na America Latina.'
+          title: 'Para quem é?',
+          content: 'O evento é para pessoas da sociedade civil, governo, academia, setor privado e comunidade tecnológica comprometidas com dados abertos, transparência e inovação pública na América Latina.'
         },
         howToArrive: {
           title: 'Como chegar',
-          content: 'O Centro Cultural Miguel Angel Asturias fica na 24 Calle 3-81, Zona 1, Cidade da Guatemala. Voce pode chegar de Transmetro, taxi ou aplicativo de transporte. Em breve publicaremos um guia detalhado de mobilidade.'
+          content: 'O Centro Cultural Miguel Ángel Asturias fica na 24 Calle 3-81, Zona 1, Cidade da Guatemala. Você pode chegar de Transmetro, táxi ou aplicativo de transporte. Em breve publicaremos um guia detalhado de mobilidade.'
         },
         duringEvent: {
           title: 'Durante o evento',
-          content: 'Havera WiFi disponivel em todas as salas. Recomendamos levar computador ou tablet para participar ativamente. O evento conta com coffee breaks, almoco e espacos de networking.'
+          content: 'Haverá WiFi disponível em todas as salas. Recomendamos levar computador ou tablet para participar ativamente. O evento conta com coffee breaks, almoço e espaços de networking.'
         },
         networking: {
           title: 'Networking e comunidade',
-          content: 'ABRELATAM / CONDATOS e, antes de tudo, um espaco de comunidade. Aproveite os intervalos, atividades sociais e side events para se conectar com outras pessoas da regiao.'
+          content: 'ABRELATAM / CONDATOS é, antes de tudo, um espaço de comunidade. Aproveite os intervalos, atividades sociais e side events para se conectar com outras pessoas da região.'
         }
       },
       faqTitle: 'Perguntas frequentes',
       faqs: {
         registration: {
           q: 'Preciso me registrar para participar?',
-          a: 'Sim, voce deve completar seu registro para participar do evento. O registro ja esta disponivel neste site.'
+          a: 'Sim, você deve completar seu registro para participar do evento. O registro já está disponível neste site.'
         },
         free: {
-          q: 'O evento e gratuito?',
-          a: 'O evento tera taxa de inscricao. Os valores por categoria serao anunciados quando o registro oficial for aberto.'
+          q: 'O evento é gratuito?',
+          a: 'O evento terá taxa de inscrição. Os valores por categoria serão anunciados quando o registro oficial for aberto.'
         },
         propose: {
-          q: 'Posso propor uma sessao?',
-          a: 'As chamadas para sessoes e oficinas serao abertas em fevereiro de 2026. Acompanhe as novidades neste site.'
+          q: 'Posso propor uma sessão?',
+          a: 'As chamadas para sessões e oficinas serão abertas em fevereiro de 2026. Acompanhe as novidades neste site.'
         },
         includes: {
-          q: 'O que a inscricao inclui?',
-          a: 'Acesso a todas as sessoes e materiais do evento. Coffee breaks estao incluidos.'
+          q: 'O que a inscrição inclui?',
+          a: 'Acesso a todas as sessões e materiais do evento. Coffee breaks estão incluídos.'
         }
       }
     },
