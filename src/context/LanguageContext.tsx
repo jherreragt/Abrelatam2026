@@ -460,7 +460,7 @@ const translations = {
     },
     zonaGastro: {
       heroTitle: 'Zona Gastronómica',
-      heroSubtitle: 'Durante ABRELATAM / CONDATOS 2026 contaremos con una zona gastronómica en el Centro Cultural Miguel Ángel Asturias, con diferentes opciones de alimentos, bebidas, café y snacks disponibles para compra durante las jornadas del evento.',
+      heroSubtitle: 'Contaremos con diferentes opciones de alimentos, bebidas, café y snacks disponibles para compra durante las jornadas del evento.',
       eyebrow: 'Gastronomía',
       optionsTitle: 'Opciones gastronómicas para participantes',
       optionsText: 'La oferta gastronómica será brindada por food trucks y emprendimientos locales, con distintas opciones y rangos de precio.',
@@ -1016,7 +1016,7 @@ const translations = {
     },
     zonaGastro: {
       heroTitle: 'Food Zone',
-      heroSubtitle: 'During ABRELATAM / CONDATOS 2026 we will have a food zone at the Miguel Ángel Asturias Cultural Center, with various food, drinks, coffee, and snacks available for purchase throughout the event.',
+      heroSubtitle: 'We will have various food, drinks, coffee, and snacks available for purchase throughout the event days.',
       eyebrow: 'Gastronomy',
       optionsTitle: 'Food options for participants',
       optionsText: 'The food offering will be provided by food trucks and local businesses, with different options and price ranges.',
@@ -1572,7 +1572,7 @@ const translations = {
     },
     zonaGastro: {
       heroTitle: 'Zona Gastronômica',
-      heroSubtitle: 'Durante o ABRELATAM / CONDATOS 2026 teremos uma zona gastronômica no Centro Cultural Miguel Ángel Asturias, com diversas opções de alimentos, bebidas, café e lanches disponíveis para compra durante os dias do evento.',
+      heroSubtitle: 'Contaremos com diversas opções de alimentos, bebidas, café e lanches disponíveis para compra durante os dias do evento.'
       eyebrow: 'Gastronomia',
       optionsTitle: 'Opções gastronômicas para participantes',
       optionsText: 'A oferta gastronômica será fornecida por food trucks e empreendimentos locais, com diferentes opções e faixas de preço.',
