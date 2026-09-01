@@ -5,8 +5,6 @@ import {
   Cookie,
   Truck,
   Info,
-  Mail,
-  MessageCircle,
   ExternalLink,
   CheckCircle2,
   Instagram,
@@ -27,9 +25,6 @@ interface FoodTruck {
 }
 
 const foodTrucks: FoodTruck[] = [];
-
-const WHATSAPP_NUMBER = '50212345678';
-const CONTACT_EMAIL = 'abrelatam@idatosabiertos.org';
 
 const FORM_EMBED_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSff1DnwCabXkfFlCVb4GLvWO92SkiD2KczWxjI-VPjZTOHyFw/viewform?embedded=true';
@@ -244,37 +239,6 @@ export default function ZonaGastronomica() {
         </section>
       )}
 
-      {/* Contacto alternativo */}
-      <section className="bg-slate-50 px-4 py-16 md:py-20">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-4 text-2xl font-bold text-[#262262] md:text-3xl">
-            {t('zonaGastro.contactTitle')}
-          </h2>
-          <p className="mx-auto mb-8 max-w-xl text-base leading-relaxed text-slate-600">
-            {t('zonaGastro.contactText')}
-          </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-                'Hola, tengo una consulta sobre la Zona Gastronómica de AbreLatam 2026'
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 rounded-full bg-[#25D366] px-7 py-3.5 text-sm font-bold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md active:scale-95"
-            >
-              <MessageCircle size={18} />
-              WhatsApp
-            </a>
-            <a
-              href={`mailto:${CONTACT_EMAIL}?subject=Zona Gastronómica - AbreLatam 2026`}
-              className="inline-flex items-center gap-2.5 rounded-full bg-[#329bd0] px-7 py-3.5 text-sm font-bold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md hover:bg-[#2789b8] active:scale-95"
-            >
-              <Mail size={18} />
-              {t('zonaGastro.emailButton')}
-            </a>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
