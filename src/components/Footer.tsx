@@ -17,12 +17,36 @@ const supporterLogos = [
   { src: assetPath('logos/mcd.png'), alt: 'Ministerio de Cultura y Deportes de Guatemala', href: 'https://mcd.gob.gt/' },
 ];
 
-const sponsorTiers = [
-  { tierKey: 'platinum', sponsors: ['BANTRAB'] },
+type Sponsor = {
+  name: string;
+  logo: string;
+  href?: string;
+};
+
+const sponsorTiers: { tierKey: 'platinum' | 'gold' | 'silver' | 'bronze'; sponsors: Sponsor[] }[] = [
+  {
+    tierKey: 'platinum',
+    sponsors: [
+      { name: 'BANTRAB', logo: '/assets/logos/sponsors/bantrab_logo.webp', href: 'https://www.bantrab.gob.gt/' },
+    ],
+  },
   { tierKey: 'gold', sponsors: [] },
-  { tierKey: 'silver', sponsors: ['BID', 'Embajada de la República de China (Taiwán) en Guatemala', 'BANRURAL'] },
-  { tierKey: 'bronze', sponsors: ['PNUD', 'UNESCO'] },
-] as const;
+  {
+    tierKey: 'silver',
+    sponsors: [
+      { name: 'BID', logo: '/assets/logos/sponsors/bid_logo.webp', href: 'https://www.iadb.org/' },
+      { name: 'Embajada de la República de China (Taiwán) en Guatemala', logo: '/assets/logos/sponsors/taiwan_embassy_logo.webp' },
+      { name: 'BANRURAL', logo: '/assets/logos/sponsors/banrural_logo.webp', href: 'https://www.banrural.gob.gt/' },
+    ],
+  },
+  {
+    tierKey: 'bronze',
+    sponsors: [
+      { name: 'PNUD', logo: '/assets/logos/sponsors/pnud_logo.webp', href: 'https://www.gt.undp.org/' },
+      { name: 'UNESCO', logo: '/assets/logos/sponsors/unesco_logo.webp', href: 'https://www.unesco.org/' },
+    ],
+  },
+];
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -80,16 +104,38 @@ export default function Footer() {
           <h2 className="mb-9 text-base font-bold">{t('footerLogos.sponsors')}</h2>
           <div className="space-y-7">
             {sponsorTiers.map(({ tierKey, sponsors }) => (
-              <div key={tierKey} className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+              <div key={tierKey} className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
                 <span className="inline-flex w-28 flex-shrink-0 items-center justify-center rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white/90">
                   {t(`footerLogos.${tierKey}`)}
                 </span>
-                <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-4">
                   {sponsors.length > 0 ? (
-                    sponsors.map((name) => (
-                      <span key={name} className="text-sm font-medium text-white/85">
-                        {name}
-                      </span>
+                    sponsors.map((sponsor) => (
+                      <div key={sponsor.name} className="flex items-center gap-2">
+                        {sponsor.href ? (
+                          <a
+                            href={sponsor.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={sponsor.name}
+                            className="transition-opacity hover:opacity-75"
+                          >
+                            <img
+                              src={sponsor.logo}
+                              alt={sponsor.name}
+                              className="h-auto object-contain brightness-0 invert"
+                              style={{ maxWidth: '160px', maxHeight: '48px' }}
+                            />
+                          </a>
+                        ) : (
+                          <img
+                            src={sponsor.logo}
+                            alt={sponsor.name}
+                            className="h-auto object-contain brightness-0 invert"
+                            style={{ maxWidth: '160px', maxHeight: '48px' }}
+                          />
+                        )}
+                      </div>
                     ))
                   ) : (
                     <span className="text-sm italic text-white/40">—</span>
