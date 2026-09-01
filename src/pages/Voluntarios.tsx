@@ -49,7 +49,7 @@ const requirements = [
   { icon: Clock, key: 'req3' },
 ] as const;
 
-const VOLUNTEER_FORM_URL = 'https://forms.gle/p87qqXnsY7WoKf4g8';
+const VOLUNTEER_FORM_URL = 'https://forms.gle/5hJPqobErW7gZsSu6';
 const CONTACT_EMAIL = 'abrelatam@idatosabiertos.org';
 
 export default function Voluntarios() {
