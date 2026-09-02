@@ -293,7 +293,6 @@ export default function ApoyosEvento() {
                     <th className="text-left px-6 py-4 text-sm font-semibold text-[#262262]">{text.colOrganization}</th>
                     <th className="text-left px-6 py-4 text-sm font-semibold text-[#262262]">{text.colType}</th>
                     <th className="text-right px-6 py-4 text-sm font-semibold text-[#262262]">{text.colAmount}</th>
-                    <th className="text-center px-6 py-4 text-sm font-semibold text-[#262262]">{text.colStatus}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -302,12 +301,6 @@ export default function ApoyosEvento() {
                       <td className="px-6 py-4 text-sm text-slate-700 font-medium">{item.organization}</td>
                       <td className="px-6 py-4 text-sm text-slate-600">{text.financialSupport}</td>
                       <td className="px-6 py-4 text-sm text-slate-700 font-semibold text-right">{formatUSD(item.amount)}</td>
-                      <td className="px-6 py-4 text-center">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-green-50 text-green-700 border border-green-200">
-                          <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                          {text.statusConfirmed}
-                        </span>
-                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -315,7 +308,6 @@ export default function ApoyosEvento() {
                   <tr className="bg-[#262262]">
                     <td colSpan={2} className="px-6 py-4 text-sm font-bold text-white">{text.totalLabel}</td>
                     <td className="px-6 py-4 text-sm font-bold text-white text-right">{formatUSD(total)}</td>
-                    <td className="px-6 py-4" />
                   </tr>
                 </tfoot>
               </table>
@@ -327,10 +319,6 @@ export default function ApoyosEvento() {
                 <div key={i} className="bg-white rounded-2xl border border-slate-200 p-5">
                   <div className="flex items-start justify-between gap-3 mb-3">
                     <p className="text-sm font-semibold text-[#262262]">{item.organization}</p>
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-50 text-green-700 border border-green-200 flex-shrink-0">
-                      <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                      {text.statusConfirmed}
-                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600">{text.financialSupport}</span>
