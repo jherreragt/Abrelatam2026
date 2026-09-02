@@ -17,5 +17,6 @@ export const ROUTES = {
   DATOS_ARTE: '/datos-arte',
   VOLUNTARIOS: '/voluntarios',
   ZONA_GASTRONOMICA: '/zona-gastronomica',
+  APOYOS: '/apoyos',
   ADMIN: '/admin',
 } as const;
