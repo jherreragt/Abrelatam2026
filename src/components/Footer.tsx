@@ -42,8 +42,7 @@ const sponsorTiers: { tierKey: 'platinum' | 'gold' | 'silver' | 'bronze'; sponso
   {
     tierKey: 'bronze',
     sponsors: [
-      { name: 'PNUD y UNESCO', logo: assetPath('logos/sponsors/pnud.png') },
-      { name: 'UNESCO', logo: assetPath('logos/sponsors/unesco.webp') },
+      { name: 'UNESCO y PNUD', logo: assetPath('logos/sponsors/Unesco_y_PNUD.png') },
     ],
   },
 ];
@@ -75,7 +74,7 @@ export default function Footer() {
                           src={sponsor.logo}
                           alt={sponsor.name}
                           className="h-auto object-contain"
-                          style={{ maxWidth: '200px', maxHeight: '72px' }}
+                          style={{ maxWidth: '320px', maxHeight: '96px' }}
                         />
                       </a>
                     ) : (
@@ -83,7 +82,7 @@ export default function Footer() {
                         src={sponsor.logo}
                         alt={sponsor.name}
                         className="h-auto object-contain"
-                        style={{ maxWidth: '200px', maxHeight: '72px' }}
+                        style={{ maxWidth: '320px', maxHeight: '96px' }}
                       />
                     )}
                   </div>
