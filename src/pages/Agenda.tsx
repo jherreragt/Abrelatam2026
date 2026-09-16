@@ -16,10 +16,16 @@ const WIDGET_LOCALES: Record<Language, string> = {
   pt: 'pt-br',
 };
 
-const WIDGET_SCRIPTS: Record<Language, string> = {
+const SCHEDULE_SCRIPTS: Record<Language, string> = {
   es: 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/widget/v2.es.js',
   en: 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/widget/v2.en.js',
   pt: 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/widget/v2.pt.js',
+};
+
+const TALKS_SCRIPTS: Record<Language, string> = {
+  es: 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/talk/widget/v2.es.js',
+  en: 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/talk/widget/v2.en.js',
+  pt: 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/talk/widget/v2.pt.js',
 };
 
 const thematicIcons = [
@@ -31,31 +37,35 @@ const thematicIcons = [
   assetPath('v2/iconos/AL-20.png'),
 ];
 
-type Tab = 'schedule' | 'talks';
+type Tab = 'talks' | 'schedule';
 
 export default function Agenda() {
   const { t, language } = useLanguage();
-  const containerRef = useRef<HTMLDivElement>(null);
+  const talksRef = useRef<HTMLDivElement>(null);
+  const scheduleRef = useRef<HTMLDivElement>(null);
   const [loaded, setLoaded] = useState(false);
-  const [tab, setTab] = useState<Tab>('schedule');
+  const [tab, setTab] = useState<Tab>('talks');
 
   useEffect(() => {
-    if (tab !== 'schedule') return;
+    setLoaded(false);
+    const container = tab === 'talks' ? talksRef : scheduleRef;
+    const scripts = tab === 'talks' ? TALKS_SCRIPTS : SCHEDULE_SCRIPTS;
+    const eventUrl = tab === 'talks' ? PRETALX_TALKS_URL : PRETALX_EVENT_URL;
 
     const script = document.createElement('script');
-    script.src = WIDGET_SCRIPTS[language];
+    script.src = scripts[language];
     script.type = 'text/javascript';
     script.async = true;
     script.onload = () => setLoaded(true);
 
-    if (containerRef.current) {
-      containerRef.current.innerHTML = '';
+    if (container.current) {
+      container.current.innerHTML = '';
       const widget = document.createElement('pretalx-schedule');
-      widget.setAttribute('event-url', PRETALX_EVENT_URL);
+      widget.setAttribute('event-url', eventUrl);
       widget.setAttribute('locale', WIDGET_LOCALES[language]);
       widget.setAttribute('style', '--pretalx-clr-primary: #329bd0');
       widget.style.display = 'block';
-      containerRef.current.appendChild(widget);
+      container.current.appendChild(widget);
     }
 
     document.body.appendChild(script);
@@ -94,17 +104,6 @@ export default function Agenda() {
             <div className="mb-6 flex justify-center">
               <div className="inline-flex rounded-full bg-white border border-slate-200 shadow-sm p-1">
                 <button
-                  onClick={() => setTab('schedule')}
-                  className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors duration-200 ${
-                    tab === 'schedule'
-                      ? 'bg-[#262262] text-white'
-                      : 'text-slate-600 hover:text-[#262262]'
-                  }`}
-                >
-                  <LayoutGrid size={16} />
-                  {t('agendaPage.tabSchedule')}
-                </button>
-                <button
                   onClick={() => setTab('talks')}
                   className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors duration-200 ${
                     tab === 'talks'
@@ -115,46 +114,36 @@ export default function Agenda() {
                   <List size={16} />
                   {t('agendaPage.tabTalks')}
                 </button>
+                <button
+                  onClick={() => setTab('schedule')}
+                  className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors duration-200 ${
+                    tab === 'schedule'
+                      ? 'bg-[#262262] text-white'
+                      : 'text-slate-600 hover:text-[#262262]'
+                  }`}
+                >
+                  <LayoutGrid size={16} />
+                  {t('agendaPage.tabSchedule')}
+                </button>
               </div>
             </div>
 
             <div className="relative bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-              {tab === 'schedule' ? (
-                <>
-                  {!loaded && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-white z-10 py-20">
-                      <div className="flex flex-col items-center gap-3">
-                        <div className="w-10 h-10 border-3 border-[#329bd0] border-t-transparent rounded-full animate-spin" />
-                        <p className="text-sm text-slate-500">{t('agendaPage.embedLoading')}</p>
-                      </div>
-                    </div>
-                  )}
-                  <div
-                    ref={containerRef}
-                    className="w-full overflow-auto"
-                    style={{ height: '65vh', minHeight: '480px' }}
-                  />
-                </>
-              ) : (
-                <>
-                  <div className="iframe-loader absolute inset-0 flex items-center justify-center bg-white z-10 py-20">
-                    <div className="flex flex-col items-center gap-3">
-                      <div className="w-10 h-10 border-3 border-[#329bd0] border-t-transparent rounded-full animate-spin" />
-                      <p className="text-sm text-slate-500">{t('agendaPage.talksLoading')}</p>
-                    </div>
+              {!loaded && (
+                <div className="absolute inset-0 flex items-center justify-center bg-white z-10 py-20">
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="w-10 h-10 border-3 border-[#329bd0] border-t-transparent rounded-full animate-spin" />
+                    <p className="text-sm text-slate-500">
+                      {tab === 'talks' ? t('agendaPage.talksLoading') : t('agendaPage.embedLoading')}
+                    </p>
                   </div>
-                  <iframe
-                    src={PRETALX_TALKS_URL}
-                    title="Pretalx talks list"
-                    className="w-full border-0"
-                    style={{ height: '65vh', minHeight: '480px' }}
-                    onLoad={(e) => {
-                      const loader = (e.target as HTMLIFrameElement).parentElement?.querySelector('.iframe-loader');
-                      if (loader) (loader as HTMLElement).style.display = 'none';
-                    }}
-                  />
-                </>
+                </div>
               )}
+              <div
+                ref={tab === 'talks' ? talksRef : scheduleRef}
+                className="w-full overflow-auto"
+                style={{ height: '65vh', minHeight: '480px' }}
+              />
               <noscript>
                 <div className="py-16 text-center">
                   <p className="text-slate-600 mb-4">
@@ -163,7 +152,7 @@ export default function Agenda() {
                     {language === 'pt' && 'JavaScript está desativado. Para acessar a agenda sem JavaScript,'}
                   </p>
                   <a
-                    href={PRETALX_SCHEDULE_URL}
+                    href={tab === 'talks' ? PRETALX_TALKS_URL : PRETALX_SCHEDULE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#262262] text-white text-sm font-semibold hover:bg-[#329bd0] transition-colors duration-200"
@@ -177,7 +166,7 @@ export default function Agenda() {
 
             <div className="mt-6 text-center">
               <a
-                href={tab === 'schedule' ? PRETALX_SCHEDULE_URL : PRETALX_TALKS_URL}
+                href={tab === 'talks' ? PRETALX_TALKS_URL : PRETALX_SCHEDULE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#262262] text-white text-sm font-semibold hover:bg-[#329bd0] transition-colors duration-200"
