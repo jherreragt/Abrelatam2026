@@ -203,7 +203,7 @@ export default function TalksList() {
           {t('agendaPage.talksNoResults')}
         </div>
       ) : (
-        <div className="space-y-8 max-h-[55vh] overflow-y-auto pr-2 -mr-2">
+        <div className="space-y-8 overflow-y-auto pr-2 -mr-2" style={{ maxHeight: '1200px' }}>
           {groupedByDay.map(([day, talks]) => (
             <div key={day}>
               <div className="sticky top-0 z-10 bg-white/95 backdrop-blur py-2 mb-3">

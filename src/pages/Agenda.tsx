@@ -135,7 +135,7 @@ export default function Agenda() {
                   <div
                     ref={scheduleRef}
                     className="w-full overflow-auto"
-                    style={{ height: '65vh', minHeight: '480px' }}
+                    style={{ height: '1200px' }}
                   />
                 </>
               )}
