@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ExternalLink, Clock, Calendar } from 'lucide-react';
+import { ExternalLink, Clock, Calendar, LayoutGrid, List } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import { useLanguage, type Language } from '../context/LanguageContext';
 import { assetPath } from '../lib/assetPath';
@@ -7,6 +7,7 @@ import { ROUTES } from '../router/routes';
 import { Link } from 'react-router-dom';
 
 const PRETALX_SCHEDULE_URL = 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/';
+const PRETALX_TALKS_URL = 'https://pretalx.abrelatam.org/abrelatam-2026/talk/';
 const PRETALX_EVENT_URL = 'https://pretalx.abrelatam.org/abrelatam-2026/';
 
 const WIDGET_LOCALES: Record<Language, string> = {
@@ -30,12 +31,17 @@ const thematicIcons = [
   assetPath('v2/iconos/AL-20.png'),
 ];
 
+type Tab = 'schedule' | 'talks';
+
 export default function Agenda() {
   const { t, language } = useLanguage();
   const containerRef = useRef<HTMLDivElement>(null);
   const [loaded, setLoaded] = useState(false);
+  const [tab, setTab] = useState<Tab>('schedule');
 
   useEffect(() => {
+    if (tab !== 'schedule') return;
+
     const script = document.createElement('script');
     script.src = WIDGET_SCRIPTS[language];
     script.type = 'text/javascript';
@@ -48,7 +54,6 @@ export default function Agenda() {
       widget.setAttribute('event-url', PRETALX_EVENT_URL);
       widget.setAttribute('locale', WIDGET_LOCALES[language]);
       widget.setAttribute('style', '--pretalx-clr-primary: #329bd0');
-      widget.style.minHeight = '80vh';
       widget.style.display = 'block';
       containerRef.current.appendChild(widget);
     }
@@ -59,7 +64,7 @@ export default function Agenda() {
       script.remove();
       setLoaded(false);
     };
-  }, [language]);
+  }, [language, tab]);
 
   return (
     <>
@@ -86,16 +91,70 @@ export default function Agenda() {
           </div>
 
           <div className="mx-auto max-w-7xl">
+            <div className="mb-6 flex justify-center">
+              <div className="inline-flex rounded-full bg-white border border-slate-200 shadow-sm p-1">
+                <button
+                  onClick={() => setTab('schedule')}
+                  className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors duration-200 ${
+                    tab === 'schedule'
+                      ? 'bg-[#262262] text-white'
+                      : 'text-slate-600 hover:text-[#262262]'
+                  }`}
+                >
+                  <LayoutGrid size={16} />
+                  {t('agendaPage.tabSchedule')}
+                </button>
+                <button
+                  onClick={() => setTab('talks')}
+                  className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors duration-200 ${
+                    tab === 'talks'
+                      ? 'bg-[#262262] text-white'
+                      : 'text-slate-600 hover:text-[#262262]'
+                  }`}
+                >
+                  <List size={16} />
+                  {t('agendaPage.tabTalks')}
+                </button>
+              </div>
+            </div>
+
             <div className="relative bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-              {!loaded && (
-                <div className="absolute inset-0 flex items-center justify-center bg-white z-10 py-32">
-                  <div className="flex flex-col items-center gap-3">
-                    <div className="w-10 h-10 border-3 border-[#329bd0] border-t-transparent rounded-full animate-spin" />
-                    <p className="text-sm text-slate-500">{t('agendaPage.embedLoading')}</p>
+              {tab === 'schedule' ? (
+                <>
+                  {!loaded && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-white z-10 py-20">
+                      <div className="flex flex-col items-center gap-3">
+                        <div className="w-10 h-10 border-3 border-[#329bd0] border-t-transparent rounded-full animate-spin" />
+                        <p className="text-sm text-slate-500">{t('agendaPage.embedLoading')}</p>
+                      </div>
+                    </div>
+                  )}
+                  <div
+                    ref={containerRef}
+                    className="w-full overflow-auto"
+                    style={{ height: '65vh', minHeight: '480px' }}
+                  />
+                </>
+              ) : (
+                <>
+                  <div className="iframe-loader absolute inset-0 flex items-center justify-center bg-white z-10 py-20">
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-10 h-10 border-3 border-[#329bd0] border-t-transparent rounded-full animate-spin" />
+                      <p className="text-sm text-slate-500">{t('agendaPage.talksLoading')}</p>
+                    </div>
                   </div>
-                </div>
+                  <iframe
+                    src={PRETALX_TALKS_URL}
+                    title="Pretalx talks list"
+                    className="w-full border-0"
+                    style={{ height: '65vh', minHeight: '480px' }}
+                    onLoad={(e) => {
+                      const loader = (e.target as HTMLIFrameElement).parentElement?.querySelector('.iframe-loader');
+                      if (loader) (loader as HTMLElement).style.display = 'none';
+                    }}
+                  />
+                </>
               )}
-              <div ref={containerRef} className="w-full" style={{ minHeight: '80vh' }} />
               <noscript>
                 <div className="py-16 text-center">
                   <p className="text-slate-600 mb-4">
@@ -118,7 +177,7 @@ export default function Agenda() {
 
             <div className="mt-6 text-center">
               <a
-                href={PRETALX_SCHEDULE_URL}
+                href={tab === 'schedule' ? PRETALX_SCHEDULE_URL : PRETALX_TALKS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#262262] text-white text-sm font-semibold hover:bg-[#329bd0] transition-colors duration-200"

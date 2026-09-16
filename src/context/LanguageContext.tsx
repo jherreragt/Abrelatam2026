@@ -429,6 +429,9 @@ const translations = {
       embedLoading: 'Cargando agenda…',
       viewOnPretalx: 'Ver agenda completa en Pretalx',
       timeZoneNote: 'Todos los horarios están en hora de Guatemala (UTC-6).',
+      tabSchedule: 'Calendario',
+      tabTalks: 'Lista de sesiones',
+      talksLoading: 'Cargando lista de sesiones…',
       proposeTitle: '¿Quieres proponer una sesión?',
       proposeText: 'Las convocatorias para proponer ponencias, talleres y side events estarán abiertas próximamente. Suscríbete a nuestro newsletter para recibir notificaciones cuando se abra el proceso.',
       callsButton: 'Ver convocatorias'
@@ -1035,6 +1038,9 @@ const translations = {
       embedLoading: 'Loading schedule…',
       viewOnPretalx: 'View full schedule on Pretalx',
       timeZoneNote: 'All times are in Guatemala time (UTC-6).',
+      tabSchedule: 'Schedule',
+      tabTalks: 'Talk list',
+      talksLoading: 'Loading talk list…',
       proposeTitle: 'Want to propose a session?',
       proposeText: 'Calls for talks, workshops, and side events will open soon. Subscribe to our newsletter to receive notifications when the process opens.',
       callsButton: 'View calls'
@@ -1641,6 +1647,9 @@ const translations = {
       embedLoading: 'Carregando agenda…',
       viewOnPretalx: 'Ver agenda completa no Pretalx',
       timeZoneNote: 'Todos os horários estão no horário da Guatemala (UTC-6).',
+      tabSchedule: 'Calendário',
+      tabTalks: 'Lista de sessões',
+      talksLoading: 'Carregando lista de sessões…',
       proposeTitle: 'Quer propor uma sessão?',
       proposeText: 'As chamadas para propor palestras, oficinas e side events serão abertas em breve. Assine nossa newsletter para receber notificações quando o processo for aberto.',
       callsButton: 'Ver chamadas'
