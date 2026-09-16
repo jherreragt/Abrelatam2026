@@ -42,7 +42,7 @@ const sponsorTiers: { tierKey: 'platinum' | 'gold' | 'silver' | 'bronze'; sponso
   {
     tierKey: 'bronze',
     sponsors: [
-      { name: 'UNESCO y PNUD', logo: assetPath('logos/sponsors/UnescoyPNUD.png') },
+      { name: 'UNESCO y PNUD', logo: assetPath('logos/UnescoyPNUD.png') },
     ],
   },
 ];
