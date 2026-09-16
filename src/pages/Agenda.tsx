@@ -1,12 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ExternalLink, Clock, Calendar } from 'lucide-react';
 import PageHero from '../components/PageHero';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage, type Language } from '../context/LanguageContext';
 import { assetPath } from '../lib/assetPath';
 import { ROUTES } from '../router/routes';
 import { Link } from 'react-router-dom';
 
 const PRETALX_SCHEDULE_URL = 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/';
+const PRETALX_EVENT_URL = 'https://pretalx.abrelatam.org/abrelatam-2026/';
+
+const WIDGET_LOCALES: Record<Language, string> = {
+  es: 'es',
+  en: 'en',
+  pt: 'pt-br',
+};
+
+const WIDGET_SCRIPTS: Record<Language, string> = {
+  es: 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/widget/v2.es.js',
+  en: 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/widget/v2.en.js',
+  pt: 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/widget/v2.pt.js',
+};
 
 const thematicIcons = [
   assetPath('v2/iconos/AL-15.png'),
@@ -18,8 +31,35 @@ const thematicIcons = [
 ];
 
 export default function Agenda() {
-  const { t } = useLanguage();
-  const [iframeLoaded, setIframeLoaded] = useState(false);
+  const { t, language } = useLanguage();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = WIDGET_SCRIPTS[language];
+    script.type = 'text/javascript';
+    script.async = true;
+    script.onload = () => setLoaded(true);
+
+    if (containerRef.current) {
+      containerRef.current.innerHTML = '';
+      const widget = document.createElement('pretalx-schedule');
+      widget.setAttribute('event-url', PRETALX_EVENT_URL);
+      widget.setAttribute('locale', WIDGET_LOCALES[language]);
+      widget.setAttribute('style', '--pretalx-clr-primary: #329bd0');
+      widget.style.minHeight = '80vh';
+      widget.style.display = 'block';
+      containerRef.current.appendChild(widget);
+    }
+
+    document.body.appendChild(script);
+
+    return () => {
+      script.remove();
+      setLoaded(false);
+    };
+  }, [language]);
 
   return (
     <>
@@ -29,7 +69,6 @@ export default function Agenda() {
         backgroundImage={assetPath('v2/slider/AL-44.png')}
       />
 
-      {/* Intro + iframe embed */}
       <section className="py-16 md:py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="mx-auto max-w-3xl text-center mb-10">
@@ -46,11 +85,9 @@ export default function Agenda() {
             </div>
           </div>
 
-          {/* Iframe container */}
           <div className="mx-auto max-w-7xl">
             <div className="relative bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-              {/* Loading overlay */}
-              {!iframeLoaded && (
+              {!loaded && (
                 <div className="absolute inset-0 flex items-center justify-center bg-white z-10 py-32">
                   <div className="flex flex-col items-center gap-3">
                     <div className="w-10 h-10 border-3 border-[#329bd0] border-t-transparent rounded-full animate-spin" />
@@ -58,17 +95,27 @@ export default function Agenda() {
                   </div>
                 </div>
               )}
-              <iframe
-                src={PRETALX_SCHEDULE_URL}
-                title="ABRELATAM 2026 Schedule"
-                className="w-full"
-                style={{ minHeight: '80vh', border: 'none' }}
-                onLoad={() => setIframeLoaded(true)}
-                loading="lazy"
-              />
+              <div ref={containerRef} className="w-full" style={{ minHeight: '80vh' }} />
+              <noscript>
+                <div className="py-16 text-center">
+                  <p className="text-slate-600 mb-4">
+                    {language === 'es' && 'JavaScript está deshabilitado. Para acceder a la agenda sin JavaScript,'}
+                    {language === 'en' && 'JavaScript is disabled. To access the schedule without JavaScript,'}
+                    {language === 'pt' && 'JavaScript está desativado. Para acessar a agenda sem JavaScript,'}
+                  </p>
+                  <a
+                    href={PRETALX_SCHEDULE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#262262] text-white text-sm font-semibold hover:bg-[#329bd0] transition-colors duration-200"
+                  >
+                    {t('agendaPage.viewOnPretalx')}
+                    <ExternalLink size={15} />
+                  </a>
+                </div>
+              </noscript>
             </div>
 
-            {/* Link to open in new tab */}
             <div className="mt-6 text-center">
               <a
                 href={PRETALX_SCHEDULE_URL}
@@ -84,7 +131,6 @@ export default function Agenda() {
         </div>
       </section>
 
-      {/* Thematic areas */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="mx-auto mb-16 max-w-4xl text-center">
@@ -110,7 +156,6 @@ export default function Agenda() {
         </div>
       </section>
 
-      {/* Propose a session CTA */}
       <section className="py-16 md:py-20 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
