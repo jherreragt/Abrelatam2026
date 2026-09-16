@@ -1,9 +1,12 @@
-import Section from '../components/Section';
+import { useState } from 'react';
+import { ExternalLink, Clock, Calendar } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import { useLanguage } from '../context/LanguageContext';
 import { assetPath } from '../lib/assetPath';
+import { ROUTES } from '../router/routes';
+import { Link } from 'react-router-dom';
 
-const expectationKeys = ['keynotes', 'workshops', 'panels', 'networking', 'hackathon', 'socialEvents'] as const;
+const PRETALX_SCHEDULE_URL = 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/';
 
 const thematicIcons = [
   assetPath('v2/iconos/AL-15.png'),
@@ -16,6 +19,7 @@ const thematicIcons = [
 
 export default function Agenda() {
   const { t } = useLanguage();
+  const [iframeLoaded, setIframeLoaded] = useState(false);
 
   return (
     <>
@@ -25,37 +29,64 @@ export default function Agenda() {
         backgroundImage={assetPath('v2/slider/AL-44.png')}
       />
 
-      <Section bgColor="gray" className="py-16 md:py-24">
-        <div className="mx-auto max-w-4xl rounded-lg bg-white px-6 py-12 text-center shadow-sm md:px-12 md:py-16">
-          <img src={assetPath('v2/iconos/AL-24.png')} alt="" className="mx-auto mb-5 h-20 w-20 object-contain" />
-          <h2 className="mb-7 text-3xl font-bold text-[#262262] md:text-4xl">
-            {t('agendaPage.comingSoonTitle')}
-          </h2>
-          <p className="mx-auto max-w-2xl text-base leading-relaxed text-slate-800">
-            {t('agendaPage.comingSoonText1')}
-          </p>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-800">
-            {t('agendaPage.comingSoonText2')}
-          </p>
+      {/* Intro + iframe embed */}
+      <section className="py-16 md:py-24 bg-slate-50">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#329bd0]/10 text-[#262262] text-xs font-semibold tracking-wide uppercase mb-4">
+              <Calendar size={14} />
+              {t('agendaPage.introTitle')}
+            </div>
+            <p className="text-slate-700 leading-relaxed">
+              {t('agendaPage.introText')}
+            </p>
+            <div className="mt-4 flex items-center justify-center gap-2 text-sm text-slate-500">
+              <Clock size={14} />
+              <span>{t('agendaPage.timeZoneNote')}</span>
+            </div>
+          </div>
 
-          <div className="mx-auto mt-12 max-w-3xl rounded-lg bg-slate-50 px-6 py-8 text-left">
-            <h3 className="mb-5 text-center text-lg font-bold text-slate-900">
-              {t('agendaPage.expectTitle')}
-            </h3>
-            <div className="grid gap-x-12 gap-y-4 md:grid-cols-2">
-              {expectationKeys.map((key) => (
-                <div key={key} className="flex items-start gap-3 text-sm leading-relaxed text-slate-600">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#329bd0]" />
-                  <span>{t(`agendaPage.expectations.${key}`)}</span>
+          {/* Iframe container */}
+          <div className="mx-auto max-w-7xl">
+            <div className="relative bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+              {/* Loading overlay */}
+              {!iframeLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center bg-white z-10 py-32">
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="w-10 h-10 border-3 border-[#329bd0] border-t-transparent rounded-full animate-spin" />
+                    <p className="text-sm text-slate-500">{t('agendaPage.embedLoading')}</p>
+                  </div>
                 </div>
-              ))}
+              )}
+              <iframe
+                src={PRETALX_SCHEDULE_URL}
+                title="ABRELATAM 2026 Schedule"
+                className="w-full"
+                style={{ minHeight: '80vh', border: 'none' }}
+                onLoad={() => setIframeLoaded(true)}
+                loading="lazy"
+              />
+            </div>
+
+            {/* Link to open in new tab */}
+            <div className="mt-6 text-center">
+              <a
+                href={PRETALX_SCHEDULE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#262262] text-white text-sm font-semibold hover:bg-[#329bd0] transition-colors duration-200"
+              >
+                {t('agendaPage.viewOnPretalx')}
+                <ExternalLink size={15} />
+              </a>
             </div>
           </div>
         </div>
-      </Section>
+      </section>
 
-      <Section bgColor="white" className="py-16 md:py-24">
-        <div className="mx-auto max-w-7xl">
+      {/* Thematic areas */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <div className="mx-auto mb-16 max-w-4xl text-center">
             <h2 className="text-2xl font-bold text-[#262262] md:text-3xl">
               {t('home.thematicTitle')}
@@ -77,7 +108,27 @@ export default function Agenda() {
             ))}
           </div>
         </div>
-      </Section>
+      </section>
+
+      {/* Propose a session CTA */}
+      <section className="py-16 md:py-20 bg-slate-50">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-xl md:text-2xl font-bold text-[#262262] mb-4">
+              {t('agendaPage.proposeTitle')}
+            </h2>
+            <p className="text-slate-600 leading-relaxed mb-6 max-w-2xl mx-auto">
+              {t('agendaPage.proposeText')}
+            </p>
+            <Link
+              to={ROUTES.CONVOCATORIAS}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#329bd0] text-white text-sm font-semibold hover:bg-[#262262] transition-colors duration-200"
+            >
+              {t('agendaPage.callsButton')}
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

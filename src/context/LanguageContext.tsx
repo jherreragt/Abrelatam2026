@@ -411,7 +411,7 @@ const translations = {
     },
     agendaPage: {
       heroTitle: 'Agenda del evento',
-      heroSubtitle: '7, 8 y 9 de octubre, 2026 - Guatemala',
+      heroSubtitle: '7, 8 y 9 de octubre, 2026 - Ciudad de Guatemala',
       comingSoonTitle: 'Próximamente',
       comingSoonText1: 'Estamos trabajando en una agenda completa con sesiones increíbles, talleres prácticos, paneles de discusión y oportunidades de networking.',
       comingSoonText2: 'El llamado a contribuciones para la agenda será publicado en las próximas semanas.',
@@ -424,8 +424,11 @@ const translations = {
         hackathon: 'Hackatón y presentaciones de proyectos',
         socialEvents: 'Eventos sociales y culturales'
       },
-      updatesButton: 'Recibir actualizaciones',
-      contactButton: 'Contactar al equipo',
+      introTitle: 'Agenda confirmada',
+      introText: 'La agenda de ABRELATAM / CONDATOS 2026 ya está disponible. Explora las sesiones, talleres, paneles y actividades confirmadas para los tres días del evento. La agenda se actualiza automáticamente desde Pretalx, por lo que siempre verás la versión más reciente.',
+      embedLoading: 'Cargando agenda…',
+      viewOnPretalx: 'Ver agenda completa en Pretalx',
+      timeZoneNote: 'Todos los horarios están en hora de Guatemala (UTC-6).',
       proposeTitle: '¿Quieres proponer una sesión?',
       proposeText: 'Las convocatorias para proponer ponencias, talleres y side events estarán abiertas próximamente. Suscríbete a nuestro newsletter para recibir notificaciones cuando se abra el proceso.',
       callsButton: 'Ver convocatorias'
@@ -1014,7 +1017,7 @@ const translations = {
     },
     agendaPage: {
       heroTitle: 'Event agenda',
-      heroSubtitle: 'October 7–9, 2026 - Guatemala',
+      heroSubtitle: 'October 7–9, 2026 - Guatemala City',
       comingSoonTitle: 'Coming soon',
       comingSoonText1: 'We are working on a complete agenda with outstanding sessions, hands-on workshops, discussion panels, and networking opportunities.',
       comingSoonText2: 'The detailed agenda will be published in the coming weeks.',
@@ -1027,8 +1030,11 @@ const translations = {
         hackathon: 'Hackathon and project presentations',
         socialEvents: 'Social and cultural events'
       },
-      updatesButton: 'Get updates',
-      contactButton: 'Contact the team',
+      introTitle: 'Confirmed schedule',
+      introText: 'The ABRELATAM / CONDATOS 2026 schedule is now available. Browse the confirmed sessions, workshops, panels, and activities for all three days of the event. The schedule updates automatically from Pretalx, so you will always see the latest version.',
+      embedLoading: 'Loading schedule…',
+      viewOnPretalx: 'View full schedule on Pretalx',
+      timeZoneNote: 'All times are in Guatemala time (UTC-6).',
       proposeTitle: 'Want to propose a session?',
       proposeText: 'Calls for talks, workshops, and side events will open soon. Subscribe to our newsletter to receive notifications when the process opens.',
       callsButton: 'View calls'
@@ -1617,7 +1623,7 @@ const translations = {
     },
     agendaPage: {
       heroTitle: 'Agenda do evento',
-      heroSubtitle: '7, 8 e 9 de outubro de 2026 - Guatemala',
+      heroSubtitle: '7, 8 e 9 de outubro de 2026 - Cidade da Guatemala',
       comingSoonTitle: 'Em breve',
       comingSoonText1: 'Estamos trabalhando em uma agenda completa com sessões incríveis, oficinas práticas, painéis de discussão e oportunidades de networking.',
       comingSoonText2: 'A agenda detalhada será publicada nas próximas semanas.',
@@ -1630,8 +1636,11 @@ const translations = {
         hackathon: 'Hackathon e apresentações de projetos',
         socialEvents: 'Eventos sociais e culturais'
       },
-      updatesButton: 'Receber atualizações',
-      contactButton: 'Contatar a equipe',
+      introTitle: 'Agenda confirmada',
+      introText: 'A agenda do ABRELATAM / CONDATOS 2026 já está disponível. Explore as sessões, oficinas, painéis e atividades confirmadas para os três dias do evento. A agenda é atualizada automaticamente desde o Pretalx, então você sempre verá a versão mais recente.',
+      embedLoading: 'Carregando agenda…',
+      viewOnPretalx: 'Ver agenda completa no Pretalx',
+      timeZoneNote: 'Todos os horários estão no horário da Guatemala (UTC-6).',
       proposeTitle: 'Quer propor uma sessão?',
       proposeText: 'As chamadas para propor palestras, oficinas e side events serão abertas em breve. Assine nossa newsletter para receber notificações quando o processo for aberto.',
       callsButton: 'Ver chamadas'
