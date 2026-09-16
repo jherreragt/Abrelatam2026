@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ExternalLink, Clock, Calendar, LayoutGrid, List } from 'lucide-react';
 import PageHero from '../components/PageHero';
+import TalksList from '../components/TalksList';
 import { useLanguage, type Language } from '../context/LanguageContext';
 import { assetPath } from '../lib/assetPath';
 import { ROUTES } from '../router/routes';
@@ -22,12 +23,6 @@ const SCHEDULE_SCRIPTS: Record<Language, string> = {
   pt: 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/widget/v2.pt.js',
 };
 
-const TALKS_SCRIPTS: Record<Language, string> = {
-  es: 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/talk/widget/v2.es.js',
-  en: 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/talk/widget/v2.en.js',
-  pt: 'https://pretalx.abrelatam.org/abrelatam-2026/schedule/talk/widget/v2.pt.js',
-};
-
 const thematicIcons = [
   assetPath('v2/iconos/AL-15.png'),
   assetPath('v2/iconos/AL-16.png'),
@@ -41,38 +36,34 @@ type Tab = 'talks' | 'schedule';
 
 export default function Agenda() {
   const { t, language } = useLanguage();
-  const talksRef = useRef<HTMLDivElement>(null);
   const scheduleRef = useRef<HTMLDivElement>(null);
-  const [loaded, setLoaded] = useState(false);
+  const [scheduleLoaded, setScheduleLoaded] = useState(false);
   const [tab, setTab] = useState<Tab>('talks');
 
   useEffect(() => {
-    setLoaded(false);
-    const container = tab === 'talks' ? talksRef : scheduleRef;
-    const scripts = tab === 'talks' ? TALKS_SCRIPTS : SCHEDULE_SCRIPTS;
-    const eventUrl = tab === 'talks' ? PRETALX_TALKS_URL : PRETALX_EVENT_URL;
+    if (tab !== 'schedule') return;
 
     const script = document.createElement('script');
-    script.src = scripts[language];
+    script.src = SCHEDULE_SCRIPTS[language];
     script.type = 'text/javascript';
     script.async = true;
-    script.onload = () => setLoaded(true);
+    script.onload = () => setScheduleLoaded(true);
 
-    if (container.current) {
-      container.current.innerHTML = '';
+    if (scheduleRef.current) {
+      scheduleRef.current.innerHTML = '';
       const widget = document.createElement('pretalx-schedule');
-      widget.setAttribute('event-url', eventUrl);
+      widget.setAttribute('event-url', PRETALX_EVENT_URL);
       widget.setAttribute('locale', WIDGET_LOCALES[language]);
       widget.setAttribute('style', '--pretalx-clr-primary: #329bd0');
       widget.style.display = 'block';
-      container.current.appendChild(widget);
+      scheduleRef.current.appendChild(widget);
     }
 
     document.body.appendChild(script);
 
     return () => {
       script.remove();
-      setLoaded(false);
+      setScheduleLoaded(false);
     };
   }, [language, tab]);
 
@@ -129,21 +120,25 @@ export default function Agenda() {
             </div>
 
             <div className="relative bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-              {!loaded && (
-                <div className="absolute inset-0 flex items-center justify-center bg-white z-10 py-20">
-                  <div className="flex flex-col items-center gap-3">
-                    <div className="w-10 h-10 border-3 border-[#329bd0] border-t-transparent rounded-full animate-spin" />
-                    <p className="text-sm text-slate-500">
-                      {tab === 'talks' ? t('agendaPage.talksLoading') : t('agendaPage.embedLoading')}
-                    </p>
-                  </div>
-                </div>
+              {tab === 'talks' ? (
+                <TalksList />
+              ) : (
+                <>
+                  {!scheduleLoaded && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-white z-10 py-20">
+                      <div className="flex flex-col items-center gap-3">
+                        <div className="w-10 h-10 border-3 border-[#329bd0] border-t-transparent rounded-full animate-spin" />
+                        <p className="text-sm text-slate-500">{t('agendaPage.embedLoading')}</p>
+                      </div>
+                    </div>
+                  )}
+                  <div
+                    ref={scheduleRef}
+                    className="w-full overflow-auto"
+                    style={{ height: '65vh', minHeight: '480px' }}
+                  />
+                </>
               )}
-              <div
-                ref={tab === 'talks' ? talksRef : scheduleRef}
-                className="w-full overflow-auto"
-                style={{ height: '65vh', minHeight: '480px' }}
-              />
               <noscript>
                 <div className="py-16 text-center">
                   <p className="text-slate-600 mb-4">
