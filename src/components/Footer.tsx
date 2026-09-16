@@ -42,7 +42,8 @@ const sponsorTiers: { tierKey: 'platinum' | 'gold' | 'silver' | 'bronze'; sponso
   {
     tierKey: 'bronze',
     sponsors: [
-      { name: 'PNUD y UNESCO', logo: assetPath('logos/sponsors/Logos_abrelatam-02.png') },
+      { name: 'PNUD y UNESCO', logo: assetPath('logos/sponsors/pnud.png') },
+      { name: 'UNESCO', logo: assetPath('logos/sponsors/unesco.webp') },
     ],
   },
 ];
