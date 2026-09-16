@@ -79,7 +79,7 @@ export default function Footer() {
                       </a>
                     ) : (
                       <img
-                        src={sponsor.logo}
+                        src={sponsor.name === 'UNESCO y PNUD' ? assetPath('logos/sponsors/Unesco_y_PNUD copy.png') : sponsor.logo}
                         alt={sponsor.name}
                         className="h-auto object-contain"
                         style={{ maxWidth: '320px', maxHeight: '96px' }}
