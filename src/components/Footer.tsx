@@ -74,7 +74,7 @@ export default function Footer() {
                           src={sponsor.logo}
                           alt={sponsor.name}
                           className="h-auto object-contain"
-                          style={{ maxWidth: '320px', maxHeight: '96px' }}
+                          style={{ maxWidth: '480px', maxHeight: '120px' }}
                         />
                       </a>
                     ) : (
@@ -82,7 +82,7 @@ export default function Footer() {
                         src={sponsor.logo}
                         alt={sponsor.name}
                         className="h-auto object-contain"
-                        style={{ maxWidth: '320px', maxHeight: '96px' }}
+                        style={{ maxWidth: '480px', maxHeight: '120px' }}
                       />
                     )}
                   </div>
