@@ -27,7 +27,7 @@ const sponsorTiers: { tierKey: 'platinum' | 'gold' | 'silver' | 'bronze'; sponso
   {
     tierKey: 'platinum',
     sponsors: [
-      { name: 'BANTRAB', logo: assetPath('logos/sponsors/bantrab.png'), href: 'https://www.bantrab.gob.gt/' },
+      { name: 'BANTRAB', logo: assetPath('logos/sponsors/bantrab.png'), href: 'https://www.bantrab.com.gt/' },
     ],
   },
   { tierKey: 'gold', sponsors: [] },
@@ -35,8 +35,8 @@ const sponsorTiers: { tierKey: 'platinum' | 'gold' | 'silver' | 'bronze'; sponso
     tierKey: 'silver',
     sponsors: [
       { name: 'BID', logo: assetPath('logos/sponsors/bid.jpg'), href: 'https://www.iadb.org/' },
-      { name: 'Embajada de la República de China (Taiwán) en Guatemala', logo: assetPath('logos/sponsors/embajada_china(taiwan).jpg'), href: 'https://www.embassy.taiwan.gt/' },
-      { name: 'BANRURAL', logo: assetPath('logos/sponsors/banrural copy.png'), href: 'https://www.banrural.gob.gt/' },
+      { name: 'Embajada de la República de China (Taiwán) en Guatemala', logo: assetPath('logos/sponsors/embajada_china(taiwan).jpg'), href: 'https://www.taiwanembassy.org/gt_es/index.html' },
+      { name: 'BANRURAL', logo: assetPath('logos/sponsors/banrural copy.png'), href: 'https://www.banrural.com.gt/site/personas' },
     ],
   },
   {
