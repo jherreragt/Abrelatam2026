@@ -42,7 +42,7 @@ const sponsorTiers: { tierKey: 'platinum' | 'gold' | 'silver' | 'bronze'; sponso
   {
     tierKey: 'bronze',
     sponsors: [
-      { name: 'UNESCO y PNUD', logo: assetPath('logos/sponsors/UnescoyPNUD.png') },
+      { name: 'UNESCO y PNUD', logo: assetPath('logos/sponsors/Unesco_y_PNUD.png') },
     ],
   },
 ];
@@ -61,7 +61,10 @@ export default function Footer() {
             {sponsorTiers.map(({ tierKey, sponsors }) => (
               <div key={tierKey} className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
                 {sponsors.map((sponsor) => (
-                  <div key={sponsor.name} className="flex items-center">
+                  <div
+                    key={sponsor.name}
+                    className={`flex items-center ${sponsor.name === 'UNESCO y PNUD' ? 'w-full justify-center' : ''}`}
+                  >
                     {sponsor.href ? (
                       <a
                         href={sponsor.href}
@@ -74,7 +77,11 @@ export default function Footer() {
                           src={sponsor.logo}
                           alt={sponsor.name}
                           className="h-auto object-contain"
-                          style={{ maxWidth: '480px', maxHeight: '120px' }}
+                          style={{
+                            width: sponsor.name === 'UNESCO y PNUD' ? 'min(650px, 100%)' : undefined,
+                            maxWidth: sponsor.name === 'UNESCO y PNUD' ? '100%' : '480px',
+                            maxHeight: sponsor.name === 'UNESCO y PNUD' ? '160px' : '120px',
+                          }}
                         />
                       </a>
                     ) : (
@@ -82,7 +89,11 @@ export default function Footer() {
                         src={sponsor.logo}
                         alt={sponsor.name}
                         className="h-auto object-contain"
-                        style={{ maxWidth: '480px', maxHeight: '120px' }}
+                        style={{
+                          width: sponsor.name === 'UNESCO y PNUD' ? 'min(650px, 100%)' : undefined,
+                          maxWidth: sponsor.name === 'UNESCO y PNUD' ? '100%' : '480px',
+                          maxHeight: sponsor.name === 'UNESCO y PNUD' ? '160px' : '120px',
+                        }}
                       />
                     )}
                   </div>
