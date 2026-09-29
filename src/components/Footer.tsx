@@ -81,7 +81,7 @@ export default function Footer() {
                           style={{
                             width: sponsor.name === 'UNESCO y PNUD' ? 'min(650px, 100%)' : undefined,
                             maxWidth: sponsor.name === 'UNESCO y PNUD' ? '100%' : '480px',
-                            maxHeight: sponsor.name === 'UNESCO y PNUD' ? '160px' : '120px',
+                            maxHeight: sponsor.name === 'UNESCO y PNUD' ? '160px' : sponsor.name === 'Hivos' ? '70px' : '120px',
                           }}
                         />
                       </a>
