@@ -37,6 +37,7 @@ const sponsorTiers: { tierKey: 'platinum' | 'gold' | 'silver' | 'bronze'; sponso
       { name: 'BID', logo: assetPath('logos/sponsors/bid.jpg'), href: 'https://www.iadb.org/' },
       { name: 'Embajada de la República de China (Taiwán) en Guatemala', logo: assetPath('logos/sponsors/embajada_china(taiwan).jpg'), href: 'https://www.taiwanembassy.org/gt_es/index.html' },
       { name: 'BANRURAL', logo: assetPath('logos/sponsors/banrural copy.png'), href: 'https://www.banrural.com.gt/site/personas' },
+      { name: 'Blue Corporation', logo: assetPath('logos/sponsors/LOGO_BLUE_CORPORATION.png') },
       { name: 'Hivos', logo: 'https://hivos.org/assets/2018/06/Logo-Hivos-203x118-px.jpg', href: 'https://hivos.org/' },
     ],
   },
