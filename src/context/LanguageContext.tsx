@@ -115,6 +115,7 @@ const translations = {
       zonaGastro: 'Zona Gastronómica',
       participate: 'Participa',
       apoyos: 'Apoyos al evento',
+      mapaInteractivo: 'Mapa Interactivo',
     },
     home: {
       title: 'Guatemala 2026: abrir datos, abrir caminos',
@@ -734,6 +735,7 @@ const translations = {
       zonaGastro: 'Food Zone',
       participate: 'Participate',
       apoyos: 'Event support',
+      mapaInteractivo: 'Interactive Map',
     },
     home: {
       title: 'Guatemala 2026: opening data, opening paths',
@@ -1353,6 +1355,7 @@ const translations = {
       zonaGastro: 'Zona Gastronômica',
       participate: 'Participe',
       apoyos: 'Apoios ao evento',
+      mapaInteractivo: 'Mapa Interativo',
     },
     home: {
       title: 'Guatemala 2026: abrir dados, abrir caminhos',

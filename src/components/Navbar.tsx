@@ -38,6 +38,7 @@ const navItems: NavItem[] = [
     dropdown: [
       { to: ROUTES.AGENDA, labelKey: 'nav.agendaPage' },
       { to: ROUTES.VIAJE_SEDE, labelKey: 'nav.travel' },
+      { to: ROUTES.MAPA_INTERACTIVO, labelKey: 'nav.mapaInteractivo' },
     ],
   },
   {
@@ -63,6 +64,7 @@ const mobileAllLinks: { to?: string; external?: string; labelKey: string; indent
   { to: ROUTES.PRE_REGISTRO, labelKey: 'nav.preRegister', indent: true },
   { to: ROUTES.AGENDA, labelKey: 'nav.agendaPage', indent: true },
   { to: ROUTES.VIAJE_SEDE, labelKey: 'nav.travel', indent: true },
+  { to: ROUTES.MAPA_INTERACTIVO, labelKey: 'nav.mapaInteractivo', indent: true },
   { to: ROUTES.SIDE_EVENTS, labelKey: 'nav.sideEvents' },
   { to: ROUTES.VOLUNTARIOS, labelKey: 'nav.volunteers' },
   { to: ROUTES.ZONA_GASTRONOMICA, labelKey: 'nav.zonaGastro' },

@@ -22,6 +22,7 @@ import DatosArte from './pages/DatosArte';
 import Voluntarios from './pages/Voluntarios';
 import ZonaGastronomica from './pages/ZonaGastronomica';
 import ApoyosEvento from './pages/ApoyosEvento';
+import MapaInteractivo from './pages/MapaInteractivo';
 import Admin from './pages/Admin';
 import { ROUTES } from './router/routes';
 
@@ -51,6 +52,7 @@ export default function App() {
               <Route path={ROUTES.VOLUNTARIOS} element={<Voluntarios />} />
               <Route path={ROUTES.ZONA_GASTRONOMICA} element={<ZonaGastronomica />} />
               <Route path={ROUTES.APOYOS} element={<ApoyosEvento />} />
+              <Route path={ROUTES.MAPA_INTERACTIVO} element={<MapaInteractivo />} />
             </Route>
             <Route path={ROUTES.ADMIN} element={<Admin />} />
           </Routes>

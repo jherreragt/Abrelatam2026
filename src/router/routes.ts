@@ -18,5 +18,6 @@ export const ROUTES = {
   VOLUNTARIOS: '/voluntarios',
   ZONA_GASTRONOMICA: '/zona-gastronomica',
   APOYOS: '/apoyos',
+  MAPA_INTERACTIVO: '/mapa-interactivo',
   ADMIN: '/admin',
 } as const;
