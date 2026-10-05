@@ -80,14 +80,15 @@ const translations = {
     hero: {
       location: 'Ciudad de Guatemala, Guatemala',
       date: '7, 8 y 9 de octubre de 2026',
-      register: 'Evento',
+      register: 'Registro',
       guide: 'Registro',
-      agenda: 'Información Útil',
+      agenda: 'Agenda',
       proposeSession: 'Proponer Sesión',
       days: 'Dias',
       hours: 'Horas',
       minutes: 'Minutos',
-      seconds: 'Segundos'
+      seconds: 'Segundos',
+      map: 'Mapa',
     },
     nav: {
       home: 'Inicio',
@@ -700,14 +701,15 @@ const translations = {
     hero: {
       location: 'Guatemala City, Guatemala',
       date: 'October 7–9, 2026',
-      register: 'Event',
+      register: 'Registration',
       guide: 'Registration',
-      agenda: 'Useful Info',
+      agenda: 'Agenda',
       proposeSession: 'Propose a Session',
       days: 'Days',
       hours: 'Hours',
       minutes: 'Minutes',
-      seconds: 'Seconds'
+      seconds: 'Seconds',
+      map: 'Map',
     },
     nav: {
       home: 'Home',
@@ -1320,17 +1322,15 @@ const translations = {
     hero: {
       location: 'Cidade da Guatemala, Guatemala',
       date: '7, 8 e 9 de outubro de 2026',
-      register: 'Evento',
+      register: 'Registro',
       guide: 'Registro',
-      agenda: 'Informações Úteis',
+      agenda: 'Agenda',
       proposeSession: 'Propor Sessão',
       days: 'Dias',
       hours: 'Horas',
       minutes: 'Minutos',
-      seconds: 'Segundos'
-    },
-    nav: {
-      home: 'Início',
+      seconds: 'Segundos',
+      map: 'Mapa',
       about: 'Sobre',
       agenda: 'Agenda',
       calls: 'Chamadas',

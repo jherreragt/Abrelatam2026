@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CalendarDays, ClipboardList, Users } from 'lucide-react';
+import { CalendarDays, ClipboardList, Map } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { ROUTES } from '../router/routes';
 import { assetPath } from '../lib/assetPath';
@@ -68,22 +68,22 @@ export default function HeroSlider() {
           </p>
 
           <div className="mb-9 flex flex-col justify-center gap-2.5 sm:flex-row sm:flex-wrap animate-fadeInUp-d2">
-            <Link to={ROUTES.SOBRE}>
-              <button className={heroButtonClass}>
-                <Users size={14} />
-                {t('hero.register')}
-              </button>
-            </Link>
             <Link to={ROUTES.PRE_REGISTRO}>
               <button className={heroButtonClass}>
                 <ClipboardList size={14} />
-                {t('hero.guide')}
+                {t('hero.register')}
               </button>
             </Link>
-            <Link to={ROUTES.VIAJE_SEDE}>
+            <Link to={ROUTES.AGENDA}>
               <button className={heroButtonClass}>
                 <CalendarDays size={14} />
                 {t('hero.agenda')}
+              </button>
+            </Link>
+            <Link to={ROUTES.MAPA_INTERACTIVO}>
+              <button className={heroButtonClass}>
+                <Map size={14} />
+                {t('hero.map')}
               </button>
             </Link>
           </div>
