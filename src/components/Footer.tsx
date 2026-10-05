@@ -82,8 +82,8 @@ export default function Footer() {
                           className="h-auto object-contain"
                           style={{
                             width: sponsor.name === 'UNESCO y PNUD' ? 'min(650px, 100%)' : undefined,
-                            maxWidth: sponsor.name === 'UNESCO y PNUD' ? '100%' : sponsor.name === 'Blue Corporation' ? '160px' : '480px',
-                            maxHeight: sponsor.name === 'UNESCO y PNUD' ? '160px' : sponsor.name === 'Hivos' ? '70px' : '120px',
+                            maxWidth: sponsor.name === 'UNESCO y PNUD' ? '100%' : sponsor.name === 'Blue Corporation' ? '160px' : sponsor.name === 'Incide Joven Guatemala' ? '200px' : '480px',
+                            maxHeight: sponsor.name === 'UNESCO y PNUD' ? '160px' : sponsor.name === 'Hivos' || sponsor.name === 'Incide Joven Guatemala' ? '70px' : '120px',
                           }}
                         />
                       </a>
