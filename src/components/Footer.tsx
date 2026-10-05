@@ -45,6 +45,7 @@ const sponsorTiers: { tierKey: 'platinum' | 'gold' | 'silver' | 'bronze'; sponso
     tierKey: 'bronze',
     sponsors: [
       { name: 'UNESCO y PNUD', logo: assetPath('logos/sponsors/Unesco_y_PNUD.png') },
+      { name: 'Incide Joven Guatemala', logo: assetPath('logos/sponsors/LOGO_INCIDEJOVEN_(morado).png'), href: 'https://incidejoven.org/' },
     ],
   },
 ];
