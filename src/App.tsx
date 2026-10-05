@@ -10,7 +10,6 @@ import Convocatorias from './pages/Convocatorias';
 import SideEvents from './pages/SideEvents';
 import ViajeSede from './pages/ViajeSede';
 import CodigoConducta from './pages/CodigoConducta';
-import Prensa from './pages/Prensa';
 import Contacto from './pages/Contacto';
 // import Noticias from './pages/Noticias';
 // import BlogDetail from './pages/BlogDetail';
@@ -40,7 +39,6 @@ export default function App() {
               <Route path={ROUTES.SIDE_EVENTS} element={<SideEvents />} />
               <Route path={ROUTES.VIAJE_SEDE} element={<ViajeSede />} />
               <Route path={ROUTES.CODIGO_CONDUCTA} element={<CodigoConducta />} />
-              <Route path={ROUTES.PRENSA} element={<Prensa />} />
               <Route path={ROUTES.CONTACTO} element={<Contacto />} />
               {/* <Route path={ROUTES.NOTICIAS} element={<Noticias />} /> */}
               {/* <Route path={ROUTES.BLOG_DETAIL} element={<BlogDetail />} /> */}

@@ -53,11 +53,6 @@ const pageMeta: Record<string, PageMeta> = {
     description: 'Todo lo que necesitas saber para participar: fechas, lugar, cómo llegar, qué incluye la inscripción y preguntas frecuentes del evento.',
     path: ROUTES.GUIA_PARTICIPANTES,
   },
-  [ROUTES.PRENSA]: {
-    title: `Sala de prensa — ABRELATAM / CONDATOS 2026 | Recursos para medios`,
-    description: 'Materiales, comunicados y contacto de prensa para medios que cubren ABRELATAM / CONDATOS 2026 en Ciudad de Guatemala.',
-    path: ROUTES.PRENSA,
-  },
   [ROUTES.CONTACTO]: {
     title: `Contacto — ABRELATAM / CONDATOS 2026`,
     description: 'Ponte en contacto con el equipo organizador de ABRELATAM / CONDATOS 2026. Consultas sobre patrocinios, prensa, becas y participación.',

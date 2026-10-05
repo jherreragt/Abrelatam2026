@@ -7,7 +7,6 @@ export const ROUTES = {
   VIAJE_SEDE: '/datos-utiles-y-logistica',
   CODIGO_CONDUCTA: '/codigo-conducta',
   GUIA_PARTICIPANTES: '/guia-participantes',
-  PRENSA: '/prensa',
   CONTACTO: '/contacto',
   PRE_REGISTRO: '/registro',
   NOTICIAS: '/noticias',
