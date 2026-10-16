@@ -6,6 +6,7 @@ import BlogCard from '../components/BlogCard';
 import { getRecentPosts } from '../data/blogPosts';
 import { ROUTES } from '../router/routes';
 import { assetPath } from '../lib/assetPath';
+import ThankYouPopup from '../components/ThankYouPopup';
 
 const thematicIcons = [
   assetPath('v2/iconos/AL-15.png'),
@@ -23,6 +24,7 @@ export default function Home() {
   const newsPageCount = Math.ceil(recentPosts.length / newsPerPage);
   const [newsPage, setNewsPage] = useState(0);
   const visiblePosts = recentPosts.slice(newsPage * newsPerPage, newsPage * newsPerPage + newsPerPage);
+  const [showThankYouPopup, setShowThankYouPopup] = useState(true);
 
   const goToPreviousNews = () => {
     setNewsPage(current => (current === 0 ? newsPageCount - 1 : current - 1));
@@ -34,6 +36,7 @@ export default function Home() {
 
   return (
     <>
+      {showThankYouPopup && <ThankYouPopup onClose={() => setShowThankYouPopup(false)} />}
       <HeroSlider />
 
       {/* Thematic Tracks */}
